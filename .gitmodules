@@ -1,3 +1,6 @@
 [submodule "roots"]
 	path = roots
 	url = https://github.com/retlehs/roots.git
+[submodule "assets/bootstrap"]
+	path = assets/bootstrap
+	url = https://github.com/twitter/bootstrap.git
