@@ -1,5 +1,5 @@
 //
-// == Getting started ==
+// == Installation ==
 //
 // Install the grunt command-line tool (-g puts it in /usr/local/bin):
 // % sudo npm install -g grunt-cli
@@ -9,11 +9,15 @@
 // % cd wp-content/themes/theme-name
 // % npm install
 //
-// One-off build:
+// == Building ==
+//
 // % grunt
 //
 // Watch for changes:
 // % grunt watch
+//
+// Compress images (not done by the above tasks):
+// % grunt img
 //
 
 module.exports = function(grunt) {
@@ -29,6 +33,7 @@ module.exports = function(grunt) {
                 },
             },
         },
+
         uglify: {
             dist: {
                 options: {
@@ -43,6 +48,7 @@ module.exports = function(grunt) {
                 },
             },
         },
+
         img: {
             dist: {
                 src: 'assets/img',
@@ -50,7 +56,7 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: ['assets/css/*.less'],
+                files: ['assets/css/**/*.less'],
                 tasks: ['less'],
             },
             js: {
@@ -68,7 +74,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'less',
         'uglify',
-        'img',
     ])
 
 }
