@@ -1,0 +1,136 @@
+.sidebar {
+  
+  .widget {
+    margin-bottom: 15px;
+    border-top: 4px solid #231f20;
+  }
+
+  .widget_nav_menu {
+
+    ul {
+      margin: 0px 0px 20px 0px;
+    }
+
+    li {
+      list-style: none;
+      margin: 5px 0px;
+      padding-left: 0px;
+      .font-size(1.6rem, 1.3rem, 1.3rem);
+      line-height: 1.25;
+      font-weight: 300;
+    }
+  }
+
+  #menu-main-menu {
+    li {
+      margin: 0;
+    }
+    a {
+      display: block;
+      padding: 10px 0;
+      border-bottom: @greyTopBorder;
+    }
+  }
+
+  .widget_categories {
+    border: none;
+  }
+
+  #menu-follow-us {
+    li {
+      margin: 7px 0;
+    }
+
+    a {
+      display: block;
+      padding: 6px 0 13px 35px;
+      height: 6px;
+      margin: 6px 0;
+      vertical-align: middle;
+
+      &[href^="http://twitter.com/"],
+      &[href^="http://www.twitter.com/"],
+      &[href^="https://twitter.com/"],
+      &[href^="https://www.twitter.com/"] {
+        .menu-follow-us(1);
+      }
+
+      &[href^="http://facebook.com/"],
+      &[href^="http://www.facebook.com/"],
+      &[href^="https://facebook.com/"],
+      &[href^="https://www.facebook.com/"] {
+        .menu-follow-us(0);
+      }
+
+      &[href^="http://youtube.com/"],
+      &[href^="http://www.youtube.com/"],
+      &[href^="https://youtube.com/"],
+      &[href^="https://www.youtube.com/"] {
+        .menu-follow-us(2);
+      }
+
+      &[href^="http://flickr.com/"],
+      &[href^="http://www.flickr.com/"],
+      &[href^="https://flickr.com/"],
+      &[href^="https://www.flickr.com/"] {
+        .menu-follow-us(3);
+      }
+
+      &[href^="http://plus.google.com/"],
+      &[href^="https://plus.google.com/"] {
+        .menu-follow-us(7);
+      }
+
+      &[href^="http://foursquare.com/"],
+      &[href^="http://www.foursquare.com/"],
+      &[href^="https://foursquare.com/"],
+      &[href^="https://www.foursquare.com/"] {
+        .menu-follow-us(8);
+      }
+
+      &[href^="http://linkedin.com/"],
+      &[href^="http://www.linkedin.com/"],
+      &[href^="https://linkedin.com/"],
+      &[href^="https://www.linkedin.com/"] {
+        .menu-follow-us(6);
+      }
+
+      &[href^="http://pinterest.com/"],
+      &[href^="http://www.pinterest.com/"],
+      &[href^="https://pinterest.com/"],
+      &[href^="https://www.pinterest.com/"] {
+        .menu-follow-us(5);
+      }
+
+      &[href^="mailto:"] {
+        .menu-follow-us(9);
+      }
+    }
+  }
+
+  .widget_categories {
+
+    select {
+      .font-size(14px, 14px, 14px);
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: @mobileMaxWidth) {
+    #menu-follow-us {
+      li:nth-child(4),li:nth-child(5),li:nth-child(6),li:nth-child(7),li:nth-child(8) {
+        display: none;
+      }
+      li {
+        width: 50%;
+        float: left;
+        display: inline-block;
+        margin: 0;
+      }
+      a {
+        margin: 3px 0px;
+      }
+    }
+  }
+}

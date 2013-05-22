@@ -1,0 +1,194 @@
+.btn,
+.btn:visited {
+  display: inline;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  line-height: (20 / 16);
+  padding: 5px 12px;
+  cursor: pointer;
+  background-image: none;
+  text-shadow: none;
+}
+
+.btn-secondary,
+.btn,
+.btn:visited {
+  background-color: #008270;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 #000;
+  -moz-box-shadow: 0 3px 0 #000;
+  box-shadow: 0 3px 0 #000;
+  font-weight: 400;
+  overflow: visible;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary-active,
+.btn:active,
+.btn:focus,
+.btn-active{
+  background-color:#28A197;
+}
+
+.btn-secondary .btn:hover,
+.btn-secondary .btn-hover,
+.btn:hover,
+.btn-hover {
+  background-color: #3ABAA8;
+  color: #fff;
+}
+
+.btn:active,
+.btn-active {
+  top: 0px;
+  box-shadow:none;
+  outline:none;
+}
+
+/* 
+ * making a click target which is bigger than the btn 
+ * (and fills the space made when the btn moves) 
+ */
+.btn:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn:active:before {
+  top: -10%;
+  height: 120%;
+}
+
+a.btn[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+input{
+  &[disabled="disabled"] {
+    opacity: 0.5;
+  }
+
+  &[type="text"],
+  &[type="search"]{
+
+  }
+}
+
+.page-numbers-container {
+  border-top: @greyTopBorder;
+  margin-top: 0px;
+  padding-top: 50px;
+  overflow: hidden;
+  
+  a:hover .page-numbers {
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    width: 45%;
+    padding: 10px 0px;
+    
+    span.contain {
+      padding-top: 10px;
+      display: inline-block;
+    }
+    
+    .arrow-button {
+      display: inline-block;
+      background: url('img/arrow-sprite.png') no-repeat;
+      width: 30px;
+      height: 50px;
+      margin: 0px 5px;
+    }
+  }
+  
+  .arrow:hover {
+    background-color: #e7e7e7;
+  }
+
+  .page-numbers {
+    display: block;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  
+  .link {
+    display: block;
+    font-size: 2.7rem;
+    width: 100%;
+  }
+
+  .next {
+    float: right;
+    background-position: top right;
+    
+    span.contain {
+      float: right;
+    }
+    
+    .link {
+      text-align: right;
+    }
+
+    .page-numbers {
+      text-align: right;
+    }
+    
+    .arrow-button {
+      float: right;
+      background-position: top right;
+    }
+  }
+
+  .previous {
+    float: left;
+    background-position: top left;
+
+    span.contain {
+      float: left;
+    }
+    
+    .link {
+      text-align: left;
+    }
+
+    .page-numbers {
+      text-align: left;
+    }
+    
+    .arrow-button {
+      float: left;
+      background-position: top left;
+    }
+  }
+
+  @media (max-width: @tabletMaxWidth) {
+    margin-bottom: 45px;
+      
+      .link {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: @mobileMaxWidth) {
+      .link {
+      font-size: 1.5rem;
+    }
+  }
+}
+

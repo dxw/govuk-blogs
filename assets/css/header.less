@@ -1,0 +1,118 @@
+.header {
+  margin-top: 40px;
+  margin-bottom: 25px;
+
+  .blog, .blog-title {
+    a {
+      color: inherit;
+    }
+  }
+  
+  table, th, tr, td {
+    padding: 2px;
+    background-color: #fff;
+    border: 0;
+  }
+  
+  table {
+    margin-bottom: 0px;
+  }
+
+  .blog {
+    .font-size(36px, 27px, 19px);
+    .line-height(40px, 32px, 22px);
+    color: @greyText;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+
+  .blog-title {
+    .font-size(48px, 36px, 27px);
+    .line-height(50px, 40px, 32px);
+    margin-top: 0;
+  }
+
+  
+  .blog-meta table {
+    .font-size(1.6rem, 1.3rem, 1.3rem);
+    margin-top: 30px;
+
+    th {
+      font-weight: normal;
+      text-align: left;
+      max-width: 95px;
+      overflow: hidden;
+      padding: 2px 0px;
+    }
+  }
+
+  .subscribe {
+    margin-top: 30px;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+      .font-size(1.6rem, 1.3rem, 1.3rem);
+      float: left;
+      margin-left: 18px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .atom a {
+      padding-left: 18px;
+      background: url(img/icon-atom.png) no-repeat left 1px;
+    }
+
+    .email a {
+      padding-left: 25px;
+      background: url(img/icon-email.png) no-repeat left 1px;
+    }
+
+
+  }
+
+  .search-container {
+    float:left;  
+  }
+
+  .bottom {
+    margin-bottom: 35px;
+    position: relative;
+  }
+
+  .subscribe {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (max-width: @mobileMaxWidth) {
+    .bottom {
+    }
+    .blog {
+      margin-bottom: 0px;
+    }
+    .blog-title {
+      margin: 0px 0px 30px 0px;
+    }
+    .blog-meta {
+      margin-top: 40px;
+    }
+    .subscribe {
+      position: relative;
+      li {
+        float: right;
+      }
+      li:first-child {
+        margin-left: 18px;
+      }
+    }    
+  }
+}

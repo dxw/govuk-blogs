@@ -1,0 +1,181 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "nta",Arial,sans-serif;
+  .font-size(1.9rem, 1.9rem, 1.3rem);
+  .line-height(2.6rem, 2.6rem, 2rem);
+  font-weight: 400;
+  text-transform: none;
+  color: #0b0c0c;
+}
+
+p {
+  margin: 0.2em 0 1.5em 0;
+}
+  
+blockquote {
+  padding: 15px 10px;
+  margin: 0 0 20px 0;
+  border: 0;
+  background-color: #e1e8e8; 
+  padding: 13px 10px;
+
+  p {
+    padding-left: 15px; 
+  }
+
+  &:before {
+    content: "\201C";
+    display: inline-block;
+    float: left;
+    font-size: 4rem;
+  } 
+
+  &:after {
+    content: "\201D";
+    display: inline-block;
+    float: right;
+    font-size: 4rem;
+  } 
+}
+
+@media (min-width: @tabletMinWidth) {
+  blockquote p {
+    padding-left: 30px; 
+  } 
+}
+
+cite {
+  color: #6f777b;
+  font-style: normal;
+  position: relative;
+  font-size: 1.8rem;
+  top: -10px;
+}
+    
+a, a:visited {
+  color: #2e3191;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #2e3191;
+}
+
+h1 {
+  line-height: 1.1111111111;
+  font-weight: normal;
+  text-transform: none;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  margin-top: 15px; 
+  .font-size(4.8rem, 3.2rem, 3.2rem);
+}
+
+.main-content h1 {
+  .font-size(3.8rem, 3rem, 3rem);
+  .line-height(3.8rem, 3rem, 3rem);
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+}
+  
+h2 {
+  line-height: 1.1111111111;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 1.25rem;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  .font-size(2.6rem, 1.9rem, 1.9rem);
+}
+  
+@media (max-width: @tabletMaxWidth) {
+    h2 {
+      padding-top: 0.7rem;
+      padding-bottom: 0.3rem; 
+  } 
+}
+
+h3 {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+@media (max-width: @tabletMaxWidth) {
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.53846;
+      padding-top: 0.6rem;
+      padding-bottom: 0.4rem; 
+  } 
+}
+
+
+h4, h5, h6 {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 7px;
+  padding-top: 0.7rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+  font-weight: bold; 
+}
+  
+@media (max-width: @tabletMaxWidth)  {
+    h4 {
+      font-size: 1.3rem;
+      line-height: 1.53846;
+      padding-top: 0.6rem;
+      padding-bottom: 0.4rem; 
+  } 
+}
+
+ul {
+  margin: 0.75em;
+  clear: both;
+}
+
+ol {
+  margin: 0.75em 1.2em;
+}
+
+li {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.25em 0;
+  padding-left: 0.3em;
+}
+
+ul li {
+  list-style-image: url(img/bullet-disc.png);
+}
+
+.entry-content a, .page-content a {
+  text-decoration: underline;
+  
+  &:hover {
+    color: #2e8aca;
+  }
+}
+
+.entry-content-asset {
+  padding: 2.5rem 0 1.5rem;
+}
