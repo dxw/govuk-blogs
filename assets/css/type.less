@@ -5,7 +5,9 @@ html {
 
 body {
   font-family: "nta", Helvetica, Arial, sans-serif;
+  font-size: 19px;
   .font-size(1.9rem, 1.9rem, 1.3rem);
+  line-height: 26px;
   .line-height(2.6rem, 2.6rem, 2rem);
   font-weight: 400;
   text-transform: none;
@@ -31,6 +33,7 @@ blockquote {
     content: "\201C";
     display: inline-block;
     float: left;
+    font-size: 40px;
     font-size: 4rem;
   } 
 
@@ -38,6 +41,7 @@ blockquote {
     content: "\201D";
     display: inline-block;
     float: right;
+    font-size: 40px;
     font-size: 4rem;
   } 
 }
@@ -52,6 +56,7 @@ cite {
   color: #6f777b;
   font-style: normal;
   position: relative;
+  font-size: 18px;
   font-size: 1.8rem;
   top: -10px;
 }
@@ -69,17 +74,24 @@ h1 {
   line-height: 1.1111111111;
   font-weight: normal;
   text-transform: none;
+  padding-top: 2px;
   padding-top: 0.2rem;
+  padding-bottom: 3px;
   padding-bottom: 0.3rem;
   font-weight: bold;
   margin-top: 15px; 
+  font-size: 48px;
   .font-size(4.8rem, 3.2rem, 3.2rem);
 }
 
 .main-content h1 {
+  font-size: 38px;
   .font-size(3.8rem, 3rem, 3rem);
+  line-height: 38px;
   .line-height(3.8rem, 3rem, 3rem);
+  padding-top: 2px;
   padding-top: 0.2rem;
+  padding-bottom: 3px;
   padding-bottom: 0.3rem;
 }
   
@@ -87,15 +99,20 @@ h2 {
   line-height: 1.1111111111;
   font-weight: 400;
   text-transform: none;
+  padding-top: 12.5px;
   padding-top: 1.25rem;
+  padding-bottom: 3px;
   padding-bottom: 0.3rem;
   font-weight: bold;
+  font-size: 26px;
   .font-size(2.6rem, 1.9rem, 1.9rem);
 }
   
 @media (max-width: @tabletMaxWidth) {
     h2 {
+      padding-top: 7px;
       padding-top: 0.7rem;
+      padding-bottom: 3px;
       padding-bottom: 0.3rem; 
   } 
 }
@@ -115,9 +132,12 @@ h3 {
 
 @media (max-width: @tabletMaxWidth) {
     h3 {
+      font-size: 15px;
       font-size: 1.5rem;
       line-height: 1.53846;
+      padding-top: 6px;
       padding-top: 0.6rem;
+      padding-bottom: 4px;
       padding-bottom: 0.4rem; 
   } 
 }
@@ -138,9 +158,12 @@ h4, h5, h6 {
   
 @media (max-width: @tabletMaxWidth)  {
     h4 {
+      font-size: 13px;
       font-size: 1.3rem;
       line-height: 1.53846;
+      padding-top: 6px;
       padding-top: 0.6rem;
+      padding-bottom: 4px;
       padding-bottom: 0.4rem; 
   } 
 }
@@ -177,5 +200,6 @@ ul li {
 }
 
 .entry-content-asset {
+  padding: 25px 0 15px;
   padding: 2.5rem 0 1.5rem;
 }
