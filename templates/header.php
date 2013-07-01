@@ -15,7 +15,7 @@
       <table>
         <?php if (get_option('gds_organisations')) : ?></td>
           <tr>
-            <th>Organisations:</th>
+            <th width="130px">Organisations:</th>
             <td><?php echo get_option('gds_organisations') ?></td>
           </tr>
         <?php endif ?>
