@@ -27,6 +27,11 @@ blockquote {
 
   p {
     padding-left: 15px; 
+    
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 1.3rem;
+      font-size: 13px;
+    }
   }
 
   &:before {
@@ -35,6 +40,11 @@ blockquote {
     float: left;
     font-size: 40px;
     font-size: 4rem;
+    
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 2.5rem;
+      font-size: 25px;
+    }
   } 
 
   &:after {
@@ -43,7 +53,13 @@ blockquote {
     float: right;
     font-size: 40px;
     font-size: 4rem;
+    
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 2rem;
+      font-size: 20px;
+    }
   } 
+  
 }
 
 @media (min-width: @tabletMinWidth) {
@@ -185,6 +201,11 @@ li {
   text-transform: none;
   margin: 0.25em 0;
   padding-left: 0.3em;
+  
+  @media (max-width: @mobileMaxWidth) {
+    font-size: 1.3rem;
+    font-size: 13px;
+  }
 }
 
 ul li {
