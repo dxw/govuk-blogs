@@ -13,19 +13,19 @@
   <div class="bottom row">
     <div class="span8 blog-meta">
       <table>
-        <?php if (get_option('gds_organisations')) : ?></td>
+        <?php if (get_option('gds_organisations')) : ?>
           <tr>
             <th width="130px">Organisations:</th>
             <td><?php echo get_option('gds_organisations') ?></td>
           </tr>
         <?php endif ?>
-        <?php if (get_option('gds_topics')) : ?></td>
+        <?php if (get_option('gds_topics')) : ?>
           <tr>
             <th>Topics:</th>
             <td><?php echo get_option('gds_topics') ?></td>
           </tr>
         <?php endif ?>
-        <?php if (get_option('gds_location')) : ?></td>
+        <?php if (get_option('gds_location')) : ?>
           <tr>
             <th>Location:</th>
             <td><?php echo get_option('gds_location') ?></td>
