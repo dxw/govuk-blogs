@@ -14,6 +14,15 @@ add_filter('embed_oembed_html', function ($cache, $url=null, $attr=null, $post_I
   return $cache;
 });
 
+
+# Youtube: Don't show related videos
+# Credit: http://wordpress.org/plugins/hide-youtube-related-videos/
+add_filter( 'oembed_result', function ($data, $url, $args = array()) {
+  $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?wmode=transparent&amp;rel=0$3', $data);
+  return $data;
+}, 10, 3);
+
+
 # CoverItLive
 add_filter('the_content', function ($content) {
   global $content_width;
