@@ -61,7 +61,11 @@ blockquote {
   } 
 
   &.noquotes {
-    &:before, &:after {
+    &:before {
+      content:"";
+    }
+
+    &:after {
       content:"";
     }
 
