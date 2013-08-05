@@ -7,3 +7,5 @@
     </div>
   </div>
 </header>
+<div class="container bar">
+</div>
