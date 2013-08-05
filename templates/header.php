@@ -5,14 +5,14 @@
       <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
     </div>
 
-    <div class="span4 logo-container">
-      <?php $icon_options = get_option('theme_logo_options'); ?>  
-        <?php if ( $logo_options['logo'] != '' ): ?>  
+  <?php $logo_options = get_option('theme_logo_options'); ?>  
+    <?php if ($logo_options['logo']): ?>      
+      <div class="span4 logo-container">
           <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />  
-      <?php  endif; ?> 
-    </div>
+      </div>
+    <?php  endif; ?> 
     
-    <?php if ( $logo_options['logo'] != '' ): ?>  
+    <?php if (!$logo_options['logo']): ?>  
       <div class="span4 search-container">
           <?php get_search_form() ?>
       </div>
@@ -43,7 +43,7 @@
       </table>
     </div>
 
-    <?php if ( !$logo_options['logo'] != '' ): ?>  
+    <?php if ($logo_options['logo']): ?>  
       <div class="span4 search-container">
         <?php get_search_form() ?>
       </div>
