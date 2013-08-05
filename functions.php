@@ -11,3 +11,4 @@ include(__DIR__.'/lib/featured.php');
 include(__DIR__.'/lib/embed.php');
 include(__DIR__.'/lib/byline.php');
 include(__DIR__.'/lib/sanitise_comments.php');
+include(__DIR__.'/lib/icon.php');

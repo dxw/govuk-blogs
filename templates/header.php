@@ -5,9 +5,18 @@
       <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
     </div>
 
-    <div class="span4 search-container">
-      <?php get_search_form() ?>
+    <div class="span4 logo-container">
+      <?php $icon_options = get_option('theme_logo_options'); ?>  
+        <?php if ( $logo_options['logo'] != '' ): ?>  
+          <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />  
+      <?php  endif; ?> 
     </div>
+    
+    <?php if ( $logo_options['logo'] != '' ): ?>  
+      <div class="span4 search-container">
+          <?php get_search_form() ?>
+      </div>
+    <?php endif ?>
   </div>
 
   <div class="bottom row">
@@ -34,13 +43,19 @@
       </table>
     </div>
 
-    <div class="span4 subscribe">
-      <ul>
-        <li class="atom"><a href="<?php echo esc_attr(get_feed_link('atom')) ?>">atom</a></li>
-        <?php if (get_option('gds_email_alerts')) : ?>
-          <li class="email"><a href="<?php echo esc_attr(get_option('gds_email_alerts')) ?>">email alerts</a></li>
-        <?php endif ?>
-      </ul>
-    </div>
+    <?php if ( !$logo_options['logo'] != '' ): ?>  
+      <div class="span4 search-container">
+        <?php get_search_form() ?>
+      </div>
+    <?php else : ?>
+      <div class="span4 subscribe">
+        <ul>
+          <li class="atom"><a href="<?php echo esc_attr(get_feed_link('atom')) ?>">atom</a></li>
+          <?php if (get_option('gds_email_alerts')) : ?>
+            <li class="email"><a href="<?php echo esc_attr(get_option('gds_email_alerts')) ?>">email alerts</a></li>
+          <?php endif ?>
+        </ul>
+      </div>
+    <?php endif ?>
   </div>
 </header>

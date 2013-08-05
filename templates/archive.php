@@ -7,6 +7,7 @@
     <?php if ( has_post_thumbnail() ) {
     	the_post_thumbnail('large');
     	} ?> 
+    
   </header>
   <div class="entry-summary">
     <?php the_excerpt() ?>
