@@ -1,4 +1,5 @@
 <h2 class="archive-title"><?php single_cat_title(); ?></h2>
+<?php echo category_description(); ?>
 <?php while (have_posts()) : the_post() ?>
 <article <?php post_class() ?>>
   <header>
