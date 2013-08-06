@@ -1,0 +1,11 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@git.dxw.net:roots-composer"
+        }
+    ],
+    "require": {
+        "dxw/roots-composer": "dev-master"
+    }
+}

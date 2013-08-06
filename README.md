@@ -47,6 +47,12 @@ And finally, to opitimise PNGs and JPEGs (not done as part of any of the other t
 The main LESS file is assets/css/main.less. JS is concatenated from assets/js/plugins/\* and assets/js/main.js (in that order).
 
 
+## To update roots
+
+    $ composer update
+    $ phar-install
+
+
 ## This theme uses
 
 * http://www.rootstheme.com/

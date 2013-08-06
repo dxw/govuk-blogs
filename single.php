@@ -1,1 +1,1 @@
-<?php include(__DIR__.'/roots/single.php');
+<?php roots_require('single.php');
