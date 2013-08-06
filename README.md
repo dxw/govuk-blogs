@@ -27,9 +27,10 @@ To compile the JavaScript (concatenation and minification) and CSS (from LESS), 
 
 To get set up:
 
-    $ sudo npm install -g grunt-cli # install grunt command line tool
+    $ sudo npm install -g grunt-cli bower # install grunt command line tool and bower
     $ cd themes/govuk-blogs
-    $ npm install                   # MUST be run in govuk-blogs directory
+    $ npm install                         # MUST be run in govuk-blogs directory
+    $ bower install                       # ditto
 
 To have grunt watch your LESS/JS for changes and re-build them accordingly:
 
