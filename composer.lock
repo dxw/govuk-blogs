@@ -1,0 +1,50 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "fb5e21467cf501fecb7be5a5ccda7385",
+    "packages": [
+        {
+            "name": "dxw/roots-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.dxw.net:roots-composer",
+                "reference": "8ef4b830f978c608ac3b4c1739c88b739ddda013"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "Roots in a Composer module!",
+            "homepage": "https://github.com/dxw/roots-composer",
+            "time": "2013-08-06 12:27:37"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dxw/roots-composer": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
