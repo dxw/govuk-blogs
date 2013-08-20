@@ -12,7 +12,6 @@
   <body <?php body_class() ?>>
 
     <?php get_template_part('templates/govuk') ?>
-    <div class="js-cookies-banner"></div>
 
     <section class="container">
       <?php do_action('get_header') ?>

@@ -7,5 +7,5 @@
     </div>
   </div>
 </header>
-<div class="container bar">
-</div>
+<div class="js-cookies-banner"></div>
+<div class="container bar"></div>
