@@ -1,10 +1,14 @@
-'use strict'
+/* jshint asi: true */
+/* global jQuery: false */
+/* global cookie: false */
+
 jQuery(function ($) {
+    'use strict';
 
     // Categories dropdown
 
     $('.js-categories-dropdown').change(function (e) {
-        var cat = parseInt(this.value)
+        var cat = parseInt(this.value, 10)
         if (cat === 0) {
             location.href = '/'
         } else {
@@ -33,7 +37,7 @@ jQuery(function ($) {
     // Cookies banner
 
     if (cookie.get('gds_seen_cookie_message') === undefined) {
-        cookie.set('gds_seen_cookie_message', 'true')
+        cookie.set('gds_seen_cookie_message', 'true', {expires: 365.25 * 10})
 
         $('.js-cookies-banner').each(function () {
             $(this).html(
