@@ -46,13 +46,8 @@
         <?php get_search_form() ?>
       </div>
       <?php else : ?>
-      <div class="span4 subscribe">
-        <ul>
-          <li class="atom"><a href="<?php echo esc_attr(get_feed_link('atom')) ?>">atom</a></li>
-          <?php if (get_option('gds_email_alerts')) : ?>
-            <li class="email"><a href="<?php echo esc_attr(get_option('gds_email_alerts')) ?>">email alerts</a></li>
-          <?php endif ?>
-        </ul>
+      <div class="span4">
+        <?php get_template_part('templates/feed-email') ?>
       </div>
     <?php endif ?>
   </div>
