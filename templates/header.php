@@ -5,16 +5,14 @@
       <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
     </div>
 
-  <?php $logo_options = get_option('theme_logo_options'); ?>  
-    <?php if ($logo_options['logo']): ?>      
+    <?php $logo_options = get_option('theme_logo_options'); ?>
+    <?php if ($logo_options['logo']): ?>
       <div class="span4 logo-container">
-          <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />  
+        <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
       </div>
-    <?php  endif; ?> 
-    
-    <?php if (!$logo_options['logo']): ?>  
+    <?php else : ?>
       <div class="span4 search-container">
-          <?php get_search_form() ?>
+        <?php get_search_form() ?>
       </div>
     <?php endif ?>
   </div>
@@ -43,11 +41,11 @@
       </table>
     </div>
 
-    <?php if ($logo_options['logo']): ?>  
+    <?php if ($logo_options['logo']): ?>
       <div class="span4 search-container">
         <?php get_search_form() ?>
       </div>
-    <?php else : ?>
+      <?php else : ?>
       <div class="span4 subscribe">
         <ul>
           <li class="atom"><a href="<?php echo esc_attr(get_feed_link('atom')) ?>">atom</a></li>
