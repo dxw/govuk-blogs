@@ -9,6 +9,9 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('main', get_stylesheet_directory_uri().'/assets/main.min.css');
 });
 
+add_action('admin_enqueue_scripts', function () {
+  wp_enqueue_style('admin', get_stylesheet_directory_uri().'/assets/admin.min.css');
+});
 
 # Emit ie6 stylesheet.
 # wp_head with priority 20 - runs after other styles get output
