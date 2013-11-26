@@ -25,13 +25,16 @@ function share_icons($id) {
 
   ?>
 
-  <ul>
-    <li><a href="<?php echo esc_attr($twitter_url) ?>">Share by Twitter</a></li>
-    <li><a href="<?php echo esc_attr($facebook_url) ?>">Share by Facebook</a></li>
-    <?php if ($thumbnail_id) : ?>
-      <li><a href="<?php echo esc_attr($pinterest_url) ?>">Share by Pinterest</a></li>
-    <?php endif ?>
-  </ul>
+  <div class="social-buttons">
+    <ul>
+      <li><a target="_blank" href="<?php echo esc_attr($twitter_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/tweet.png" alt="Tweet"></a></li>
+      <li><a target="_blank" href="<?php echo esc_attr($facebook_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/fb-share.png" alt="Share via Facebook"></a></li>
+      <?php if ($thumbnail_id) : ?>
+        <li><a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/pin_it_button.png" alt="Pin it"></a></li>
+      <?php endif ?>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
 
   <?php
 }
