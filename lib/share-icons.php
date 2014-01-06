@@ -1,9 +1,6 @@
 <?php
 
 function share_icons($id) {
-  # TODO - remove this when this functionality is ready to deploy.
-  return;
-
   $url = get_permalink($id);
   $title = get_the_title($id);
   $thumbnail_id = get_post_thumbnail_id($id);
