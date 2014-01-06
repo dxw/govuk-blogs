@@ -12,7 +12,6 @@ roots_require('lib/titles.php');
 roots_require('lib/cleanup.php');
 roots_require('lib/nav.php');
 roots_require('lib/comments.php');
-roots_require('lib/rewrites.php');
 require(__DIR__.'/lib/widgets.php');
 require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');

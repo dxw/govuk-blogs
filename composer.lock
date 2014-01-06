@@ -11,7 +11,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.dxw.net:roots-composer",
-                "reference": "8ef4b830f978c608ac3b4c1739c88b739ddda013"
+                "reference": "2fad80195fc15bd48329f398d256fcfd013ca0d5"
             },
             "type": "library",
             "autoload": {
@@ -28,7 +28,7 @@
             ],
             "description": "Roots in a Composer module!",
             "homepage": "https://github.com/dxw/roots-composer",
-            "time": "2013-08-06 12:27:37"
+            "time": "2013-12-06 15:08:34"
         }
     ],
     "packages-dev": [
