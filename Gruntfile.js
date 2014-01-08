@@ -20,17 +20,21 @@
 // % grunt img
 //
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+
+    'use strict';
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         less: {
             dist: {
                 options: {
-                    yuicompress: true,
+                    compress: true,
+                    sourceMap: true,
                 },
                 files: {
-                    "assets/main.min.css": "assets/css/main.less",
-                    "assets/admin.min.css": "assets/css/admin.less",
+                    'build/main.min.css': 'assets/css/main.less',
+                    'build/admin.min.css': 'assets/css/admin.less',
                 },
             },
         },
@@ -40,13 +44,29 @@ module.exports = function(grunt) {
                 options: {
                     preserveComments: 'some',
                     compress: false,
+                    sourceMap: 'build/main.min.js.map',
+                    sourceMappingURL: 'main.min.js.map',
+                    sourceMapRoot: '../',
                 },
                 files: {
-                    'assets/main.min.js': [
+                    'build/main.min.js': [
                         'assets/js/plugins/*.js',
                         'assets/js/main.js',
                     ],
                 },
+            },
+        },
+
+        copy: {
+            dist: {
+                files: [
+                    {
+                        src: [
+                            'bower_components/bsie/bootstrap/css/bootstrap-ie6.min.css',
+                        ],
+                        dest: 'build/',
+                    },
+                ],
             },
         },
 
@@ -55,7 +75,8 @@ module.exports = function(grunt) {
                 src: 'assets/img',
             },
         },
-        watch: {
+
+        _watch: {
             css: {
                 files: ['assets/css/**/*.less'],
                 tasks: ['less'],
@@ -70,9 +91,27 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-img')
 
+    grunt.registerTask('bower-install', 'Installs bower deps', function () {
+        var done = this.async()
+          , bower = require('bower')
+
+        bower.commands.install().on('end', function () {
+            done()
+        })
+    })
+
+    grunt.renameTask('watch', '_watch')
+    grunt.registerTask('watch', [
+        'default',
+        '_watch',
+    ])
+
     grunt.registerTask('default', [
+        'bower-install',
+        'copy',
         'less',
         'uglify',
     ])
