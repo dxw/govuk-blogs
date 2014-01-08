@@ -102,6 +102,10 @@ input{
   .arrow {
     width: 45%;
     padding: 10px 0px;
+
+    &:hover {
+      background-color: #e7e7e7;
+    }
     
     span.contain {
       padding-top: 10px;
@@ -115,10 +119,10 @@ input{
       height: 50px;
       margin: 0px 5px;
     }
-  }
-  
-  .arrow:hover {
-    background-color: #e7e7e7;
+
+    .lte-ie7 & .link {
+      line-height: 1.2em;
+    }
   }
 
   .page-numbers {
