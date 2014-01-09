@@ -51,6 +51,7 @@ module.exports = function (grunt) {
                 files: {
                     'build/main.min.js': [
                         'assets/js/plugins/*.js',
+                        'bower_components/jquery-placeholder/jquery.placeholder.js',
                         'assets/js/main.js',
                     ],
                 },

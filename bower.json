@@ -2,6 +2,7 @@
   "name": "a",
   "dependencies": {
     "bootstrap": "~2.3.2",
-    "bsie": "https://github.com/ddouble/bsie.git"
+    "bsie": "https://github.com/ddouble/bsie.git",
+    "jquery-placeholder": "~2.0.7"
   }
 }
