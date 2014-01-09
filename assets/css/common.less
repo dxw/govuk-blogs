@@ -220,6 +220,11 @@ table td small {
       top: 5px;
       right: 6px;
 
+      .lte-ie7 & {
+        // Apparently pixels are a different size in IE7
+        text-indent: -100000000000000px;
+      }
+
       &:active, &:hover {
         top: 8px;
       }
