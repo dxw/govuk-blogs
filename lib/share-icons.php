@@ -26,11 +26,24 @@ function share_icons($id) {
   ?>
 
   <div class="social-buttons">
+    <p><strong>Share this page</strong></p>
     <ul>
-      <li><a target="_blank" href="<?php echo esc_attr($twitter_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/tweet.png" alt="Tweet"></a></li>
-      <li><a target="_blank" href="<?php echo esc_attr($facebook_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/fb-share.png" alt="Share via Facebook"></a></li>
+      <li>
+        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>">
+          <span class="twitter"></span> Twitter
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>">
+          <span class="facebook"></span> Facebook
+        </a>
+      </li>
       <?php if ($thumbnail_id) : ?>
-        <li><a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/assets/img/social/pin_it_button.png" alt="Pin it"></a></li>
+        <li>
+          <a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>">
+            <span class="pinterest"></span> Pinterest
+          </a>
+        </li>
       <?php endif ?>
     </ul>
     <div class="clearfix"></div>

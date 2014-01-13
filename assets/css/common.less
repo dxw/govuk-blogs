@@ -267,6 +267,10 @@ table td small {
 }
 
 .social-buttons {
+  margin-top: 50px;
+  p {
+    margin-bottom: 5px;
+  }
   ul {
     margin: 0;
   }
@@ -274,6 +278,35 @@ table td small {
   li {
     list-style: none;
     float: left;
+    margin-right: 10px;
+    &:first-child {
+      padding-left: 0;
+    }
+    a {
+      height: 25px;
+      display: block;
+      vertical-align: middle;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 24px;
+      span {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        float: left;
+        background: #2e3191 url(../assets/img/social/social-icons-sprite.png) no-repeat 0 0;
+        margin-right: 5px;
+        &.facebook {
+          background-position: -2px -3px;
+        }
+        &.twitter {
+          background-position: -2px -33px;
+        }
+        &.pinterest {
+          background-position: -2px -64px;
+        }
+      }
+    }
   }
 }
 
