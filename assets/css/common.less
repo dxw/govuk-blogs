@@ -214,15 +214,20 @@ table td small {
       width: 28px;
       height: 20px;
       box-shadow: none;
-      background: url(img/search.png) no-repeat center center #fff;
-      text-indent: -1000px;
+      background: url(../assets/img/search.png) no-repeat center center #fff;
+      text-indent: -10000px;
       position: absolute;
       top: 5px;
       right: 6px;
-    }
 
-    input[type="submit"]:active, input[type="submit"]:hover {
-      top: 8px;
+      .lte-ie7 & {
+        // Apparently pixels are a different size in IE7
+        text-indent: -100000000000000px;
+      }
+
+      &:active, &:hover {
+        top: 8px;
+      }
     }
 
   }
@@ -251,12 +256,60 @@ table td small {
 
   .atom a {
     padding-left: 18px;
-    background: url(img/icon-atom.png) no-repeat left 1px;
+    background: url(../assets/img/icon-atom.png) no-repeat left 1px;
   }
 
   .email a {
     padding-left: 25px;
-    background: url(img/icon-email.png) no-repeat left 1px;
+    background: url(../assets/img/icon-email.png) no-repeat left 1px;
   }
 
+}
+
+.social-buttons {
+  margin-top: 50px;
+  p {
+    margin-bottom: 5px;
+  }
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    &:first-child {
+      padding-left: 0;
+    }
+    a {
+      height: 25px;
+      display: block;
+      vertical-align: middle;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 28px;
+      span {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        float: left;
+        background: #2e3191 url(../assets/img/social/social-icons-sprite.png) no-repeat 0 0;
+        margin-right: 5px;
+        &.facebook {
+          background-position: -2px -3px;
+        }
+        &.twitter {
+          background-position: -2px -33px;
+        }
+        &.pinterest {
+          background-position: -2px -64px;
+        }
+      }
+    }
+  }
+}
+
+.bar {
+  border-top: 10px solid #57da95;
 }

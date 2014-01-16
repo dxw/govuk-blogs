@@ -102,6 +102,10 @@ input{
   .arrow {
     width: 45%;
     padding: 10px 0px;
+
+    &:hover {
+      background-color: #e7e7e7;
+    }
     
     span.contain {
       padding-top: 10px;
@@ -110,15 +114,19 @@ input{
     
     .arrow-button {
       display: inline-block;
-      background: url('img/arrow-sprite.png') no-repeat;
+      background: url(../assets/img/arrow-sprite.png) no-repeat;
       width: 30px;
       height: 50px;
       margin: 0px 5px;
     }
-  }
-  
-  .arrow:hover {
-    background-color: #e7e7e7;
+
+    .lte-ie7 & {
+      cursor: pointer;
+
+      .link {
+        line-height: 1.2em;
+      }
+    }
   }
 
   .page-numbers {
@@ -126,6 +134,10 @@ input{
     font-size: 14px;
     font-size: 1.4rem;
     width: 100%;
+
+    .lte-ie7 & {
+      width: 200px;
+    }
   }
   
   .link {
@@ -133,6 +145,10 @@ input{
     font-size: 27px;
     font-size: 2.7rem;
     width: 100%;
+
+    .lte-ie7 & {
+      width: 200px;
+    }
   }
 
   .next {
