@@ -16,7 +16,7 @@
         <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
       </p>
     </footer>
-    <?php share_icons(get_the_ID()) ?>
-    <?php comments_template('/templates/comments.php') ?>
   </article>
+  <?php share_icons(get_the_ID()) ?>
+  <?php comments_template('/templates/comments.php') ?>
 <?php endwhile ?>
