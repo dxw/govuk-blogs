@@ -23,7 +23,7 @@
         <?php if (get_option('gds_organisations')) : ?>
           <tr>
             <th width="130px">Organisations:</th>
-            <td><?php echo get_option('gds_organisations') ?></td>
+            <td><?php gds_organisations() ?></td>
           </tr>
         <?php endif ?>
         <?php if (get_option('gds_topics')) : ?>
