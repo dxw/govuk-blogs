@@ -20,10 +20,10 @@
   <div class="bottom row">
     <div class="span8 blog-meta">
       <table>
-        <?php if (get_option('gds_organisations')) : ?>
+        <?php if ($orgs = gds_organisations()) : ?>
           <tr>
             <th width="130px">Organisations:</th>
-            <td><?php gds_organisations() ?></td>
+            <td><?php echo $orgs # this is pre-escaped ?></td>
           </tr>
         <?php endif ?>
         <?php if (get_option('gds_topics')) : ?>

@@ -11,10 +11,9 @@ function gds_organisations() {
       foreach ($field as $f) {
         $output[] = '<a href="'.esc_attr($orgs[$f['organisation']]['web_url']).'">'.esc_html($orgs[$f['organisation']]['title']).'</a>';
       }
-      echo implode(', ', $output);
-      return;
+      return implode(', ', $output);
     }
   }
 
-  echo get_option('gds_organisations');
+  return get_option('gds_organisations');
 }
