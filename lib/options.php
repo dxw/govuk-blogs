@@ -1,10 +1,5 @@
 <?php
 
-add_action('admin_enqueue_scripts', function () {
-  do_action('acf/input/admin_enqueue_scripts');
-});
-add_action('admin_head', [$GLOBALS['acf_options_page'], 'admin_head']);
-
 # Add theme settings
 add_action('admin_menu', function () {
 
@@ -28,6 +23,7 @@ add_action('admin_menu', function () {
       'title' => __('Location'),
     ),
   );
+
 
   add_theme_page($title, $title, 'create_users', 'gds_options', function () use ($title, $options) {
     ?>
@@ -53,14 +49,6 @@ add_action('admin_menu', function () {
               </tr>
             <?php endforeach ?>
           </table>
-
-          <?php
-
-          $fields = apply_filters('acf/field_group/get_fields', array(), 'acf_organisations');
-          do_action('acf/create_fields', $fields, 'options');
-
-          ?>
-          <input type="text" name="acf_nonce" value="<?php echo wp_create_nonce('input'); ?>">
 
           <?php submit_button() ?>
 
