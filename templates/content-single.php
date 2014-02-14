@@ -16,6 +16,17 @@
       </p>
     </footer>
   </article>
+
+  <div class="next-prev">
+    <div class="previous pull-left">
+      <?php previous_post_link() ?>
+    </div>
+    <div class="next pull-right">
+      <?php next_post_link() ?>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
   <?php share_icons(get_the_ID()) ?>
   <?php comments_template('/templates/comments.php') ?>
 <?php endwhile ?>
