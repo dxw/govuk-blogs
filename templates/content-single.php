@@ -12,10 +12,6 @@
     </div>
     <footer class="single">
       <p>
-        <strong>By:</strong> <?php gds_byline(); ?>
-        &nbsp;&nbsp;<strong>Category:</strong> <?php echo get_the_category_list(', ') ?>
-      </p>
-      <p>
         <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
       </p>
     </footer>
