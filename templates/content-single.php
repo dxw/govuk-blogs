@@ -11,6 +11,12 @@
       <?php the_content() ?>
     </div>
     <footer class="single">
+      <ul class="related-posts">
+        <?php while (have_rows('related_posts')) : ?>
+          <?php the_row() ?>
+          <li><a href="<?php echo esc_attr(get_sub_field('url')) ?>"><?php echo esc_html(get_sub_field('title')) ?></a></li>
+        <?php endwhile ?>
+      </ul>
       <p>
         <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
       </p>
