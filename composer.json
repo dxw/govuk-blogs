@@ -6,6 +6,8 @@
         }
     ],
     "require": {
-        "dxw/roots-composer": "dev-master"
+        "dxw/roots-composer": "dev-master",
+        "mustache/mustache": "dev-master",
+        "dxw/php-missing": "dev-master"
     }
 }
