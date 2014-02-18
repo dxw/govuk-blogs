@@ -1,3 +1,4 @@
+<div class="container bar"></div>
 <section class="container">
   <?php do_action('get_header') ?>
   <?php get_template_part('templates/header') ?>
