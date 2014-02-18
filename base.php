@@ -33,5 +33,6 @@ echo $template->render([
     </section>
     <?php
   }),
+  'footerSupportLinks' => \Missing\String::get_output(function () { get_template_part('templates/footer'); }),
   'bodyEnd' => \Missing\String::get_output('wp_footer'),
 ]);
