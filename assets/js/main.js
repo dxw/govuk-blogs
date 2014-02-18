@@ -34,29 +34,6 @@ jQuery(function ($) {
     })
 
 
-    // Cookies banner
-
-    if (cookie.get('gds_seen_cookie_message') === undefined) {
-        cookie.set('gds_seen_cookie_message', 'true', {expires: 365.25 * 10})
-
-        $('.js-cookies-banner').each(function () {
-            $(this).html(
-                '<div class="cookie-message full-width">' +
-                '  <div class="container">' +
-                '    <div class="row">' +
-                '      <div class="span12">' +
-                '        <p>' +
-                '          GOV.UK blogs use cookies to make the site simpler. <a href="https://blog.gov.uk/cookies/">Find out more about cookies</a>' +
-                '        </p>' +
-                '      </div>' +
-                '    </div>' +
-                '  </div>' +
-                '</div>'
-            )
-        })
-    }
-
-
     // Polyfills
 
     $('input, textarea').placeholder()
