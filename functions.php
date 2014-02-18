@@ -29,3 +29,5 @@ require(__DIR__.'/lib/icon.php');
 require(__DIR__.'/lib/feed-email-widget.php');
 require(__DIR__.'/lib/share-icons.php');
 require(__DIR__.'/lib/meta.php');
+require(__DIR__.'/lib/organisations.php');
+require(__DIR__.'/lib/acf.php');
