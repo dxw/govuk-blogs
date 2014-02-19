@@ -1,42 +1,20 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lte-ie8 lte-ie7 lte-ie6" <?php language_attributes() ?>> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lte-ie8 lte-ie7" <?php language_attributes() ?>> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lte-ie8" <?php language_attributes() ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes() ?>> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <title><?php wp_title('|', true, 'right') ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-    <?php wp_head() ?>
-    
-  </head>
-  <body <?php body_class() ?>>
+<?php
 
-    <?php get_template_part('templates/govuk') ?>
+$m = new Mustache_Engine([
+  'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/build/govuk_template/views/layouts', [
+    'extension' => '.html',
+  ]),
+]);
 
-    <section class="container">
-      <?php do_action('get_header') ?>
-      <?php get_template_part('templates/header') ?>
-      <?php if (is_home()) : ?>
-        <?php get_template_part('templates/featured') ?>
-      <?php endif ?>
+$template = $m->loadTemplate('govuk_template');
 
-      <div class="row">
-        <div class="span8 main-content">
-          <?php include roots_template_path() ?>
-          <?php if(!is_single() || !is_page()) {
-            get_template_part('templates/paging');
-            } ?>
-        </div>
-        <div class="span4 sidebar-contain">
-          <?php get_template_part('templates/sidebar') ?>
-        </div>
-      </div>
-    </section>
-
-    <?php get_template_part('templates/footer') ?>
-    <?php wp_footer() ?>
-
-  </body>
-</html>
+echo $template->render([
+  'pageTitle' => \Missing\String::get_output(function () { wp_title('|', true, 'right'); }),
+  'assetPath' => get_template_directory_uri().'/build/govuk_template/assets/',
+  'head' => \Missing\String::get_output('wp_head'),
+  'bodyClasses' => \Missing\String::get_output('body_class'),
+  'cookieMessage' => \Missing\String::get_output(function () { get_template_part('templates/cookies'); }),
+  'content' => \Missing\String::get_output(function () { get_template_part('templates/base'); }),
+  'footerSupportLinks' => \Missing\String::get_output(function () { get_template_part('templates/footer'); }),
+  'bodyEnd' => \Missing\String::get_output('wp_footer'),
+]);

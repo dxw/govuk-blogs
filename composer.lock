@@ -3,8 +3,43 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fb5e21467cf501fecb7be5a5ccda7385",
+    "hash": "1675e4fe95aba5b8141ec8b263b4eac7",
     "packages": [
+        {
+            "name": "dxw/php-missing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/php-missing.git",
+                "reference": "52efbacd07b663a604a0c1634bea35acc86a9dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/php-missing/zipball/52efbacd07b663a604a0c1634bea35acc86a9dfa",
+                "reference": "52efbacd07b663a604a0c1634bea35acc86a9dfa",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Missing": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "The stdlib you wish PHP had",
+            "homepage": "https://github.com/dxw/php-missing",
+            "time": "2014-01-16 15:00:21"
+        },
         {
             "name": "dxw/roots-composer",
             "version": "dev-master",
@@ -29,6 +64,51 @@
             "description": "Roots in a Composer module!",
             "homepage": "https://github.com/dxw/roots-composer",
             "time": "2013-12-06 15:08:34"
+        },
+        {
+            "name": "mustache/mustache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "996c944fa2ddedddfaf0d276b913809d6a32fd85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/996c944fa2ddedddfaf0d276b913809d6a32fd85",
+                "reference": "996c944fa2ddedddfaf0d276b913809d6a32fd85",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "time": "2014-01-09 00:36:09"
         }
     ],
     "packages-dev": [
@@ -39,7 +119,9 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dxw/roots-composer": 20
+        "dxw/roots-composer": 20,
+        "mustache/mustache": 20,
+        "dxw/php-missing": 20
     },
     "platform": [
 
