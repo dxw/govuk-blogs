@@ -94,12 +94,17 @@ body.single .main-content article {
 }
 
 figure, figure.thumbnail {
+  max-width: 610px !important; // overwriting the WP inline styles
   background-color: #e1e8e8;
   border: solid 1px #bbb;
   -webkit-box-shadow: none;
   box-shadow: none;
   -moz-box-shadow: none;
   margin-bottom: 0.75em;
+}
+
+figure.alignnone {
+  margin-left: 0;
 }
 
 figcaption {
@@ -179,12 +184,26 @@ table td small {
   .sidebar-contain, .subscribe, .search-container {
     width: 218px;
   }
+  figure, figure.thumbnail {
+    max-width: 466px !important; // overwriting the WP inline styles
+  }
 }
 
 @media (max-width: 767px) {
   .sidebar-contain, .subscribe, .search-container {
     width: 100%;
     margin-left: 0px;
+  }
+  figure, figure.thumbnail {
+    max-width: 98% !important; // overwriting the WP inline styles
+  }
+}
+
+@media (max-width: 500px) {
+  figure.alignnone, figure.alignleft, figure.alignright, figure.aligncenter {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
   }
 }
 
