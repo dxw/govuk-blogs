@@ -38,12 +38,12 @@ add_action('admin_menu', function () {
               <?php $title = $v['title'] ?>
               <?php $type = $v['type'] ?>
               <tr valign="top">
-                <th scope="row"><label for="<?php echo $k ?>"><?php echo esc_html($title) ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($k) ?>"><?php echo esc_html($title) ?></label></th>
                 <td>
                   <?php if ($type === 'tinymce') : ?>
                     <?php wp_editor(get_option($k), $k) ?>
                   <?php elseif ($type === 'uri') : ?>
-                    <input type="url" name="<?php echo $k ?>" value="<?php echo get_option($k) ?>" class="regular-text">
+                    <input type="url" name="<?php echo esc_attr($k) ?>" value="<?php echo esc_attr(get_option($k)) ?>" class="regular-text">
                   <?php endif ?>
                 </td>
               </tr>
