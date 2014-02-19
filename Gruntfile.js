@@ -104,6 +104,34 @@ module.exports = function (grunt) {
         })
     })
 
+    grunt.registerTask('govuk_template', function () {
+        var done = this.async()
+          , child_process = require('child_process')
+          , async = require('async')
+
+          , runCommands = function (commands, callback) {
+              async.series(commands.map(function (command) {
+                  return function (callback) {
+                      child_process.exec(command, function (error, stdout, stderr) {
+                          if (error !== null) {
+                              console.log('error executing command')
+                              callback(true)
+                          }
+                          callback(null)
+                      })
+                  }
+              }), callback)
+            }
+
+        runCommands([
+            'test -d govuk_template || git clone https://github.com/alphagov/govuk_template.git',
+            'cd govuk_template && bundle install',
+            'cd govuk_template && bundle exec rake build:mustache',
+            'rm -rf build/govuk_template',
+            'cp -r govuk_template/pkg/mustache_govuk_template-0.6.1/ build/govuk_template',
+        ], done)
+    })
+
     grunt.renameTask('watch', '_watch')
     grunt.registerTask('watch', [
         'default',
