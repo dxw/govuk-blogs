@@ -52,6 +52,8 @@ module.exports = function (grunt) {
                     'build/main.min.js': [
                         'assets/js/plugins/*.js',
                         'bower_components/jquery-placeholder/jquery.placeholder.js',
+                        'bower_components/bowser/bowser.js',
+                        'bower_components/lte-ie/lte-ie.js',
                         'assets/js/main.js',
                     ],
                 },
