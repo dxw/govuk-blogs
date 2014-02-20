@@ -1,5 +1,9 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
+  @media (max-width: @mobileMaxWidth) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .no-js .hide-if-no-js {
@@ -190,6 +194,10 @@ table td small {
 }
 
 @media (max-width: 767px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .sidebar-contain, .subscribe, .search-container {
     width: 100%;
     margin-left: 0px;
