@@ -26,16 +26,16 @@
             <td><?php echo $orgs # this is pre-escaped ?></td>
           </tr>
         <?php endif ?>
-        <?php if (get_option('gds_topics')) : ?>
+        <?php if (get_option('options_gds_topics')) : ?>
           <tr>
             <th>Topics:</th>
-            <td><?php echo get_option('gds_topics') ?></td>
+            <td><?php echo get_option('options_gds_topics') ?></td>
           </tr>
         <?php endif ?>
-        <?php if (get_option('gds_location')) : ?>
+        <?php if (get_option('options_gds_location')) : ?>
           <tr>
             <th>Location:</th>
-            <td><?php echo get_option('gds_location') ?></td>
+            <td><?php echo get_option('options_gds_location') ?></td>
           </tr>
         <?php endif ?>
       </table>

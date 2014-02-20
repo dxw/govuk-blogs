@@ -15,5 +15,5 @@ function gds_organisations() {
     }
   }
 
-  return get_option('gds_organisations');
+  return get_option('options_gds_organisations');
 }
