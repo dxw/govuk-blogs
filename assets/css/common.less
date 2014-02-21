@@ -67,6 +67,18 @@ iframe.coveritlive {
   height: 500px;
 }
 
+.main-content iframe {
+  @media (max-width: @tabletMaxWidth) {
+    max-width: 476px;
+  }
+  @media (max-width: @tabletMinWidth) {
+    max-width: 100%;
+  }
+  @media (max-width: @mobileSmallWidth) {
+    height: auto;
+  }
+}
+
 .main-content article {
   border-top: @greyTopBorder;
   padding: 20px 0px 35px 0px;
@@ -140,12 +152,23 @@ table {
   padding-bottom: 3px; 
   padding-bottom: 0.3rem; 
   margin-bottom: 20px;
+  @media (max-width: @mobileMaxWidth) {
+    font-size: 1.3rem;
+    font-size: 13px;
+  }
+  @media (max-width: @mobileSmallWidth) {
+    font-size: 1.2rem;
+    font-size: 12px;
+  }
 }
 
 table th, table td {
   vertical-align: top;
   line-height: 1.3em;
-  padding: 0.7em 0.5em 0.7em 1em; 
+  padding: 0.7em 0.5em 0.7em 1em;
+  @media (max-width: @mobileSmallWidth) {
+    padding-left: 0.5em;
+  }
 }
 
 table tr:nth-child(even) td {
