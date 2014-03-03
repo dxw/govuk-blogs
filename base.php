@@ -9,7 +9,7 @@ $m = new Mustache_Engine([
 $template = $m->loadTemplate('govuk_template');
 
 echo $template->render([
-  'pageTitle' => \Missing\String::get_output(function () { wp_title('|', true, 'right'); }),
+  'pageTitle' => html_entity_decode(\Missing\String::get_output(function () { wp_title('|', true, 'right'); })),
   'assetPath' => get_template_directory_uri().'/build/govuk_template/assets/',
   'head' => \Missing\String::get_output('wp_head'),
   'bodyClasses' => implode(' ', array_map('esc_attr', get_body_class())),
