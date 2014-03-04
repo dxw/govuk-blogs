@@ -19,40 +19,27 @@ Requirements:
 
 * node and npm
 * grunt-cli and bower (npm install -g grunt-cli bower)
+* [composer](https://getcomposer.org/)
+* Run this in the theme: npm install
 
-To set the theme up (only need to do this once):
+If it's in build, don't touch it because it'll get overwritten.
 
-    % npm install
-
-
-### Static assets
-
-To build the CSS/JS:
-
-    % grunt
-
-To have grunt watch your LESS/JS for changes and re-build them accordingly:
+JS and LESS files live in assets/js and assets/css. To compile them when they change run this:
 
     % grunt watch
 
-To opitimise PNGs and JPEGs (not done as part of any of the other tasks):
+Images can be optimised like so:
 
     % grunt img
 
-The main LESS file is assets/css/main.less. JS is concatenated from assets/js/plugins/\* and assets/js/main.js (in that order).
-
-
-### To update roots
-
-    % composer update
-    % phar-install
-
-
-### To update govuk_template
+This theme is based on [govuk_template](https://github.com/alphagov/govuk_template) which is what many gov.uk sites use. We used mustache because that's the only format it generates for which a PHP implementation exists. The mustache template is included from base.php where all the variables are defined. And to grab the latest version of govuk_template run this:
 
     % grunt govuk_template
 
-This generates a mustache template and lots of CSS and JS which all ends up in build/govuk_template. The mustache template is included from base.php.
+To update the composer modules:
+
+    % composer update
+    % phar-install
 
 
 ## This theme uses
@@ -62,13 +49,15 @@ This generates a mustache template and lots of CSS and JS which all ends up in b
 * http://lesscss.org/
 * http://gruntjs.com/
 * https://github.com/alphagov/govuk_template
+* https://github.com/bobthecow/mustache.php
+* https://github.com/dxw/php-missing
 
 
 ## Help and bug reports
 
 If you get stuck with something we might be able to help (but can't guarantee it). We're always happy to receive bug reports (or, even better, pull requests).
 
-If you'd like to get in touch about anything to do with this theme, please use the issue tracker on Github: https://github.com/dxw/govuk-blogs/issues
+If you'd like to get in touch about anything to do with this theme, please use the issue tracker on GitHub: https://github.com/dxw/govuk-blogs/issues
 
 
 ## Licence
