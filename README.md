@@ -1,56 +1,58 @@
-GOV.UK Blogs
-============
+# GOV.UK Blogs
 
 This is the theme in use for the blogs hosted at blog.gov.uk. It is currently in beta.
-
-The theme uses Bootstrap, Roots, Grunt, and LESS.
 
 
 ## Installation
 
-Clone the repo into the WordPress themes directory:
+Clone the theme:
 
-    $ cd wp-content/themes
-    $ git clone https://github.com/dxw/govuk-blogs.git
+    % cd wp-content/themes
+    % git clone https://github.com/dxw/govuk-blogs.git
 
-After you've cloned the repo, there are some extra steps you'll need to follow to get up and running:
-
-    $ cd govuk-blogs
-    $ git submodule update --init
-
-This should give you the functioning theme. But the CSS and JavaScript require compilation (see Development).
+This will give you a functioning theme, but if you want to hack on it there are assets that need compiling. See the [Development](#development) section.
 
 
 ## Development
 
-To compile the JavaScript (concatenation and minification) and CSS (from LESS), you'll need to install grunt and this project's dependencies.
+Requirements:
 
-To get set up:
+* node and npm
+* grunt-cli and bower (npm install -g grunt-cli bower)
 
-    $ sudo npm install -g grunt-cli bower # install grunt command line tool and bower
-    $ cd themes/govuk-blogs
-    $ npm install                         # MUST be run in govuk-blogs directory
-    $ bower install                       # ditto
+To set the theme up (only need to do this once):
+
+    % npm install
+
+
+### Static assets
+
+To build the CSS/JS:
+
+    % grunt
 
 To have grunt watch your LESS/JS for changes and re-build them accordingly:
 
-    $ grunt watch
+    % grunt watch
 
-Or to compile the CSS/JS only once:
+To opitimise PNGs and JPEGs (not done as part of any of the other tasks):
 
-    $ grunt
-
-And finally, to opitimise PNGs and JPEGs (not done as part of any of the other tasks):
-
-    $ grunt img
+    % grunt img
 
 The main LESS file is assets/css/main.less. JS is concatenated from assets/js/plugins/\* and assets/js/main.js (in that order).
 
 
-## To update roots
+### To update roots
 
-    $ composer update
-    $ phar-install
+    % composer update
+    % phar-install
+
+
+### To update govuk_template
+
+    % grunt govuk_template
+
+This generates a mustache template and lots of CSS and JS which all ends up in build/govuk_template. The mustache template is included from base.php.
 
 
 ## This theme uses
@@ -59,6 +61,7 @@ The main LESS file is assets/css/main.less. JS is concatenated from assets/js/pl
 * http://twitter.github.io/bootstrap/
 * http://lesscss.org/
 * http://gruntjs.com/
+* https://github.com/alphagov/govuk_template
 
 
 ## Help and bug reports
