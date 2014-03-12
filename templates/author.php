@@ -2,7 +2,7 @@
   <div class="span8 author-container">
     <div class="row">
       <div class="span2 avatar">
-        <?php echo get_avatar( get_the_author_meta('email'), 140 ); ?>
+        <?php gds_avatar() ?>
       </div>
       <div class="span6">
         <h2 class="author-title"><?php the_author_meta('display_name'); ?></h2>

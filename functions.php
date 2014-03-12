@@ -31,3 +31,4 @@ require(__DIR__.'/lib/share-icons.php');
 require(__DIR__.'/lib/meta.php');
 require(__DIR__.'/lib/organisations.php');
 require(__DIR__.'/lib/acf.php');
+require(__DIR__.'/lib/avatar.php');
