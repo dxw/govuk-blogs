@@ -127,7 +127,7 @@ module.exports = function (grunt) {
 
         runCommands([
             'test -d govuk_template || git clone https://github.com/alphagov/govuk_template.git',
-            'cd govuk_template && bundle install',
+            'cd govuk_template && bundle install --path=vendor/bundle',
             'rm -rf govuk_template/pkg/*',
             'cd govuk_template && bundle exec rake build:mustache',
             'rm -rf build/govuk_template',
