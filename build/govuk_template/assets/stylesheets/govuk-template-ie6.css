@@ -128,7 +128,7 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased; }
 
-ol, ul, nav ol, nav ul {
+ul, nav ol, nav ul {
   list-style: inherit; }
 
 fieldset {
