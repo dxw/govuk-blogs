@@ -1,7 +1,10 @@
 <div class="media-body">
   <p class="media-heading">
     <span class="author"><?php echo get_comment_author_link() ?></span>
-    <time datetime="<?php echo comment_date('c') ?>">— <?php echo esc_html(get_comment_date('d/m/Y')) ?></time>
+    <span class="divider">—</span>
+    <time datetime="<?php echo comment_date('c') ?>"><?php echo esc_html(get_comment_date('d/m/Y')) ?></time>
+    <span class="divider">—</span>
+    <a href="<?php echo esc_attr(get_comment_link()) ?>">comment link</a>
   </p>
   <?php edit_comment_link(__('(Edit)', 'roots'), '', '') ?>
   <div class="comment-body">
