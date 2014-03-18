@@ -5,12 +5,13 @@
   </p>
   <?php edit_comment_link(__('(Edit)', 'roots'), '', '') ?>
   <div class="comment-body">
-  <?php if ($comment->comment_approved == '0') : ?>
-    <div class="alert">
-      <?php _e('Your comment is awaiting moderation.', 'roots') ?>
-    </div>
-  <?php endif ?>
+    <?php if ($comment->comment_approved == '0') : ?>
+      <div class="alert">
+        <?php _e('Your comment is awaiting moderation.', 'roots') ?>
+      </div>
+    <?php endif ?>
 
-  <?php comment_text() ?>
-  <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    <?php comment_text() ?>
+    <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
   </div>
+  <?php # There is a missing DIV tag here due to a bug in roots ?>
