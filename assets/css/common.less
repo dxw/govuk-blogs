@@ -107,6 +107,11 @@ body.single .main-content article {
 .page .main-content {
   border-top: @greyTopBorder;
   padding: 15px 0px;
+
+  // Allow ordered lists to have numbers
+  ol{
+    list-style-type: decimal;
+  }
 }
 
 figure, figure.thumbnail {
