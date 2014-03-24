@@ -26,5 +26,6 @@ add_action('wp_head', function () {
 add_action('wp_head', function () {
   ?>
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
+  <meta name="description" content="<?php bloginfo('description'); ?>" />
   <?php
 });
