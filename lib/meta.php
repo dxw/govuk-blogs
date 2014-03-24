@@ -24,7 +24,7 @@ add_action('wp_head', function () {
 
   ?>
 
-  <meta name="description" content="<?php echo esc_attr($content) ?>">
+  <meta name="description" content="<?php bloginfo('description'); ?>" />
 
   <?php
 });
