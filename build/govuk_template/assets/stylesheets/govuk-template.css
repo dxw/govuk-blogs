@@ -146,11 +146,11 @@ a:active {
   color: #2e8aca; }
 
 a[rel="external"]:after {
-  background-image: url(external-links/external-link.png?0.6.2);
+  background-image: url(external-links/external-link.png?0.6.4);
   background-repeat: no-repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     a[rel="external"]:after {
-      background-image: url(external-links/external-link-24x24.png?0.6.2);
+      background-image: url(external-links/external-link-24x24.png?0.6.4);
       background-size: 12px 400px; } }
 a[rel="external"]:after {
   content: "\A0\A0\A0\A0";
@@ -170,11 +170,11 @@ a[rel="external"]:hover:after {
 .external-link:hover:after {
   background-position: right 0px; }
 .external-link:after {
-  background-image: url(external-links/external-link-black-12x12.png?0.6.2);
+  background-image: url(external-links/external-link-black-12x12.png?0.6.4);
   background-repeat: no-repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .external-link:after {
-      background-image: url(external-links/external-link-black-24x24.png?0.6.2);
+      background-image: url(external-links/external-link-black-24x24.png?0.6.4);
       background-size: 12px 400px; } }
 
 /*
@@ -351,6 +351,7 @@ button:focus,
   background-color: #0b0c0c;
   width: 100%; }
   #global-header .header-wrapper {
+    background-color: #0b0c0c;
     max-width: 990px;
     margin: 0 auto;
     padding: 0.5em 15px; }
@@ -358,7 +359,6 @@ button:focus,
       #global-header .header-wrapper {
         padding: 0.5em 0; } }
     #global-header .header-wrapper .header-global .header-logo {
-      width: 49%;
       float: left; }
       @media (min-width: 769px) {
         #global-header .header-wrapper .header-global .header-logo {
@@ -548,12 +548,13 @@ button:focus,
   background-color: #dee0e2;
   border-top: 1px solid #a1acb2; }
   #footer .footer-wrapper {
-    max-width: 60em;
+    background-color: #dee0e2;
+    max-width: 990px;
     margin: 0 auto;
-    padding: 60px 1em 0 1em; }
-    @media (max-width: 640px) {
+    padding: 20px 0 0; }
+    @media (min-width: 641px) {
       #footer .footer-wrapper {
-        padding-top: 20px; } }
+        padding: 60px 15px 0; } }
   #footer a {
     color: #454a4c; }
     #footer a:hover {
@@ -577,7 +578,7 @@ button:focus,
     clear: both;
     font-size: 0;
     color: #454a4c;
-    padding-bottom: 60px; }
+    padding: 0 15px 60px; }
     @media (max-width: 640px) {
       #footer .footer-meta {
         margin: 0; } }
@@ -634,10 +635,10 @@ button:focus,
             height: 17px;
             overflow: hidden;
             text-indent: -999em;
-            background: url(images/open-government-licence.png?0.6.2) 0 0 no-repeat; }
+            background: url(images/open-government-licence.png?0.6.4) 0 0 no-repeat; }
             @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
               #footer .footer-meta .footer-meta-inner .open-government-licence h2 a {
-                background-image: url(images/open-government-licence_2x.png?0.6.2);
+                background-image: url(images/open-government-licence_2x.png?0.6.4);
                 background-size: 41px 17px; } }
         #footer .footer-meta .footer-meta-inner .open-government-licence p {
           font-family: "nta", Arial, sans-serif;
@@ -651,19 +652,6 @@ button:focus,
             #footer .footer-meta .footer-meta-inner .open-government-licence p {
               font-size: 14px;
               line-height: 1.14286; } }
-          #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-            font-family: "nta", Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857;
-            font-weight: 400;
-            text-transform: none; }
-            @media (max-width: 640px) {
-              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-                font-size: 12px;
-                line-height: 1.25; } }
-            @media (max-width: 640px) {
-              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-                font-size: 1em; } }
     #footer .footer-meta .copyright {
       font-family: "nta", Arial, sans-serif;
       font-size: 16px;
@@ -682,12 +670,12 @@ button:focus,
       #footer .footer-meta .copyright a {
         display: block;
         padding: 115px 0 0 0;
-        background: transparent url(images/govuk-crest.png?0.6.2) no-repeat 100% 0;
+        background: transparent url(images/govuk-crest.png?0.6.4) no-repeat 100% 0;
         text-align: right;
         text-decoration: none; }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           #footer .footer-meta .copyright a {
-            background-image: url(images/govuk-crest-2x.png?0.6.2);
+            background-image: url(images/govuk-crest-2x.png?0.6.4);
             background-size: 125px 102px; } }
       @media (max-width: 640px) {
         #footer .footer-meta .copyright {
