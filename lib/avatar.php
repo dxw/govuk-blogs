@@ -10,6 +10,7 @@ function gds_avatar() {
     $guest_authors = get_posts([
       'post_type' => 'guest-author',
       'post_status' => 'any',
+      'posts_per_page' => -1,
     ]);
 
     foreach ($guest_authors as $guest_author) {
