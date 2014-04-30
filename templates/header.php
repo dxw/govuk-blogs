@@ -26,12 +26,6 @@
             <td><?php echo $orgs # this is pre-escaped ?></td>
           </tr>
         <?php endif ?>
-        <?php if (get_option('options_gds_topics')) : ?>
-          <tr>
-            <th>Topics:</th>
-            <td><?php echo get_option('options_gds_topics') ?></td>
-          </tr>
-        <?php endif ?>
         <?php if (get_option('options_gds_location')) : ?>
           <tr>
             <th>Location:</th>

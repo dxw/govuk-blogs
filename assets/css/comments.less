@@ -1,7 +1,3 @@
-#comments {
-  margin-top: 50px;
-}
-
 .bypostauthor {
   .comment-body {
     background: #f0f0f0;
@@ -49,11 +45,34 @@
   li.comment li.comment {
     padding-left: 20px;
     border-left: 4px solid #231f20;
+    list-style-image: none;
+  }
+
+  .comment-reply-link,
+  .comment-link {
+    display: block;
+  }
+
+  .comment-link {
+    margin-bottom: 1.5em;
+    color: @greyText;
+    &:before {
+      .icomoon(@icon-link);
+    }
+
+    .lte-ie7 & {
+      padding-left: 25px;
+      background: url('../assets/img/icon-link.png') no-repeat;
+    }
   }
 }
 
 p.media-heading {
   time {
-    color: #919496;
+    color: @greyLight;
   }
+}
+
+.media-list {
+  margin-top: 0;
 }

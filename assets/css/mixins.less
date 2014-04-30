@@ -6,7 +6,6 @@
 @tabletMaxWidth:    979px;
 
 @greyTopBorder: 1px solid #bfc1c3;
-@greyText: #6f777b;
 
 // "Desktop"
 // No media-query
@@ -43,4 +42,19 @@
   background-image: url(../assets/img/follow-sprite.png);
   background-repeat: no-repeat;
   background-position: left (@h * -25px);
+}
+
+// Icon font
+.icomoon(@content) {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: @content;
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: none;
 }

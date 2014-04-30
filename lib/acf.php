@@ -94,15 +94,6 @@ if (function_exists("register_field_group")) {
         'media_upload' => 'yes',
       ),
       array (
-        'key' => 'field_53061c867decb',
-        'label' => 'Topics',
-        'name' => 'gds_topics',
-        'type' => 'wysiwyg',
-        'default_value' => '',
-        'toolbar' => 'full',
-        'media_upload' => 'yes',
-      ),
-      array (
         'key' => 'field_53061c9c7decc',
         'label' => 'Location',
         'name' => 'gds_location',

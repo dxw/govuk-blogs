@@ -246,46 +246,52 @@ table td small {
 /* Search */
 
 .form-search {
-    position: relative;
-    max-width: 350px;
+  position: relative;
+  max-width: 350px;
 
-    input.search-query {
-      border-color: @greyText;
-      border-radius: 0;
-      width: 90%;
-      position: absolute;
-      color: @greyText;
+  input.search-query {
+    border-color: @greyText;
+    border-radius: 0;
+    width: 90%;
+    position: absolute;
+    color: @greyText;
+    -webkit-appearance: none;
 
-      .lte-ie6 & {
-        position: static;
-      }
-
-      .lte-ie8 & {
-        width: 95%;
-      }
+    .lte-ie6 & {
+      position: static;
     }
 
-    input[type="submit"] {
-      width: 28px;
-      height: 20px;
-      box-shadow: none;
-      background: url('../assets/img/search.png') no-repeat center center #fff;
-      text-indent: -10000px;
-      position: absolute;
-      top: 5px;
-      right: 6px;
-
-      .lte-ie7 & {
-        // Apparently pixels are a different size in IE7
-        text-indent: -100000000000000px;
-      }
-
-      &:active, &:hover {
-        top: 8px;
-      }
+    .lte-ie8 & {
+      width: 95%;
     }
-
   }
+
+  input[type="submit"] {
+    width: 28px;
+    height: 20px;
+    box-shadow: none;
+    background: url('../assets/img/search.png') no-repeat center center #fff;
+    background-size: 18px 18px;
+    text-indent: -10000px;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+
+    .lte-ie8 & {
+      background-image: url('../assets/img/search-small.png');
+    }
+
+    .lte-ie7 & {
+      // Apparently pixels are a different size in IE7
+      text-indent: -100000000000000px;
+    }
+
+    &:active, &:hover {
+      top: 8px;
+    }
+  }
+
+}
   
 .avatar img {
   float: right;
@@ -310,22 +316,35 @@ table td small {
   }
 
   .atom a {
-    padding-left: 18px;
-    background: url('../assets/img/icon-atom.png') no-repeat left 1px;
+    &:before {
+      .icomoon(@icon-feed);
+      color: #000;
+      .font-size(13px, 13px, 13px);
+    }
+
+    .lte-ie7 & {
+      padding-left: 18px;
+      background: url('../assets/img/icon-atom.png') no-repeat;
+    }
   }
 
   .email a {
-    padding-left: 25px;
-    background: url('../assets/img/icon-email.png') no-repeat left 1px;
+    &:before {
+      .icomoon(@icon-envelope2);
+      color: #000;
+    }
+
+    .lte-ie7 & {
+      padding-left: 25px;
+      background: url('../assets/img/icon-email.png') no-repeat;
+    }
   }
 
 }
 
 .social-buttons {
   margin-top: 50px;
-  p {
-    margin-bottom: 5px;
-  }
+  margin-bottom: 1.5em;
   ul {
     margin: 0;
   }
@@ -334,31 +353,54 @@ table td small {
     list-style: none;
     float: left;
     margin-right: 10px;
+    margin-bottom: 0;
     &:first-child {
       padding-left: 0;
     }
     a {
-      height: 25px;
       display: block;
       vertical-align: middle;
       font-size: 14px;
       font-size: 1.4rem;
       line-height: 28px;
-      span {
-        width: 25px;
-        height: 25px;
-        display: inline-block;
-        float: left;
-        background: #2e3191 url('../assets/img/social/social-icons-sprite.png') no-repeat 0 0;
-        margin-right: 5px;
-        &.facebook {
-          background-position: -2px -3px;
+      &:before {
+        background: @blueDark;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        .font-size(18px, 18px, 18px);
+      }
+      &.twitter {
+        &:before {
+          .icomoon(@icon-twitter);
         }
-        &.twitter {
-          background-position: -2px -33px;
+
+        .lte-ie7 & {
+          height: 30px;
+          padding-left: 35px;
+          background: url('../assets/img/social-icons-blue.png') no-repeat 0 -30px;
         }
-        &.pinterest {
-          background-position: -2px -64px;
+      }
+      &.facebook {
+        &:before {
+          .icomoon(@icon-facebook);
+        }
+
+        .lte-ie7 & {
+          height: 30px;
+          padding-left: 35px;
+          background: url('../assets/img/social-icons-blue.png') no-repeat 0 0;
+        }
+      }
+      &.pinterest {
+        &:before {
+          .icomoon(@icon-pinterest);
+        }
+
+        .lte-ie7 & {
+          height: 30px;
+          padding-left: 35px;
+          background: url('../assets/img/social-icons-blue.png') no-repeat 0 -150px;
         }
       }
     }
