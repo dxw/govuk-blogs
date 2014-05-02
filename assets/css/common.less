@@ -23,12 +23,28 @@ body {
   }
 }
 
+.hidden-tablet {
+  @media screen and (max-width: @tabletMaxWidth) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.visible-tablet {
+  display: none;
+  visibility: hidden;
+  @media screen and (max-width: @tabletMaxWidth) {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
 .visible-mobile {
   display: none;
   visibility: hidden;
   @media screen and (max-width: @mobileMaxWidth) {
-    display: block;
-    visibility: visible;
+    display: block !important;
+    visibility: visible !important;
   }
 }
 
@@ -106,6 +122,23 @@ iframe.coveritlive {
 .main-content article {
   border-top: @greyTopBorder;
   padding: 20px 0px 35px 0px;
+
+  .entry-content-asset {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+  }
+
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 body.single .main-content article {

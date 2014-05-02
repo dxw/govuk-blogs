@@ -60,30 +60,7 @@ article.featured {
     margin-bottom: 10px;
   }
   
-  // Some elements commented out as an alternative cropping method for the featured image at tablet size 
-  
-  @media (min-width: @tabletMinWidth) and (max-width: @tabletMaxWidth) {
-    .image {
-      width: 190px;
-      padding: 0 25px 0 0;
-      float: left;
-      // height: 100%;
-      // overflow: hidden;
-
-      img {
-        width: 190px;
-        max-width: none;
-      //  height: 290px;
-      //  text-align: center;
-      //  margin-left: -(750 - 430) / 2px;
-      }
-    }
-    .text {
-      width: 455px;
-      float: right;
-    }
-  }
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: @tabletMaxWidth) {
     .image {
       width: 100%;
 
@@ -94,6 +71,7 @@ article.featured {
       img {
         width: 100%;
         height: auto;
+        margin-bottom: 1.5em;
       }
     }
     .text {
