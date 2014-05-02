@@ -264,13 +264,13 @@ table td small {
 
 /* Fix to increase the margin to the left of the sidebar */
 
-.sidebar-contain, .subscribe, .search-container, .logo-container {
+.sidebar-contain, .search-container, .logo-container {
   margin-left: 30px;
   width: 298px;
 }
 
 @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
-  .sidebar-contain, .subscribe, .search-container {
+  .sidebar-contain, .search-container {
     width: 218px;
   }
   figure, figure.thumbnail {
@@ -283,7 +283,7 @@ table td small {
     padding-right: 20px;
     padding-left: 20px;
   }
-  .sidebar-contain, .subscribe, .search-container {
+  .sidebar-contain, .search-container {
     width: 100%;
     margin-left: 0px;
   }
@@ -349,7 +349,7 @@ table td small {
     right: 6px;
 
     .lte-ie10 & {
-      right: 20px;
+      right: 26px;
     }
 
     .lte-ie8 & {
@@ -373,52 +373,7 @@ table td small {
   float: right;
 }
 
-.subscribe {
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-    font-size: 16px;
-    .font-size(1.6rem, 1.3rem, 1.3rem);
-    float: left;
-    margin-left: 18px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  .atom a {
-    &:before {
-      .icomoon(@icon-feed);
-      color: #000;
-      .font-size(13px, 13px, 13px);
-    }
-
-    .lte-ie7 & {
-      padding-left: 18px;
-      background: url('../assets/img/icon-atom.png') no-repeat;
-    }
-  }
-
-  .email a {
-    &:before {
-      .icomoon(@icon-envelope2);
-      color: #000;
-    }
-
-    .lte-ie7 & {
-      padding-left: 25px;
-      background: url('../assets/img/icon-email.png') no-repeat;
-    }
-  }
-
-}
-
-.social-buttons {
+.icons-buttons {
   margin-top: 50px;
   margin-bottom: 1.5em;
   ul {
@@ -436,8 +391,8 @@ table td small {
     a {
       display: block;
       vertical-align: middle;
-      font-size: 14px;
-      font-size: 1.4rem;
+      font-size: 16px;
+      .font-size(1.6rem, 1.3rem, 1.3rem);
       line-height: 28px;
       &:before {
         background: @blueDark;
@@ -481,6 +436,50 @@ table td small {
       }
     }
   }
+}
+
+.subscribe {
+  margin: 0;
+
+  ul {
+    li {
+      display: block;
+      float: none;
+      padding-left: 0;
+      a {
+
+        &:before {
+          .font-size(18px, 18px, 18px);
+        }
+
+        &.email {
+          &:before {
+            .icomoon(@icon-envelope);
+          }
+
+          .lte-ie7 & {
+            height: 30px;
+            padding-left: 35px;
+            background: url('../assets/img/social-icons-blue.png') no-repeat 0 -270px;
+          }
+        }
+
+        &.feed {
+          &:before {
+            .icomoon(@icon-feed);
+          }
+
+          .lte-ie7 & {
+            height: 30px;
+            padding-left: 35px;
+            background: url('../assets/img/social-icons-blue.png') no-repeat 0 -300px;
+          }
+        }
+
+      }
+    }
+  }
+
 }
 
 .bar {

@@ -12,7 +12,7 @@
     <?php endif ?>
 
     <?php comment_text() ?>
-    <a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" rel="external nofollow" title="<?php echo $title; ?>" class="comment-link">Link to the comment</a>
+    <a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" rel="external nofollow" title="<?php echo $title; ?>" class="comment-link">Link to this comment</a>
     <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
   </div>
   <?php # There is a missing DIV tag here due to a bug in roots ?>

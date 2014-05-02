@@ -6,7 +6,7 @@ add_action('widgets_init', function () {
 
 class FeedEmailWidget extends WP_Widget {
   public $fields = array(
-    'title'          => 'Title',
+    'title'          => 'Link',
   );
 
   function __construct() {
@@ -38,7 +38,7 @@ class FeedEmailWidget extends WP_Widget {
     ob_start();
     extract($args, EXTR_SKIP);
 
-    $title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
+    $link = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
 
     foreach($this->fields as $name => $label) {
       if (!isset($instance[$name])) { $instance[$name] = ''; }
@@ -46,11 +46,21 @@ class FeedEmailWidget extends WP_Widget {
 
     echo $before_widget;
 
-    if ($title) {
-      echo $before_title, $title, $after_title;
-    }
   ?>
-    <?php get_template_part('templates/feed-email') ?>
+    <h3>Sign up for updates from <?php echo get_bloginfo('name'); ?></h3>
+    <div class="subscribe icons-buttons">
+      <ul>
+        <?php if ($link) : ?>
+          <li>
+            <a href="<?php echo esc_attr($link) ?>" class="email">Email sign up</a>
+          </li>
+        <?php endif ?>
+        <li>
+          <a href="<?php echo esc_attr(get_feed_link('atom')) ?>" class="feed">Atom</a>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
   <?php
     echo $after_widget;
 

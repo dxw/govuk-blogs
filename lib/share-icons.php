@@ -25,18 +25,18 @@ function share_icons($id) {
 
   ?>
 
-  <div class="social-buttons">
+  <div class="icons-buttons">
     <h3>Share this page</h3>
     <ul>
       <li>
-        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="social twitter">Twitter</a>
+        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="twitter">Twitter</a>
       </li>
       <li>
-        <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="social facebook">Facebook</a>
+        <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="facebook">Facebook</a>
       </li>
       <?php if ($thumbnail_id) : ?>
         <li>
-          <a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>" class="social pinterest">Pinterest</a>
+          <a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>" class="pinterest">Pinterest</a>
         </li>
       <?php endif ?>
     </ul>
