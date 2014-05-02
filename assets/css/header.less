@@ -70,9 +70,17 @@
   .search-container, .logo-container {
     float: left;  
 
+    img {
+      float: right;
+    }
+
     @media (max-width: @mobileMaxWidth) {
       float: none;
       display: inline-block;
+
+      img {
+        float: none;
+      }
     }
   }
 
@@ -114,6 +122,9 @@
     }
     .bottom {
       margin-top: 0;
+      .search-container {
+        display: inline-block !important;
+      }
     }
     .blog {
       margin-bottom: 0px;

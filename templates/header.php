@@ -18,7 +18,7 @@
         <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
       </div>
     <?php else : ?>
-      <div class="span4 search-container">
+      <div class="span4 search-container visible-desktop">
         <?php get_search_form() ?>
       </div>
     <?php endif ?>
@@ -47,8 +47,8 @@
         <?php get_search_form() ?>
       </div>
       <?php else : ?>
-      <div class="span4">
-        <?php get_template_part('templates/feed-email') ?>
+      <div class="span4 search-container visible-mobile">
+        <?php get_search_form() ?>
       </div>
     <?php endif ?>
   </div>
