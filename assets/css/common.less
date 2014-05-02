@@ -236,7 +236,7 @@ table td small {
   width: 290px;
 }
 
-@media (max-width: 979px) and (min-width: 768px) {
+@media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
   .sidebar-contain, .subscribe, .search-container {
     width: 218px;
   }
@@ -245,7 +245,7 @@ table td small {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: @mobileMaxWidth) {
   .container {
     padding-right: 20px;
     padding-left: 20px;
@@ -273,6 +273,10 @@ table td small {
   position: relative;
   max-width: 350px;
 
+  @media (max-width: @mobileMaxWidth) {
+    max-width: 100%;
+  }
+
   input.search-query {
     border-color: @greyText;
     border-radius: 0;
@@ -287,6 +291,16 @@ table td small {
 
     .lte-ie8 & {
       width: 95%;
+    }
+
+    @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
+      width: 86%;
+    }
+
+    @media (max-width: @mobileMaxWidth) {
+      width: 96%;
+      padding-left: 2%;
+      padding-right: 2%;
     }
   }
 
@@ -438,6 +452,12 @@ table td small {
 
 .bar {
   border-top: 10px solid #57da95;
+  @media screen and (max-width: @tabletMaxWidth) {
+    margin: 0 auto;
+  }
+  @media screen and (max-width: @mobileMaxWidth) {
+    margin: 0 20px;
+  }
 }
 
 footer.single div.related-posts {

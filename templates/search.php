@@ -24,7 +24,7 @@
 
 <?php } else { ?>
   <article>
-    <p>No results found on <strong><?php echo get_bloginfo('name'); ?>.</strong></p>
+    <p>No results found on <strong><?php echo get_bloginfo('name'); ?></strong>.</p>
     <p>Please try searching again using different words or try this search on <a href="https://www.gov.uk/">Gov.uk</a>.</p>
   </article>
 <?php } ?>

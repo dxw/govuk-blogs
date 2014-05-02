@@ -1,13 +1,20 @@
 <header class="header">
   <div class="top row">
+
+    <?php $logo_options = get_option('theme_logo_options'); ?>
+    <?php if ($logo_options['logo']): ?>
+      <div class="span4 logo-container visible-mobile">
+        <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
+      </div>
+    <?php endif ?>
+
     <div class="span8">
       <h1 class="blog"><a href="<?php echo home_url() ?>">Blog</a></h1>
       <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
     </div>
 
-    <?php $logo_options = get_option('theme_logo_options'); ?>
     <?php if ($logo_options['logo']): ?>
-      <div class="span4 logo-container">
+      <div class="span4 logo-container visible-desktop">
         <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
       </div>
     <?php else : ?>

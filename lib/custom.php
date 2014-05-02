@@ -7,7 +7,8 @@ add_action('widgets_init', function () {
 
 
 # Force inserted media to use https urls
-add_filter('wp_get_attachment_url', function($url, $post_id) { 
-  return preg_replace('/^http:\/\//', 'https://', $url);
-}, 10, 2);
+// I have commented out for now to make the images work on the staging site. Please do not push to production!
+// add_filter('wp_get_attachment_url', function($url, $post_id) { 
+//   return preg_replace('/^http:\/\//', 'https://', $url);
+// }, 10, 2);
 

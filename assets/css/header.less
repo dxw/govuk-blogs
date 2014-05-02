@@ -1,3 +1,23 @@
+#global-header {
+  .header-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #logo {
+    @media screen and (max-width: @tabletMaxWidth) {
+      margin: 0;
+    }
+  }
+}
+
+.header-global {
+  @media screen and (max-width: @tabletMaxWidth) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 724px;
+  }
+}
+
 .header {
   margin-top: 40px;
   margin-bottom: 25px;
@@ -48,7 +68,12 @@
   }
 
   .search-container, .logo-container {
-    float:left;  
+    float: left;  
+
+    @media (max-width: @mobileMaxWidth) {
+      float: none;
+      display: inline-block;
+    }
   }
 
   .lte-ie6 & #searchsubmit {
@@ -67,17 +92,37 @@
     right: 0;
   }
 
+  @media (max-width: @tabletMaxWidth) {
+    .logo-container {
+      width: 218px;
+    }
+  }
+
   @media (max-width: @mobileMaxWidth) {
+    .logo-container {
+      float: none;
+      margin-left: 0;
+      margin-bottom: 15px;
+      img {
+        max-width: 80%;
+      }
+    }
+    .top {
+      .search-container {
+        margin-bottom: 20px;
+      }
+    }
     .bottom {
+      margin-top: 0;
     }
     .blog {
       margin-bottom: 0px;
     }
     .blog-title {
-      margin: 0px 0px 30px 0px;
+      margin: 0px 0px 15px 0px;
     }
     .blog-meta {
-      margin-top: 40px;
+      margin: 0 0 20px 0;
     }
     .subscribe {
       position: relative;
