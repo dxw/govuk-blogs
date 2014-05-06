@@ -401,6 +401,12 @@ table td small {
         color: #fff;
         .font-size(18px, 18px, 18px);
       }
+      &:hover, &:focus {
+        &:before {
+          background: darken(@blueDark, 10%);
+        }
+      }
+
       &.twitter {
         &:before {
           .icomoon(@icon-twitter);

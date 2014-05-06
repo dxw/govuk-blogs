@@ -6,7 +6,7 @@ add_action('widgets_init', function () {
 
 class FeedEmailWidget extends WP_Widget {
   public $fields = array(
-    'title'          => 'Link',
+    'link'          => 'Link',
   );
 
   function __construct() {
@@ -38,7 +38,7 @@ class FeedEmailWidget extends WP_Widget {
     ob_start();
     extract($args, EXTR_SKIP);
 
-    $link = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
+    $link = apply_filters('widget_title', empty($instance['link']) ? '' : $instance['link'], $instance, $this->id_base);
 
     foreach($this->fields as $name => $label) {
       if (!isset($instance[$name])) { $instance[$name] = ''; }
