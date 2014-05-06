@@ -47,12 +47,12 @@ class FeedEmailWidget extends WP_Widget {
     echo $before_widget;
 
   ?>
-    <h3>Sign up for updates from <?php echo get_bloginfo('name'); ?></h3>
+    <h3>Sign up for updates</h3>
     <div class="subscribe icons-buttons">
       <ul>
         <?php if ($link) : ?>
           <li>
-            <a href="<?php echo esc_attr($link) ?>" class="email">Email sign up</a>
+            <a href="<?php echo esc_attr($link) ?>" class="email">Email</a>
           </li>
         <?php endif ?>
         <li>

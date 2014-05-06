@@ -9,6 +9,10 @@ article.featured {
   background: #f0f0f0;
   margin-bottom: 40px;
 
+  @media (max-width: @mobileMaxWidth) {
+    margin-bottom: 25px;
+  }
+
   .featured-wrapper {
     padding: 25px; 
   }
@@ -63,15 +67,16 @@ article.featured {
   @media (max-width: @tabletMaxWidth) {
     .image {
       width: 100%;
+      padding-left: 0;
 
       .entry-content-asset {
-        margin-bottom: 1.5em;
+        margin-bottom: 18px;
       }
 
       img {
         width: 100%;
         height: auto;
-        margin-bottom: 1.5em;
+        margin-bottom: 18px;
       }
     }
     .text {
@@ -80,10 +85,16 @@ article.featured {
       padding: 0px;
     }
     h2 {
-      margin-bottom: 1em;
+      margin-bottom: 15px;
     }
     .featured-wrapper {
       padding: 20px; 
+    }
+  }
+
+  @media (max-width: @mobileMaxWidth) {
+    .featured-wrapper {
+      padding: 15px; 
     }
   }
 }

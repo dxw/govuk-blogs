@@ -39,6 +39,13 @@ body {
   }
 }
 
+.hidden-mobile {
+  @media screen and (max-width: @mobileMaxWidth) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
 .visible-mobile {
   display: none;
   visibility: hidden;
@@ -74,6 +81,10 @@ article {
 
     .wp-post-image {
       margin-bottom: 20px;
+
+      @media (max-width: @mobileMaxWidth) {
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -123,6 +134,10 @@ iframe.coveritlive {
   border-top: @greyTopBorder;
   padding: 20px 0px 35px 0px;
 
+  @media (max-width: @mobileMaxWidth) {
+    padding: 5px 0 20px 0;
+  }
+
   .entry-content-asset {
     position: relative;
     padding-bottom: 56.25%;
@@ -130,6 +145,10 @@ iframe.coveritlive {
     height: 0;
     overflow: hidden;
     margin-bottom: 1.5em;
+
+    @media (max-width: @mobileMaxWidth) {
+      margin-bottom: 18px;
+    }
   }
 
   iframe {
@@ -307,7 +326,7 @@ table td small {
   max-width: 350px;
 
   @media (max-width: @mobileMaxWidth) {
-    max-width: 100%;
+    max-width: 99.5%;
   }
 
   input.search-query {
@@ -392,7 +411,7 @@ table td small {
       display: block;
       vertical-align: middle;
       font-size: 16px;
-      .font-size(1.6rem, 1.3rem, 1.3rem);
+      .font-size(1.6rem, 1.6rem, 1.6rem);
       line-height: 28px;
       &:before {
         background: @blueDark;
