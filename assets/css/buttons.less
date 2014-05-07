@@ -109,25 +109,26 @@ input{
   padding-top: 35px;
   overflow: hidden;
 
+  .lte-ie7 & {
+    a {
+      width: 200px;
+    }
+  }
+
   @media (max-width: @mobileMaxWidth) {
     padding-top: 25px;
   }
   
-  a:hover .page-numbers {
+  a:hover .link {
     text-decoration: underline;
   }
   
   .arrow {
-    width: 45%;
-    padding: 10px 0px;
-
-    &:hover {
-      background-color: #e7e7e7;
-    }
+    padding: 0px 0px 25px 0px;
     
     span.contain {
-      padding-top: 10px;
       display: inline-block;
+      padding-top: 9px;
     }
     
     .arrow-button {
@@ -135,33 +136,24 @@ input{
       background: url('../assets/img/arrow-sprite.png') no-repeat;
       width: 30px;
       height: 50px;
-      margin: 0px 5px;
+      margin: 0 5px 0 0;
     }
 
     .lte-ie7 & {
+      width: 200px;
       cursor: pointer;
 
       .link {
         line-height: 1.2em;
+        width: 75%;
       }
-    }
-  }
-
-  .page-numbers {
-    display: block;
-    font-size: 14px;
-    font-size: 1.4rem;
-    width: 100%;
-
-    .lte-ie7 & {
-      width: 200px;
     }
   }
   
   .link {
     display: block;
-    font-size: 27px;
-    font-size: 2.7rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     width: 100%;
 
     .lte-ie7 & {
@@ -170,7 +162,6 @@ input{
   }
 
   .next {
-    width: 48%;
     float: right;
     
     span.contain {
@@ -178,11 +169,8 @@ input{
     }
     
     .link {
-      width: 86%;
       display: inline-block;
       margin-right: 2%;
-      font-size: 19px;
-      font-size: 1.9rem;
       text-align: right;
     }
 
@@ -200,7 +188,6 @@ input{
   }
 
   .previous {
-    width: 48%;
     float: left;
 
     span.contain {
@@ -208,15 +195,8 @@ input{
     }
     
     .link {
-      width: 86%;
       display: inline-block;
       margin-left: 2%;
-      font-size: 19px;
-      font-size: 1.9rem;
-      text-align: left;
-    }
-
-    .page-numbers {
       text-align: left;
     }
     
@@ -229,47 +209,91 @@ input{
     }
   }
 
-  @media (max-width: @tabletMaxWidth) {
-      
-      .previous,
-      .next {
-        .link {
-          width: 80%;
-          font-size: 20px;
-          font-size: 2rem;
-        }
+}
+
+.page-navigation {
+  .previous, .next {
+    width: 49%;
+
+    .lte-ie7 & {
+      width: 46%;
+    }
+
+    .link {
+      width: 86%;
+      .font-size(18px, 18px, 14px);
+
+      @media screen and (max-width: @tabletMaxWidth) {
+        width: 82%;
       }
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 440px) {
+        width: 78%;
+      }
+      @media screen and (max-width: 395px) {
+        width: 76%;
+      }
+      @media screen and (max-width: 365px) {
+        width: 74%;
+      }
+      @media screen and (max-width: 340px) {
+        width: 72%;
+      }
+    }
   }
-  
-  @media (max-width: @mobileMaxWidth) {
+  .previous {
+    float: left;
+    margin-right: 2%;
+  }
+  .next {
+    float: right;
 
-      .previous,
-      .next {
-        .link {
-          font-size: 15px;
-          font-size: 1.5rem;
-        }
+    .lte-ie7 & {
+      .arrow-button {
+        position: absolute;
       }
+    }
+  }
+}
+
+.pagination {
+  margin: 10px auto 0 auto;
+  text-align: center;
+
+  .lte-ie7 & {
+    float: right;
   }
 
-  @media (max-width: 445px) {
-
-      .previous,
-      .next {
-        .link {
-          width: 75%;
+  ul {
+    margin: 0 10px;
+    box-shadow: none;
+    li {
+      padding-left: 0;      
+      .font-size(18px, 18px, 16px);
+      a {
+        float: none;
+        &:hover {
+          text-decoration: underline;
+          background: transparent;
         }
       }
-  }
-
-  @media (max-width: 360px) {
-
-      .previous,
-      .next {
-        .link {
-          width: 70%;
+      a, span {
+        border: none;
+      }
+    }
+    .active {
+      border: none;
+      a {
+        &:hover {
+          text-decoration: none;
         }
       }
+      a, span {
+        background: transparent;
+      }
+    }
   }
 }
 

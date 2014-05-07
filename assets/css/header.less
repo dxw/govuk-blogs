@@ -22,6 +22,10 @@
   margin-top: 40px;
   margin-bottom: 25px;
 
+  @media screen and (max-width: @tabletMaxWidth) {
+    margin-top: 30px;
+  }
+
   @media screen and (max-width: @mobileMaxWidth) {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -30,6 +34,22 @@
   .blog, .blog-title {
     a {
       color: inherit;
+    }
+  }
+
+  .blog-title {
+    a {
+      .lte-ie7 & {
+        color: @black;
+      }
+    }
+  }
+
+  .blog {
+    a {
+      .lte-ie7 & {
+        color: @greyText;
+      }
     }
   }
   

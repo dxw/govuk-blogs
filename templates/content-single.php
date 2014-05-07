@@ -28,7 +28,7 @@
     </footer>
   </article>
 
-  <div class="page-numbers-container">
+  <div class="page-numbers-container page-navigation">
     <div class="previous pull-left">
       <?php previous_post_link('<span class="arrow-button"></span><span class="link">%link</span>') ?>
     </div>
