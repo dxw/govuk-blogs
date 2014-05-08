@@ -54,73 +54,169 @@
   }
 
   #menu-follow-us {
+    width: 100%;
+    display: inline-block;
     li {
       margin: 7px 0;
     }
 
     a {
-      display: block;
-      padding: 6px 0 13px 35px;
-      height: 6px;
-      margin: 6px 0;
+      padding: 0;
+      border-bottom: none;
       vertical-align: middle;
+      font-size: 16px;
+      .font-size(1.6rem, 1.6rem, 1.6rem);
+      line-height: 28px;
+      &:before {
+        background: @blueDark;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        .font-size(18px, 18px, 18px);
+      }
+      &:hover, &:focus {
+        &:before {
+          background: darken(@blueDark, 10%);
+        }
+      }
 
+      // Twitter
       &[href^="http://twitter.com/"],
       &[href^="http://www.twitter.com/"],
       &[href^="https://twitter.com/"],
       &[href^="https://www.twitter.com/"] {
-        .menu-follow-us(1);
+        &:before {
+          .icomoon(@icon-twitter);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(1);
+        }
       }
 
+      // Facebook
       &[href^="http://facebook.com/"],
       &[href^="http://www.facebook.com/"],
       &[href^="https://facebook.com/"],
       &[href^="https://www.facebook.com/"] {
-        .menu-follow-us(0);
+        &:before {
+          .icomoon(@icon-facebook);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(0);
+        }
       }
 
+      // YouTube
       &[href^="http://youtube.com/"],
       &[href^="http://www.youtube.com/"],
       &[href^="https://youtube.com/"],
       &[href^="https://www.youtube.com/"] {
-        .menu-follow-us(2);
+        &:before {
+          .icomoon(@icon-play);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(2);
+        }
       }
 
+      // Flickr
       &[href^="http://flickr.com/"],
       &[href^="http://www.flickr.com/"],
       &[href^="https://flickr.com/"],
       &[href^="https://www.flickr.com/"] {
-        .menu-follow-us(3);
+        &:before {
+          .icomoon(@icon-flickr);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(3);
+        }
       }
 
+      // Google +
       &[href^="http://plus.google.com/"],
       &[href^="https://plus.google.com/"] {
-        .menu-follow-us(7);
+        &:before {
+          .icomoon(@icon-googleplus);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(7);
+        }
       }
 
+      // Foursquare
       &[href^="http://foursquare.com/"],
       &[href^="http://www.foursquare.com/"],
       &[href^="https://foursquare.com/"],
       &[href^="https://www.foursquare.com/"] {
-        .menu-follow-us(8);
+        &:before {
+          .icomoon(@icon-foursquare);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(8);
+        }
       }
 
+      // LinkedIn
       &[href^="http://linkedin.com/"],
       &[href^="http://www.linkedin.com/"],
       &[href^="https://linkedin.com/"],
       &[href^="https://www.linkedin.com/"] {
-        .menu-follow-us(6);
+        &:before {
+          .icomoon(@icon-linkedin);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(6);
+        }
       }
 
+      // Pinterest
       &[href^="http://pinterest.com/"],
       &[href^="http://www.pinterest.com/"],
       &[href^="https://pinterest.com/"],
       &[href^="https://www.pinterest.com/"] {
-        .menu-follow-us(5);
+        &:before {
+          .icomoon(@icon-pinterest);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(5);
+        }
       }
 
+      // Email
       &[href^="mailto:"] {
-        .menu-follow-us(9);
+        &:before {
+          .icomoon(@icon-envelope);
+        }
+
+        .lte-ie7 & {
+          height: 25px;
+          padding-left: 35px;
+          .menu-follow-us(9);
+        }
       }
     }
   }

@@ -54,7 +54,7 @@
   }
   
   table, th, tr, td {
-    padding: 2px;
+    padding: 0 2px;
     background-color: #fff;
     border: 0;
   }
@@ -81,19 +81,29 @@
 
   
   .blog-meta table {
+    margin-top: 10px;
     font-size: 16px;
     .font-size(1.6rem, 1.3rem, 1.3rem);
+
+    @media screen and (max-width: @tabletMaxWidth) {
+      margin-top: 14px;
+    }
+
+    @media screen and (max-width: @mobileMaxWidth) {
+      margin-top: 0;
+    }
 
     th {
       width: 130px;
       font-weight: normal;
       text-align: left;
       overflow: hidden;
-      padding: 2px 0px;
+      padding: 0px;
 
       @media screen and (max-width: @tabletMaxWidth) {
         width: 105px;
       }
+
     }
   }
 
