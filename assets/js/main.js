@@ -37,4 +37,28 @@ jQuery(function ($) {
     // Polyfills
 
     $('input, textarea').placeholder()
+
+
+    // Transform category list into select box on mobile view
+
+    var mobileMaxWidth = $(window).width();
+    if (mobileMaxWidth < 768) {
+        $('.widget_categories ul').each(function() {
+            var list = $(this),
+            select = $(document.createElement('select')).insertBefore($(this).hide()).change(function() {
+                window.location.href = $(this).val();
+            });
+            $('>li a', this).each(function() {
+                var option = $(document.createElement('option'))
+                .appendTo(select)
+                .val(this.href)
+                .html($(this).html());
+                if($(this).attr('class') === 'selected') {
+                    option.attr('selected','selected');
+                }
+            });
+            list.remove();
+        });
+    }
+
 })
