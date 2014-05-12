@@ -34,3 +34,4 @@ require(__DIR__.'/lib/acf.php');
 require(__DIR__.'/lib/avatar.php');
 require(__DIR__.'/lib/thumbnail.php');
 require(__DIR__.'/lib/pagination.php');
+require(__DIR__.'/lib/footnotes.php');

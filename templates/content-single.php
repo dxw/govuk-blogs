@@ -11,6 +11,9 @@
       <?php the_content() ?>
     </div>
     <footer class="single">
+      <div class="footnotes">
+        <?php the_footnotes(); ?>
+      </div>
       <?php if (have_rows('related_posts')) : ?>
         <div class="related-posts">
           <p>You may also be interested in:</p>
@@ -22,9 +25,7 @@
           </ul>
         </div>
       <?php endif ?>
-      <p>
-        <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
-      </p>
+      <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
     </footer>
   </article>
 
