@@ -17,10 +17,12 @@ function the_footnotes() {
     return;
   }
   
+  ?><div class="footnotes"><?php
   ?><h3>Footnotes</h3><?php
   ?><ul><?php
   foreach($footnotes as $id => $footnote) {
     ?><li id="footnote_<?php echo esc_attr($id) ?>"><span class="number"><?php echo esc_html($id) ?>.</span> <span class="footnote"><?php echo $footnote ?></span></li><?php
   }
   ?></ul><?php
+  ?></div><?php
 }

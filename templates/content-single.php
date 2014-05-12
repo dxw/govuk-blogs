@@ -11,9 +11,7 @@
       <?php the_content() ?>
     </div>
     <footer class="single">
-      <div class="footnotes">
-        <?php the_footnotes(); ?>
-      </div>
+      <?php the_footnotes(); ?>
       <?php if (have_rows('related_posts')) : ?>
         <div class="related-posts">
           <p>You may also be interested in:</p>
