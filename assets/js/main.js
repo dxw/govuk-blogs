@@ -88,4 +88,15 @@ jQuery(function ($) {
         }
     });
 
+
+    // Roots theme meta data height
+
+    var highestQuote = 0;
+    $('.featured-posts span.meta').each(function(){
+        if($(this).height() > highestQuote){
+            highestQuote = $(this).height();
+        }   
+    });
+    $('.featured-posts span.meta').height(highestQuote);
+
 })

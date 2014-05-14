@@ -1,7 +1,6 @@
 .featured-posts {
 	.span4 {
 		width: 298px;
-		margin-left: 30px;
 
 		@media (max-width: @tabletMaxWidth) {
 			width: 218px;
@@ -39,6 +38,11 @@
 		a {
 			color: @greyText;
 		}
+
+		@media (max-width: @mobileMaxWidth) {
+			height: auto !important;
+		}
+
 	}
 	h2 {
 		margin-top: 8px;
@@ -52,5 +56,50 @@
 		@media (max-width: @mobileMaxWidth) {
 			margin-bottom: 25px;
 		}
+	}
+}
+
+.selections {
+	width: 100%;
+	display: inline-block;
+	span {
+		float: left;
+	}
+	.count {
+		padding-right: 15px;
+		font-weight: bold;
+		.font-size(48px, 48px, 32px);
+
+		@media (max-width: @mobileMaxWidth) {
+			padding-right: 10px;
+		}
+
+	}
+	.name {
+		margin-top: -12px;
+
+		@media (max-width: @mobileMaxWidth) {
+			margin-top: -9px;
+			margin-bottom: 0;
+		}
+
+	}
+}
+
+.blogs-list {
+	margin-right: 0;
+	li {
+		list-style: none;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		border-top: @greyTopBorder;
+	}
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+		margin-bottom: 15px;
 	}
 }
