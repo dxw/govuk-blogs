@@ -70,6 +70,10 @@
 		font-weight: bold;
 		.font-size(48px, 48px, 32px);
 
+		.lte-ie7 & {
+			line-height: 40px;
+		}
+
 		@media (max-width: @mobileMaxWidth) {
 			padding-right: 10px;
 		}
@@ -77,6 +81,10 @@
 	}
 	.name {
 		margin-top: -12px;
+
+		.lte-ie7 & {
+			margin-top: -5px;
+		}
 
 		@media (max-width: @mobileMaxWidth) {
 			margin-top: -9px;
