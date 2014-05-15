@@ -91,12 +91,33 @@ jQuery(function ($) {
 
     // Roots theme meta data height
 
-    var highestQuote = 0;
-    $('.featured-posts span.meta').each(function(){
-        if($(this).height() > highestQuote){
-            highestQuote = $(this).height();
+    var highestMeta = 0;
+    $('.featured-posts .meta').each(function(){
+        if($(this).height() > highestMeta){
+            highestMeta = $(this).height();
         }   
     });
-    $('.featured-posts span.meta').height(highestQuote);
+    $('.featured-posts .meta').height(highestMeta);
+    $(window).resize(function() {
+        if ($(window).width() > 979){
+            var highestMeta = 0;
+            $('.featured-posts .meta').each(function(){
+                if($(this).height() > highestMeta){
+                    highestMeta = $(this).height();
+                }   
+            });
+            $('.featured-posts .meta').height(highestMeta);
+        } if ($(window).width() > 768){
+            var highestMeta = 0;
+            $('.featured-posts .meta').each(function(){
+                if($(this).height() > highestMeta){
+                    highestMeta = $(this).height();
+                }   
+            });
+            $('.featured-posts .meta').height(highestMeta);
+        } else {
+            $('.featured-posts .meta').css('height', 'auto');
+        }
+    });
 
 })
