@@ -47,6 +47,13 @@
 
   .widget_categories {
     border: none;
+
+    .lte-ie6 & {
+      ul {
+        margin-left: 20px;
+      }
+    }
+
     li {
       font-size: 16px;
       font-size: 1.6rem;
@@ -89,10 +96,13 @@
           .icomoon(@icon-twitter);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(1);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -105,10 +115,13 @@
           .icomoon(@icon-facebook);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(0);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -121,10 +134,13 @@
           .icomoon(@icon-play);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(2);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -137,10 +153,13 @@
           .icomoon(@icon-flickr);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(3);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -151,10 +170,13 @@
           .icomoon(@icon-googleplus);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(7);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -167,10 +189,13 @@
           .icomoon(@icon-foursquare);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(8);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -183,10 +208,13 @@
           .icomoon(@icon-linkedin);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(6);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -199,10 +227,13 @@
           .icomoon(@icon-pinterest);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(5);
+          &:before {
+            display: none;
+          }
         }
       }
 
@@ -212,10 +243,13 @@
           .icomoon(@icon-envelope);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(9);
+          &:before {
+            display: none;
+          }
         }
       }
     }

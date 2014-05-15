@@ -1,5 +1,14 @@
 .featured-posts {
 
+	.span4 {
+
+		.lte-ie6 & {
+			float: left;
+			margin-right: 20px;
+		}
+
+	}
+
 	figure {
 		max-height: 197px;
 		margin: 0 0 10px 0;
@@ -53,6 +62,7 @@
 	display: inline-block;
 	border-top: 4px solid #231f20;
 	padding-top: 25px;
+
 	span {
 		float: left;
 	}
@@ -87,6 +97,11 @@
 
 .blogs-list {
 	margin-right: 0;
+
+	.lte-ie6 & {
+		margin-left: 0;
+	}
+
 	li {
 		list-style: none;
 		margin-top: 0;

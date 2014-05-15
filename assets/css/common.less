@@ -68,6 +68,12 @@ body {
   font-weight: bold;
 }
 
+.row {
+  .lte-ie6 & {
+    margin: 0;
+  }
+}
+
 article {
   word-wrap: break-word;
   
@@ -327,6 +333,11 @@ sup {
 .sidebar-contain, .search-container, .logo-container {
   margin-left: 30px;
   width: 298px;
+
+  .lte-ie6 & {
+    float: left;
+    width: 250px;
+  }
 }
 
 @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
@@ -382,6 +393,7 @@ sup {
 
     .lte-ie6 & {
       position: static;
+      height: 25px;
     }
 
     .lte-ie8 & {
@@ -415,7 +427,7 @@ sup {
     }
 
     .lte-ie8 & {
-      right: 6px;
+      right: 8px;
       background-image: url('../assets/img/search-small.png');
     }
 
@@ -429,6 +441,20 @@ sup {
     }
   }
 
+  // for IE6
+  input#searchsubmit {
+    .lte-ie6 & {
+      width: 28px;
+      height: 20px;
+      box-shadow: none;
+      background: url('../assets/img/search-small.png') no-repeat center center #fff;
+      position: absolute;
+      top: 4px;
+      right: 8px;
+      text-indent: -100000000000000px;
+    }
+  }
+
 }
   
 .avatar img {
@@ -438,8 +464,19 @@ sup {
 .icons-buttons {
   margin-top: 25px;
   margin-bottom: 25px;
+
+  .lte-ie6 & {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
   ul {
     margin: 0;
+
+    .lte-ie8 & {
+      margin-left: 0;
+    }
   }
 
   li {
@@ -447,6 +484,7 @@ sup {
     float: left;
     margin-right: 10px;
     margin-bottom: 0;
+
     &:first-child {
       padding-left: 0;
     }
@@ -474,10 +512,13 @@ sup {
           .icomoon(@icon-twitter);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(1);
+          &:before {
+            display: none;
+          }
         }
       }
       &.facebook {
@@ -485,10 +526,13 @@ sup {
           .icomoon(@icon-facebook);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(0);
+          &:before {
+            display: none;
+          }
         }
       }
       &.pinterest {
@@ -496,10 +540,13 @@ sup {
           .icomoon(@icon-pinterest);
         }
 
-        .lte-ie7 & {
+        .lte-ie8 & {
           height: 25px;
-          padding-left: 35px;
+          padding-left: 30px;
           .menu-follow-us(5);
+          &:before {
+            display: none;
+          }
         }
       }
     }
@@ -510,6 +557,11 @@ sup {
   margin: 0;
 
   ul {
+
+    .lte-ie8 & {
+      margin-left: 0;
+    }
+
     li {
 
       @media screen and (max-width: @mobileMaxWidth) {
@@ -530,10 +582,13 @@ sup {
             .icomoon(@icon-envelope);
           }
 
-          .lte-ie7 & {
+          .lte-ie8 & {
             height: 25px;
-            padding-left: 35px;
+            padding-left: 30px;
             .menu-follow-us(9);
+            &:before {
+              display: none;
+            }
           }
         }
 
@@ -542,10 +597,14 @@ sup {
             .icomoon(@icon-feed);
           }
 
-          .lte-ie7 & {
+          .lte-ie8 & {
+            width: 20px;
             height: 25px;
-            padding-left: 35px;
-            background: url('../assets/img/social-icons-blue.png') no-repeat left -302px;
+            padding-left: 30px;
+            background: url('../assets/img/social-icons-blue.png') no-repeat -4px -300px;
+            &:before {
+              display: none;
+            }
           }
         }
 
@@ -562,6 +621,15 @@ sup {
   }
   @media screen and (max-width: @mobileMaxWidth) {
     margin: 0 20px;
+  }
+}
+
+#global-cookie-message {
+  @media screen and (max-width: @mobileMaxWidth) {
+    .full-width {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 

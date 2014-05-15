@@ -71,11 +71,21 @@
     color: @greyText;
     &:before {
       .icomoon(@icon-link);
+      text-decoration: none;
     }
 
-    .lte-ie7 & {
+    &:hover {
+      &:before {
+        text-decoration: none;
+      }
+    }
+
+    .lte-ie8 & {
       padding-left: 25px;
       background: url('../assets/img/icon-link.png') no-repeat;
+      &:before {
+        display: none;
+      }
     }
   }
 }
