@@ -32,3 +32,7 @@ add_filter('the_content', function ($content) {
 
   return preg_replace($ex, $replacement, $content);
 });
+
+
+# Audioboo
+wp_oembed_add_provider('#https?://audioboo.fm/.*#', 'https://api.embed.ly/1/oembed?key=053112f24c9243bd891aada0a99ea83b&url=', true);
