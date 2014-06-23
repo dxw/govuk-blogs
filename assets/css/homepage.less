@@ -60,21 +60,87 @@
   }
 }
 
-.selections {
-  width: 100%;
-  display: inline-block;
-  border-top: 4px solid #231f20;
-  padding-top: 25px;
+hr {
+  &.filters {
+    margin-top: 0;
+    height: 4px;
+    border-top: 4px solid #231f20;
+  }
+}
 
-  .span {
+.blog-selector {
+  margin-bottom: 30px;
+
+  .filters {
+    width: 90%;
+
+    @media (max-width: @mobileMaxWidth) {
+      width: 100%;
+    }
+
+  }
+
+  h2 {
+    margin-top: 15px;
+    padding-top: 0;
+  }
+  p {
+    .font-size(16px, 16px, 14px);
+    .line-height(1.25, 1.25, 1.14);
+  }
+  label {
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  input {
+    width: 92%;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 0;
+    padding: 5px 10px;
+
+    @media (max-width: @mobileMaxWidth) {
+      width: 94%;
+    }
+
+  }
+  select {
+    border: 1px solid #bfc1c3;
+    padding: 5px 20px 5px 10px;
+    width: 100%;
+    background: #fff;
+    background-image: url('../assets/img/dropdown-arrow-small.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    box-shadow: 1px 1px 1px #fff;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    line-height: 1.25;
+  }
+
+  input:focus, select:focus {
+    outline: 3px solid #ffbf47;
+  }
+
+}
+
+.selections {
+  margin-bottom: 0;
+  padding-top: 0;
+  line-height: 1;
+
+  span {
     float: left;
   }
   .count {
+    margin-bottom: 5px;
     padding-right: 15px;
     font-weight: bold;
     .font-size(48px, 48px, 32px);
 
     .lte-ie7 & {
+      margin-left: 15px;
       line-height: 40px;
     }
 
@@ -84,22 +150,46 @@
 
   }
   .name {
-    margin-top: -12px;
+    margin-top: 4px;
+    .font-size(16px, 16px, 14px);
 
     .lte-ie7 & {
-      margin-top: -5px;
+      margin-top: 0;
     }
 
     @media (max-width: @mobileMaxWidth) {
-      margin-top: -9px;
-      margin-bottom: 0;
+      margin-top: 2px;
     }
 
+  }
+  .term {
+    font-weight: normal;
+    margin-top: 2px;
+    margin-left: 8px;
+    .font-size(16px, 16px, 14px);
+    .line-height(1.25, 1.25, 1.14);
+
+    .lte-ie7 & {
+      margin-top: -2px;
+    }
+
+    strong {
+      margin-left: 3px;
+    }
+  }
+  .term-x {
+    float: none;
+    margin-left: 10px;
+    color: #6f777b;
+    position: relative;
+    top: -1px;
+    cursor: pointer
   }
 }
 
 .blogs-list {
-  margin-right: 0;
+  margin: 0 0 30px 0;
+  list-style: none;
 
   .lte-ie6 & {
     margin-left: 0;
@@ -114,6 +204,11 @@
     &:first-child {
       margin-top: 15px;
     }
+
+    .lte-ie7 & {
+      list-style-image: none;
+    }
+
   }
   h3 {
     margin-bottom: 0;
