@@ -135,7 +135,7 @@ hr {
   }
   .count {
     margin-bottom: 5px;
-    padding-right: 15px;
+    padding-right: 10px;
     font-weight: bold;
     .font-size(48px, 48px, 32px);
 
@@ -179,11 +179,21 @@ hr {
   }
   .term-x {
     float: none;
-    margin-left: 10px;
+    margin-left: 5px;
     color: #6f777b;
     position: relative;
     top: -1px;
-    cursor: pointer
+    cursor: pointer;
+    &:hover, &:focus {
+      color: darken(#6f777b, 15%);
+    }
+  }
+  .term-and {
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+    .font-size(16px, 16px, 14px);
+    .line-height(1.25, 1.25, 1.14);
   }
 }
 
@@ -209,6 +219,26 @@ hr {
       list-style-image: none;
     }
 
+    &.noresults {
+      h3 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+      ul {
+        margin: 0;
+        margin-left: 0.75em;
+        li {
+          list-style-image: url(../assets/img/bullet-disc.png);
+          border-top: none;
+          margin-top: 0;
+          padding-left: 0.3em;
+          .font-size(16px, 16px, 14px);
+          .line-height(1.25, 1.25, 1.14);
+        }
+      }
+    }
   }
   h3 {
     margin-bottom: 0;
