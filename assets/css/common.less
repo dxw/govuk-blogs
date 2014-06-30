@@ -125,7 +125,7 @@ article {
     margin-bottom: 1.5em;
   }
 
-  iframe {
+  iframe[src^="https://www.youtube.com/"] {
     position: absolute;
     top:0;
     left: 0;
@@ -165,15 +165,16 @@ iframe.coveritlive {
     @media (max-width: @mobileMaxWidth) {
       margin-bottom: 18px;
     }
+
+    iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 body.single .main-content article {
