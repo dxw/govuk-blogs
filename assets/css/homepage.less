@@ -145,8 +145,14 @@ hr {
     }
 
     &.btn {
-      width: 100%;
-      padding: 8px 16px;
+      width: auto;
+      padding: 8px 24px;
+
+      .lte-ie7 & {
+        margin-left: 0;
+        padding: 5px 16px;
+      }
+
       &:hover, &:focus {
         color: @white;
       }
