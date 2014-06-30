@@ -51,7 +51,7 @@
             <label for="url"><?php _e('Website', 'roots') ?></label>
             <input type="url" class="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url) ?>" size="22">
           <?php endif ?>
-          <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Submit Comment', 'roots') ?>"></p>
+          <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Submit comment', 'roots') ?>"></p>
         </div>
         <?php comment_id_fields() ?>
         <?php do_action('comment_form', $post->ID) ?>
