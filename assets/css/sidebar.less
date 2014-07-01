@@ -237,6 +237,25 @@
         }
       }
 
+      // Instagram
+      &[href^="http://instagram.com/"],
+      &[href^="http://www.instagram.com/"],
+      &[href^="https://instagram.com/"],
+      &[href^="https://www.instagram.com/"] {
+        &:before {
+          .icomoon(@icon-instagram);
+        }
+
+        .lte-ie8 & {
+          height: 25px;
+          padding-left: 30px;
+          .menu-follow-us(10);
+          &:before {
+            display: none;
+          }
+        }
+      }
+
       // Email
       &[href^="mailto:"] {
         &:before {
