@@ -3,6 +3,9 @@
   .widget {
     margin-bottom: 15px;
     border-top: 4px solid #231f20;
+    .textwidget {
+      .font-size(1.6rem, 1.6rem, 1.6rem);
+    }
   }
   
   .widget-inner {
@@ -13,7 +16,7 @@
       }
     }
     .textwidget {
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -42,6 +45,12 @@
       display: block;
       padding: 10px 0;
       border-bottom: @greyTopBorder;
+    }
+  }
+
+  .about_widget {
+    p {
+      margin-bottom: 20px;
     }
   }
 
@@ -279,6 +288,8 @@
     select {
       .font-size(14px, 14px, 14px);
       width: 100%;
+    }
+    ul {
       margin-bottom: 20px;
     }
   }
