@@ -36,3 +36,4 @@ require(__DIR__.'/lib/thumbnail.php');
 require(__DIR__.'/lib/pagination.php');
 require(__DIR__.'/lib/footnotes.php');
 require(__DIR__.'/lib/about-widget.php');
+require(__DIR__.'/lib/google-maps.php');
