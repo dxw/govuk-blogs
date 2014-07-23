@@ -7,14 +7,8 @@ add_action('widgets_init', function () {
 class AboutWidget extends WP_Widget {
 
   function __construct() {
-
     $this->WP_Widget('about_widget', 'About Widget', ['classname' => 'about_widget', 'description' => 'Information about blog']);
     $this->alt_option_name = 'about_widget';
-
-    add_action('save_post', array(&$this, 'flush_widget_cache'));
-    add_action('deleted_post', array(&$this, 'flush_widget_cache'));
-    add_action('switch_theme', array(&$this, 'flush_widget_cache'));
-
   }
 
   public function widget( $args, $instance ) {
@@ -62,5 +56,4 @@ class AboutWidget extends WP_Widget {
 
     return $instance;
   }
-
 }
