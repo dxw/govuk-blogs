@@ -23,7 +23,7 @@
           </ul>
         </div>
       <?php endif ?>
-      <?php echo get_the_tag_list('<p><strong>Tags:</strong> ', ',', '</p>'); ?>
+      <?php echo get_the_tag_list('<p class="tags"><strong>Tags:</strong> ', ', ', '</p>'); ?>
     </footer>
   </article>
 
