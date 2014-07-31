@@ -1,12 +1,12 @@
 <?php
 
-$m = new Mustache_Engine([
+$engine = new Mustache_Engine([
   'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/build/govuk_template/views/layouts', [
     'extension' => '.html',
   ]),
 ]);
 
-$template = $m->loadTemplate('govuk_template');
+$template = $engine->loadTemplate('govuk_template');
 
 echo $template->render([
   'pageTitle' => html_entity_decode(wp_title('|', false, 'right'), ENT_HTML5 | ENT_QUOTES), // Apparently it doesn't unescape quotes by default for some reason
