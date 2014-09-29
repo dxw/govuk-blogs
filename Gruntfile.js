@@ -69,6 +69,8 @@ module.exports = function (grunt) {
                     {
                         src: [
                             'bower_components/bsie/bootstrap/css/bootstrap-ie6.min.css',
+                            'bower_components/bootstrap/img/glyphicons-halflings.png',
+                            'bower_components/bootstrap/img/glyphicons-halflings-white.png',
                         ],
                         dest: 'build/',
                     },
