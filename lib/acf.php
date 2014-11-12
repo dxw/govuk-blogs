@@ -161,4 +161,72 @@ if (function_exists("register_field_group")) {
     ),
     'menu_order' => 0,
   ));
+
+  register_field_group(array (
+    'id' => 'acf_image-licensing',
+    'title' => 'Image licensing',
+    'fields' => array (
+      array (
+        'key' => 'field_5463adf92808a',
+        'label' => 'Licence',
+        'name' => 'licence',
+        'type' => 'select',
+        'choices' => array (
+          'ogl' => 'OGL',
+          'cc-by' => 'Attribution',
+          'cc-by-sa' => 'Attribution-ShareAlike',
+          'cc-by-nd' => 'Attribution-NoDerivs',
+          'cc-by-nc' => 'Attribution-NonCommercial',
+          'cc-by-nc-sa' => 'Attribution-NonCommercial-ShareAlike',
+          'cc-by-nc-nd' => 'Attribution-NonCommercial-NoDerivs',
+          'other' => 'Other',
+        ),
+        'default_value' => '',
+        'allow_null' => 1,
+        'multiple' => 0,
+      ),
+      array (
+        'key' => 'field_5463b0f72808b',
+        'label' => 'Copyright holder',
+        'name' => 'copyright_holder',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_5463b1152808c',
+        'label' => 'Link to source',
+        'name' => 'link_to_source',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'attachment',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
 }
