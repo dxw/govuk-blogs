@@ -20,7 +20,7 @@ function share_icons($id) {
       'url' => $url,
       'media' => $attachment_url,
       'description' => $title,
-    ], 'http://www.pinterest.com/pin/create/button/');
+    ], 'https://www.pinterest.com/pin/create/button/');
   }
 
   ?>
