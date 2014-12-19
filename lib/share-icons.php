@@ -8,7 +8,7 @@ function share_icons($id) {
   $twitter_url = add_query_arg([
     'url' => $url,
     'text' => $title,
-  ], 'https://twitter.com/intent/tweet');
+  ], 'https://twitter.com/intent/tweet?original_referer=');
 
   $facebook_url = add_query_arg([
     'u' => $url,
