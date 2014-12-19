@@ -2,24 +2,24 @@
 
 function share_icons($id) {
   $url = get_permalink($id);
-  $title = get_the_title($id);
+  $title = html_entity_decode(get_the_title($id)); // decode entities so we can UTF-8 escape URLs properly
   $thumbnail_id = get_post_thumbnail_id($id);
 
   $twitter_url = add_query_arg([
-    'url' => $url,
-    'text' => $title,
+    'url' => urlencode($url),
+    'text' => urlencode($title),
   ], 'https://twitter.com/intent/tweet?original_referer=');
 
   $facebook_url = add_query_arg([
-    'u' => $url,
+    'u' => urlencode($url),
   ], 'https://www.facebook.com/sharer/sharer.php');
 
   if ($thumbnail_id) {
     $attachment_url = wp_get_attachment_url($thumbnail_id);
     $pinterest_url = add_query_arg([
-      'url' => $url,
-      'media' => $attachment_url,
-      'description' => $title,
+      'url' => urlencode($url),
+      'media' => urlencode($attachment_url),
+      'description' => urlencode($title),
     ], 'https://www.pinterest.com/pin/create/button/');
   }
 
