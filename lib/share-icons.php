@@ -14,14 +14,13 @@ function share_icons($id) {
     'u' => urlencode($url),
   ], 'https://www.facebook.com/sharer/sharer.php');
 
-  if ($thumbnail_id) {
-    $attachment_url = wp_get_attachment_url($thumbnail_id);
-    $pinterest_url = add_query_arg([
-      'url' => urlencode($url),
-      'media' => urlencode($attachment_url),
-      'description' => urlencode($title),
-    ], 'https://www.pinterest.com/pin/create/button/');
-  }
+  $google_url = add_query_arg([
+    'u' => urlencode($url),
+  ], 'https://plus.google.com/share?');
+
+  $linkedin_url = add_query_arg([
+    'u' => urlencode($url),
+  ], 'https://www.linkedin.com/shareArticle?mini=true&amp;');
 
   ?>
 
@@ -34,11 +33,15 @@ function share_icons($id) {
       <li>
         <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="facebook">Facebook</a>
       </li>
-      <?php if ($thumbnail_id) : ?>
-        <li>
-          <a target="_blank" href="<?php echo esc_attr($pinterest_url) ?>" class="pinterest">Pinterest</a>
-        </li>
-      <?php endif ?>
+      <li>
+        <a target="_blank" href="<?php echo esc_attr($google_url) ?>" class="google">Google+</a>
+      </li>
+      <li>
+        <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">Linkedin</a>
+      </li>
+      <li>
+        <a href="mailto:?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php echo esc_attr($title) ?> <?php echo esc_attr($url) ?>" class="email">Email</a>
+      </li>
     </ul>
     <div class="clearfix"></div>
   </div>

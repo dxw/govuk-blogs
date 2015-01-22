@@ -542,12 +542,7 @@ sup {
         }
 
         .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
           .menu-follow-us(1);
-          &:before {
-            display: none;
-          }
         }
       }
       &.facebook {
@@ -556,28 +551,45 @@ sup {
         }
 
         .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
           .menu-follow-us(0);
-          &:before {
-            display: none;
-          }
         }
       }
-      &.pinterest {
+      &.google {
         &:before {
-          .icomoon(@icon-pinterest);
+          .icomoon(@icon-googleplus);
         }
 
         .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          .menu-follow-us(5);
-          &:before {
-            display: none;
-          }
+          .menu-follow-us(7);
         }
       }
+      &.linkedin {
+        &:before {
+          .icomoon(@icon-linkedin);
+        }
+
+        .lte-ie8 & {
+          .menu-follow-us(6);
+        }
+      }
+      &.email {
+        &:before {
+          .icomoon(@icon-envelope);
+        }
+
+        .lte-ie8 & {
+          .menu-follow-us(9);
+        }
+      }
+
+      .lte-ie8 & {
+        height: 25px;
+        padding-left: 30px;
+        &:before {
+          display: none;
+        }
+      }
+
     }
   }
 }
