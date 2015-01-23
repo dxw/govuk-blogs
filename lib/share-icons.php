@@ -15,12 +15,12 @@ function share_icons($id) {
   ], 'https://www.facebook.com/sharer/sharer.php');
 
   $google_url = add_query_arg([
-    'u' => urlencode($url),
-  ], 'https://plus.google.com/share?');
+    'url' => urlencode($url),
+  ], 'https://plus.google.com/share');
 
   $linkedin_url = add_query_arg([
-    'u' => urlencode($url),
-  ], 'https://www.linkedin.com/shareArticle?mini=true&amp;');
+    'url' => urlencode($url),
+  ], 'https://www.linkedin.com/shareArticle');
 
   ?>
 
@@ -37,7 +37,7 @@ function share_icons($id) {
         <a target="_blank" href="<?php echo esc_attr($google_url) ?>" class="google">Google+</a>
       </li>
       <li>
-        <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">Linkedin</a>
+        <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">LinkedIn</a>
       </li>
       <li>
         <a href="mailto:?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php echo esc_attr($title) ?> <?php echo esc_attr($url) ?>" class="email">Email</a>
