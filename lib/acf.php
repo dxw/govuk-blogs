@@ -162,6 +162,8 @@ if (function_exists("register_field_group")) {
     'menu_order' => 0,
   ));
 
+  global $gds_image_licences;
+
   register_field_group(array (
     'id' => 'acf_image-licensing',
     'title' => 'Image licensing',
@@ -171,16 +173,7 @@ if (function_exists("register_field_group")) {
         'label' => 'Licence',
         'name' => 'licence',
         'type' => 'select',
-        'choices' => array (
-          'ogl' => 'OGL',
-          'cc-by' => 'Attribution',
-          'cc-by-sa' => 'Attribution-ShareAlike',
-          'cc-by-nd' => 'Attribution-NoDerivs',
-          'cc-by-nc' => 'Attribution-NonCommercial',
-          'cc-by-nc-sa' => 'Attribution-NonCommercial-ShareAlike',
-          'cc-by-nc-nd' => 'Attribution-NonCommercial-NoDerivs',
-          'other' => 'Other',
-        ),
+        'choices' => $gds_image_licences,
         'default_value' => '',
         'allow_null' => 1,
         'multiple' => 0,

@@ -16,6 +16,7 @@ require(__DIR__.'/lib/widgets.php');
 require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');
 
+require(__DIR__.'/lib/image-licensing.php');
 require(__DIR__.'/lib/feeds.php');
 require(__DIR__.'/lib/options.php');
 require(__DIR__.'/lib/assets.php');
