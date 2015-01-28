@@ -24,4 +24,4 @@ add_filter('image_send_to_editor', function ($html, $id, $caption, $title, $alig
   $caption = 'Licence: '.esc_html($licence).' <a href="'.esc_attr($link_to_source).'">'.esc_html($copyright_holder).'</a>';
 
   return '<figure>'.$html.'<figcaption>'.$caption.'</figcaption></figure>';
-}, 10, 8);
+}, 999, 8);
