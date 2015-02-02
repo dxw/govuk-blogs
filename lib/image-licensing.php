@@ -4,12 +4,12 @@ global $gds_image_licences;
 
 $gds_image_licences = [
   'ogl' => 'OGL',
-  'cc-by' => 'Attribution',
-  'cc-by-sa' => 'Attribution-ShareAlike',
-  'cc-by-nd' => 'Attribution-NoDerivs',
-  'cc-by-nc' => 'Attribution-NonCommercial',
-  'cc-by-nc-sa' => 'Attribution-NonCommercial-ShareAlike',
-  'cc-by-nc-nd' => 'Attribution-NonCommercial-NoDerivs',
+  'cc-by' => 'Creative Commons Attribution',
+  'cc-by-sa' => 'Creative Commons Attribution-ShareAlike',
+  'cc-by-nd' => 'Creative Commons Attribution-NoDerivs',
+  'cc-by-nc' => 'Creative Commons Attribution-NonCommercial',
+  'cc-by-nc-sa' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
+  'cc-by-nc-nd' => 'Creative Commons Attribution-NonCommercial-NoDerivs',
   'other' => 'Other',
 ];
 
