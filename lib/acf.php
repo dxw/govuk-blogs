@@ -173,7 +173,7 @@ if (function_exists("register_field_group")) {
         'label' => 'Licence',
         'name' => 'licence',
         'type' => 'select',
-        'choices' => $gds_image_licences,
+        'choices' => array_map(function ($licence) {return $licence['name'];}, $gds_image_licences),
         'default_value' => '',
         'allow_null' => 1,
         'multiple' => 0,
