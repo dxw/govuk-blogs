@@ -130,6 +130,12 @@ article {
     height: 0;
     overflow: hidden;
     margin-bottom: 1.5em;
+    &[data-twttr-id] {
+      margin-bottom: 0;
+      padding: 0;
+      height: auto;
+      overflow: visible;
+    }
   }
 
   iframe[src^="https://www.youtube.com/"],
