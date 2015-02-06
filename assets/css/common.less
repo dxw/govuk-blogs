@@ -132,12 +132,17 @@ article {
     margin-bottom: 1.5em;
   }
 
-  iframe[src^="https://www.youtube.com/"] {
+  iframe[src^="https://www.youtube.com/"],
+  iframe[src^="https://w.soundcloud.com/"] {
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  iframe[src^="http://www.bbc.co.uk/"] {
+    width: 100%;
   }
 
   .storify {
@@ -166,27 +171,6 @@ iframe.coveritlive {
 
   @media (max-width: @mobileMaxWidth) {
     padding: 5px 0 20px 0;
-  }
-
-  .entry-content-asset {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1.5em;
-
-    @media (max-width: @mobileMaxWidth) {
-      margin-bottom: 18px;
-    }
-
-    iframe {
-      position: absolute;
-      top:0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
   }
 
 }
