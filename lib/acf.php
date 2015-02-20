@@ -156,11 +156,21 @@ if (function_exists("register_field_group")) {
     'options' => array (
       'position' => 'side',
       'layout' => 'default',
+      'priority' => 'low',
       'hide_on_screen' => array (
       ),
     ),
     'menu_order' => 0,
   ));
+
+  // Fix priority for "Featured video"
+  add_filter('acf/input/meta_box_priority', function ($priority, $acf) {
+    if (isset($acf['options']['priority'])) {
+      return $acf['options']['priority'];
+    }
+
+    return $priority;
+  });
 
   global $gds_image_licences;
 

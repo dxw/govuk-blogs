@@ -12,7 +12,7 @@ add_action('admin_init', function () {
         Featured Post
       </label>
     <?php
-  }, 'post', 'side');
+  }, 'post', 'side', 'low');
 });
 
 
