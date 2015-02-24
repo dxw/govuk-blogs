@@ -170,7 +170,7 @@ if (function_exists("register_field_group")) {
     }
 
     return $priority;
-  });
+  }, 10, 2);
 
   global $gds_image_licences;
 
