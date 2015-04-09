@@ -47,4 +47,8 @@
       </div>
     <?php endif ?>
   </div>
+
+  <div class="row">
+    <?php history_mode_notice(get_the_ID(), 'post') ?>
+  </div>
 </header>
