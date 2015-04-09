@@ -49,6 +49,6 @@
   </div>
 
   <div class="row">
-    <?php history_mode_notice(get_the_ID(), 'post') ?>
+    <?php history_mode_notice(get_the_ID(), 'blog post') ?>
   </div>
 </header>
