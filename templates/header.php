@@ -49,6 +49,10 @@
   </div>
 
   <div class="row">
-    <?php history_mode_notice(get_the_ID(), 'blog post') ?>
+    <?php
+    if (is_single() || is_page()) {
+      history_mode_notice(get_the_ID(), 'blog post');
+    }
+    ?>
   </div>
 </header>
