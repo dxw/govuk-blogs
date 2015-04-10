@@ -50,7 +50,7 @@
 
   <div class="row">
     <?php
-    if (is_single() || is_page()) {
+    if (function_exists('history_mode_notice') && (is_single() || is_page())) {
       history_mode_notice(get_the_ID(), 'blog post');
     }
     ?>
