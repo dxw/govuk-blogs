@@ -216,11 +216,9 @@ if (function_exists("register_field_group")) {
     'location' => array (
       array (
         array (
-          'param' => 'post_type',
+          'param' => 'attachment',
           'operator' => '==',
-          'value' => 'attachment',
-          'order_no' => 0,
-          'group_no' => 0,
+          'value' => 'all',
         ),
       ),
     ),
