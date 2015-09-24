@@ -1,17 +1,28 @@
 <?php
-function pagination($q = null, $mode = null) {
+function pagination($q = null, $mode = null, $uri = null) {
   global $wp_query;
+
+  $_ = $_SERVER['REQUEST_URI'];
+
+  if ($uri !== null) {
+    $_SERVER['REQUEST_URI'] = $uri;
+    if (isset($_SERVER['QUERY_STRING'])) {
+      $_SERVER['REQUEST_URI'] .= '?' . $_SERVER['QUERY_STRING'];
+    }
+  }
 
   if ($q === null) {
     $q = $wp_query;
   }
 
   if ($q->is_singular()) {
+    $_SERVER['REQUEST_URI'] = $_;
     return;
   }
 
   /** Stop execution if there's only 1 page */
   if ($q->max_num_pages <= 1) {
+    $_SERVER['REQUEST_URI'] = $_;
     return;
   }
 
@@ -120,4 +131,5 @@ function pagination($q = null, $mode = null) {
 
   echo '</ul></div>' . "\n";
 
+  $_SERVER['REQUEST_URI'] = $_;
 }
