@@ -17,17 +17,17 @@ body {
 p {
   margin: 0.2em 0 1.5em 0;
 }
-  
+
 blockquote {
   padding: 15px 10px;
   margin: 0 0 20px 0;
   border: 0;
-  background-color: #e1e8e8; 
+  background-color: #e1e8e8;
   padding: 13px 10px;
 
   p {
-    padding-left: 15px; 
-    
+    padding-left: 15px;
+
     @media (max-width: @mobileMaxWidth) {
       font-size: 1.3rem;
       font-size: 13px;
@@ -40,12 +40,12 @@ blockquote {
     float: left;
     font-size: 40px;
     font-size: 4rem;
-    
+
     @media (max-width: @mobileMaxWidth) {
       font-size: 2.5rem;
       font-size: 25px;
     }
-  } 
+  }
 
   &:after {
     content: "\201D";
@@ -53,12 +53,12 @@ blockquote {
     float: right;
     font-size: 40px;
     font-size: 4rem;
-    
+
     @media (max-width: @mobileMaxWidth) {
       font-size: 2rem;
       font-size: 20px;
     }
-  } 
+  }
 
   &.noquotes {
     &:before {
@@ -73,13 +73,13 @@ blockquote {
       padding-left: 10px;
     }
   }
-  
+
 }
 
 @media (min-width: @tabletMinWidth) {
   blockquote p {
-    padding-left: 30px; 
-  } 
+    padding-left: 30px;
+  }
 }
 
 cite {
@@ -90,7 +90,7 @@ cite {
   font-size: 1.8rem;
   top: -10px;
 }
-    
+
 a, a:visited {
   color: #2e3191;
 }
@@ -109,7 +109,7 @@ h1 {
   padding-bottom: 3px;
   padding-bottom: 0.3rem;
   font-weight: bold;
-  margin-top: 15px; 
+  margin-top: 15px;
   font-size: 48px;
   .font-size(4.8rem, 3.2rem, 3.2rem);
 }
@@ -124,7 +124,7 @@ h1 {
   padding-bottom: 3px;
   padding-bottom: 0.3rem;
 }
-  
+
 h2 {
   line-height: 1.1111111111;
   font-weight: 400;
@@ -137,19 +137,19 @@ h2 {
   font-size: 26px;
   .font-size(2.6rem, 2.2rem, 2.2rem);
 }
-  
+
 @media (max-width: @tabletMaxWidth) {
     h2 {
       padding-top: 7px;
       padding-top: 0.7rem;
       padding-bottom: 3px;
-      padding-bottom: 0.3rem; 
-  } 
+      padding-bottom: 0.3rem;
+  }
 }
 
 h3 {
-  font-size: 19px;
-  font-size: 1.9rem;
+  font-size: 23px;
+  font-size: 2.3rem;
   line-height: 25px;
   font-weight: 400;
   text-transform: none;
@@ -166,12 +166,25 @@ h3 {
       padding-top: 6px;
       padding-top: 0.6rem;
       padding-bottom: 4px;
-      padding-bottom: 0.4rem; 
-  } 
+      padding-bottom: 0.4rem;
+  }
+}
+
+h4 {
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
 }
 
 
-h4, h5, h6 {
+h5, h6 {
   font-size: 19px;
   font-size: 1.9rem;
   line-height: 25px;
@@ -181,17 +194,17 @@ h4, h5, h6 {
   padding-top: 0.7rem;
   padding-bottom: 3px;
   padding-bottom: 0.3rem;
-  font-weight: bold; 
+  font-weight: bold;
 }
-  
+
 @media (max-width: @tabletMaxWidth)  {
     h4 {
       line-height: 1.53846;
       padding-top: 6px;
       padding-top: 0.6rem;
       padding-bottom: 4px;
-      padding-bottom: 0.4rem; 
-  } 
+      padding-bottom: 0.4rem;
+  }
 }
 
 ul {
@@ -216,7 +229,7 @@ li {
   text-transform: none;
   margin: 0.25em 0;
   padding-left: 0.3em;
-  
+
   @media (max-width: @mobileMaxWidth) {
     font-size: 1.3rem;
     font-size: 13px;
@@ -233,7 +246,7 @@ ul.children {
 
 .entry-content a, .page-content a {
   text-decoration: underline;
-  
+
   &:hover {
     color: #2e8aca;
   }
