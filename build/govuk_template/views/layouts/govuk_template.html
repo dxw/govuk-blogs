@@ -68,15 +68,15 @@
     <div id="global-cookie-message">
       <div class="outer-block">
         <div class="inner-block">
-          
+
             {{{ cookieMessage }}}
-          
+
         </div>
       </div>
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="{{{ headerClass }}}">
       <div class="header-wrapper">
         <div class="header-global">
@@ -91,7 +91,7 @@
       </div>
     </header>
     <!--end header-->
-    
+
 
     {{{ afterHeader }}}
 
@@ -133,5 +133,13 @@
     <script src="{{{ assetPath }}}javascripts/govuk-template.js?0.10.0" type="text/javascript"></script>
 
     {{{ bodyEnd }}}
+    <script>
+    // Event tracking
+    jQuery(function($){
+      $('body').on('click', '.ho-digital-email', function(){
+        ga('send', 'event', 'contact', 'email', 'hodigitalsheffield@digital.homeoffice.gov.uk');
+      });
+    });
+    </script>
   </body>
 </html>
