@@ -1,1 +1,1 @@
-<?php roots_require('single.php');
+<?php get_template_part('templates/content', 'single') ?>
