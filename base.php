@@ -11,10 +11,10 @@ $template = $engine->loadTemplate('govuk_template');
 echo $template->render([
   'pageTitle' => html_entity_decode(wp_title('|', false, 'right'), ENT_HTML5 | ENT_QUOTES), // Apparently it doesn't unescape quotes by default for some reason
   'assetPath' => get_template_directory_uri().'/build/govuk_template/assets/',
-  'head' => \Missing\String::get_output('wp_head'),
+  'head' => \Missing\Strings::getOutput('wp_head'),
   'bodyClasses' => implode(' ', array_map('esc_attr', get_body_class())),
-  'cookieMessage' => \Missing\String::get_output(function () { get_template_part('templates/cookies'); }),
-  'content' => \Missing\String::get_output(function () { get_template_part('templates/base'); }),
-  'footerSupportLinks' => \Missing\String::get_output(function () { get_template_part('templates/footer'); }),
-  'bodyEnd' => \Missing\String::get_output('wp_footer'),
+  'cookieMessage' => \Missing\Strings::getOutput(function () { get_template_part('templates/cookies'); }),
+  'content' => \Missing\Strings::getOutput(function () { get_template_part('templates/base'); }),
+  'footerSupportLinks' => \Missing\Strings::getOutput(function () { get_template_part('templates/footer'); }),
+  'bodyEnd' => \Missing\Strings::getOutput('wp_footer'),
 ]);

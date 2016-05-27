@@ -1,13 +1,13 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@git.dxw.net:roots-composer"
-        }
-    ],
     "require": {
-        "dxw/roots-composer": "dev-master",
-        "mustache/mustache": "dev-master",
-        "dxw/php-missing": "dev-master"
+        "dxw/roots-composer": "dev-master#2fad80195fc15bd48329f398d256fcfd013ca0d5",
+        "mustache/mustache": "2.5.1",
+        "dxw/php-missing": "^1.0"
+    },
+    "scripts": {
+        "post-update-cmd": "vendor/bin/phar-install"
+    },
+    "require-dev": {
+        "dxw/phar-install": "^1.0"
     }
 }
