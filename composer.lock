@@ -4,9 +4,129 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7c849c4581301944a3bb2c3328d99669",
-    "content-hash": "5b1c217783a3f76de1ea5af37594c2ee",
+    "hash": "00579d49969facf9fc2b7b827642aa78",
+    "content-hash": "99b9ffd1f7b766a3c348806721c0276e",
     "packages": [
+        {
+            "name": "aura/autoload",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Autoload.git",
+                "reference": "c2a8f5dde204bbed34e194394046f7516eff04c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Autoload/zipball/c2a8f5dde204bbed34e194394046f7516eff04c4",
+                "reference": "c2a8f5dde204bbed34e194394046f7516eff04c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library"
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Autoload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Autoload Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Autoload/contributors"
+                }
+            ],
+            "description": "Provides a PSR-4 compliant autoloader implementation.",
+            "homepage": "https://github.com/auraphp/Aura.Autoload",
+            "keywords": [
+                "PSR-4",
+                "SPL autoloader",
+                "autoload",
+                "autoloader",
+                "class loader"
+            ],
+            "time": "2015-03-27 19:34:08"
+        },
+        {
+            "name": "dxw/iguana",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/iguana.git",
+                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/iguana/zipball/7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
+                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
+                "shasum": ""
+            },
+            "require": {
+                "aura/autoload": "^2.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dxw\\Iguana\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/dxw/iguana",
+            "time": "2016-05-18 18:59:51"
+        },
+        {
+            "name": "dxw/iguana-extras",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/iguana-extras.git",
+                "reference": "3a6c6ae6657581a92957a9918ff8be43f7185d34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/iguana-extras/zipball/3a6c6ae6657581a92957a9918ff8be43f7185d34",
+                "reference": "3a6c6ae6657581a92957a9918ff8be43f7185d34",
+                "shasum": ""
+            },
+            "require": {
+                "dxw/iguana": "^1.0"
+            },
+            "require-dev": {
+                "10up/wp_mock": "^0.1.1",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dxw\\Iguana\\Extras\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/dxw/iguana-extras",
+            "time": "2016-05-23 18:22:48"
+        },
         {
             "name": "dxw/php-missing",
             "version": "v1.0.0",
