@@ -40,3 +40,6 @@ require(__DIR__.'/lib/about-widget.php');
 require(__DIR__.'/lib/google-maps.php');
 require(__DIR__.'/lib/tableau-shortcode.php');
 require(__DIR__.'/lib/disable-wptexturize.php');
+require(__DIR__.'/lib/co-authors-plus.php');
+
+(new \Dxw\Iguana\Extras\UseAtom())->register();
