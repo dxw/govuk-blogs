@@ -41,5 +41,6 @@ require(__DIR__.'/lib/google-maps.php');
 require(__DIR__.'/lib/tableau-shortcode.php');
 require(__DIR__.'/lib/disable-wptexturize.php');
 require(__DIR__.'/lib/co-authors-plus.php');
+require(__DIR__.'/lib/enable-rss2.php');
 
 (new \Dxw\Iguana\Extras\UseAtom())->register();
