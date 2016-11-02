@@ -19,4 +19,3 @@
   </footer>
 </article>
 <?php endwhile ?>
- 
