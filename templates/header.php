@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
   <div class="top row">
 
     <?php $logo_options = get_option('theme_logo_options'); ?>
