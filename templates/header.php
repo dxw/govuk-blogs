@@ -4,7 +4,7 @@
     <?php $logo_options = get_option('theme_logo_options'); ?>
 
     <div class="span8">
-      <h1 class="blog"><a href="<?php echo home_url() ?>">Blog</a></h1>
+      <h1 class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></h1>
       <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
     </div>
 
