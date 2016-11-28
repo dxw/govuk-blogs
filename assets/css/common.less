@@ -405,78 +405,80 @@ sup {
     max-width: 99.5%;
   }
 
-  input.search-query {
-    border-color: @greyText;
-    border-radius: 0;
-    width: 90%;
-    position: absolute;
-    color: @greyText;
-    -webkit-appearance: none;
+  .search-input-wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
 
-    .lte-ie6 & {
-      position: static;
-      height: 25px;
+  input {
+
+    &:focus {
+      outline: 3px solid @focusColour;
+      outline-offset: 0;
+      box-shadow: none;
     }
+  }
+
+  input.search-query {
+    height: 40px;
+    float: left;
+    border: 2px solid @black;
+    border-radius: 0;
+    width: 86%;
+    color: @black;
+    -webkit-appearance: none;
+    font-size: 19px;
+    line-height: 1.4;
+    z-index: 10;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
     .lte-ie8 & {
-      width: 95%;
+      width: 240px;
+      height: 28px;
+      margin-right: 0;
     }
 
     @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
-      width: 86%;
+      width: 81%;
     }
 
     @media (max-width: @mobileMaxWidth) {
-      width: 96%;
-      padding-left: 2%;
-      padding-right: 2%;
+      width: 95%;
+    }
+
+    @media (max-width: @mobileSmallWidth) {
+      width: 88%;
     }
   }
 
   input[type="submit"] {
-    width: 28px;
-    height: 20px;
-    box-shadow: none;
-    background: url('../assets/img/search.png') no-repeat center center #fff;
-    background-size: 18px 18px;
-    text-indent: -10000px;
-    position: absolute;
-    top: 5px;
-    right: 6px;
-
-    .lte-ie10 & {
-      right: 26px;
-    }
-
-    .lte-ie8 & {
-      right: 8px;
-      background-image: url('../assets/img/search-small.png');
-    }
-
-    .lte-ie7 & {
-      // Apparently pixels are a different size in IE7
-      text-indent: -100000000000000px;
-    }
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding: 6px;
+    background: @black url('../assets/img/search-button.png') no-repeat 2px 50%;
+    text-indent: -5000px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
     &:active, &:hover {
-      top: 8px;
+      background-color: lighten(@black, 5%);
     }
-  }
 
-  // for IE6
-  input#searchsubmit {
-    .lte-ie6 & {
-      width: 28px;
-      height: 20px;
-      box-shadow: none;
-      background: url('../assets/img/search-small.png') no-repeat center center #fff;
+    @media (max-width: @mobileMaxWidth) {
       position: absolute;
-      top: 4px;
-      right: 8px;
-      text-indent: -100000000000000px;
+      right: 0;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-size: 52.5px 35px;
+      background-position: 115% 50%;
     }
   }
-
 }
 
 .avatar img {
@@ -486,12 +488,6 @@ sup {
 .icons-buttons {
   margin-top: 25px;
   margin-bottom: 25px;
-
-  .lte-ie6 & {
-    width: 100%;
-    float: none;
-    display: block;
-  }
 
   ul {
     margin: 0;
@@ -686,11 +682,6 @@ footer.single div.related-posts {
 // Fix a little bug with GOV.UK header in IE8
 .lte-ie8 #logo {
   width: 100%;
-}
-
-// Fix IE6 bug
-.lte-ie6 body.root section.container {
-  padding-left: 30px;
 }
 
 // Hide screen reader text
