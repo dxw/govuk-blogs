@@ -1,37 +1,26 @@
-// This fixes article.featured { margin-bottom: 40px; }
-.lte-ie7 {
-  .main-content, .sidebar-contain {
-    margin-top: 40px;
-  }
-}
-
 article.featured {
-  background: #f0f0f0;
-  margin-bottom: 40px;
-
-  @media (max-width: @mobileMaxWidth) {
-    margin-bottom: 25px;
-  }
+  background: @background;
+  margin-bottom: @gutter;
 
   .featured-wrapper {
-    padding: 25px; 
+    padding: @gutter;
   }
 
   h2 {
-    margin-top:0px;
+    margin-top: 0px;
     margin-bottom: 0.5em;
     font-size: 26px;
     .font-size(2.6rem, 2.4rem, 2rem);
   }
 
   .text {
-    width: 250px;
+    width: 25%;
     float: left;
   }
 
   .image {
-    padding-left: 30px; 
-    width: 600px;
+    padding-left: @gutter; 
+    width: 70%;
     float: right;
 
     // iframe container
@@ -50,51 +39,33 @@ article.featured {
       width: 100%;
       height: 100%;
     }
-
-    .lte-ie6 & img {
-      width: 600px;
-    }
-  }
-
-  .entry-title {
-    padding-top: 0;
-  }
-
-  .entry-summary {
-    margin-bottom: 10px;
   }
   
   @media (max-width: @tabletMaxWidth) {
+
     .image {
       width: 100%;
       padding-left: 0;
 
       .entry-content-asset {
-        margin-bottom: 18px;
+        margin-bottom: @gutterHalf;
       }
 
       img {
         width: 100%;
         height: auto;
-        margin-bottom: 18px;
+        margin-bottom: @gutterHalf;
       }
     }
+
     .text {
       width: 100%;
       margin-right: 0px;
       padding: 0px;
     }
-    h2 {
-      margin-bottom: 15px;
-    }
-    .featured-wrapper {
-      padding: 20px; 
-    }
-  }
 
-  @media (max-width: @mobileMaxWidth) {
-    .featured-wrapper {
-      padding: 15px; 
+    h2 {
+      margin-bottom: @gutterHalf;
     }
   }
 }

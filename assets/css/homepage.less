@@ -1,14 +1,5 @@
 .featured-posts {
 
-  .span4 {
-
-    .lte-ie6 & {
-      float: left;
-      margin-right: 20px;
-    }
-
-  }
-
   figure {
     max-height: 197px;
     margin: 0 0 10px 0;
@@ -19,30 +10,35 @@
     @media (max-width: @tabletMaxWidth) {
       max-height: 144px;
     }
+
     @media (max-width: @mobileMaxWidth) {
       max-width: 100% !important;
       max-height: none;
       overflow: visible;
+
       img {
         width: 100%;
       }
     }
-
   }
+
   .meta {
     color: @greyText;
     .font-size(13px, 13px, 12px);
     .line-height(1.3, 1.3, 1.2);
+
     a {
       color: @greyText;
     }
   }
+
   h3 {
     margin-top: 8px;
     margin-bottom: 5px;
     padding: 0;
     .line-height(1.3, 1.3, 1.25);
   }
+
   p {
     margin-top: 0;
     margin-bottom: 45px;
@@ -55,27 +51,31 @@
   }
 
   .latest {
-    padding-bottom: 45px;
-    border-top: @greyTopBorder;
+    padding-bottom: @gutter;
+
     h3 {
-      &.header {
-        margin-top: 15px;
-      }
+      margin-top: 0;
+      padding-top: @gutterHalf;
+      border-top: @greyTopBorder;
     }
+
     ul {
       list-style: none;
-      margin: 0 0 15px 0;
+      margin: 0 0 @gutterHalf 0;
       border-bottom: @greyTopBorder;
-      padding-bottom: 5px;
+      padding-bottom: @spacingSmall;
+
       li {
         list-style-image: none;
-        margin: 0 0 10px 0;
+        margin: 0 0 @spacingSmall * 2 0;
         padding: 0;
       }
+
       h3 {
         margin-bottom: 0;
         .line-height(1.3, 1.3, 1.25);
       }
+
       .meta {
         height: auto !important;
         color: @black;
@@ -84,6 +84,7 @@
         }
       }
     }
+
     p.link {
       margin-bottom: 0;
       .font-size(16px, 16px, 14px);
@@ -100,21 +101,12 @@ hr {
   &.filters {
     margin-top: 0;
     height: 4px;
-    border-top: 4px solid #231f20;
+    border-top: 4px solid @black;
   }
 }
 
 .blog-selector {
-  margin-bottom: 30px;
-
-  .filters {
-    width: 90%;
-
-    @media (max-width: @mobileMaxWidth) {
-      width: 100%;
-    }
-
-  }
+  margin-bottom: @gutter;
 
   h2 {
     margin-top: 15px;
@@ -134,6 +126,7 @@ hr {
     margin-bottom: 15px;
     border-radius: 0;
     padding: 5px 10px;
+    border: 2px solid @black;
 
     @media (max-width: @mobileMaxWidth) {
       width: 94%;
@@ -142,11 +135,6 @@ hr {
     &.btn {
       width: auto;
       padding: 8px 24px;
-
-      .lte-ie7 & {
-        margin-left: 0;
-        padding: 5px 16px;
-      }
 
       &:hover, &:focus {
         color: @white;
@@ -169,8 +157,9 @@ hr {
     line-height: 1.25;
   }
 
-  input:focus, select:focus {
-    outline: 3px solid #ffbf47;
+  input:focus,
+  select:focus {
+    outline: 3px solid @focusColour;
   }
 
 }
@@ -184,44 +173,28 @@ hr {
     float: left;
   }
   .count {
-    margin-bottom: 5px;
-    padding-right: 10px;
+    margin-bottom: @spacingSmall;
+    padding-right: @spacingSmall * 2;
     font-weight: bold;
     .font-size(48px, 48px, 32px);
-
-    .lte-ie7 & {
-      margin-left: 15px;
-      line-height: 40px;
-    }
-
-    @media (max-width: @mobileMaxWidth) {
-      padding-right: 10px;
-    }
-
   }
-  .name {
-    margin-top: 4px;
-    .font-size(16px, 16px, 14px);
 
-    .lte-ie7 & {
-      margin-top: 0;
-    }
+  .name {
+    margin-top: @spacingSmall;
+    .font-size(16px, 16px, 14px);
 
     @media (max-width: @mobileMaxWidth) {
       margin-top: 2px;
     }
 
   }
+
   .term {
     font-weight: normal;
     margin-top: 2px;
     margin-left: 8px;
     .font-size(16px, 16px, 14px);
     .line-height(1.25, 1.25, 1.14);
-
-    .lte-ie7 & {
-      margin-top: -2px;
-    }
 
     strong {
       margin-left: 3px;
@@ -248,12 +221,9 @@ hr {
 }
 
 .blogs-list {
-  margin: 0 0 30px 0;
+  margin: 0 0 @gutter 0;
+  padding-left: 0;
   list-style: none;
-
-  .lte-ie6 & {
-    margin-left: 0;
-  }
 
   li {
     list-style: none;
@@ -261,26 +231,26 @@ hr {
     margin-bottom: 0;
     padding-left: 0;
     border-top: @greyTopBorder;
-    &:first-child {
-      margin-top: 15px;
-    }
 
-    .lte-ie7 & {
-      list-style-image: none;
+    &:first-child {
+      margin-top: @gutterHalf;
     }
 
     &.noresults {
+
       h3 {
-        margin-bottom: 10px;
+        margin-bottom: @spacingSmall * 2;
       }
+
       p {
-        margin-bottom: 5px;
+        margin-bottom: @spacingSmall;
       }
+
       ul {
         margin: 0;
-        margin-left: 0.75em;
+
         li {
-          list-style-image: url(../assets/img/bullet-disc.png);
+          list-style: disc;
           border-top: none;
           margin-top: 0;
           padding-left: 0.3em;
@@ -305,7 +275,7 @@ hr {
   }
   p {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: @gutterHalf;
     .font-size(16px, 16px, 12px);
     .line-height(1.6, 1.6, 1.2);
   }

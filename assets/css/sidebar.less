@@ -1,10 +1,11 @@
 .sidebar {
   
   .widget {
-    margin-bottom: 15px;
-    border-top: 4px solid #231f20;
+    margin-bottom: @gutterHalf;
+    border-top: 4px solid @black;
+
     .textwidget {
-      margin-bottom: 20px;
+      margin-bottom: @gutter;
       .font-size(1.6rem, 1.6rem, 1.6rem);
       line-height: 22px;
     }
@@ -22,12 +23,12 @@
   .widget_nav_menu {
 
     ul {
-      margin: 0px 0px 20px 0px;
+      margin: 0px 0px @gutter 0px;
     }
 
     li {
       list-style: none;
-      margin: 5px 0px;
+      margin: @spacingSmall 0px;
       padding-left: 0px;
       font-size: 16px;
       .font-size(1.6rem, 1.3rem, 1.3rem);
@@ -42,25 +43,19 @@
     }
     a {
       display: block;
-      padding: 10px 0;
+      padding: @spacingSmall * 2 0;
       border-bottom: @greyTopBorder;
     }
   }
 
   .about_widget {
     p {
-      margin-bottom: 20px;
+      margin-bottom: @gutter / 2;
     }
   }
 
   .widget_categories {
     border: none;
-
-    .lte-ie6 & {
-      ul {
-        margin-left: 20px;
-      }
-    }
 
     li {
       font-size: 16px;
@@ -71,6 +66,7 @@
   #menu-follow-us {
     width: 100%;
     display: inline-block;
+
     li {
       margin: 7px 0;
     }
@@ -290,8 +286,9 @@
       .font-size(14px, 14px, 14px);
       width: 100%;
     }
+
     ul {
-      margin-bottom: 20px;
+      margin-bottom: @gutter;
     }
   }
 

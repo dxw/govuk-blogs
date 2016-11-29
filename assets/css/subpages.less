@@ -1,25 +1,28 @@
 .search, .archive {
-  h2.search-title, h2.archive-title {
+
+  h2.search-title,
+  h2.archive-title {
     border-top: @greyTopBorder;
     margin-top: 0px;
-    padding-top: 20px;
+    padding-top: @gutter;
   }
   
-  h2.search-title + article, h2.archive-title + article {
+  h2.search-title + article,
+  h2.archive-title + article {
     border-top: 0px;
   }
-  
 }
 
 .author {
+
   .author-container {
     border-top: @greyTopBorder;
     margin-top: 0px;
-    padding-top: 30px;
+    padding-top: @gutter;
   }
   
   .row {
-    margin-bottom: 30px;
+    margin-bottom: @gutter;
   }
   
   .author-title {
@@ -27,6 +30,6 @@
   }
   
   h3.author-title {
-    margin-top: 30px;
+    margin-top: @gutter;
   }
 }

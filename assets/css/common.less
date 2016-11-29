@@ -1,5 +1,6 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
+
   @media (max-width: @mobileMaxWidth) {
     padding-right: 0;
     padding-left: 0;
@@ -68,12 +69,6 @@ body {
   font-weight: bold;
 }
 
-.row {
-  .lte-ie6 & {
-    margin: 0;
-  }
-}
-
 article {
   word-wrap: break-word;
   
@@ -83,15 +78,11 @@ article {
       font-size: 14px;
       font-size: 1.4rem;
       line-height: 20px;
-      margin-bottom: 20px;
+      margin-bottom: @gutterHalf;
     }
 
     .wp-post-image {
-      margin-bottom: 20px;
-
-      @media (max-width: @mobileMaxWidth) {
-        margin-bottom: 18px;
-      }
+      margin-bottom: @gutterHalf;
     }
   }
 
@@ -106,21 +97,17 @@ article {
     &.single {
       .font-size(14px, 14px, 12px);
       .line-height(1.4, 1.4, 1.2);
-      margin-top: 35px;
-
-      @media (max-width: @mobileMaxWidth) {
-        margin-top: 25px;
-      }
+      margin-top: @gutter;
     }
 
     p.tags {
-      margin-top: 25px;
+      margin-top: @gutter;
     }
   }
 }
 
 .entry-summary, .entry-content, .page-content {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px @gutterHalf 0px;
 }
 
 .entry-summary, .entry-content, .page-content, .main-content {
@@ -176,12 +163,7 @@ iframe.coveritlive {
 
 .main-content article {
   border-top: @greyTopBorder;
-  padding: 20px 0px 35px 0px;
-
-  @media (max-width: @mobileMaxWidth) {
-    padding: 5px 0 20px 0;
-  }
-
+  padding: @gutter 0px;
 }
 
 body.single .main-content article {
@@ -191,12 +173,12 @@ body.single .main-content article {
 
 .alignright {
   float: right;
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px @gutterHalf @gutterHalf;
 }
 
 .alignleft {
   float: left;
-  margin: 0px 20px 20px 0px; 
+  margin: 0px @gutterHalf @gutterHalf 0px; 
 }
 
 .aligncenter {
@@ -206,7 +188,7 @@ body.single .main-content article {
 
 .page .main-content {
   border-top: @greyTopBorder;
-  padding: 15px 0px;
+  padding: @gutterHalf 0px;
 
   // Allow ordered lists to have numbers
   ol{
@@ -233,7 +215,7 @@ figure.alignnone {
 }
 
 figcaption {
-  margin-top: 5px;
+  margin-top: @spacingSmall;
   .font-size(1.6rem, 1.6rem, 1.3rem);
 }
 
@@ -260,7 +242,7 @@ table {
   padding-top: 0.7rem;
   padding-bottom: 3px; 
   padding-bottom: 0.3rem; 
-  margin-bottom: 20px;
+  margin-bottom: @gutter;
   @media (max-width: @mobileMaxWidth) {
     font-size: 1.3rem;
     font-size: 13px;
@@ -304,7 +286,7 @@ table td small {
 
 .address {
   border-left: 1px solid #bfc1c3;
-  padding-left: 15px; 
+  padding-left: @gutterHalf; 
   margin-bottom: 0.75em;
 }
 
@@ -313,27 +295,25 @@ table td small {
   display: none;
 }
 .footnotes {
-  margin-bottom: 35px;
+  margin-bottom: @gutter;
   border-top: @greyTopBorder;
-  padding-top: 15px;
-
-  @media (max-width: @mobileMaxWidth) {
-    margin-bottom: 25px;
-    padding-top: 5px;
-  }
+  padding-top: @gutterHalf;
 
   ul {
     margin: 0;
+
     li {
       list-style: none;
-      margin-top: 10px;
+      margin-top: @spacingSmall * 2;
       padding-left: 0;
       .font-size(16px, 16px, 13px);
+
       &:first-child {
         margin-top: 0.25em;
       }
+
       .number {
-        padding-right: 5px;
+        padding-right: @spacingSmall;
         font-weight: bold;
       }
     }
@@ -349,50 +329,6 @@ sup {
   }
 }
 
-
-/* Fix to increase the margin to the left of the sidebar */
-
-.sidebar-contain, .search-container, .logo-container {
-  margin-left: 30px;
-  width: 298px;
-
-  .lte-ie6 & {
-    float: left;
-    width: 250px;
-  }
-}
-
-@media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
-  .sidebar-contain, .search-container {
-    width: 218px;
-  }
-  figure, figure.thumbnail {
-    max-width: 466px !important; // overwriting the WP inline styles
-  }
-}
-
-@media (max-width: @mobileMaxWidth) {
-  .container {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .sidebar-contain, .search-container {
-    width: 100%;
-    margin-left: 0px;
-  }
-  figure, figure.thumbnail {
-    max-width: 98% !important; // overwriting the WP inline styles
-  }
-}
-
-@media (max-width: 500px) {
-  figure.alignnone, figure.alignleft, figure.alignright, figure.aligncenter {
-    margin-left: 0;
-    margin-right: 0;
-    float: none;
-  }
-}
-
 /* Search */
 
 .form-search {
@@ -400,6 +336,7 @@ sup {
   position: relative;
   max-width: 350px;
   display: inline-block;
+  margin-bottom: 0;
 
   @media (max-width: @mobileMaxWidth) {
     max-width: 99.5%;
@@ -435,13 +372,19 @@ sup {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    .lte-ie8 & {
-      width: 240px;
-      height: 28px;
-      margin-right: 0;
+    @media (max-width: @tabletMaxWidth) {
+      width: 84%;
     }
 
-    @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
+    @media (max-width: 869px) {
+      width: 83%;
+    }
+
+    @media (max-width: 825px) {
+      width: 82%;
+    }
+
+    @media (max-width: 786px) {
       width: 81%;
     }
 
@@ -486,8 +429,7 @@ sup {
 }
 
 .icons-buttons {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: @gutter 0;
 
   ul {
     margin: 0;
@@ -643,36 +585,20 @@ sup {
   }
 }
 
-.bar {
-  border-top: 10px solid #57da95;
-  @media screen and (max-width: @tabletMaxWidth) {
-    margin: 0 auto;
-  }
-  @media screen and (max-width: @mobileMaxWidth) {
-    margin: 0 20px;
-  }
-}
-
-#global-cookie-message {
-  @media screen and (max-width: @mobileMaxWidth) {
-    .full-width {
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
 footer.single div.related-posts {
   background: #e1e8e8;
-  padding: 13px 20px;
+  padding: @gutterHalf @gutter;
   font-size: 19px;
   .font-size(1.9rem, 1.9rem, 1.3rem);
+
   p {
     margin: 0.2em 0 0.5em 0;
   }
+
   ul {
     margin-top: 0;
     margin-bottom: 0;
+    
     li {
       margin-bottom: 0;
     }
