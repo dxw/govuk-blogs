@@ -107,25 +107,16 @@ input{
 .page-numbers-container {
   border-top: @greyTopBorder;
   margin-top: 0px;
-  padding-top: 35px;
+  padding-top: @gutter;
   overflow: hidden;
-
-  .lte-ie7 & {
-    a {
-      width: 200px;
-    }
-  }
-
-  @media (max-width: @mobileMaxWidth) {
-    padding-top: 25px;
-  }
   
   a:hover .link {
     text-decoration: underline;
   }
   
   .arrow {
-    padding: 0px 0px 25px 0px;
+    margin-bottom: @gutter;
+    padding: 0px;
     
     span.contain {
       display: inline-block;
@@ -137,17 +128,7 @@ input{
       background: url('../assets/img/arrow-sprite.png') no-repeat;
       width: 30px;
       height: 50px;
-      margin: 0 5px 0 0;
-    }
-
-    .lte-ie7 & {
-      width: 200px;
-      cursor: pointer;
-
-      .link {
-        line-height: 1.2em;
-        width: 75%;
-      }
+      margin: 0 @spacingSmall 0 0;
     }
   }
   
@@ -156,11 +137,6 @@ input{
     font-size: 18px;
     font-size: 1.8rem;
     width: 100%;
-
-    .lte-ie7 & {
-      width: 200px;
-    }
-
   }
 
   .next {
@@ -217,10 +193,6 @@ input{
   .previous, .next {
     width: 49%;
 
-    .lte-ie7 & {
-      width: 46%;
-    }
-
     .link {
       width: 86%;
       .font-size(18px, 18px, 14px);
@@ -251,12 +223,6 @@ input{
   }
   .next {
     float: right;
-
-    .lte-ie7 & {
-      .arrow-button {
-        position: absolute;
-      }
-    }
   }
 }
 
@@ -264,34 +230,37 @@ input{
   margin: 10px auto 0 auto;
   text-align: center;
 
-  .lte-ie7 & {
-    float: right;
-  }
-
   ul {
-    margin: 0 10px;
+    margin: 0 @spacingSmall * 2;
     box-shadow: none;
+
     li {
       padding-left: 0;      
       .font-size(18px, 18px, 16px);
+
       a {
         float: none;
-        &:hover {
+
+        &:hover, &:focus {
           text-decoration: underline;
           background: transparent;
         }
       }
+
       a, span {
         border: none;
       }
     }
+
     .active {
       border: none;
+
       a {
-        &:hover {
+        &:hover, &:focus {
           text-decoration: none;
         }
       }
+
       a, span {
         background: transparent;
       }

@@ -10,6 +10,7 @@
       }
     }
   }
+
   #logo {
     height: auto;
     margin: 0 @gutterHalf;
@@ -18,7 +19,7 @@
     border-bottom: 1px solid transparent;
     line-height: 1.1;
 
-    @media screen and (max-width: @tabletMaxWidth) and (min-width: @mobileMaxWidth) {
+    @media screen and (max-width: @tabletMaxWidth) {
       margin: 0;
     }
 
@@ -40,45 +41,27 @@
 }
 
 .header-global {
+
   @media screen and (max-width: @tabletMaxWidth) {
     margin-left: auto;
     margin-right: auto;
-    max-width: 724px;
+    width: auto;
+    padding: 0 @gutterHalf;
+  }
+
+  @media screen and (max-width: @mobileMaxWidth) and (min-width: 641px) {
+    padding: 0;
   }
 }
 
 .header {
-  margin-top: 40px;
-  margin-bottom: 25px;
-
-  @media screen and (max-width: @tabletMaxWidth) {
-    margin-top: 30px;
-  }
-
-  @media screen and (max-width: @mobileMaxWidth) {
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+  margin-top: @gutter;
+  margin-bottom: @gutter;
 
   .blog, .blog-title, .site-title {
+
     a {
       color: inherit;
-    }
-  }
-
-  .blog-title, .site-title {
-    a {
-      .lte-ie7 & {
-        color: @black;
-      }
-    }
-  }
-
-  .blog {
-    a {
-      .lte-ie7 & {
-        color: @greyText;
-      }
     }
   }
   
@@ -87,10 +70,6 @@
     background-color: #fff;
     border: 0;
     line-height: 1;
-
-    .lte-ie7 & {
-      line-height: 1.2;
-    }
   }
   
   table {
@@ -157,39 +136,33 @@
     }
   }
 
-  .lte-ie6 & #searchsubmit {
-    margin-top: 0px;
-  }
-
   .bottom {
-    margin-top: 15px;
+    margin-top: @gutterHalf;
     position: relative;
 
     @media (max-width: @tabletMaxWidth) {
-      margin-top: 5px;
-    }
-  }
-
-  @media (max-width: @tabletMaxWidth) {
-    .logo-container {
-      width: 218px;
+      margin-top: @spacingSmall;
     }
   }
 
   @media (max-width: @mobileMaxWidth) {
+
     .logo-container {
       float: none;
       margin-left: 0;
-      margin-bottom: 15px;
+      margin-bottom: @gutterHalf;
+
       img {
         max-width: 80%;
       }
     }
+
     .top {
       .search-container {
         margin-bottom: 20px;
       }
     }
+
     .bottom {
       margin-top: 0;
       .search-container {
@@ -215,14 +188,14 @@
 // https://github.com/alphagov/whitehall/blob/53e0faa4a6a1c3819cca8f54e804bf13d14f7083/app/assets/stylesheets/frontend/helpers/_status-block.scss#L26
 .history-status-block {
   clear: both;
-  margin: 15px 0;
-  padding: 15px;
-  color: #fff;
-  background: #005ea5;
+  margin: @gutterHalf 0;
+  padding: @gutterHalf;
+  color: @white;
+  background: @linkColour;
 
   @media screen and (min-width: @tabletMaxWidth) {
-    margin: 30px 15px;
-    padding: 20px 30px;
+    margin: @gutter @gutterHalf;
+    padding: @gutterHalf @gutter;
   }
 
   h2 {

@@ -214,17 +214,16 @@ h5, h6 {
 }
 
 ul {
-  margin: 0.2em 0.75em 1.5em 0.75em;
+  margin: @spacingSmall 0 @gutter 0;
   clear: both;
-
-  .lte-ie7 & {
-    margin-left: 0.85em;
-  }
+  padding-left: 20px;
+  list-style: disc;
 }
 
 ol {
-  margin: 0.2em 0.75em 1.5em 0.75em;
+  margin: @spacingSmall 0 @gutter 0;
   list-style: decimal;
+  padding-left: 20px;
 }
 
 li {
@@ -234,16 +233,12 @@ li {
   font-weight: 400;
   text-transform: none;
   margin: 0.25em 0;
-  padding-left: 0.3em;
+  margin-bottom: @spacingSmall;
 
   @media (max-width: @mobileMaxWidth) {
     font-size: 1.3rem;
     font-size: 13px;
   }
-}
-
-ul li {
-  list-style-image: url(../assets/img/bullet-disc.png);
 }
 
 ul.children {
@@ -258,11 +253,6 @@ ul.children {
   }
 }
 
-p + ul, p + ol {
-  margin-top: 0;
-}
-
 .entry-content-asset {
-  padding: 25px 0 15px;
-  padding: 2.5rem 0 1.5rem;
+  padding: @gutter 0 @gutterHalf;
 }
