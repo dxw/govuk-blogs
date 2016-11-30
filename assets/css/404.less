@@ -1,12 +1,17 @@
-.error404{
-  .bar{
-    border-top: 10px solid #DF3034;
+.error404 {
+
+  .bar {
+    border-top: 10px solid @red;
   }
+
   .main-content {
-    border-top: @greyTopBorder;
     margin-top: 0px;
     margin-bottom: @gutter;
-    padding-top: @gutter;
+
+    hr {
+      margin-top: 0;
+      margin-bottom: @gutter;
+    }
 
     .form-search {
         width: 100%;

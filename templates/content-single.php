@@ -35,7 +35,6 @@
       <?php next_post_link('<span class="link">%link</span><span class="arrow-button"></span>') ?>
     </div>
   </div>
-  <div class="clearfix"></div>
 
   <?php share_icons(get_the_ID()) ?>
   <?php comments_template('/templates/comments.php') ?>

@@ -20,7 +20,6 @@
   .border-radius(0px);
   font-weight: 400;
   overflow: visible;
-  .font-size(16px, 16px, 16px);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -134,8 +133,6 @@ input{
   
   .link {
     display: block;
-    font-size: 18px;
-    font-size: 1.8rem;
     width: 100%;
   }
 
@@ -195,7 +192,6 @@ input{
 
     .link {
       width: 86%;
-      .font-size(18px, 18px, 14px);
 
       @media screen and (max-width: @tabletMaxWidth) {
         width: 82%;
@@ -227,23 +223,46 @@ input{
 }
 
 .pagination {
-  margin: 10px auto 0 auto;
+  margin: @spacingSmall * 2 auto 0 auto;
   text-align: center;
 
   ul {
     margin: 0 @spacingSmall * 2;
     box-shadow: none;
 
-    li {
-      padding-left: 0;      
-      .font-size(18px, 18px, 16px);
+    > li {
+      padding-left: 0;
+
+      &:first-child {
+
+        > a {
+          border-left-width: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      &:last-child {
+
+        > a {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
 
       a {
         float: none;
+        .border-radius(0);
 
         &:hover, &:focus {
           text-decoration: underline;
           background: transparent;
+        }
+
+        &:focus {
+          background: @focusColour;
+          outline: 3px solid @focusColour;
+          outline-offset: 0;
         }
       }
 

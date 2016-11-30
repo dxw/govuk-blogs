@@ -4,8 +4,10 @@
         <?php $logo_options = get_option('theme_logo_options'); ?>
 
         <div class="span8">
-            <h1 class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></h1>
-            <h1 class="blog-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
+            <h1 class="blog-title">
+                <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span>
+                <a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
+            </h1>
 
             <?php if ($orgs = gds_organisations() ||  get_option('options_gds_location')) : ?>
                 <div class="bottom blog-meta">

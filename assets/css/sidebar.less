@@ -6,17 +6,13 @@
 
     .textwidget {
       margin-bottom: @gutter;
-      .font-size(1.6rem, 1.6rem, 1.6rem);
-      line-height: 22px;
     }
   }
   
   .widget-inner {
-    ul {
-      li {
-        font-size: 16px;
-        font-size: 1.6rem;
-      }
+
+    h3 {
+      margin-top: @gutter;
     }
   }
 
@@ -24,16 +20,13 @@
 
     ul {
       margin: 0px 0px @gutter 0px;
+      padding-left: 0;
     }
 
     li {
       list-style: none;
       margin: @spacingSmall 0px;
       padding-left: 0px;
-      font-size: 16px;
-      .font-size(1.6rem, 1.3rem, 1.3rem);
-      line-height: 1.25;
-      font-weight: 300;
     }
   }
 
@@ -56,11 +49,6 @@
 
   .widget_categories {
     border: none;
-
-    li {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
   }
 
   #menu-follow-us {
@@ -76,14 +64,14 @@
       border-bottom: none;
       vertical-align: middle;
       font-size: 16px;
-      .font-size(1.6rem, 1.6rem, 1.6rem);
+      .font-size(1.6rem, 1.6rem);
       line-height: 28px;
       &:before {
         background: @blueDark;
         padding: 5px;
         text-align: center;
         color: #fff;
-        .font-size(18px, 18px, 18px);
+        .font-size(18px, 18px);
       }
       &:hover, &:focus {
         &:before {
@@ -283,7 +271,8 @@
   .widget_categories {
 
     select {
-      .font-size(14px, 14px, 14px);
+      .font-size(16px, 16px);
+      .line-height(20 / 16, 20 / 16);
       width: 100%;
     }
 
