@@ -59,6 +59,7 @@
   margin-bottom: @gutter;
 
   .blog, .blog-title, .site-title {
+    margin-bottom: 0;
 
     a {
       color: inherit;
@@ -78,48 +79,54 @@
   }
 
   .blog {
-    .font-size(36px, 27px, 19px);
-    .line-height(40px, 32px, 22px);
+    line-height: 1.1111111111;
+    .font-size(27px, 20px);
     color: @greyText;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 8px;
     font-weight: normal;
+    display: block;
+
+    @media screen and (max-width: @mobileMaxWidth) {
+      padding-bottom: 6px;
+    }
   }
 
   .blog-title, .site-title {
-    .font-size(48px, 36px, 27px);
-    .line-height(50px, 40px, 32px);
     margin-top: 0;
   }
 
   .site-title {
     margin-bottom: 0;
   }
-  
-  .blog-meta table {
-    margin-top: 18px;
-    font-size: 16px;
-    .font-size(1.6rem, 1.3rem, 1.3rem);
 
-    @media screen and (max-width: @tabletMaxWidth) {
-      margin-top: 19px;
+  .blog-meta {
+    padding-top: @spacingSmall * 2;
+
+    @media (max-width: @tabletMaxWidth) {
+      padding-top: 0;
     }
 
-    @media screen and (max-width: @mobileMaxWidth) {
-      margin-top: 0;
+    @media (max-width: @mobileMaxWidth) {
+      margin-bottom: @gutterHalf;
     }
 
-    th {
-      width: 130px;
-      font-weight: normal;
-      text-align: left;
-      overflow: hidden;
-      padding: 0px;
+    table {
+      .font-size(16px, 16px);
+      .line-height(20 / 16, 20 / 16);
 
-      @media screen and (max-width: @tabletMaxWidth) {
-        width: 105px;
+      th {
+        width: 130px;
+        font-weight: normal;
+        text-align: left;
+        overflow: hidden;
+        padding: 0px;
+
+        @media screen and (max-width: @tabletMaxWidth) {
+          width: 105px;
+        }
+
       }
-
     }
   }
 
@@ -144,11 +151,15 @@
   }
 
   .bottom {
-    margin-top: @gutterHalf;
+    margin-top: @gutter;
     position: relative;
 
-    @media (max-width: @tabletMaxWidth) {
+    @media (max-width: @tabletMaxWidth) and (min-width: @tabletMinWidth) {
       margin-top: @spacingSmall;
+    }
+
+    @media (max-width: @mobileMaxWidth) {
+      margin-top: @gutterHalf;
     }
   }
 
@@ -162,29 +173,7 @@
       img {
         max-width: 80%;
       }
-    }
-
-    .top {
-      .search-container {
-        margin-bottom: 20px;
-      }
-    }
-
-    .bottom {
-      margin-top: 0;
-      .search-container {
-        display: inline-block !important;
-      }
-    }
-    .blog {
-      margin-bottom: 0px;
-    }
-    .blog-title {
-      margin: 0px 0px 10px 0px;
-    }
-    .blog-meta {
-      margin: 0 0 18px 0;
-    }    
+    }  
   }
 }
 
