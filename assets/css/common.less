@@ -178,6 +178,11 @@ body.single .main-content article {
   }
 }
 
+.alignnone {
+  display: block;
+  margin: 0px @gutterHalf @gutterHalf 0px; 
+}
+
 .alignright {
   float: right;
   margin: 0px 0px @gutterHalf @gutterHalf;
@@ -189,8 +194,20 @@ body.single .main-content article {
 }
 
 .aligncenter {
-  margin: auto;
+  display: block;
+  margin: 0 auto @gutter auto;
   clear: both;
+}
+
+@media (max-width: 500px) {
+  .alignleft,
+  .alignright,
+  .aligncenter {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
 }
 
 .page .main-content {
