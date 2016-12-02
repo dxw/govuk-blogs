@@ -3,6 +3,7 @@ form {
 }
 
 textarea,
+select,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -18,5 +19,26 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  
+  border-radius: 0;
+  padding: @spacingSmall;
+  border: 2px solid @black;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .font-size(19px, 19px);
+  .line-height(25 / 19, 25 / 19);
+  color: @black;
+
+  &:focus {
+    outline: 3px solid @focusColour;
+    outline-offset: 0;
+    box-shadow: none;
+    border-color: @black;
+  }
+}
+
+select {
+  -webkit-appearance: menulist;
+  height: 40px;
 }
