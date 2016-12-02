@@ -148,7 +148,7 @@ hr {
   margin-top: @gutterHalf;
 
   h2.count {
-    margin-top: -4px;
+    margin-top: 0;
     margin-bottom: 0;
     float: left;
     display: inline;
@@ -159,19 +159,17 @@ hr {
 
   span.terms,
   span.name {
-    float: left;
     display: inline-block;
     .font-size(16px, 16px);
     line-height: 1;
   }
 
   .name {
-    margin-right: 4px;
+    margin-right: 2px;
   }
 
   .term {
     font-weight: normal;
-    margin-top: 2px;
     margin-left: 3px;
 
     strong {
@@ -184,9 +182,10 @@ hr {
   }
 
   button.term-x {
-    float: left;
+    position: relative;
+    top: -2px;
     display: inline-block;
-    margin: 0 0 0 @gutter;
+    margin: 0 0 0 5px;
     padding: 0;
     color: @greyText;
     border: none;
