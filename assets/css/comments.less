@@ -1,27 +1,42 @@
-.bypostauthor {
-  .comment-body {
-    background: #f0f0f0;
-    padding: 20px;
+form#commentform {
+
+  label[for="email"] {
+    padding-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 50%;
 
     @media (max-width: @mobileMaxWidth) {
-      padding: 15px;
+      width: 100%;
     }
   }
+
+  input[type="submit"] {
+    margin-top: 0;
+    margin-bottom: @gutter;
+  }
+}
+
+.bypostauthor {
+
   ul {
     .comment-body {
-      background: #fff;
+      background: @white;
       padding: 0px;
     }
   }
 }
 
 .comments, .leave-a-comment {
-  h3 {
-    margin-bottom: 0;
-  }
   p.cancel-comment-reply {
-    margin-bottom: 0;
-    padding-bottom: 15px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -32,12 +47,16 @@
   }
 
   .media-heading {
+    margin-bottom: @gutterHalf;
     .font-size(16px, 16px);
     .line-height(20 / 16, 20 / 16);
 
     .author {
-      .font-size(19px, 19px);
-      .line-height(25 / 19, 25 / 19);
+      font-weight: 700;
+    }
+
+    time {
+      color: @greyText;
     }
   }
 
@@ -92,22 +111,7 @@
   }
 }
 
-p.media-heading {
-  time {
-    color: @greyLight;
-  }
-}
-
 .media-list {
   margin-top: 0;
   margin-bottom: 25px;
-}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
-  border-color: #66Afe9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
-  outline: 0 none;
-  color: #555;
 }

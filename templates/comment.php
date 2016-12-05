@@ -1,7 +1,7 @@
 <div class="media-body">
   <p class="media-heading">
     <span class="author"><?php echo get_comment_author_link() ?></span>
-    <time datetime="<?php echo comment_date('c') ?>">— <?php echo esc_html(get_comment_date('d/m/Y')) ?></time>
+    <time datetime="<?php echo comment_date('c') ?>">on <?php echo esc_html(get_comment_date('d F Y')) ?></time>
   </p>
   <?php edit_comment_link(__('(Edit)', 'roots'), '', '') ?>
   <div class="comment-body">

@@ -1,3 +1,31 @@
+.button {
+  background-color: @buttonColour;
+  position: relative;
+  display: inline-block;
+  padding: @spacingSmall @gutterHalf;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 @buttonBorder;
+  -moz-box-shadow: 0 2px 0 @buttonBorder;
+  box-shadow: 0 2px 0 @buttonBorder;
+  .font-size(19px, 19px);
+  .line-height(25 / 19, 25 / 19);
+  text-decoration: none;
+  cursor: pointer;
+  color: @white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+
+  &:hover, &:focus {
+    background-color: @buttonHover;
+  }
+}
+
 .btn,
 .btn:visited {
   display: inline;
