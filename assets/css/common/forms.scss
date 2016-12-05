@@ -27,7 +27,10 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
+<<<<<<< HEAD:assets/css/common/forms.scss
   font-family: "nta", Helvetica, Arial, sans-serif;
+=======
+>>>>>>> Card 212 - comment form styles:assets/css/forms.less
   height: auto;
   border-radius: 0;
   padding: $spacingSmall;
@@ -37,15 +40,33 @@ input[type="color"],
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+<<<<<<< HEAD:assets/css/common/forms.scss
   @include font-size(19px, 19px);
   @include line-height(25 / 19, 25 / 19);
   color: $black;
+=======
+  .font-size(19px, 19px);
+  .line-height(25 / 19, 25 / 19);
+  color: @black;
+  margin-bottom: 0;
+>>>>>>> Card 212 - comment form styles:assets/css/forms.less
 
   &:focus {
     outline: 3px solid $focusColour;
     outline-offset: 0;
     box-shadow: none;
+<<<<<<< HEAD:assets/css/common/forms.scss
     border-color: $black;
+=======
+    border-color: @black;
+
+    // WordPress adds invalid property to the comments form so I'm overwriting it below
+    &:invalid:focus {
+      color: @black;
+      box-shadow: none;
+      border-color: @black;
+    }
+>>>>>>> Card 212 - comment form styles:assets/css/forms.less
   }
 }
 
@@ -54,6 +75,7 @@ select {
   height: 40px;
 }
 
+<<<<<<< HEAD:assets/css/common/forms.scss
 .form-comments {
 
   textarea {
@@ -65,3 +87,26 @@ select {
   }
 }
 
+=======
+label {
+  margin-bottom: 0;
+  padding-bottom: 2px;
+  font-weight: 700;
+  .font-size(19px, 19px);
+  .line-height(25 / 19, 25 / 19);
+}
+
+.form-hint {
+  display: block;
+  padding-bottom: 2px;
+  color: @greyText;
+}
+
+.form-group {
+  margin-bottom: @gutter;
+
+  @media (max-width: @mobileMaxWidth) {
+    margin-bottom: @gutterHalf;
+  }
+}
+>>>>>>> Card 212 - comment form styles:assets/css/forms.less

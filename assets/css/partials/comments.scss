@@ -1,27 +1,47 @@
-.bypostauthor {
-  .comment-body {
-    background: #f0f0f0;
-    padding: 20px;
+form#commentform {
 
+  label[for="email"] {
+    padding-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 50%;
+
+<<<<<<< HEAD:assets/css/partials/comments.scss
     @media (max-width: $mobileMaxWidth) {
       padding: 15px;
+=======
+    @media (max-width: @mobileMaxWidth) {
+      width: 100%;
+>>>>>>> Card 212 - comment form styles:assets/css/comments.less
     }
   }
+
+  input[type="submit"] {
+    margin-top: 0;
+    margin-bottom: @gutter;
+  }
+}
+
+.bypostauthor {
+
   ul {
     .comment-body {
-      background: #fff;
+      background: @white;
       padding: 0px;
     }
   }
 }
 
 .comments, .leave-a-comment {
-  h3 {
-    margin-bottom: 0;
-  }
   p.cancel-comment-reply {
-    margin-bottom: 0;
-    padding-bottom: 15px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -32,12 +52,25 @@
   }
 
   .media-heading {
+<<<<<<< HEAD:assets/css/partials/comments.scss
     @include font-size(16px, 16px);
     @include line-height(20 / 16, 20 / 16);
 
     .author {
       @include font-size(19px, 19px);
       @include line-height(25 / 19, 25 / 19);
+=======
+    margin-bottom: @gutterHalf;
+    .font-size(16px, 16px);
+    .line-height(20 / 16, 20 / 16);
+
+    .author {
+      font-weight: 700;
+    }
+
+    time {
+      color: @greyText;
+>>>>>>> Card 212 - comment form styles:assets/css/comments.less
     }
   }
 
@@ -92,16 +125,20 @@
   }
 }
 
+<<<<<<< HEAD:assets/css/partials/comments.scss
 p.media-heading {
   time {
     color: $greyLight;
   }
 }
 
+=======
+>>>>>>> Card 212 - comment form styles:assets/css/comments.less
 .media-list {
   margin-top: 0;
   margin-bottom: 25px;
 }
+<<<<<<< HEAD:assets/css/partials/comments.scss
 
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
@@ -111,3 +148,5 @@ select:focus:invalid:focus {
   outline: 0 none;
   color: #555;
 }
+=======
+>>>>>>> Card 212 - comment form styles:assets/css/comments.less
