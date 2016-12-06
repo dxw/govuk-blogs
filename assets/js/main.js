@@ -102,6 +102,23 @@ jQuery(function ($) {
    /// Fix audioboo embed height. Needs to be done with jQuery because of shared class names
     $('.embedly-embed').css({'position':'relative'}).parent().css({'padding-top':'0' , 'padding-bottom':'0' ,  'height':'auto'});
 
+    //Get survey cookie, show banner if not set to true
+    $(document).ready(function() {
+        var surveyTaken = GOVUK.cookie('no-more-survey');
+        if(surveyTaken != 'true') {
+            $('#user-satisfaction-survey').show();
+        }
+    })
+
+    ///Set survey cookie
+    $('#survey-no-thanks').click(function() {
+        GOVUK.cookie('no-more-survey', 'true', { days: 365 });
+        $('#user-satisfaction-survey').hide();
+    });
+    $('#take-survey').click(function() {
+        GOVUK.cookie('no-more-survey', 'true', { days: 365 });
+    });
+
 
 
 })
