@@ -29,14 +29,16 @@
 
 <?php if (comments_open()) : ?>
   <section id="respond" class="leave-a-comment">
-    <h3>Leave a comment</h3>
-    <p class="cancel-comment-reply"><?php cancel_comment_reply_link() ?></p>
+    <header class="group">
+      <h3><?php comment_form_title(__('Leave a comment', 'roots'), __('Leave a reply to %s', 'roots'), __(false, 'roots')); ?></h3>
+      <p class="cancel-comment-reply"><?php cancel_comment_reply_link() ?></p>
+    </header>
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
-      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform">
+      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
         <div class="form-group">
-          <label for="comment" class="visuallyhidden"><?php _e('Comment', 'roots') ?></label>
+          <label for="comment"><?php _e('Comment', 'roots') ?></label>
           <textarea name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
         </div>
         <div class="js-comment-extra">
