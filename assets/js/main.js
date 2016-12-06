@@ -99,9 +99,8 @@ jQuery(function ($) {
     });
 
 
-   /// Fix audioboo embed height. Needs to be done with jQuery because of shared class names
+    /// Fix audioboo embed height. Needs to be done with jQuery because of shared class names
     $('.embedly-embed').css({'position':'relative'}).parent().css({'padding-top':'0' , 'padding-bottom':'0' ,  'height':'auto'});
-
-
+    
 
 })
