@@ -17,19 +17,15 @@ p {
 }
 
 blockquote {
-  padding: 15px 10px;
-  margin: 0 0 20px 0;
+  padding: @gutterHalf;
+  margin: 0 0 @gutter 0;
   border: 0;
   background-color: #e1e8e8;
-  padding: 13px 10px;
 
   p {
-    padding-left: 15px;
-
-    @media (max-width: @mobileMaxWidth) {
-      font-size: 1.3rem;
-      font-size: 13px;
-    }
+    padding: 0 @spacingSmall * 4;
+    .font-size(19px, 19px);
+    .line-height(25 / 19, 25 / 19);
   }
 
   &:before {
@@ -38,11 +34,6 @@ blockquote {
     float: left;
     font-size: 40px;
     font-size: 4rem;
-
-    @media (max-width: @mobileMaxWidth) {
-      font-size: 2.5rem;
-      font-size: 25px;
-    }
   }
 
   &:after {
@@ -51,11 +42,7 @@ blockquote {
     float: right;
     font-size: 40px;
     font-size: 4rem;
-
-    @media (max-width: @mobileMaxWidth) {
-      font-size: 2rem;
-      font-size: 20px;
-    }
+    margin-top: -30px;
   }
 
   &.noquotes {
@@ -74,14 +61,8 @@ blockquote {
 
 }
 
-@media (min-width: @tabletMinWidth) {
-  blockquote p {
-    padding-left: 30px;
-  }
-}
-
 cite {
-  color: #6f777b;
+  color: @greyText;
   font-style: normal;
   position: relative;
   font-size: 18px;
