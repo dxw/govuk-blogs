@@ -99,9 +99,12 @@ jQuery(function ($) {
     });
 
 
-   /// Fix audioboo embed height. Needs to be done with jQuery because of shared class names
+    /// Fix audioboo embed height. Needs to be done with jQuery because of shared class names
     $('.embedly-embed').css({'position':'relative'}).parent().css({'padding-top':'0' , 'padding-bottom':'0' ,  'height':'auto'});
 
 
-
+    /// Blockquote closing quotation mark
+    $('article blockquote').each(function() {
+        $(this).find('p:last-of-type').append('<span class="blockquote-close"></span>');
+    });
 })
