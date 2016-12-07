@@ -17,15 +17,18 @@ p {
 }
 
 blockquote {
-  padding: 0;
-  margin: 0 0 @gutter 0;
+  padding: 15px 10px;
+  margin: 0 0 20px 0;
   border: 0;
+  background-color: #e1e8e8;
+  padding: 13px 10px;
 
   p {
-    padding-left: @gutterHalf;
+    padding-left: 15px;
 
-    em {
-      font-style: normal;
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 1.3rem;
+      font-size: 13px;
     }
   }
 
@@ -33,22 +36,52 @@ blockquote {
     content: "\201C";
     display: inline-block;
     float: left;
-    .font-size(19px, 19px);
+    font-size: 40px;
+    font-size: 4rem;
+
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 2.5rem;
+      font-size: 25px;
+    }
   }
 
-  span.blockquote-close {
-    margin-left: 4px;
-    
-    &:after {
-      content: "\201D";
-      display: inline-block;
-      .font-size(19px, 19px);
+  &:after {
+    content: "\201D";
+    display: inline-block;
+    float: right;
+    font-size: 40px;
+    font-size: 4rem;
+
+    @media (max-width: @mobileMaxWidth) {
+      font-size: 2rem;
+      font-size: 20px;
     }
+  }
+
+  &.noquotes {
+    &:before {
+      content:"";
+    }
+
+    &:after {
+      content:"";
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  }
+
+}
+
+@media (min-width: @tabletMinWidth) {
+  blockquote p {
+    padding-left: 30px;
   }
 }
 
 cite {
-  color: @greyText;
+  color: #6f777b;
   font-style: normal;
   position: relative;
   font-size: 18px;
