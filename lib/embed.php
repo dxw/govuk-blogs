@@ -17,10 +17,18 @@ add_filter('embed_oembed_html', function ($cache, $url=null, $attr=null, $post_I
 
 # Youtube: Don't show related videos
 # Credit: http://wordpress.org/plugins/hide-youtube-related-videos/
-add_filter( 'oembed_result', function ($data, $url, $args = array()) {
+add_filter('oembed_result', function ($data, $url, $args = array()) {
   $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?wmode=transparent&amp;rel=0$3', $data);
   return $data;
 }, 10, 3);
+
+# Instagram: add class so Instagram embeds can be styled independently
+add_filter('embed_oembed_html', function ($cache, $url, $attr, $post_ID) {
+    if (preg_match('/https?:\/\/www\.\instagram\.com/', $url)==1) {
+        $cache = str_replace('<div class="entry-content-asset">', '<div class="entry-content-asset instagram-embed">', $cache);
+        return $cache;
+    }
+}, 10, 4);
 
 
 # CoverItLive
