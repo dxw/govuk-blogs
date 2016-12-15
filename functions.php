@@ -42,5 +42,6 @@ require(__DIR__.'/lib/tableau-shortcode.php');
 require(__DIR__.'/lib/disable-wptexturize.php');
 require(__DIR__.'/lib/co-authors-plus.php');
 require(__DIR__.'/lib/enable-rss2.php');
+require(__DIR__.'/lib/unhook_wpmudev_scheduled_jobs.php');
 
 (new \Dxw\Iguana\Extras\UseAtom())->register();
