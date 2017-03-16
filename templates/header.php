@@ -1,22 +1,3 @@
-<!-- show banner unless ACF option set to false -->
-<?php
-$var = get_option('options_show_banner');
-if ($var === false || $var == 1) {
-    ?>
-    <div id="user-satisfaction-survey-container">
-      <section id="user-satisfaction-survey" class="visible" aria-hidden="false">
-        <div class="wrapper">
-          <h1>Tell us what you think of GOV.UK</h1>
-          <p class="right"><a href="#survey-no-thanks" id="survey-no-thanks">No thanks</a></p>
-          <p><a href="https://www.surveymonkey.com/s/2MRDLTW?c=/government/consultations/retail-exits-reform-draft-regulations" id="take-survey" target="_blank">Take the 3 minute survey</a> This will open a short survey on another website</p>
-        </div>
-      </section>
-    </div>
-    <?php
-
-}
-?>
-
 <header class="header" role="banner">
     <div class="row">
 
