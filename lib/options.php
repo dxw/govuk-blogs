@@ -9,11 +9,19 @@ if (function_exists('acf_add_options_sub_page')) {
 
 add_action('network_admin_menu', function () {
     add_submenu_page('settings.php', 'Banner', 'Banner', 'manage_options', 'banner-settings', function () {
-        if (isset($_POST['_wpnonce']) && isset($_POST['banner_setting']) && wp_verify_nonce($_POST['_wpnonce'], 'banner-settings')) {
-            $skip_days = absint($_POST['banner_setting']);
-            update_site_option('banner_setting', $skip_days);
-        } elseif (isset($_POST['_wpnonce']) && !isset($_POST['banner_setting']) && wp_verify_nonce($_POST['_wpnonce'], 'banner-settings')) {
-            delete_site_option('banner_setting');
+        if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'banner-settings')) {
+            if(isset($_POST['banner_setting'])) {
+                $banner_setting = absint($_POST['banner_setting']);
+                update_site_option('banner_setting', $banner_setting);
+            } else {
+                delete_site_option('banner_setting');
+            }
+            $banner_title = $_POST['banner_title'];
+            $banner_link_text = $_POST['banner_link_text'];
+            $banner_link = $_POST['banner_link'];
+            update_site_option('banner_title', $banner_title);
+            update_site_option('banner_link_text', $banner_link_text);
+            update_site_option('banner_link', $banner_link);
         }
         ?>
 
@@ -22,7 +30,7 @@ add_action('network_admin_menu', function () {
 
             <p>This page controls the banner display across this site.</p>
 
-            <p>If you choose to display the banner here, it will display across all sites in the network unless explicitly turned off on a site-by-site basis.</p>
+            <p>If you choose to display the banner here, it will display across all sites in the network unless explicitly turned off in the options of a specific site.</p>
 
             <form method="POST" action="settings.php?page=banner-settings">
 
@@ -33,6 +41,27 @@ add_action('network_admin_menu', function () {
                         <td>
                             <label>
                                 Display banner <input type="checkbox" name="banner_setting" value="1" <?php checked( get_site_option('banner_setting'), 1 ) ?> >
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner title <input type="text" name="banner_title" value="<?php echo esc_attr(get_site_option('banner_title')) ?>">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner link text <input type="text" name="banner_link_text" value="<?php echo esc_attr(get_site_option('banner_link_text')) ?>">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner link <input type="url" name="banner_link" value="<?php echo esc_attr(get_site_option('banner_link')) ?>">
                             </label>
                         </td>
                     </tr>
