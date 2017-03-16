@@ -1,11 +1,12 @@
 <?php
-$showBanner = get_field('show_banner', 'options');
-if ($showBanner === true || $showBanner = null) {
+$showBannerOnNetwork = get_site_option('banner_setting');
+$showBannerBySite = get_field('show_banner', 'options');
+if ($showBannerOnNetwork == true && ($showBannerBySite === true || $showBannerBySite = null)) {
     $bannerTitle = get_field('banner_title', 'options');
     if ($bannerTitle == null) {
         $bannerTitle = 'Tell us what you think of BLOG.GOV.UK';
     }
-    $bannerLinkText = get_field('banner_title', 'options');
+    $bannerLinkText = get_field('banner_link_text', 'options');
     if ($bannerLinkText == null) {
         $bannerLinkText = 'Your feedback will help us improve this website';
     }

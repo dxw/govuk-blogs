@@ -26,7 +26,7 @@ if (function_exists('acf_add_local_field_group')) {
                 'default_value' => 1,
             ),
             array(
-              'key' => 'field_584689440d482',
+              'key' => 'field_584689440d484',
               'label' => 'Title',
               'name' => 'banner_title',
               'type' => 'text',
