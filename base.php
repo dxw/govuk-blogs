@@ -13,6 +13,7 @@ echo $template->render([
   'assetPath' => get_template_directory_uri().'/build/govuk_template/assets/',
   'head' => \Missing\Strings::getOutput('wp_head'),
   'bodyClasses' => implode(' ', array_map('esc_attr', get_body_class())),
+  'banner' => \Missing\Strings::getOutput(function () { get_template_part('templates/banner'); }),
   'cookieMessage' => \Missing\Strings::getOutput(function () { get_template_part('templates/cookies'); }),
   'content' => \Missing\Strings::getOutput(function () { get_template_part('templates/base'); }),
   'footerSupportLinks' => \Missing\Strings::getOutput(function () { get_template_part('templates/footer'); }),

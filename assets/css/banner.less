@@ -1,0 +1,38 @@
+#user-satisfaction-survey {
+  /**
+   * Hidden by default as we only want to show it to users who have
+   * JavaScript enabled.
+   */
+  display: none;
+  background-color: #2B358B;
+  padding: 0.8em 0;
+  color: #fff;
+
+  &.visible {
+    @media(desktop) {
+      display: block;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  p {
+    margin: 0 0 0 20px;
+
+    a {
+      &:link,
+      &:active,
+      &:visited {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
