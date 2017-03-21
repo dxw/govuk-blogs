@@ -10,7 +10,7 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
       <section id="user-satisfaction-survey" class="visible" aria-hidden="false">
         <div class="row">
             <div class="span10">
-                <h2><?php echo esc_html($bannerTitle) ?></h2>
+                <h3><?php echo esc_html($bannerTitle) ?></h2>
                 <p><a href="<?php echo esc_url($bannerLink)?>" id="take-survey" target="_blank"><?php echo esc_html($bannerLinkText) ?></a></p>
             </div>
             <div class="span2">
