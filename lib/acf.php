@@ -2,6 +2,7 @@
 
 if (function_exists('acf_add_options_sub_page')) {
     acf_add_options_sub_page('Banner');
+    acf_add_options_sub_page('Google Verification Code');
 }
 
 if (function_exists('acf_add_local_field_group')) {
@@ -32,6 +33,45 @@ if (function_exists('acf_add_local_field_group')) {
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-banner',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+    acf_add_local_field_group(array(
+        'key' => 'group_5846892ea7h09',
+        'title' => 'Google verification code',
+        'fields' => array(
+            array(
+                'key' => 'field_584689440g473',
+                'label' => 'Google Search Console verification code',
+                'name' => 'google_verification_code',
+                'type' => 'text',
+                'instructions' => 'Enter the meta code provided by Google',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options-google-verification-code',
                 ),
             ),
         ),
