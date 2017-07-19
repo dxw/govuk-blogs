@@ -5,7 +5,7 @@
   <?php if (is_home()) : ?>
     <?php get_template_part('templates/featured') ?>
   <?php endif ?>
-  <main id="content" class="row" role="main">
+  <main id="content" class="grid-row" role="main">
     <div class="span8 main-content">
       <?php include roots_template_path() ?>
       <?php if(!is_single() || !is_page()) { get_template_part('templates/paging'); } ?>

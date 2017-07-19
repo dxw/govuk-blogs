@@ -50,7 +50,10 @@
   }
 }
 
-[class*="span"] {
+.column-one-half,
+.column-third,
+.column-one-third,
+.column-two-thirds, {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -58,27 +61,37 @@
   padding: 0 $gutterHalf;
 }
 
-.row {
+.grid-row {
   margin: 0 -$gutterHalf;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 .span12 {
   width: 100%;
 }
 
-.span8 {
+.column-two-thirds {
   width: 66.66666%;
+  float: left;
 
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
+    float: none;
   }
 }
 
-.span4 {
+.column-third, .column-one-third {
   width: 33.33333%;
+  float: left;
 
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
+    float: none;
   }
 }
 

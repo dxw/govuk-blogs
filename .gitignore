@@ -6,4 +6,5 @@
 /build/main.min.css.map
 /assets/img/.DS_Store
 /assets/css/.DS_Store
+/build/govuk_template/views/.DS_Store
 .sass-cache/

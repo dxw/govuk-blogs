@@ -1,6 +1,6 @@
 <?php if (gds_get_featured()) : ?>
   <?php while (have_posts()): the_post() ?>
-    <div class="row">
+    <div class="grid-row">
       <div class="span12">
         <article <?php post_class('featured') ?>>
           <div class="featured-wrapper">

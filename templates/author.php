@@ -1,5 +1,5 @@
 <div class="author-container">
-    <div class="row author-details">
+    <div class="grid-row author-details">
         <div class="span2 avatar">
             <?php gds_avatar() ?>
         </div>

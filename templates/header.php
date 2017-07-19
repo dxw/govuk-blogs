@@ -1,9 +1,9 @@
 <header class="header" role="banner">
-    <div class="row">
+    <div class="grid-row">
 
         <?php $logo_options = get_option('theme_logo_options'); ?>
 
-        <div class="span8">
+        <div class="column-two-thirds">
             <h1 class="blog-title">
                 <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span>
                 <a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
@@ -29,7 +29,7 @@
             <?php endif ?>
         </div>
 
-        <div class="span4">
+        <div class="column-one-third">
             <?php if ($logo_options['logo']): ?>
                 <div class="logo-container hidden-mobile">
                     <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
@@ -42,7 +42,7 @@
 
     </div>
 
-    <div class="row">
+    <div class="grid-row">
         <?php
         if (function_exists('history_mode_notice') && (is_single() || is_page())) {
             history_mode_notice(get_the_ID(), 'blog post');
