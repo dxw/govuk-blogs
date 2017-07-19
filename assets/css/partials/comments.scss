@@ -3,7 +3,7 @@
     background: #f0f0f0;
     padding: 20px;
 
-    @media (max-width: @mobileMaxWidth) {
+    @media (max-width: $mobileMaxWidth) {
       padding: 15px;
     }
   }
@@ -27,17 +27,17 @@
 
 .comments {
   .media-body {
-    .font-size(16px, 16px);
-    .line-height(20 / 16, 20 / 16);
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
   }
 
   .media-heading {
-    .font-size(16px, 16px);
-    .line-height(20 / 16, 20 / 16);
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
 
     .author {
-      .font-size(19px, 19px);
-      .line-height(25 / 19, 25 / 19);
+      @include font-size(19px, 19px);
+      @include line-height(25 / 19, 25 / 19);
     }
   }
 
@@ -70,9 +70,9 @@
 
   .comment-link {
     margin-bottom: 15px;
-    color: @greyText;
+    color: $greyText;
     &:before {
-      .icomoon(@icon-link);
+      @include icomoon($icon-link);
       text-decoration: none;
     }
 
@@ -94,7 +94,7 @@
 
 p.media-heading {
   time {
-    color: @greyLight;
+    color: $greyLight;
   }
 }
 

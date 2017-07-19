@@ -1,7 +1,7 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
 
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     padding-right: 0;
     padding-left: 0;
   }
@@ -18,14 +18,14 @@ body {
 .visible-desktop {
   display: block !important;
   visibility: visible !important;
-  @media screen and (max-width: @mobileMaxWidth) {
+  @media screen and (max-width: $mobileMaxWidth) {
     display: none !important;
     visibility: hidden !important;
   }
 }
 
 .hidden-tablet {
-  @media screen and (max-width: @tabletMaxWidth) {
+  @media screen and (max-width: $tabletMaxWidth) {
     display: none !important;
     visibility: hidden !important;
   }
@@ -34,14 +34,14 @@ body {
 .visible-tablet {
   display: none;
   visibility: hidden;
-  @media screen and (max-width: @tabletMaxWidth) {
+  @media screen and (max-width: $tabletMaxWidth) {
     display: block !important;
     visibility: visible !important;
   }
 }
 
 .hidden-mobile {
-  @media screen and (max-width: @mobileMaxWidth) {
+  @media screen and (max-width: $mobileMaxWidth) {
     display: none !important;
     visibility: hidden !important;
   }
@@ -50,14 +50,14 @@ body {
 .visible-mobile {
   display: none;
   visibility: hidden;
-  @media screen and (max-width: @mobileMaxWidth) {
+  @media screen and (max-width: $mobileMaxWidth) {
     display: block !important;
     visibility: visible !important;
   }
 }
 
 .full-width {
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
@@ -75,36 +75,36 @@ article {
   header {
 
     .byline {
-      .font-size(16px, 16px);
-      .line-height(20 / 16, 20 / 16);
-      margin-bottom: @gutterHalf;
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
+      margin-bottom: $gutterHalf;
     }
 
     .wp-post-image {
-      margin-bottom: @gutterHalf;
+      margin-bottom: $gutterHalf;
     }
   }
 
   time {
-    color: @greyText;
+    color: $greyText;
   }
 
   footer {
-    .font-size(16px, 16px);
-    .line-height(20 / 16, 20 / 16);
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
 
     &.single {
-      margin-top: @gutter;
+      margin-top: $gutter;
     }
 
     p.tags {
-      margin-top: @gutter;
+      margin-top: $gutter;
     }
   }
 }
 
 .entry-summary, .entry-content, .page-content {
-  margin: 0px 0px @gutterHalf 0px;
+  margin: 0px 0px $gutterHalf 0px;
 }
 
 .entry-summary, .entry-content, .page-content, .main-content {
@@ -164,13 +164,13 @@ iframe.coveritlive {
 }
 
 .main-content article {
-  border-top: @greyTopBorder;
-  padding: 0 0 @gutter 0;
+  border-top: $greyTopBorder;
+  padding: 0 0 $gutter 0;
 
   h2.entry-title {
-    .font-size(24px, 24px);
-    .line-height(30 / 24, 30 / 24);
-    margin-top: @gutter;
+    @include font-size(24px, 24px);
+    @include line-height(30 / 24, 30 / 24);
+    margin-top: $gutter;
   }
 }
 
@@ -180,28 +180,28 @@ body.page .main-content article {
   padding-bottom: 0px;
 
   h1.entry-title {
-    margin-top: @gutterHalf * 3;
+    margin-top: $gutterHalf * 3;
   }
 }
 
 .alignnone {
   display: block;
-  margin: 0px @gutterHalf @gutterHalf 0px;
+  margin: 0px $gutterHalf $gutterHalf 0px;
 }
 
 .alignright {
   float: right;
-  margin: 0px 0px @gutterHalf @gutterHalf;
+  margin: 0px 0px $gutterHalf $gutterHalf;
 }
 
 .alignleft {
   float: left;
-  margin: 0px @gutterHalf @gutterHalf 0px;
+  margin: 0px $gutterHalf $gutterHalf 0px;
 }
 
 .aligncenter {
   display: block;
-  margin: 0 auto @gutter auto;
+  margin: 0 auto $gutter auto;
   clear: both;
 }
 
@@ -235,7 +235,7 @@ figure, figure.thumbnail {
   -webkit-box-shadow: none;
   box-shadow: none;
   -moz-box-shadow: none;
-  margin-bottom: @gutter;
+  margin-bottom: $gutter;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -246,9 +246,9 @@ figure.alignnone {
 }
 
 figcaption {
-  margin-top: @spacingSmall;
-  .font-size(16px, 16px);
-  .line-height(20 / 16, 20 / 16);
+  margin-top: $spacingSmall;
+  @include font-size(16px, 16px);
+  @include line-height(20 / 16, 20 / 16);
 }
 
 .thumbnail {
@@ -257,7 +257,7 @@ figcaption {
 }
 
 .thumbnail .caption {
-  color: @black;
+  color: $black;
   text-align: center;
 }
 
@@ -271,13 +271,13 @@ table {
   padding-top: 0.7rem;
   padding-bottom: 3px;
   padding-bottom: 0.3rem;
-  margin-bottom: @gutter;
+  margin-bottom: $gutter;
 }
 
 table th, table td {
   vertical-align: top;
   padding: 0.7em 0.5em 0.7em 1em;
-  @media (max-width: @mobileSmallWidth) {
+  @media (max-width: $mobileSmallWidth) {
     padding-left: 0.5em;
   }
 }
@@ -306,7 +306,7 @@ table td small {
 
 .address {
   border-left: 1px solid #bfc1c3;
-  padding-left: @gutterHalf;
+  padding-left: $gutterHalf;
   margin-bottom: 0.75em;
 }
 
@@ -316,26 +316,26 @@ table td small {
 }
 
 .footnotes {
-  margin-bottom: @gutter;
-  border-top: @greyTopBorder;
-  padding-top: @gutterHalf;
+  margin-bottom: $gutter;
+  border-top: $greyTopBorder;
+  padding-top: $gutterHalf;
 
   ul {
     margin: 0;
 
     li {
       list-style: none;
-      margin-top: @spacingSmall * 2;
+      margin-top: $spacingSmall * 2;
       padding-left: 0;
-      .font-size(16px, 16px);
-      .line-height(20 / 16, 20 / 16);
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
 
       &:first-child {
         margin-top: 0.25em;
       }
 
       .number {
-        padding-right: @spacingSmall;
+        padding-right: $spacingSmall;
         font-weight: bold;
       }
     }
@@ -360,7 +360,7 @@ sup {
   display: inline-block;
   margin-bottom: 0;
 
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     max-width: 99.5%;
   }
 
@@ -376,7 +376,7 @@ sup {
     width: 86%;
     z-index: 10;
 
-    @media (max-width: @tabletMaxWidth) {
+    @media (max-width: $tabletMaxWidth) {
       width: 84%;
     }
 
@@ -392,11 +392,11 @@ sup {
       width: 81%;
     }
 
-    @media (max-width: @mobileMaxWidth) {
+    @media (max-width: $mobileMaxWidth) {
       width: 95%;
     }
 
-    @media (max-width: @mobileSmallWidth) {
+    @media (max-width: $mobileSmallWidth) {
       width: 88%;
     }
   }
@@ -406,17 +406,17 @@ sup {
     height: 40px;
     float: left;
     padding: 6px;
-    background: @black url('../assets/img/search-button.png') no-repeat 2px 50%;
+    background: $black url('../assets/img/search-button.png') no-repeat 2px 50%;
     text-indent: -5000px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
     &:active, &:hover {
-      background-color: lighten(@black, 5%);
+      background-color: lighten($black, 5%);
     }
 
-    @media (max-width: @mobileMaxWidth) {
+    @media (max-width: $mobileMaxWidth) {
       position: absolute;
       right: 0;
     }
@@ -433,7 +433,7 @@ sup {
 }
 
 .icons-buttons {
-  margin: @gutter 0;
+  margin: $gutter 0;
 
   ul {
     margin: 0;
@@ -456,64 +456,64 @@ sup {
     a {
       display: block;
       vertical-align: middle;
-      .font-size(16px, 16px);
-      .line-height(20 / 16, 20 / 16);
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
       &:before {
-        background: @blueDark;
+        background: $blueDark;
         padding: 5px;
         text-align: center;
         color: #fff;
-        .font-size(18px, 18px);
+        @include font-size(18px, 18px);
       }
       &:hover, &:focus {
         &:before {
-          background: darken(@blueDark, 10%);
+          background: darken($blueDark, 10%);
         }
       }
 
       &.twitter {
         &:before {
-          .icomoon(@icon-twitter);
+          @include icomoon($icon-twitter);
         }
 
         .lte-ie8 & {
-          .menu-follow-us(1);
+          @include menu-follow-us(1);
         }
       }
       &.facebook {
         &:before {
-          .icomoon(@icon-facebook);
+          @include icomoon($icon-facebook);
         }
 
         .lte-ie8 & {
-          .menu-follow-us(0);
+          @include menu-follow-us(0);
         }
       }
       &.google {
         &:before {
-          .icomoon(@icon-googleplus);
+          @include icomoon($icon-googleplus);
         }
 
         .lte-ie8 & {
-          .menu-follow-us(7);
+          @include menu-follow-us(7);
         }
       }
       &.linkedin {
         &:before {
-          .icomoon(@icon-linkedin);
+          @include icomoon($icon-linkedin);
         }
 
         .lte-ie8 & {
-          .menu-follow-us(6);
+          @include menu-follow-us(6);
         }
       }
       &.email {
         &:before {
-          .icomoon(@icon-envelope);
+          @include icomoon($icon-envelope);
         }
 
         .lte-ie8 & {
-          .menu-follow-us(9);
+          @include menu-follow-us(9);
         }
       }
 
@@ -540,7 +540,7 @@ sup {
 
     li {
 
-      @media screen and (max-width: @mobileMaxWidth) {
+      @media screen and (max-width: $mobileMaxWidth) {
         width: 50%;
         float: left;
         margin-right: 0;
@@ -550,18 +550,18 @@ sup {
       a {
 
         &:before {
-          .font-size(18px, 18px);
+          @include font-size(18px, 18px);
         }
 
         &.email {
           &:before {
-            .icomoon(@icon-envelope);
+            @include icomoon($icon-envelope);
           }
 
           .lte-ie8 & {
             height: 25px;
             padding-left: 30px;
-            .menu-follow-us(9);
+            @include menu-follow-us(9);
             &:before {
               display: none;
             }
@@ -570,7 +570,7 @@ sup {
 
         &.feed {
           &:before {
-            .icomoon(@icon-feed);
+            @include icomoon($icon-feed);
           }
 
           .lte-ie8 & {
@@ -591,12 +591,12 @@ sup {
 
 footer.single div.related-posts {
   background: #e1e8e8;
-  padding: @gutterHalf @gutter;
-  .font-size(19px, 19px);
-  .line-height(25 / 19, 25 / 19);
+  padding: $gutterHalf $gutter;
+  @include font-size(19px, 19px);
+  @include line-height(25 / 19, 25 / 19);
 
   p {
-    margin: 0 0 @spacingSmall * 2 0;
+    margin: 0 0 $spacingSmall * 2 0;
   }
 
   ul {

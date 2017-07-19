@@ -15,9 +15,9 @@
 .btn-secondary,
 .btn,
 .btn:visited {
-  background-color: @blueDark;
+  background-color: $blueDark;
   color: #fff;
-  .border-radius(0px);
+  @include border-radius(0px);
   font-weight: 400;
   overflow: visible;
   -webkit-font-smoothing: antialiased;
@@ -29,14 +29,14 @@
 .btn:active,
 .btn:focus,
 .btn-active{
-  background-color: darken(@blueDark, 10%);
+  background-color: darken($blueDark, 10%);
 }
 
 .btn-secondary .btn:hover,
 .btn-secondary .btn-hover,
 .btn:hover,
 .btn-hover {
-  background-color: darken(@blueDark, 10%);
+  background-color: darken($blueDark, 10%);
 }
 
 .btn:active,
@@ -87,26 +87,26 @@ input{
 #commentform {
   input[type="submit"] {
     margin-top: 10px;
-    @media (max-width: @mobileMaxWidth) {
+    @media (max-width: $mobileMaxWidth) {
       width: 100%;
     }
   }
   input[type="text"],
   input[type="email"],
   input[type="url"] {
-    @media (max-width: @mobileMaxWidth) {
+    @media (max-width: $mobileMaxWidth) {
       width: 97%;
     }
-    @media (max-width: @mobileSmallWidth) {
+    @media (max-width: $mobileSmallWidth) {
       width: 96%;
     }
   }
 }
 
 .page-numbers-container {
-  border-top: @greyTopBorder;
+  border-top: $greyTopBorder;
   margin-top: 0px;
-  padding-top: @gutter;
+  padding-top: $gutter;
   overflow: hidden;
   
   a:hover .link {
@@ -114,7 +114,7 @@ input{
   }
   
   .arrow {
-    margin-bottom: @gutter;
+    margin-bottom: $gutter;
     padding: 0px;
     
     span.contain {
@@ -127,7 +127,7 @@ input{
       background: url('../assets/img/arrow-sprite.png') no-repeat;
       width: 30px;
       height: 50px;
-      margin: 0 @spacingSmall 0 0;
+      margin: 0 $spacingSmall 0 0;
     }
   }
   
@@ -193,7 +193,7 @@ input{
     .link {
       width: 86%;
 
-      @media screen and (max-width: @tabletMaxWidth) {
+      @media screen and (max-width: $tabletMaxWidth) {
         width: 82%;
       }
       @media screen and (max-width: 500px) {
@@ -223,11 +223,11 @@ input{
 }
 
 .pagination {
-  margin: @spacingSmall * 2 auto 0 auto;
+  margin: $spacingSmall * 2 auto 0 auto;
   text-align: center;
 
   ul {
-    margin: 0 @spacingSmall * 2;
+    margin: 0 $spacingSmall * 2;
     box-shadow: none;
 
     > li {
@@ -252,7 +252,7 @@ input{
 
       a {
         float: none;
-        .border-radius(0);
+        @include border-radius(0);
 
         &:hover, &:focus {
           text-decoration: underline;
@@ -260,8 +260,8 @@ input{
         }
 
         &:focus {
-          background: @focusColour;
-          outline: 3px solid @focusColour;
+          background: $focusColour;
+          outline: 3px solid $focusColour;
           outline-offset: 0;
         }
       }

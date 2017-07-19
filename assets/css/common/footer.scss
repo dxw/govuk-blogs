@@ -21,13 +21,13 @@
     .copyright{
       width: 15%;
 
-      @media (min-width: 0) and (max-width: @tabletMinWidth){
+      @media (min-width: 0) and (max-width: $tabletMinWidth){
         width: 100%;
       }
 
       a {
 
-        @media (min-width: 769px) and (max-width: @tabletMaxWidth){
+        @media (min-width: 769px) and (max-width: $tabletMaxWidth){
           background-size: 80%;
         }
       }

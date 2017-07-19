@@ -2,9 +2,9 @@
 
   h2.search-title,
   h2.archive-title {
-    border-top: @greyTopBorder;
+    border-top: $greyTopBorder;
     margin-top: 0px;
-    padding-top: @gutter;
+    padding-top: $gutter;
   }
   
   h2.search-title + article,
@@ -16,13 +16,13 @@
 .author {
 
   .author-container {
-    border-top: @greyTopBorder;
+    border-top: $greyTopBorder;
     margin-top: 0px;
-    padding-top: @gutter;
+    padding-top: $gutter;
   }
   
   .author-details {
-    margin-bottom: @gutter;
+    margin-bottom: $gutter;
   }
   
   .author-title {
@@ -30,6 +30,6 @@
   }
   
   h3.author-title {
-    margin-top: @gutter;
+    margin-top: $gutter;
   }
 }

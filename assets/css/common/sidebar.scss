@@ -1,29 +1,29 @@
 .sidebar {
   
   .widget {
-    margin-bottom: @gutter;
-    border-top: 4px solid @black;
+    margin-bottom: $gutter;
+    border-top: 4px solid $black;
 
     h3 {
-      margin-top: @gutterHalf;
-      margin-bottom: @gutterHalf;
+      margin-top: $gutterHalf;
+      margin-bottom: $gutterHalf;
     }
 
     .textwidget {
-      margin-bottom: @gutter;
+      margin-bottom: $gutter;
     }
   }
 
   .widget_nav_menu {
 
     ul {
-      margin: 0px 0px @gutter 0px;
+      margin: 0px 0px $gutter 0px;
       padding-left: 0;
     }
 
     li {
       list-style: none;
-      margin: @spacingSmall 0px;
+      margin: $spacingSmall 0px;
       padding-left: 0px;
     }
   }
@@ -34,14 +34,14 @@
     }
     a {
       display: block;
-      padding: @spacingSmall * 2 0;
-      border-bottom: @greyTopBorder;
+      padding: $spacingSmall * 2 0;
+      border-bottom: $greyTopBorder;
     }
   }
 
   .about_widget {
     p {
-      margin-bottom: @gutter / 2;
+      margin-bottom: $gutter / 2;
     }
   }
 
@@ -62,18 +62,18 @@
       border-bottom: none;
       vertical-align: middle;
       font-size: 16px;
-      .font-size(1.6rem, 1.6rem);
+      @include font-size(1.6rem, 1.6rem);
       line-height: 28px;
       &:before {
-        background: @blueDark;
+        background: $blueDark;
         padding: 5px;
         text-align: center;
         color: #fff;
-        .font-size(18px, 18px);
+        @include font-size(18px, 18px);
       }
       &:hover, &:focus {
         &:before {
-          background: darken(@blueDark, 10%);
+          background: darken($blueDark, 10%);
         }
       }
 
@@ -83,13 +83,13 @@
       &[href^="https://twitter.com/"],
       &[href^="https://www.twitter.com/"] {
         &:before {
-          .icomoon(@icon-twitter);
+          @include icomoon($icon-twitter);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(1);
+          @include menu-follow-us(1);
           &:before {
             display: none;
           }
@@ -102,13 +102,13 @@
       &[href^="https://facebook.com/"],
       &[href^="https://www.facebook.com/"] {
         &:before {
-          .icomoon(@icon-facebook);
+          @include icomoon($icon-facebook);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(0);
+          @include menu-follow-us(0);
           &:before {
             display: none;
           }
@@ -121,13 +121,13 @@
       &[href^="https://youtube.com/"],
       &[href^="https://www.youtube.com/"] {
         &:before {
-          .icomoon(@icon-play);
+          @include icomoon($icon-play);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(2);
+          @include menu-follow-us(2);
           &:before {
             display: none;
           }
@@ -140,13 +140,13 @@
       &[href^="https://flickr.com/"],
       &[href^="https://www.flickr.com/"] {
         &:before {
-          .icomoon(@icon-flickr);
+          @include icomoon($icon-flickr);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(3);
+          @include menu-follow-us(3);
           &:before {
             display: none;
           }
@@ -157,13 +157,13 @@
       &[href^="http://plus.google.com/"],
       &[href^="https://plus.google.com/"] {
         &:before {
-          .icomoon(@icon-googleplus);
+          @include icomoon($icon-googleplus);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(7);
+          @include menu-follow-us(7);
           &:before {
             display: none;
           }
@@ -176,13 +176,13 @@
       &[href^="https://foursquare.com/"],
       &[href^="https://www.foursquare.com/"] {
         &:before {
-          .icomoon(@icon-foursquare);
+          @include icomoon($icon-foursquare);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(8);
+          @include menu-follow-us(8);
           &:before {
             display: none;
           }
@@ -195,13 +195,13 @@
       &[href^="https://linkedin.com/"],
       &[href^="https://www.linkedin.com/"] {
         &:before {
-          .icomoon(@icon-linkedin);
+          @include icomoon($icon-linkedin);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(6);
+          @include menu-follow-us(6);
           &:before {
             display: none;
           }
@@ -216,13 +216,13 @@
       &[href^="http://uk.pinterest.com/"],
       &[href^="https://uk.pinterest.com/"] {
         &:before {
-          .icomoon(@icon-pinterest);
+          @include icomoon($icon-pinterest);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(5);
+          @include menu-follow-us(5);
           &:before {
             display: none;
           }
@@ -235,13 +235,13 @@
       &[href^="https://instagram.com/"],
       &[href^="https://www.instagram.com/"] {
         &:before {
-          .icomoon(@icon-instagram);
+          @include icomoon($icon-instagram);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(10);
+          @include menu-follow-us(10);
           &:before {
             display: none;
           }
@@ -251,13 +251,13 @@
       // Email
       &[href^="mailto:"] {
         &:before {
-          .icomoon(@icon-envelope);
+          @include icomoon($icon-envelope);
         }
 
         .lte-ie8 & {
           height: 25px;
           padding-left: 30px;
-          .menu-follow-us(9);
+          @include menu-follow-us(9);
           &:before {
             display: none;
           }
@@ -269,17 +269,17 @@
   .widget_categories {
 
     select {
-      .font-size(16px, 16px);
-      .line-height(20 / 16, 20 / 16);
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
       width: 100%;
     }
 
     ul {
-      margin-bottom: @gutter;
+      margin-bottom: $gutter;
     }
   }
 
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     #menu-follow-us {
       li {
         width: 50%;

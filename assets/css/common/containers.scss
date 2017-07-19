@@ -1,29 +1,29 @@
 // Grid and containers
 
 .bar {
-  border-top: 10px solid @blogColour;
+  border-top: 10px solid $blogColour;
   margin: 0 auto;
 
-  @media screen and (max-width: @tabletMaxWidth) {
-    margin: 0 @gutter;
+  @media screen and (max-width: $tabletMaxWidth) {
+    margin: 0 $gutter;
   }
 
-  @media screen and (max-width: @mobileMaxWidth) {
-    margin: 0 @gutterHalf;
+  @media screen and (max-width: $mobileMaxWidth) {
+    margin: 0 $gutterHalf;
   }
 }
 
 #global-cookie-message {
 
-  @media screen and (max-width: @mobileMaxWidth) and (min-width: 641px) {
+  @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
     
     .inner-block {
-      padding-left: @gutterHalf;
-      padding-right: @gutterHalf;
+      padding-left: $gutterHalf;
+      padding-right: $gutterHalf;
     }
   }
 
-  @media screen and (max-width: @mobileMaxWidth) {
+  @media screen and (max-width: $mobileMaxWidth) {
 
     .full-width {
       margin: 0;
@@ -40,13 +40,13 @@
   margin: 0 auto;
   width: auto;
 
-  @media screen and (max-width: @desktopSmallWidth) {
-    margin: 0 @gutter;
+  @media screen and (max-width: $desktopSmallWidth) {
+    margin: 0 $gutter;
     max-width: none;
   }
 
-  @media screen and (max-width: @mobileMaxWidth) {
-    margin: 0 @gutterHalf;
+  @media screen and (max-width: $mobileMaxWidth) {
+    margin: 0 $gutterHalf;
   }
 }
 
@@ -55,11 +55,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-left: 0;
-  padding: 0 @gutterHalf;
+  padding: 0 $gutterHalf;
 }
 
 .row {
-  margin: 0 -@gutterHalf;
+  margin: 0 -$gutterHalf;
 }
 
 .span12 {
@@ -69,7 +69,7 @@
 .span8 {
   width: 66.66666%;
 
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     width: 100%;
   }
 }
@@ -77,14 +77,14 @@
 .span4 {
   width: 33.33333%;
 
-  @media (max-width: @mobileMaxWidth) {
+  @media (max-width: $mobileMaxWidth) {
     width: 100%;
   }
 }
 
 /* Fix to increase the margin to the left of the sidebar */
 
-@media (max-width: @mobileMaxWidth) {
+@media (max-width: $mobileMaxWidth) {
   .sidebar-contain, .search-container {
     width: 100%;
     margin-left: 0px;
