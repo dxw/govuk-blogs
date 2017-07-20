@@ -1,5 +1,4 @@
 .hallo-editor {
-  //@import "bootstrap";
   @import "common/variables";
   @import "common/mixins";
   @import "common/common";
@@ -15,6 +14,6 @@
   }
 
   table {
-    max-width: 620px; // span8
+    max-width: 620px;
   }
 }

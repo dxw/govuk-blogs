@@ -51,8 +51,17 @@
 }
 
 .header {
-  margin-top: $gutter;
-  margin-bottom: $gutter;
+  margin-top: $gutter + $gutterHalf;
+  margin-bottom: $gutter + $gutterHalf;
+  width: 100%;
+  display: inline-block;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 
   .blog, .blog-title, .site-title {
     margin-bottom: 0;

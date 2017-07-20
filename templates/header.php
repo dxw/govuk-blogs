@@ -41,12 +41,11 @@
         </div>
 
     </div>
-
-    <div class="grid-row">
-        <?php
-        if (function_exists('history_mode_notice') && (is_single() || is_page())) {
-            history_mode_notice(get_the_ID(), 'blog post');
-        }
-        ?>
-    </div>
+    
+    <?php if (function_exists('history_mode_notice') && (is_single() || is_page())) { ?>
+        <div class="grid-row">
+            <?php history_mode_notice(get_the_ID(), 'blog post'); ?>
+        </div>
+    <?php } ?>
+    
 </header>

@@ -40,6 +40,17 @@
   margin: 0 auto;
   width: auto;
 
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+
   @media screen and (max-width: $desktopSmallWidth) {
     margin: 0 $gutter;
     max-width: none;
@@ -50,10 +61,13 @@
   }
 }
 
+.column-full,
 .column-one-half,
 .column-third,
 .column-one-third,
 .column-two-thirds, {
+  display: inline-block;
+  float: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -64,6 +78,7 @@
 .grid-row {
   margin: 0 -$gutterHalf;
 
+  &:before,
   &:after {
     content: "";
     display: block;
@@ -71,8 +86,9 @@
   }
 }
 
-.span12 {
+.column-full {
   width: 100%;
+  float: left;
 }
 
 .column-two-thirds {
@@ -81,7 +97,6 @@
 
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
-    float: none;
   }
 }
 
@@ -91,7 +106,6 @@
 
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
-    float: none;
   }
 }
 
