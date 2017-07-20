@@ -2,6 +2,14 @@ form {
   margin: 0 0 $gutter;
 }
 
+label {
+  display: block;
+  margin-bottom: 5px;
+  @include font-size(14px, 14px);
+  @include line-height(20 / 14, 20 / 14);
+  font-weight: normal;
+}
+
 textarea,
 select,
 input[type="text"],
@@ -24,6 +32,7 @@ input[type="color"],
   border-radius: 0;
   padding: $spacingSmall;
   border: 2px solid $black;
+  margin-bottom: 10px;
   -webkit-appearance: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -44,3 +53,15 @@ select {
   -webkit-appearance: menulist;
   height: 40px;
 }
+
+.form-comments {
+
+  textarea {
+    width: 622px;
+
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+    }
+  }
+}
+

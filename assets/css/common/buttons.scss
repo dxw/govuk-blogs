@@ -4,7 +4,8 @@
   border: none;
   text-decoration: none;
   position: relative;
-  line-height: (20 / 16);
+  @include font-size(14px, 14px);
+  @include line-height(20 / 16, 20 / 16);
   padding: 8px 16px;
   cursor: pointer;
   background-image: none;

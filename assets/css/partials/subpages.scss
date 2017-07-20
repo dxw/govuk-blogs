@@ -18,11 +18,16 @@
   .author-container {
     border-top: $greyTopBorder;
     margin-top: 0px;
-    padding-top: $gutter;
   }
   
   .author-details {
+    margin-top: $gutter;
     margin-bottom: $gutter;
+  }
+
+  .avatar {
+    max-width: 100%;
+    height: auto;
   }
   
   .author-title {

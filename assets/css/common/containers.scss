@@ -65,7 +65,9 @@
 .column-one-half,
 .column-third,
 .column-one-third,
-.column-two-thirds, {
+.column-two-thirds,
+.column-one-quarter,
+.column-three-quarters {
   display: inline-block;
   float: none;
   -webkit-box-sizing: border-box;
@@ -103,6 +105,24 @@
 .column-third, .column-one-third {
   width: 33.33333%;
   float: left;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+.column-one-quarter {
+  float: left;
+  width: 25%;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+.column-three-quarters {
+  float: left;
+  width: 75%;
 
   @media (max-width: $mobileMaxWidth) {
     width: 100%;

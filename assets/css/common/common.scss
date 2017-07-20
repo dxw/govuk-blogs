@@ -56,6 +56,10 @@ body {
   }
 }
 
+.visible-print {
+  display: none !important;
+}
+
 .full-width {
   @media (max-width: $mobileMaxWidth) {
     margin-left: -20px;
@@ -200,9 +204,16 @@ body.page .main-content article {
 }
 
 .aligncenter {
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto $gutter auto;
   clear: both;
+}
+
+.size-full {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 500px) {
