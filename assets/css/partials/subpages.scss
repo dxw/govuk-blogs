@@ -38,3 +38,16 @@
     margin-top: $gutter;
   }
 }
+
+.page-template-all-posts {
+
+  .main-content.column-full {
+
+    .page-numbers-container {
+
+      .arrow {
+        margin-bottom: $gutter + $gutterHalf;
+      }
+    }
+  }
+}
