@@ -34,9 +34,9 @@
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
-      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform">
+      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="form-comments">
         <label for="comment" class="visuallyhidden"><?php _e('Comment', 'roots') ?></label>
-        <textarea name="comment" id="comment" class="span8" rows="8" required aria-required="true" placeholder="Enter your comment here…"></textarea>
+        <textarea name="comment" id="comment" rows="8" required aria-required="true" placeholder="Enter your comment here…"></textarea>
         <div class="js-comment-extra">
           <?php if (is_user_logged_in()) : ?>
             <p>

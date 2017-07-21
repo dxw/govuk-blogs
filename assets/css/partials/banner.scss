@@ -1,0 +1,46 @@
+#user-satisfaction-survey {
+  /**
+   * Hidden by default as we only want to show it to users who have
+   * JavaScript enabled.
+   */
+  display: none;
+  background-color: #2B358B;
+  padding: 0.8em 0;
+  color: #fff;
+
+  &.visible {
+    @media(desktop) {
+      display: block;
+    }
+  }
+
+  .grid-row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-left: 20px;
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0 0 0 20px;
+    font-size: 16px;
+
+    a {
+      &:link,
+      &:active,
+      &:visited {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

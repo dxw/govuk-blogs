@@ -1,0 +1,19 @@
+.hallo-editor {
+  @import "common/variables";
+  @import "common/mixins";
+  @import "common/common";
+  @extend .entry-content;
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 2em;
+  }
+
+  table {
+    max-width: 620px;
+  }
+}

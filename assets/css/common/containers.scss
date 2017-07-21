@@ -1,0 +1,139 @@
+// Grid and containers
+
+.bar {
+  border-top: 10px solid $blogColour;
+  margin: 0 auto;
+
+  @media screen and (max-width: $tabletMaxWidth) {
+    margin: 0 $gutter;
+  }
+
+  @media screen and (max-width: $mobileMaxWidth) {
+    margin: 0 $gutterHalf;
+  }
+}
+
+#global-cookie-message {
+
+  @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
+    
+    .inner-block {
+      padding-left: $gutterHalf;
+      padding-right: $gutterHalf;
+    }
+  }
+
+  @media screen and (max-width: $mobileMaxWidth) {
+
+    .full-width {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  max-width: 964px;
+  margin: 0 auto;
+  width: auto;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  @media screen and (max-width: $desktopSmallWidth) {
+    margin: 0 $gutter;
+    max-width: none;
+  }
+
+  @media screen and (max-width: $mobileMaxWidth) {
+    margin: 0 $gutterHalf;
+  }
+}
+
+.column-full,
+.column-one-half,
+.column-third,
+.column-one-third,
+.column-two-thirds,
+.column-one-quarter,
+.column-three-quarters {
+  display: inline-block;
+  float: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 0;
+  padding: 0 $gutterHalf;
+}
+
+.grid-row {
+  margin: 0 -$gutterHalf;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.column-full {
+  width: 100%;
+  float: left;
+}
+
+.column-two-thirds {
+  width: 66.66666%;
+  float: left;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+.column-third, .column-one-third {
+  width: 33.33333%;
+  float: left;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+.column-one-quarter {
+  float: left;
+  width: 25%;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+.column-three-quarters {
+  float: left;
+  width: 75%;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+  }
+}
+
+/* Fix to increase the margin to the left of the sidebar */
+
+@media (max-width: $mobileMaxWidth) {
+  .sidebar-contain, .search-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+}

@@ -26,20 +26,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        less: {
-            dist: {
+        sass: {
+            production: {
                 options: {
-                    compress: true,
-                    sourceMap: true,
-                    sourceMapFilename: 'build/main.min.css.map',
-                    sourceMapURL: 'main.min.css.map',
-                    sourceMapRootpath: '../',
+                    style: 'compressed',
+                    sourcemap: 'auto'
                 },
                 files: {
-                    'build/main.min.css': 'assets/css/main.less',
-                    'build/admin.min.css': 'assets/css/admin.less',
-                },
-            },
+                    'build/main.min.css': 'assets/css/main.scss',
+                    'build/admin.min.css': 'assets/css/admin.scss',
+                }
+            }
         },
 
         uglify: {
@@ -86,8 +83,8 @@ module.exports = function (grunt) {
 
         _watch: {
             css: {
-                files: ['assets/css/**/*.less'],
-                tasks: ['less'],
+                files: ['assets/css/**/*.scss'],
+                tasks: ['sass'],
             },
             js: {
                 files: ['assets/js/**/*.js'],
@@ -96,7 +93,7 @@ module.exports = function (grunt) {
         },
     })
 
-    grunt.loadNpmTasks('grunt-contrib-less')
+    grunt.loadNpmTasks('grunt-contrib-sass')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
@@ -151,7 +148,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'bower-install',
         'copy',
-        'less',
+        'sass',
         'uglify',
     ])
 
