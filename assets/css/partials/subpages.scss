@@ -1,0 +1,53 @@
+.search, .archive {
+
+  h2.search-title,
+  h2.archive-title {
+    border-top: $greyTopBorder;
+    margin-top: 0px;
+    padding-top: $gutter;
+  }
+  
+  h2.search-title + article,
+  h2.archive-title + article {
+    border-top: 0px;
+  }
+}
+
+.author {
+
+  .author-container {
+    border-top: $greyTopBorder;
+    margin-top: 0px;
+  }
+  
+  .author-details {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+  }
+
+  .avatar {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .author-title {
+    margin-top: 0px;
+  }
+  
+  h3.author-title {
+    margin-top: $gutter;
+  }
+}
+
+.page-template-all-posts {
+
+  .main-content.column-full {
+
+    .page-numbers-container {
+
+      .arrow {
+        margin-bottom: $gutter + $gutterHalf;
+      }
+    }
+  }
+}

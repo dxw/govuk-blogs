@@ -36,6 +36,8 @@ This theme is based on [govuk_template](https://github.com/alphagov/govuk_templa
 
     % grunt govuk_template
 
+The latest version of govuk_template removes the `{{ banner }}` variable from below the `<header>` element so it needs to be added back to the template manually.
+
 To update the composer modules:
 
     % composer update

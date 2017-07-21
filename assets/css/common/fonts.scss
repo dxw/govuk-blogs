@@ -1,0 +1,12 @@
+//////// ICON FONT
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('#{$fontPath}/icomoon.eot?5t5wc2');
+	src:url('#{$fontPath}/icomoon.eot?#iefix5t5wc2') format('embedded-opentype'),
+		url('#{$fontPath}/icomoon.woff?5t5wc2') format('woff'),
+		url('#{$fontPath}/icomoon.ttf?5t5wc2') format('truetype'),
+		url('#{$fontPath}/icomoon.svg?5t5wc2#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,40 @@
+#footer {
+
+  .footer-meta {
+
+    li {
+      font-size: inherit;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    .footer-meta-inner {
+      width: 85%;
+
+      .lte-ie8 & {
+        margin-top: 75px;
+      }
+    }
+
+    .copyright{
+      width: 15%;
+
+      @media (min-width: 0) and (max-width: $tabletMinWidth){
+        width: 100%;
+      }
+
+      a {
+
+        @media (min-width: 769px) and (max-width: $tabletMaxWidth){
+          background-size: 80%;
+        }
+      }
+    }
+  }
+
+  .open-government-licence h2 {
+    padding-top: 0;
+  }
+}

@@ -5,12 +5,12 @@
   <?php if (is_home()) : ?>
     <?php get_template_part('templates/featured') ?>
   <?php endif ?>
-  <main id="content" class="row" role="main">
-    <div class="span8 main-content">
+  <main id="content" class="grid-row" role="main">
+    <div class="column-two-thirds main-content">
       <?php include roots_template_path() ?>
       <?php if(!is_single() || !is_page()) { get_template_part('templates/paging'); } ?>
     </div>
-    <div class="span4 sidebar-contain">
+    <div class="column-one-third sidebar-contain">
       <?php get_template_part('templates/sidebar') ?>
     </div>
 </main>

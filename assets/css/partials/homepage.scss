@@ -1,0 +1,285 @@
+.featured-posts {
+
+  figure {
+    max-height: 197px;
+    margin: 0 0 10px 0;
+    border: none;
+    overflow: hidden;
+    background: transparent;
+
+    @media (max-width: $tabletMaxWidth) {
+      max-height: 144px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      max-width: 100% !important;
+      max-height: none;
+      overflow: visible;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .meta {
+    color: $greyText;
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
+
+    a {
+      color: $greyText;
+    }
+  }
+
+  h3 {
+    margin-top: $spacingSmall * 2;
+    margin-bottom: $spacingSmall;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $gutter;
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
+  }
+
+  .latest {
+    padding-bottom: $gutter;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: $gutterHalf;
+      border-top: $greyTopBorder;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 $gutterHalf 0;
+      border-bottom: $greyTopBorder;
+      padding-bottom: $spacingSmall;
+      padding-left: 0;
+
+      li {
+        list-style-image: none;
+        margin: 0 0 $spacingSmall * 2 0;
+        padding: 0;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .meta {
+        height: auto !important;
+        color: $black;
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    p.link {
+      margin-bottom: 0;
+      @include font-size(19px, 19px);
+      @include line-height(25 / 19, 25 / 19);
+
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+hr {
+  &.filters {
+    margin-top: 0;
+    height: 4px;
+    border-top: 4px solid $black;
+  }
+}
+
+.blog-selector {
+  margin-bottom: $gutter;
+
+  h2 {
+    margin-top: $gutterHalf;
+    padding-top: 0;
+  }
+
+  p {
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
+  }
+
+  label {
+    margin-bottom: 0;
+    padding-bottom: 2px;
+    font-weight: 700;
+    @include font-size(19px, 19px);
+    @include line-height(25 / 19, 25 / 19);
+  }
+
+  input {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-bottom: $gutter;
+
+    &.btn {
+      width: auto;
+      padding: 8px 24px;
+
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+.selections {
+  margin-top: $gutterHalf;
+
+  h2.count {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+    display: inline;
+    padding-right: $spacingSmall * 2;
+    @include font-size(48px, 36px);
+    @include line-height(50 / 48, 35 / 32);
+  }
+
+  span.terms,
+  span.name {
+    display: inline-block;
+    @include font-size(16px, 16px);
+    line-height: 1;
+  }
+
+  .name {
+    margin-right: 2px;
+  }
+
+  .term {
+    font-weight: normal;
+    margin-left: 3px;
+
+    strong {
+      margin-left: 3px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-top: 4px;
+    }
+  }
+
+  button.term-x {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 0;
+    color: $greyText;
+    border: none;
+    background: transparent;
+    @include font-size(16px, 16px);
+    line-height: 1;
+    font-family: "nta", Helvetica, Arial, sans-serif;
+
+    &:hover, &:focus {
+      color: darken($greyText, 15%);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      background: $focusColour;
+      outline: 3px solid $focusColour;
+      outline-offset: 0;
+      border: none;
+    }
+  }
+  
+  .term-and {
+    margin-left: 3px;
+  }
+}
+
+.blogs-list {
+  margin: $gutterHalf 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    border-top: $greyTopBorder;
+
+    &:first-child {
+      margin-top: $gutterHalf;
+    }
+
+    &.noresults {
+
+      h3 {
+        margin-top: $gutter;
+        margin-bottom: $gutterHalf;
+      }
+
+      p {
+        @include font-size(19px, 19px);
+        @include line-height(25 / 19, 25 / 19);
+        margin-bottom: $spacingSmall;
+      }
+
+      ul {
+        margin: 0 0 $gutter 0;
+
+        li {
+          list-style: disc;
+          border-top: none;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .meta {
+      padding-bottom: $spacingSmall;
+      color: $greyText;
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
+
+      a {
+        color: $greyText;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: $gutterHalf;
+    margin-bottom: $spacingSmall;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $gutterHalf;
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
+  }
+}
+
+body.home.root {
+
+  .blogs-list {
+    padding-bottom: $gutter;
+  }
+}

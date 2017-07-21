@@ -1,0 +1,23 @@
+.pagination {
+  margin: 10px auto 0 auto;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    margin: 0 10px;
+
+    > li > a {
+      padding: 4px 12px;
+      line-height: 20px;
+      text-decoration: none;
+    }
+
+    > .active {
+
+      span, a {
+        color: #999;
+        cursor: default;
+      }
+    }
+  }
+}

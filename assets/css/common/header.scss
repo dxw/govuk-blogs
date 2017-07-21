@@ -1,0 +1,232 @@
+// https://github.com/alphagov/govuk_template/blob/master/source/assets/stylesheets/_header.scss
+#global-header {
+
+  .header-wrapper {
+
+    .header-global {
+
+      .header-logo {
+        margin: 2px 0 0 0;
+      }
+    }
+  }
+
+  #logo {
+    height: auto;
+    margin: 0 $gutterHalf;
+    padding-bottom: 0;
+    top: auto;
+    border-bottom: 1px solid transparent;
+    line-height: 1.1;
+
+    @media screen and (max-width: $tabletMaxWidth) {
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $white;
+      color: $white;
+    }
+
+    img {
+      width: 36px;
+      margin: 2px 1px 0 0;
+    }
+  }
+}
+
+.header-global {
+
+  @media screen and (max-width: $tabletMaxWidth) {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding: 0 $gutterHalf;
+  }
+
+  @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
+    padding: 0;
+  }
+}
+
+.header {
+  margin-top: $gutter + $gutterHalf;
+  margin-bottom: $gutter + $gutterHalf;
+  width: 100%;
+  display: inline-block;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .blog, .blog-title, .site-title {
+    margin-bottom: 0;
+
+    a {
+      color: inherit;
+    }
+  }
+  
+  table, th, tr, td {
+    padding: 0 2px;
+    background-color: #fff;
+    border: 0;
+    line-height: 1;
+  }
+  
+  table {
+    width: auto;
+    margin-bottom: 0px;
+  }
+
+  .blog {
+    line-height: 1.1111111111;
+    @include font-size(27px, 20px);
+    color: $greyText;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    font-weight: normal;
+    display: block;
+
+    @media screen and (max-width: $mobileMaxWidth) {
+      padding-bottom: 6px;
+    }
+  }
+
+  .blog-title, .site-title {
+    margin-top: 0;
+  }
+
+  .site-title {
+    margin-bottom: 0;
+  }
+
+  .blog-meta {
+    padding-top: $spacingSmall * 2;
+
+    @media (max-width: $tabletMaxWidth) {
+      padding-top: 0;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-bottom: $gutterHalf;
+    }
+
+    table {
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
+
+      th {
+        width: 130px;
+        font-weight: normal;
+        text-align: left;
+        overflow: hidden;
+        padding: 0px;
+
+        @media screen and (max-width: $tabletMaxWidth) {
+          width: 105px;
+        }
+
+      }
+    }
+  }
+
+  .logo-container {
+    height: 90px;
+
+    img {
+      max-height: 90px;
+    }
+  }
+
+  .search-container, .logo-container { 
+
+    img {
+      float: right;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  .bottom {
+    margin-top: $gutter;
+    position: relative;
+
+    @media (max-width: $tabletMaxWidth) and (min-width: $tabletMinWidth) {
+      margin-top: $spacingSmall;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-top: $gutterHalf;
+    }
+  }
+
+  @media (max-width: $mobileMaxWidth) {
+
+    .logo-container {
+      float: none;
+      margin-left: 0;
+      margin-bottom: $gutterHalf;
+
+      img {
+        max-width: 80%;
+      }
+    }  
+  }
+}
+
+#global-header-bar {
+  display: none;
+}
+
+// https://github.com/alphagov/whitehall/blob/53e0faa4a6a1c3819cca8f54e804bf13d14f7083/app/assets/stylesheets/frontend/helpers/_status-block.scss#L26
+.history-status-block {
+  clear: both;
+  margin: $gutterHalf 0;
+  padding: $gutterHalf;
+  color: $white;
+  background: $linkColour;
+
+  @media screen and (min-width: $tabletMaxWidth) {
+    margin: $gutter $gutterHalf;
+    padding: $gutterHalf $gutter;
+  }
+
+  h2 {
+    font-family: "nta", Arial, sans-serif;
+    text-transform: none;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 7px;
+
+    font-size: 24px;
+    line-height: 1.04167;
+
+    @media screen and (min-width: $tabletMaxWidth) {
+      padding-top: 6px;
+      padding-bottom: 9px;
+      font-size: 36px;
+      line-height: 1.11111;
+    }
+
+    .government {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    span {
+      @media screen and (min-width: $tabletMaxWidth) {
+        display: block;
+      }
+    }
+  }
+}
