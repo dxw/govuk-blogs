@@ -6,7 +6,7 @@ $tabletMinWidth:    768px;
 $tabletMaxWidth:    979px;
 $desktopSmallWidth: 1020px;
 
-$greyTopBorder: 1px solid #bfc1c3;;
+$greyTopBorder: 1px solid #bfc1c3;
 
 @mixin font-size($d, $m) {
   font-size: $d;

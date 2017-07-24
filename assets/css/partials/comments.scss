@@ -1,113 +1,154 @@
-.bypostauthor {
-  .comment-body {
-    background: #f0f0f0;
-    padding: 20px;
+form#commentform {
+
+  label[for="email"] {
+    padding-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 50%;
 
     @media (max-width: $mobileMaxWidth) {
       padding: 15px;
+      width: 100%;
     }
   }
-  ul {
-    .comment-body {
-      background: #fff;
-      padding: 0px;
-    }
+
+  input[type="submit"] {
+    margin-top: 0;
+    margin-bottom: $gutter;
+  }
+}
+
+#respond h3 {
+  width: 70%;
+  float: left;
+
+  @media (max-width: $mobileMaxWidth) {
+    width: 100%;
+    float: none;
   }
 }
 
 .comments, .leave-a-comment {
-  h3 {
-    margin-bottom: 0;
-  }
+
   p.cancel-comment-reply {
-    margin-bottom: 0;
-    padding-bottom: 15px;
+    width: 30%;
+    margin: 0;
+    float: right;
+    margin: 2.6em 0 0 0;
+    padding: 0;
+    text-align: right;
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
+
+    a {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+      float: none;
+      margin-top: 0;
+      margin-bottom: $gutterHalf;
+      text-align: left;
+    }
   }
 }
 
 .comments {
+
   .media-body {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+
+    a {
+      text-decoration: underline;
+    }
+
+    a.comment-reply-link {
+      font-weight: 700;
+      text-decoration: none;
+    }
   }
 
   .media-heading {
     @include font-size(16px, 16px);
     @include line-height(20 / 16, 20 / 16);
+    margin-bottom: $gutterHalf;
 
     .author {
       @include font-size(19px, 19px);
       @include line-height(25 / 19, 25 / 19);
-    }
-  }
+      font-weight: 700;
 
-  ul.comment {
-    margin: 0;
-  }
-
-  li.comment {
-    margin: 20px 0px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    p:last-child {
-      margin-bottom: 0px;
-    }
-  }
-
-  li.comment li.comment {
-    padding-left: 20px;
-    border-left: 4px solid #231f20;
-    list-style-image: none;
-  }
-
-  .comment-reply-link,
-  .comment-link {
-    display: block;
-  }
-
-  .comment-link {
-    margin-bottom: 15px;
-    color: $greyText;
-    &:before {
-      @include icomoon($icon-link);
-      text-decoration: none;
-    }
-
-    &:hover {
-      &:before {
+      a {
         text-decoration: none;
       }
     }
 
-    .lte-ie8 & {
-      padding-left: 25px;
-      background: url('../assets/img/icon-link.png') no-repeat;
-      &:before {
-        display: none;
+    time {
+      color: $greyText;
+    }
+  }
+
+  ul.comment {
+    margin-top: $gutter;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &.depth-1 {
+      padding-left: $gutter;
+      border-left: 4px solid $borderColour;
+    }
+  }
+
+  .comment-body {
+
+    p {
+      margin-bottom: $gutterHalf;
+    }
+  }
+
+  li.comment {
+    margin: 20px 0px;
+    list-style: none;
+  }
+
+  .comment-links {
+    margin-top: $gutterHalf;
+    margin-bottom: $gutterHalf;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-left: $gutter;
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @media (max-width: $mobileMaxWidth) {
+        display: block;
+        margin-left: 0;
       }
     }
   }
 }
 
-p.media-heading {
-  time {
-    color: $greyLight;
-  }
-}
-
 .media-list {
-  margin-top: 0;
-  margin-bottom: 25px;
-}
+  margin: 0;
+  padding-left: 0;
 
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
-  border-color: #66Afe9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
-  outline: 0 none;
-  color: #555;
+  li {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
