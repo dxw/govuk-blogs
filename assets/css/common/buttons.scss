@@ -2,7 +2,7 @@
   background-color: $buttonColour;
   position: relative;
   display: inline-block;
-  padding: $spacingSmall $gutterHalf;
+  padding: $spacingSmall*2 $gutterHalf $spacingSmall $gutterHalf;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

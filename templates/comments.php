@@ -29,12 +29,14 @@
 
 <?php if (comments_open()) : ?>
   <section id="respond" class="leave-a-comment">
-    <h3>Leave a comment</h3>
-    <p class="cancel-comment-reply"><?php cancel_comment_reply_link() ?></p>
+    <header class="group">
+      <h3><?php comment_form_title(__('Leave a comment', 'roots'), __('Leave a reply to %s', 'roots'), __(false, 'roots')); ?></h3>
+      <p class="cancel-comment-reply"><?php cancel_comment_reply_link('Cancel reply') ?></p>
+    </header>
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
-      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform">
+      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
         <div class="form-group">
           <label for="comment" class="visuallyhidden"><?php _e('Comment', 'roots') ?></label>
           <textarea name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
@@ -43,7 +45,7 @@
           <?php if (is_user_logged_in()) : ?>
             <p>
               <?php printf(__('You are logged in as <strong>%s</strong>.', 'roots'), $user_identity) ?>
-              <a href="<?php echo wp_logout_url(get_permalink()) ?>" title="<?php __('Log out of this account', 'roots') ?>"><?php _e('Log out', 'roots') ?></a>
+              <a href="<?php echo wp_logout_url(get_permalink()) ?>"><?php _e('Log out', 'roots') ?></a>
             </p>
           <?php else : ?>
             <div class="form-group">
