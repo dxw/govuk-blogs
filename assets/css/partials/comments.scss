@@ -12,19 +12,15 @@ form#commentform {
   input[type="email"] {
     width: 50%;
 
-<<<<<<< HEAD:assets/css/partials/comments.scss
     @media (max-width: $mobileMaxWidth) {
       padding: 15px;
-=======
-    @media (max-width: @mobileMaxWidth) {
       width: 100%;
->>>>>>> Card 212 - comment form styles:assets/css/comments.less
     }
   }
 
   input[type="submit"] {
     margin-top: 0;
-    margin-bottom: @gutter;
+    margin-bottom: $gutter;
   }
 }
 
@@ -32,7 +28,7 @@ form#commentform {
 
   ul {
     .comment-body {
-      background: @white;
+      background: $white;
       padding: 0px;
     }
   }
@@ -46,31 +42,36 @@ form#commentform {
 }
 
 .comments {
+
+  ol {
+    padding-left: 0;
+  }
+
   .media-body {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   .media-heading {
-<<<<<<< HEAD:assets/css/partials/comments.scss
     @include font-size(16px, 16px);
     @include line-height(20 / 16, 20 / 16);
+    margin-bottom: $gutterHalf;
 
     .author {
       @include font-size(19px, 19px);
       @include line-height(25 / 19, 25 / 19);
-=======
-    margin-bottom: @gutterHalf;
-    .font-size(16px, 16px);
-    .line-height(20 / 16, 20 / 16);
-
-    .author {
       font-weight: 700;
+
+      a {
+        color: $black;
+        text-decoration: none;
+      }
     }
 
     time {
-      color: @greyText;
->>>>>>> Card 212 - comment form styles:assets/css/comments.less
+      color: $greyText;
     }
   }
 
@@ -80,6 +81,7 @@ form#commentform {
 
   li.comment {
     margin: 20px 0px;
+    list-style: none;
 
     &:last-child {
       margin-bottom: 0;
@@ -96,49 +98,27 @@ form#commentform {
     list-style-image: none;
   }
 
-  .comment-reply-link,
-  .comment-link {
-    display: block;
+  .comment-link,
+  .comment-reply-link {
+    @include font-size(16px, 16px);
+    @include line-height(20 / 16, 20 / 16);
   }
 
   .comment-link {
     margin-bottom: 15px;
-    color: $greyText;
-    &:before {
-      @include icomoon($icon-link);
-      text-decoration: none;
-    }
-
-    &:hover {
-      &:before {
-        text-decoration: none;
-      }
-    }
-
-    .lte-ie8 & {
-      padding-left: 25px;
-      background: url('../assets/img/icon-link.png') no-repeat;
-      &:before {
-        display: none;
-      }
-    }
   }
 }
 
-<<<<<<< HEAD:assets/css/partials/comments.scss
 p.media-heading {
   time {
     color: $greyLight;
   }
 }
 
-=======
->>>>>>> Card 212 - comment form styles:assets/css/comments.less
 .media-list {
   margin-top: 0;
   margin-bottom: 25px;
 }
-<<<<<<< HEAD:assets/css/partials/comments.scss
 
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
@@ -148,5 +128,3 @@ select:focus:invalid:focus {
   outline: 0 none;
   color: #555;
 }
-=======
->>>>>>> Card 212 - comment form styles:assets/css/comments.less

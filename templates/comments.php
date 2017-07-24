@@ -34,17 +34,11 @@
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
-<<<<<<< HEAD
-      <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="form-comments">
-        <label for="comment" class="visuallyhidden"><?php _e('Comment', 'roots') ?></label>
-        <textarea name="comment" id="comment" rows="8" required aria-required="true" placeholder="Enter your comment here…"></textarea>
-=======
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform">
         <div class="form-group">
           <label for="comment" class="visuallyhidden"><?php _e('Comment', 'roots') ?></label>
           <textarea name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
         </div>
->>>>>>> Card 212 - comment form styles
         <div class="js-comment-extra">
           <?php if (is_user_logged_in()) : ?>
             <p>
