@@ -27,14 +27,14 @@
     </footer>
   </article>
 
-  <div class="page-numbers-container page-navigation">
+  <nav class="page-numbers-container page-navigation" aria-label="Pagination">
     <div class="previous pull-left">
       <?php previous_post_link('<span class="arrow-button"></span><span class="link">%link</span>') ?>
     </div>
     <div class="next pull-right">
       <?php next_post_link('<span class="link">%link</span><span class="arrow-button"></span>') ?>
     </div>
-  </div>
+  </nav>
 
   <?php share_icons(get_the_ID()) ?>
   <?php comments_template('/templates/comments.php') ?>
