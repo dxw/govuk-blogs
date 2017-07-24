@@ -123,7 +123,6 @@ hr {
   }
 
   input {
-    height: auto;
     width: 100%;
     display: block;
     margin-bottom: $gutter;
@@ -136,7 +135,6 @@ hr {
         color: $white;
       }
     }
-
   }
 
   select {

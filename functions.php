@@ -26,6 +26,7 @@ require(__DIR__.'/lib/featured.php');
 require(__DIR__.'/lib/embed.php');
 require(__DIR__.'/lib/byline.php');
 require(__DIR__.'/lib/sanitise_comments.php');
+require(__DIR__.'/lib/comment_author.php');
 require(__DIR__.'/lib/icon.php');
 require(__DIR__.'/lib/feed-email-widget.php');
 require(__DIR__.'/lib/share-icons.php');

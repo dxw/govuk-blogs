@@ -40,12 +40,20 @@ input[type="color"],
   @include font-size(19px, 19px);
   @include line-height(25 / 19, 25 / 19);
   color: $black;
+  margin-bottom: 0;
 
   &:focus {
     outline: 3px solid $focusColour;
     outline-offset: 0;
     box-shadow: none;
     border-color: $black;
+
+    // WordPress adds invalid property to the comments form so I'm overwriting it below
+    &:invalid:focus {
+      color: $black;
+      box-shadow: none;
+      border-color: $black;
+    }
   }
 }
 
@@ -65,3 +73,24 @@ select {
   }
 }
 
+label {
+  margin-bottom: 0;
+  padding-bottom: 2px;
+  font-weight: 700;
+  @include font-size(19px, 19px);
+  @include line-height(25 / 19, 25 / 19);
+}
+
+.form-hint {
+  display: block;
+  padding-bottom: 2px;
+  color: $greyText;
+}
+
+.form-group {
+  margin-bottom: $gutter;
+
+  @media (max-width: $mobileMaxWidth) {
+    margin-bottom: $gutterHalf;
+  }
+}
