@@ -1,7 +1,7 @@
 <?php if ($wp_query->max_num_pages > 1) : ?>
 
-  <div class="page-numbers-container">
+  <nav class="page-numbers-container" aria-label="Pagination">
     <?php pagination(); ?>
-  </div>
+</nav>
 
 <?php endif; ?>

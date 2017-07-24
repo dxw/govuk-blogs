@@ -56,7 +56,7 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<a href="%s" class="pull-left">
+    printf('<a href="%s" class="pull-left" rel="previous">
     <span class="previous arrow">
       <span class="arrow-button"></span>
       <span class="contain hidden-mobile">
@@ -73,7 +73,7 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<a href="%s" class="pull-right">
+    printf('<a href="%s" class="pull-right" rel="next">
     <span class="next arrow">
       <span class="arrow-button"></span>
       <span class="contain hidden-mobile">
@@ -97,7 +97,7 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url($uri), '1');
+    printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), '1');
 
     if (!in_array(2, $links)) {
       echo '<li>…</li>';
@@ -112,7 +112,7 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url($uri), $link);
+    printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), $link);
   }
 
   /** Link to last page, plus ellipses if necessary */
@@ -126,7 +126,7 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url($uri), $max);
+    printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), $max);
   }
 
   echo '</ul></div>' . "\n";
