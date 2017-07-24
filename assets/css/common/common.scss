@@ -70,7 +70,7 @@ body {
 }
 
 .read-more {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 article {
@@ -103,6 +103,20 @@ article {
 
     p.tags {
       margin-top: $gutter;
+    }
+  }
+}
+
+.entry-footer {
+
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
     }
   }
 }

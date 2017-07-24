@@ -13,7 +13,7 @@
               <div class="entry-summary">
                 <?php the_excerpt() ?>
               </div>
-              <a class="read-more" href="<?php the_permalink() ?>">Read more</a>
+              <a class="read-more" href="<?php the_permalink() ?>">Read more <span class="visuallyhidden">about this topic</span></a>
             </div>
           </div>
         </article>
