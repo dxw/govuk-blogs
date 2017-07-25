@@ -209,7 +209,6 @@ img {
 
 .alignnone {
   display: block;
-  margin: 0px $gutterHalf $gutterHalf 0px;
 }
 
 .alignright {
@@ -233,9 +232,15 @@ img {
   height: auto;
 }
 
-.alignright,
-.alignleft {
-  border: solid 1px #bbb;
+img {
+
+  &.alignnone,
+  &.alignright,
+  &.alignleft,
+  &.aligncenter,
+   {
+    border: solid 1px $borderColour;
+  }
 }
 
 @media (max-width: 500px) {
@@ -261,8 +266,7 @@ img {
   padding-top: 0;
 }
 
-figure,
-figure.thumbnail {
+figure {
   max-width: 100%;
   margin: 0 0 $gutter 0;
   -webkit-box-sizing: border-box;
@@ -271,16 +275,19 @@ figure.thumbnail {
 }
 
 figcaption {
-  margin: $gutterHalf;
+  margin-top: $gutterHalf;
 }
 
-figure.alignnone, 
-figure.aligncenter {
-  border: none;
+figure.thumbnail {
 
-  figcaption {
-    margin-left: 0;
-    margin-right: 0;
+  img {
+    margin-bottom: 0;
+    border: solid 1px $borderColour;
+  }
+
+  // WordPress sometimes adds <br> to the container with image and caption
+  br {
+    display: none;
   }
 }
 
