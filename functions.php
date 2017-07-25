@@ -46,5 +46,6 @@ require(__DIR__.'/lib/enable-rss2.php');
 require(__DIR__.'/lib/unhook_wpmudev_scheduled_jobs.php');
 require(__DIR__.'/lib/jm-twitter-excerpt.php');
 require(__DIR__.'/lib/google-verification-code.php');
+require(__DIR__.'/lib/tiny_mce.php');
 
 (new \Dxw\Iguana\Extras\UseAtom())->register();
