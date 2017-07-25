@@ -202,6 +202,11 @@ body.page .main-content article {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .alignnone {
   display: block;
   margin: 0px $gutterHalf $gutterHalf 0px;
@@ -218,8 +223,6 @@ body.page .main-content article {
 }
 
 .aligncenter {
-  max-width: 100%;
-  height: auto;
   display: block;
   margin: 0 auto $gutter auto;
   clear: both;
