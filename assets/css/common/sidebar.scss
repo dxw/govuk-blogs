@@ -47,6 +47,16 @@
 
   .widget_categories {
     border: none;
+
+    select {
+      @include font-size(16px, 16px);
+      @include line-height(20 / 16, 20 / 16);
+      width: 100%;
+    }
+
+    ul {
+      margin-bottom: $gutter;
+    }
   }
 
   #menu-follow-us {
@@ -263,19 +273,6 @@
           }
         }
       }
-    }
-  }
-
-  .widget_categories {
-
-    select {
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-      width: 100%;
-    }
-
-    ul {
-      margin-bottom: $gutter;
     }
   }
 
