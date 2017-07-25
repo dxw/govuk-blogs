@@ -233,6 +233,11 @@ img {
   height: auto;
 }
 
+.alignright,
+.alignleft {
+  border: solid 1px #bbb;
+}
+
 @media (max-width: 500px) {
   .alignleft,
   .alignright,
@@ -256,37 +261,27 @@ img {
   padding-top: 0;
 }
 
-figure, figure.thumbnail {
+figure,
+figure.thumbnail {
   max-width: 100%;
-  background-color: #e1e8e8;
-  border: solid 1px #bbb;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  margin-bottom: $gutter;
+  margin: 0 0 $gutter 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-figure.alignnone {
-  margin-left: 0;
-}
-
 figcaption {
-  margin-top: $spacingSmall;
-  @include font-size(16px, 16px);
-  @include line-height(20 / 16, 20 / 16);
+  margin: $gutterHalf;
 }
 
-.thumbnail {
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-}
+figure.alignnone, 
+figure.aligncenter {
+  border: none;
 
-.thumbnail .caption {
-  color: $black;
-  text-align: center;
+  figcaption {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 table {
