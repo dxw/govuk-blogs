@@ -59,6 +59,44 @@
     }
   }
 
+  .widget_recent_entries,
+  .widget_recent_comments {
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: $gutterHalf;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    span.post-date {
+      color: $greyText;
+
+      &:before {
+        content: " ";
+      }
+    }
+  }
+
+  .widget_recent_entries {
+
+    ul li {
+
+      a {
+
+        &:after {
+          content: ",";
+        }
+      }
+    }
+  }
+
   #menu-follow-us {
     width: 100%;
     display: inline-block;
