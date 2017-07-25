@@ -17,3 +17,9 @@
     max-width: 620px;
   }
 }
+
+label.setting[data-setting="alt"] {
+    ::after {
+        content: " (Alt text is used as an alternative to an image for people who use screen readers. It should not be a literal description of the image, but tell the user what point the image is making.)";
+    }
+}
