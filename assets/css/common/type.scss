@@ -17,45 +17,45 @@ p {
 }
 
 blockquote {
-  padding: $gutterHalf;
   margin: 0 0 $gutter 0;
-  border: 0;
-  background-color: #e1e8e8;
 
   p {
-    padding: 0 $spacingSmall * 4;
-    @include font-size(19px, 19px);
-    @include line-height(25 / 19, 25 / 19);
-  }
+    padding-left: $gutter;
+    margin-bottom: $gutterHalf;
 
-  &:before {
-    content: "\201C";
-    display: inline-block;
-    float: left;
-    font-size: 40px;
-    font-size: 4rem;
-  }
+    &:last-of-type {
+      margin-bottom: 0;
 
-  &:after {
-    content: "\201D";
-    display: inline-block;
-    float: right;
-    font-size: 40px;
-    font-size: 4rem;
-    margin-top: -20px;
+      &:after {
+        content: "\201D";
+      }
+    }
+
+    &:before {
+      content: "\201C";
+      float: left;
+      clear: both;
+      margin-left: -$gutterHalf;
+    }
   }
 
   &.noquotes {
-    &:before {
-      content:"";
-    }
-
-    &:after {
-      content:"";
-    }
+    padding: $gutterHalf;
+    background-color: #e1e8e8;
 
     p {
-      padding-left: 10px;
+      padding-left: 0;
+      
+      &:last-of-type {
+
+        &:after {
+          content: "";
+        }
+      }
+
+      &:before {
+        content: "";
+      }
     }
   }
 
