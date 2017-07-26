@@ -55,6 +55,7 @@ module.exports = function (grunt) {
                         'bower_components/bowser/bowser.js',
                         'bower_components/lte-ie/lte-ie.js',
                         'assets/js/main.js',
+                        'assets/js/comments.js'
                     ],
                 },
             },

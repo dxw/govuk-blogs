@@ -1,5 +1,24 @@
 form#commentform {
 
+  .form-group {
+    padding-left: $gutterHalf + 4px;
+    &.error {
+      padding-left: $gutterHalf;
+      border-left: 4px solid $alertColour;
+      textarea, input {
+          border-color: $alertColour;
+      }
+    }
+  }
+
+  label {
+      .error {
+          display:block;
+          clear:left;
+          color: $alertColour;
+      }
+  }
+
   label[for="email"] {
     padding-bottom: 0;
   }
@@ -21,16 +40,38 @@ form#commentform {
   input[type="submit"] {
     margin-top: 0;
     margin-bottom: $gutter;
+    margin-left: $gutterHalf + 4px;
   }
 }
 
-#respond h3 {
-  width: 70%;
-  float: left;
+#respond {
+  h3 {
+    width: 70%;
+    float: left;
 
-  @media (max-width: $mobileMaxWidth) {
-    width: 100%;
-    float: none;
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .alert.error-summary {
+    display: block;
+    border-color: $alertColour;
+      h3 {
+        width: 100%;
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: $gutterHalf;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        color: $alertColour;
+        font-weight: 600;
+      }
   }
 }
 
