@@ -1,10 +1,18 @@
+.pagination-container {
+  margin-bottom: $gutter;
+}
+
 .pagination {
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
   text-align: center;
 
   ul {
     display: inline-block;
     margin: 0 10px;
+
+    @media (max-width: $mobileSmallWidth) {
+      margin-top: $gutterHalf;
+    }
 
     > li > a {
       padding: 4px 12px;
