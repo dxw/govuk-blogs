@@ -110,6 +110,7 @@ article {
 .entry-footer {
 
   ul {
+    margin-bottom: 0;
     padding-left: 0;
 
     li {
@@ -209,7 +210,6 @@ img {
 
 .alignnone {
   display: block;
-  margin: 0px $gutterHalf $gutterHalf 0px;
 }
 
 .alignright {
@@ -231,6 +231,17 @@ img {
 .size-full {
   max-width: 100%;
   height: auto;
+}
+
+img {
+
+  &.alignnone,
+  &.alignright,
+  &.alignleft,
+  &.aligncenter,
+   {
+    border: solid 1px $borderColour;
+  }
 }
 
 @media (max-width: 500px) {
@@ -256,37 +267,29 @@ img {
   padding-top: 0;
 }
 
-figure, figure.thumbnail {
+figure {
   max-width: 100%;
-  background-color: #e1e8e8;
-  border: solid 1px #bbb;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  margin-bottom: $gutter;
+  margin: 0 0 $gutter 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-figure.alignnone {
-  margin-left: 0;
-}
-
 figcaption {
-  margin-top: $spacingSmall;
-  @include font-size(16px, 16px);
-  @include line-height(20 / 16, 20 / 16);
+  margin-top: $gutterHalf;
 }
 
-.thumbnail {
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-}
+figure.thumbnail {
 
-.thumbnail .caption {
-  color: $black;
-  text-align: center;
+  img {
+    margin-bottom: 0;
+    border: solid 1px $borderColour;
+  }
+
+  // WordPress sometimes adds <br> to the container with image and caption
+  br {
+    display: none;
+  }
 }
 
 table {
