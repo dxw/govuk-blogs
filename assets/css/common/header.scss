@@ -70,14 +70,14 @@
       color: inherit;
     }
   }
-  
+
   table, th, tr, td {
     padding: 0 2px;
     background-color: #fff;
     border: 0;
     line-height: 1;
   }
-  
+
   table {
     width: auto;
     margin-bottom: 0px;
@@ -116,21 +116,28 @@
       margin-bottom: $gutterHalf;
     }
 
-    table {
+    dl {
       @include font-size(16px, 16px);
       @include line-height(20 / 16, 20 / 16);
+      margin: 0;
 
-      th {
+      dt {
         width: 130px;
         font-weight: normal;
         text-align: left;
         overflow: hidden;
         padding: 0px;
+        display: table-cell;
 
         @media screen and (max-width: $tabletMaxWidth) {
           width: 105px;
         }
 
+      }
+
+      dd {
+          display: table-cell;
+          margin-left: 0;
       }
     }
   }
@@ -143,7 +150,7 @@
     }
   }
 
-  .search-container, .logo-container { 
+  .search-container, .logo-container {
 
     img {
       float: right;
@@ -178,7 +185,7 @@
       img {
         max-width: 80%;
       }
-    }  
+    }
   }
 }
 
