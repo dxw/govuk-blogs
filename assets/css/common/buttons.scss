@@ -137,182 +137,69 @@ input{
   margin-top: 0px;
   padding-top: $gutter;
   overflow: hidden;
-  
-  a:hover .link {
-    text-decoration: underline;
-  }
-  
-  .arrow {
-    margin-bottom: $gutter;
-    padding: 0px;
-    
-    span.contain {
-      display: inline-block;
-      padding-top: 9px;
+
+  .next,
+  .previous {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    a {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: 17px 14px;
     }
-    
-    .arrow-button {
-      display: inline-block;
-      background: url('../assets/img/arrow-sprite.png') no-repeat;
-      width: 30px;
-      height: 50px;
-      margin: 0 $spacingSmall 0 0;
-    }
-  }
-  
-  .link {
-    display: block;
-    width: 100%;
   }
 
   .next {
     float: right;
+    text-align: right;
     
-    span.contain {
-      float: right;
-    }
-    
-    .link {
-      display: inline-block;
-      margin-right: 2%;
-      text-align: right;
-    }
+    a {
+      padding-right: $gutter;
+      background-image: url('../assets/img/arrow-pagination-right.svg');
+      background-position: 100% 4px;
 
-    .page-numbers {
-      text-align: right;
-    }
-    
-    .arrow-button {
-      width: 35px;
-      height: 45px;
-      display: inline-block;
-      float: right;
-      background: url('../assets/img/arrow-sprite.png') no-repeat top right;
+      .lt-ie11 &,
+      .lte-ie8 & {
+        background-image: url('../assets/img/arrow-pagination-right.png');
+      }
     }
   }
 
   .previous {
     float: left;
+    text-align: left;
+    
+    a {
+      padding-left: $gutter;
+      background-image: url('../assets/img/arrow-pagination-left.svg');
+      background-position: 0 4px;
 
-    span.contain {
-      float: left;
-    }
-    
-    .link {
-      display: inline-block;
-      margin-left: 2%;
-      text-align: left;
-    }
-    
-    .arrow-button {
-      width: 35px;
-      height: 45px;
-      display: inline-block;
-      background: url('../assets/img/arrow-sprite.png') no-repeat top left;
-      float: left;
+      .lte-ie11 &,
+      .lte-ie8 & {
+        background-image: url('../assets/img/arrow-pagination-left.png');
+      }
     }
   }
-
 }
 
 .page-navigation {
+
   .previous, .next {
     width: 49%;
 
-    .link {
-      width: 86%;
-
-      @media screen and (max-width: $tabletMaxWidth) {
-        width: 82%;
-      }
-      @media screen and (max-width: 500px) {
-        width: 80%;
-      }
-      @media screen and (max-width: 440px) {
-        width: 78%;
-      }
-      @media screen and (max-width: 395px) {
-        width: 76%;
-      }
-      @media screen and (max-width: 365px) {
-        width: 74%;
-      }
-      @media screen and (max-width: 340px) {
-        width: 72%;
-      }
+    @media (max-width: $mobileSmallWidth) {
+      width: 100%;
     }
   }
+
   .previous {
-    float: left;
     margin-right: 2%;
-  }
-  .next {
-    float: right;
-  }
-}
 
-.pagination {
-  margin: $spacingSmall * 2 auto 0 auto;
-  text-align: center;
-
-  ul {
-    margin: 0 $spacingSmall * 2;
-    box-shadow: none;
-
-    > li {
-      padding-left: 0;
-
-      &:first-child {
-
-        > a {
-          border-left-width: 0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      }
-
-      &:last-child {
-
-        > a {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-      }
-
-      a {
-        float: none;
-        @include border-radius(0);
-
-        &:hover, &:focus {
-          text-decoration: underline;
-          background: transparent;
-        }
-
-        &:focus {
-          background: $focusColour;
-          outline: 3px solid $focusColour;
-          outline-offset: 0;
-        }
-      }
-
-      a, span {
-        border: none;
-      }
-    }
-
-    .active {
-      border: none;
-
-      a {
-        &:hover, &:focus {
-          text-decoration: none;
-        }
-      }
-
-      a, span {
-        background: transparent;
-      }
+    @media (max-width: $mobileSmallWidth) {
+      margin-right: 0;
+      margin-bottom: $gutterHalf;
     }
   }
 }
-
