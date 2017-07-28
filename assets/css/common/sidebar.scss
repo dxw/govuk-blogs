@@ -103,6 +103,10 @@
 
     li {
       margin: 7px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     a {

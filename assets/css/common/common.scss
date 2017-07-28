@@ -573,14 +573,11 @@ sup {
       margin-left: 0;
     }
 
-    li {
-
-      @media screen and (max-width: $mobileMaxWidth) {
-        width: 50%;
-        float: left;
-        margin-right: 0;
-        padding-left: 0;
-      }
+    li {      
+      width: 50%;
+      float: left;
+      margin-right: 0;
+      padding-left: 0;
 
       a {
 
@@ -589,7 +586,9 @@ sup {
         }
 
         &.email {
+
           &:before {
+
             @include icomoon($icon-envelope);
           }
 
