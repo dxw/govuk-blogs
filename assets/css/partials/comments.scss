@@ -1,12 +1,12 @@
 form#commentform {
 
   .form-group {
-    padding-left: $gutterHalf + 4px;
     &.error {
       padding-left: $gutterHalf;
       border-left: 4px solid $alertColour;
       textarea, input {
           border-color: $alertColour;
+          border-width: 4px;
       }
     }
   }
@@ -40,7 +40,6 @@ form#commentform {
   input[type="submit"] {
     margin-top: 0;
     margin-bottom: $gutter;
-    margin-left: $gutterHalf + 4px;
   }
 }
 
