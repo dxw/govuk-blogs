@@ -103,6 +103,10 @@
 
     li {
       margin: 7px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     a {
@@ -110,38 +114,14 @@
       border-bottom: none;
       vertical-align: middle;
       font-size: 16px;
-      @include font-size(1.6rem, 1.6rem);
-      line-height: 28px;
-      &:before {
-        background: $blueDark;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        @include font-size(18px, 18px);
-      }
-      &:hover, &:focus {
-        &:before {
-          background: darken($blueDark, 10%);
-        }
-      }
+      @include icons;
 
       // Twitter
       &[href^="http://twitter.com/"],
       &[href^="http://www.twitter.com/"],
       &[href^="https://twitter.com/"],
       &[href^="https://www.twitter.com/"] {
-        &:before {
-          @include icomoon($icon-twitter);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(1);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-twitter;
       }
 
       // Facebook
@@ -149,18 +129,7 @@
       &[href^="http://www.facebook.com/"],
       &[href^="https://facebook.com/"],
       &[href^="https://www.facebook.com/"] {
-        &:before {
-          @include icomoon($icon-facebook);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(0);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-facebook;
       }
 
       // YouTube
@@ -168,18 +137,7 @@
       &[href^="http://www.youtube.com/"],
       &[href^="https://youtube.com/"],
       &[href^="https://www.youtube.com/"] {
-        &:before {
-          @include icomoon($icon-play);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(2);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-youtube;
       }
 
       // Flickr
@@ -187,35 +145,13 @@
       &[href^="http://www.flickr.com/"],
       &[href^="https://flickr.com/"],
       &[href^="https://www.flickr.com/"] {
-        &:before {
-          @include icomoon($icon-flickr);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(3);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-flickr;
       }
 
       // Google +
       &[href^="http://plus.google.com/"],
       &[href^="https://plus.google.com/"] {
-        &:before {
-          @include icomoon($icon-googleplus);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(7);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-googleplus;
       }
 
       // Foursquare
@@ -223,18 +159,7 @@
       &[href^="http://www.foursquare.com/"],
       &[href^="https://foursquare.com/"],
       &[href^="https://www.foursquare.com/"] {
-        &:before {
-          @include icomoon($icon-foursquare);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(8);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-foursquare;
       }
 
       // LinkedIn
@@ -242,18 +167,7 @@
       &[href^="http://www.linkedin.com/"],
       &[href^="https://linkedin.com/"],
       &[href^="https://www.linkedin.com/"] {
-        &:before {
-          @include icomoon($icon-linkedin);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(6);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-linkedin;
       }
 
       // Pinterest
@@ -263,18 +177,7 @@
       &[href^="https://www.pinterest.com/"],
       &[href^="http://uk.pinterest.com/"],
       &[href^="https://uk.pinterest.com/"] {
-        &:before {
-          @include icomoon($icon-pinterest);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(5);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-pinterest;
       }
 
       // Instagram
@@ -282,48 +185,12 @@
       &[href^="http://www.instagram.com/"],
       &[href^="https://instagram.com/"],
       &[href^="https://www.instagram.com/"] {
-        &:before {
-          @include icomoon($icon-instagram);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(10);
-          &:before {
-            display: none;
-          }
-        }
+        @include icon-instagram;
       }
 
       // Email
       &[href^="mailto:"] {
-        &:before {
-          @include icomoon($icon-envelope);
-        }
-
-        .lte-ie8 & {
-          height: 25px;
-          padding-left: 30px;
-          @include menu-follow-us(9);
-          &:before {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: $mobileMaxWidth) {
-    #menu-follow-us {
-      li {
-        width: 50%;
-        float: left;
-        display: inline-block;
-        margin: 0;
-      }
-      a {
-        margin: 3px 0px;
+        @include icon-email;
       }
     }
   }
