@@ -27,15 +27,18 @@ blockquote {
       margin-bottom: 0;
 
       &:after {
-        content: "\201D";
+        content: "\2019";
       }
     }
 
-    &:before {
-      content: "\201C";
-      float: left;
-      clear: both;
-      margin-left: -$gutterHalf;
+    &:first-child {
+
+      &:before {
+        content: "\201C";
+        float: left;
+        clear: both;
+        margin-left: -$gutterHalf;
+      }
     }
   }
 
