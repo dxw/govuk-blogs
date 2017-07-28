@@ -37,11 +37,9 @@ function pagination($q = null, $mode = null, $uri = null) {
   /** Add the pages around the current page to the array */
   if ($paged >= 3) {
     $links[] = $paged - 1;
-    $links[] = $paged - 2;
   }
 
   if (($paged + 2) <= $max) {
-    $links[] = $paged + 2;
     $links[] = $paged + 1;
   }
 
@@ -56,14 +54,11 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<a href="%s" class="pull-left" rel="previous">
-    <span class="previous arrow">
-      <span class="arrow-button"></span>
-      <span class="contain hidden-mobile">
-        <span class="link">Previous page</span>
-      </span>
-    </span>
-    </a>', $uri);
+    printf('<div class="previous">
+    <a href="%s" rel="previous">
+      Previous <span class="hidden-mobile">page</span>
+    </a>
+  </div>', $uri);
   }
 
   // next page
@@ -73,14 +68,11 @@ function pagination($q = null, $mode = null, $uri = null) {
     if ($mode) {
       $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<a href="%s" class="pull-right" rel="next">
-    <span class="next arrow">
-      <span class="arrow-button"></span>
-      <span class="contain hidden-mobile">
-        <span class="link">Next page</span>
-      </span>
-    </span>
-    </a>', $uri);
+    printf('<div class="next">
+    <a href="%s" rel="next">
+      Next <span class="hidden-mobile">page</span>
+    </a>
+  </div>', $uri);
 
   }
 

@@ -1,11 +1,31 @@
 form#commentform {
 
+  .form-group {
+    &.error {
+      padding-left: $gutterHalf;
+      border-left: 4px solid $alertColour;
+      textarea, input {
+          border-color: $alertColour;
+          border-width: 4px;
+      }
+    }
+  }
+
+  label {
+      .error {
+          display:block;
+          clear:left;
+          color: $alertColour;
+      }
+  }
+
   label[for="email"] {
     padding-bottom: 0;
   }
 
   textarea {
     width: 100%;
+    display: block;
   }
 
   input[type="text"],
@@ -24,13 +44,34 @@ form#commentform {
   }
 }
 
-#respond h3 {
-  width: 70%;
-  float: left;
+#respond {
+  h3 {
+    width: 70%;
+    float: left;
 
-  @media (max-width: $mobileMaxWidth) {
-    width: 100%;
-    float: none;
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .alert.error-summary {
+    display: block;
+    border-color: $alertColour;
+      h3 {
+        width: 100%;
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: $gutterHalf;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        color: $alertColour;
+        font-weight: 600;
+      }
   }
 }
 

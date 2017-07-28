@@ -1,15 +1,55 @@
+.pagination-container {
+  margin-bottom: $gutter;
+}
+
 .pagination {
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
   text-align: center;
 
   ul {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 $spacingSmall*2;
 
-    > li > a {
-      padding: 4px 12px;
-      line-height: 20px;
-      text-decoration: none;
+    @media (max-width: $mobileSmallWidth) {
+      margin-top: $gutterHalf;
+    }
+
+    > li {
+      padding-left: 0;
+
+      &:first-child {
+
+        > a {
+          border-left-width: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      &:last-child {
+
+        > a {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      > a {
+        padding: 4px 12px;
+        line-height: 20px;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          background: transparent;
+        }
+
+        &:focus {
+          background: $focusColour;
+          outline: 3px solid $focusColour;
+          outline-offset: 0;
+        }
+      }
     }
 
     > .active {
@@ -17,6 +57,13 @@
       span, a {
         color: #999;
         cursor: default;
+        background: transparent;
+      }
+
+      a {
+        &:hover, &:focus {
+          text-decoration: none;
+        }
       }
     }
   }

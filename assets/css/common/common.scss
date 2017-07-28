@@ -118,6 +118,10 @@ article {
       display: inline-block;
       @include font-size(16px, 16px);
       @include line-height(20 / 16, 20 / 16);
+
+      .lte-ie8 & {
+        float: left;
+      }
     }
   }
 }
