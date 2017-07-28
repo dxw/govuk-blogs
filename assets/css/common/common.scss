@@ -485,81 +485,60 @@ sup {
     margin-right: 10px;
     margin-bottom: 0;
 
+    @media (max-width: $mobileMaxWidth) {
+      width: 50%;
+      margin-right: 0; 
+      margin-bottom: $spacingSmall;
+    }
+
     &:first-child {
       padding-left: 0;
     }
     a {
-      display: block;
-      vertical-align: middle;
+      @include icons;
       @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-      &:before {
-        background: $blueDark;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        @include font-size(18px, 18px);
-      }
-      &:hover, &:focus {
-        &:before {
-          background: darken($blueDark, 10%);
-        }
-      }
+      @include line-height(20px/16px, 20px/16px);
 
       &.twitter {
-        &:before {
-          @include icomoon($icon-twitter);
-        }
+        background-image: url('../assets/img/icon-twitter.svg');
 
+        .lt-ie11 &,
         .lte-ie8 & {
-          @include menu-follow-us(1);
+          background-image: url('../assets/img/icon-twitter.png');
         }
       }
       &.facebook {
-        &:before {
-          @include icomoon($icon-facebook);
-        }
+        background-image: url('../assets/img/icon-facebook.svg');
 
+        .lt-ie11 &,
         .lte-ie8 & {
-          @include menu-follow-us(0);
+          background-image: url('../assets/img/icon-facebook.png');
         }
       }
       &.google {
-        &:before {
-          @include icomoon($icon-googleplus);
-        }
+        background-image: url('../assets/img/icon-google-plus.svg');
 
+        .lt-ie11 &,
         .lte-ie8 & {
-          @include menu-follow-us(7);
+          background-image: url('../assets/img/icon-google-plus.png');
         }
       }
       &.linkedin {
-        &:before {
-          @include icomoon($icon-linkedin);
-        }
+        background-image: url('../assets/img/icon-linkedin.svg');
 
+        .lt-ie11 &,
         .lte-ie8 & {
-          @include menu-follow-us(6);
+          background-image: url('../assets/img/icon-linkedin.png');
         }
       }
       &.email {
-        &:before {
-          @include icomoon($icon-envelope);
-        }
+        background-image: url('../assets/img/icon-email.svg');
 
+        .lt-ie11 &,
         .lte-ie8 & {
-          @include menu-follow-us(9);
+          background-image: url('../assets/img/icon-email.png');
         }
       }
-
-      .lte-ie8 & {
-        height: 25px;
-        padding-left: 30px;
-        &:before {
-          display: none;
-        }
-      }
-
     }
   }
 }
@@ -580,41 +559,24 @@ sup {
       padding-left: 0;
 
       a {
-
-        &:before {
-          @include font-size(18px, 18px);
-        }
+        @include icons;
+        line-height: 30px;
 
         &.email {
+          background-image: url('../assets/img/icon-email.svg');
 
-          &:before {
-
-            @include icomoon($icon-envelope);
-          }
-
+          .lt-ie11 &,
           .lte-ie8 & {
-            height: 25px;
-            padding-left: 30px;
-            @include menu-follow-us(9);
-            &:before {
-              display: none;
-            }
+            background-image: url('../assets/img/icon-email.png');
           }
         }
 
         &.feed {
-          &:before {
-            @include icomoon($icon-feed);
-          }
+          background-image: url('../assets/img/icon-rss.svg');
 
+          .lt-ie11 &,
           .lte-ie8 & {
-            width: 20px;
-            height: 25px;
-            padding-left: 30px;
-            background: url('../assets/img/social-icons-blue.png') no-repeat -4px -300px;
-            &:before {
-              display: none;
-            }
+            background-image: url('../assets/img/icon-rss.png');
           }
         }
 

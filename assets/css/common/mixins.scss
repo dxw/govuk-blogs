@@ -24,29 +24,14 @@ $greyTopBorder: 1px solid #bfc1c3;
   }
 }
 
-@mixin menu-follow-us($h) {
-  background-image: url(../assets/img/follow-sprite.png);
-  background-repeat: no-repeat;
-  background-position: left ($h * -25px);
-}
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius:    $radius;
   border-radius:         $radius;
 }
 
-// Icon font
-@mixin icomoon($content) {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  content: $content;
-  display: inline-block;
-  margin-right: 5px;
-  text-decoration: none;
+@mixin icons {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
 }

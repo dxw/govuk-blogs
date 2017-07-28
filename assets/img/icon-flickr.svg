@@ -7,8 +7,8 @@
 	.st1{fill:#FFFFFF;}
 </style>
 <rect class="st0" width="25.5" height="25.5"/>
-<g>
-	<circle class="st1" cx="7.2" cy="12.8" r="4.4"/>
-	<circle class="st1" cx="18.4" cy="12.8" r="4.4"/>
+<g id="flickr">
+	<circle class="st1" cx="8.1" cy="12.8" r="3.7"/>
+	<circle class="st1" cx="17.4" cy="12.8" r="3.7"/>
 </g>
 </svg>
