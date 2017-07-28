@@ -30,7 +30,7 @@
         <div class="column-one-third">
             <?php if ($logo_options['logo']): ?>
                 <div class="logo-container hidden-mobile">
-                    <img src="<?php echo $logo_options['logo']; ?>" alt="Logo for <?php bloginfo('name')?>" />
+                    <img src="<?php echo $logo_options['logo']; ?>" alt="<?php bloginfo('name')?>" />
                 </div>
             <?php endif ?>
             <div class="bottom search-container">
