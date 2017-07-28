@@ -31,11 +31,14 @@ blockquote {
       }
     }
 
-    &:before {
-      content: "\201C";
-      float: left;
-      clear: both;
-      margin-left: -$gutterHalf;
+    &:first-child {
+
+      &:before {
+        content: "\201C";
+        float: left;
+        clear: both;
+        margin-left: -$gutterHalf;
+      }
     }
   }
 

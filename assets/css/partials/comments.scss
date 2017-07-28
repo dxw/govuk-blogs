@@ -156,6 +156,14 @@ form#commentform {
   li.comment {
     margin: 20px 0px;
     list-style: none;
+
+    &.depth-1 {
+      margin-bottom: $gutter*2;
+
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   .comment-links {
