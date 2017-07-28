@@ -11,18 +11,20 @@
 
             <?php if ($orgs = gds_organisations() ||  get_option('options_gds_location')) : ?>
                 <div class="bottom blog-meta">
+                    <table>
                         <?php if ($orgs = gds_organisations()) : ?>
-                            <dl>
-                                <dt>Organisations:</dt>
-                                <dd><?php echo $orgs # this is pre-escaped ?></dd>
-                            </dl>
+                            <tr>
+                                <th>Organisations:</th>
+                                <td><?php echo $orgs # this is pre-escaped ?></td>
+                            </tr>
                         <?php endif ?>
                         <?php if (get_option('options_gds_location')) : ?>
-                            <dl>
-                                <dt>Location:</dt>
-                                <dd><?php echo get_option('options_gds_location') ?></dd>
-                            </dl>
+                            <tr>
+                                <th>Location:</th>
+                                <td><?php echo get_option('options_gds_location') ?></td>
+                            </tr>
                         <?php endif ?>
+                    </table>
                 </div>
             <?php endif ?>
         </div>
@@ -39,11 +41,11 @@
         </div>
 
     </div>
-
+    
     <?php if (function_exists('history_mode_notice') && (is_single() || is_page())) { ?>
         <div class="grid-row">
             <?php history_mode_notice(get_the_ID(), 'blog post'); ?>
         </div>
     <?php } ?>
-
+    
 </header>
