@@ -17,3 +17,9 @@
     max-width: 620px;
   }
 }
+
+label.setting[data-setting="alt"] {
+    ::after {
+        content: " (should convey what point the image is making)";
+    }
+}
