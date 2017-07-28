@@ -121,12 +121,7 @@
       &[href^="http://www.twitter.com/"],
       &[href^="https://twitter.com/"],
       &[href^="https://www.twitter.com/"] {
-        background-image: url('../assets/img/icon-twitter.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-twitter.png');
-        }
+        @include icon-twitter;
       }
 
       // Facebook
@@ -134,12 +129,7 @@
       &[href^="http://www.facebook.com/"],
       &[href^="https://facebook.com/"],
       &[href^="https://www.facebook.com/"] {
-        background-image: url('../assets/img/icon-facebook.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-facebook.png');
-        }
+        @include icon-facebook;
       }
 
       // YouTube
@@ -147,12 +137,7 @@
       &[href^="http://www.youtube.com/"],
       &[href^="https://youtube.com/"],
       &[href^="https://www.youtube.com/"] {
-        background-image: url('../assets/img/icon-youtube.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-youtube.png');
-        }
+        @include icon-youtube;
       }
 
       // Flickr
@@ -160,23 +145,13 @@
       &[href^="http://www.flickr.com/"],
       &[href^="https://flickr.com/"],
       &[href^="https://www.flickr.com/"] {
-        background-image: url('../assets/img/icon-flickr.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-flickr.png');
-        }
+        @include icon-flickr;
       }
 
       // Google +
       &[href^="http://plus.google.com/"],
       &[href^="https://plus.google.com/"] {
-        background-image: url('../assets/img/icon-google-plus.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-google-plus.png');
-        }
+        @include icon-googleplus;
       }
 
       // Foursquare
@@ -184,12 +159,7 @@
       &[href^="http://www.foursquare.com/"],
       &[href^="https://foursquare.com/"],
       &[href^="https://www.foursquare.com/"] {
-        background-image: url('../assets/img/icon-foursquare.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-foursquare.png');
-        }
+        @include icon-foursquare;
       }
 
       // LinkedIn
@@ -197,12 +167,7 @@
       &[href^="http://www.linkedin.com/"],
       &[href^="https://linkedin.com/"],
       &[href^="https://www.linkedin.com/"] {
-        background-image: url('../assets/img/icon-linkedin.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-linkedin.png');
-        }
+        @include icon-linkedin;
       }
 
       // Pinterest
@@ -212,12 +177,7 @@
       &[href^="https://www.pinterest.com/"],
       &[href^="http://uk.pinterest.com/"],
       &[href^="https://uk.pinterest.com/"] {
-        background-image: url('../assets/img/icon-pinterest.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-pinterest.png');
-        }
+        @include icon-pinterest;
       }
 
       // Instagram
@@ -225,22 +185,12 @@
       &[href^="http://www.instagram.com/"],
       &[href^="https://instagram.com/"],
       &[href^="https://www.instagram.com/"] {
-        background-image: url('../assets/img/icon-instagram.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-instagram.png');
-        }
+        @include icon-instagram;
       }
 
       // Email
       &[href^="mailto:"] {
-        background-image: url('../assets/img/icon-email.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-email.png');
-        }
+        @include icon-email;
       }
     }
   }

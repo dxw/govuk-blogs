@@ -500,44 +500,27 @@ sup {
       @include line-height(20px/16px, 20px/16px);
 
       &.twitter {
-        background-image: url('../assets/img/icon-twitter.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-twitter.png');
-        }
+        @include icon-twitter;
       }
+
       &.facebook {
-        background-image: url('../assets/img/icon-facebook.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-facebook.png');
-        }
+        @include icon-facebook;
       }
+
       &.google {
-        background-image: url('../assets/img/icon-google-plus.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-google-plus.png');
-        }
+        @include icon-googleplus;
       }
+
       &.linkedin {
-        background-image: url('../assets/img/icon-linkedin.svg');
-
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-linkedin.png');
-        }
+        @include icon-linkedin;
       }
-      &.email {
-        background-image: url('../assets/img/icon-email.svg');
 
-        .lt-ie11 &,
-        .lte-ie8 & {
-          background-image: url('../assets/img/icon-email.png');
-        }
+      &.email {
+        @include icon-email;
+      }
+
+      &.feed {
+        @include icon-rss;
       }
     }
   }
@@ -561,25 +544,6 @@ sup {
       a {
         @include icons;
         line-height: 30px;
-
-        &.email {
-          background-image: url('../assets/img/icon-email.svg');
-
-          .lt-ie11 &,
-          .lte-ie8 & {
-            background-image: url('../assets/img/icon-email.png');
-          }
-        }
-
-        &.feed {
-          background-image: url('../assets/img/icon-rss.svg');
-
-          .lt-ie11 &,
-          .lte-ie8 & {
-            background-image: url('../assets/img/icon-rss.png');
-          }
-        }
-
       }
     }
   }

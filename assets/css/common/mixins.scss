@@ -35,3 +35,102 @@ $greyTopBorder: 1px solid #bfc1c3;
   background-repeat: no-repeat;
   background-size: 21px 21px;
 }
+
+@mixin icon-email {
+  background-image: url('../assets/img/icon-email.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-email.png');
+  }
+}
+
+@mixin icon-facebook {
+  background-image: url('../assets/img/icon-facebook.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-facebook.png');
+  }
+}
+
+@mixin icon-flickr {
+  background-image: url('../assets/img/icon-flickr.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-flickr.png');
+  }
+}
+
+@mixin icon-foursquare {
+  background-image: url('../assets/img/icon-foursquare.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-foursquare.png');
+  }
+}
+
+@mixin icon-googleplus {
+  background-image: url('../assets/img/icon-google-plus.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-google-plus.png');
+  }
+}
+
+@mixin icon-instagram {
+  background-image: url('../assets/img/icon-instagram.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-instagram.png');
+  }
+}
+
+@mixin icon-linkedin {
+  background-image: url('../assets/img/icon-linkedin.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-linkedin.png');
+  }
+}
+
+@mixin icon-pinterest {
+  background-image: url('../assets/img/icon-pinterest.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-pinterest.png');
+  }
+}
+
+@mixin icon-rss {
+  background-image: url('../assets/img/icon-rss.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-rss.png');
+  }
+}
+
+@mixin icon-twitter {
+  background-image: url('../assets/img/icon-twitter.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-twitter.png');
+  }
+}
+
+@mixin icon-youtube {
+  background-image: url('../assets/img/icon-youtube.svg');
+
+  .lt-ie11 &,
+  .lte-ie8 & {
+    background-image: url('../assets/img/icon-youtube.png');
+  }
+}
