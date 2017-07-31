@@ -36,12 +36,18 @@ $greyTopBorder: 1px solid #bfc1c3;
   background-size: 21px 21px;
 }
 
+@mixin menu-follow-us($h) {
+  background-image: url(../assets/img/follow-sprite.png);
+  background-position: left ($h * -21px);
+  background-size: auto;
+}
+
 @mixin icon-email {
   background-image: url('../assets/img/icon-email.svg');
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-email.png');
+    @include menu-follow-us(8);
   }
 }
 
@@ -50,7 +56,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-facebook.png');
+    @include menu-follow-us(0);
   }
 }
 
@@ -59,7 +65,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-flickr.png');
+    @include menu-follow-us(3);
   }
 }
 
@@ -68,7 +74,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-foursquare.png');
+    @include menu-follow-us(7);
   }
 }
 
@@ -77,7 +83,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-google-plus.png');
+    @include menu-follow-us(6);
   }
 }
 
@@ -86,7 +92,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-instagram.png');
+    @include menu-follow-us(9);
   }
 }
 
@@ -95,7 +101,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-linkedin.png');
+    @include menu-follow-us(5);
   }
 }
 
@@ -104,7 +110,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-pinterest.png');
+    @include menu-follow-us(4);
   }
 }
 
@@ -113,7 +119,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-rss.png');
+    @include menu-follow-us(10);
   }
 }
 
@@ -122,7 +128,7 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-twitter.png');
+    @include menu-follow-us(1);
   }
 }
 
@@ -131,6 +137,6 @@ $greyTopBorder: 1px solid #bfc1c3;
 
   .lt-ie11 &,
   .lte-ie8 & {
-    background-image: url('../assets/img/icon-youtube.png');
+    @include menu-follow-us(2);
   }
 }
