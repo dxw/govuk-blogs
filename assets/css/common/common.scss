@@ -485,81 +485,43 @@ sup {
     margin-right: 10px;
     margin-bottom: 0;
 
+    @media (max-width: $mobileMaxWidth) {
+      width: 50%;
+      margin-right: 0; 
+      margin-bottom: $spacingSmall;
+    }
+
     &:first-child {
       padding-left: 0;
     }
     a {
-      display: block;
-      vertical-align: middle;
+      @include icons;
       @include font-size(16px, 16px);
       @include line-height(20 / 16, 20 / 16);
-      &:before {
-        background: $blueDark;
-        padding: 5px;
-        text-align: center;
-        color: #fff;
-        @include font-size(18px, 18px);
-      }
-      &:hover, &:focus {
-        &:before {
-          background: darken($blueDark, 10%);
-        }
-      }
 
       &.twitter {
-        &:before {
-          @include icomoon($icon-twitter);
-        }
-
-        .lte-ie8 & {
-          @include menu-follow-us(1);
-        }
+        @include icon-twitter;
       }
+
       &.facebook {
-        &:before {
-          @include icomoon($icon-facebook);
-        }
-
-        .lte-ie8 & {
-          @include menu-follow-us(0);
-        }
+        @include icon-facebook;
       }
+
       &.google {
-        &:before {
-          @include icomoon($icon-googleplus);
-        }
-
-        .lte-ie8 & {
-          @include menu-follow-us(7);
-        }
+        @include icon-googleplus;
       }
+
       &.linkedin {
-        &:before {
-          @include icomoon($icon-linkedin);
-        }
-
-        .lte-ie8 & {
-          @include menu-follow-us(6);
-        }
+        @include icon-linkedin;
       }
+
       &.email {
-        &:before {
-          @include icomoon($icon-envelope);
-        }
-
-        .lte-ie8 & {
-          @include menu-follow-us(9);
-        }
+        @include icon-email;
       }
 
-      .lte-ie8 & {
-        height: 25px;
-        padding-left: 30px;
-        &:before {
-          display: none;
-        }
+      &.feed {
+        @include icon-rss;
       }
-
     }
   }
 }
@@ -573,52 +535,15 @@ sup {
       margin-left: 0;
     }
 
-    li {
-
-      @media screen and (max-width: $mobileMaxWidth) {
-        width: 50%;
-        float: left;
-        margin-right: 0;
-        padding-left: 0;
-      }
+    li {      
+      width: 50%;
+      float: left;
+      margin-right: 0;
+      padding-left: 0;
 
       a {
-
-        &:before {
-          @include font-size(18px, 18px);
-        }
-
-        &.email {
-          &:before {
-            @include icomoon($icon-envelope);
-          }
-
-          .lte-ie8 & {
-            height: 25px;
-            padding-left: 30px;
-            @include menu-follow-us(9);
-            &:before {
-              display: none;
-            }
-          }
-        }
-
-        &.feed {
-          &:before {
-            @include icomoon($icon-feed);
-          }
-
-          .lte-ie8 & {
-            width: 20px;
-            height: 25px;
-            padding-left: 30px;
-            background: url('../assets/img/social-icons-blue.png') no-repeat -4px -300px;
-            &:before {
-              display: none;
-            }
-          }
-        }
-
+        @include icons;
+        line-height: 30px;
       }
     }
   }
