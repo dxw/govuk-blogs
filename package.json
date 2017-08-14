@@ -8,5 +8,8 @@
     "grunt-img": "~0.1.8",
     "bower": "~1.2.8",
     "async": "~0.2.10"
+  },
+  "dependencies": {
+    "url-polyfill": "^1.0.7"
   }
 }
