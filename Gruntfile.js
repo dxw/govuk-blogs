@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                         'bower_components/jquery-placeholder/jquery.placeholder.js',
                         'bower_components/bowser/bowser.js',
                         'bower_components/lte-ie/lte-ie.js',
+                        'node_modules/url-polyfill/url-polyfill.js',
                         'assets/js/main.js',
                         'assets/js/comments.js'
                     ],
