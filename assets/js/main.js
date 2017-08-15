@@ -120,5 +120,30 @@ jQuery(function ($) {
     });
 
 
+    // Analytics for external links
+    $('a').click(function (e) {
+      var href = $(e.currentTarget).attr('href')
+      var u = new URL(href, document.location.href)
 
+      var isHttps = u.protocol === 'https:'
+      var hostnameMatches = (u.hostname === 'blog.gov.uk' || u.hostname.endsWith('.blog.gov.uk'))
+
+      // Ignore if https://blog.gov.uk or https://*.blog.gov.uk
+      if (isHttps && hostnameMatches) {
+        return
+      }
+
+      if (typeof ga !== 'function') {
+        return
+      }
+
+      e.preventDefault()
+
+      ga('send', 'event', 'outbound', 'click', u.href, {
+        'transport': 'beacon',
+        'hitCallback': function(){
+          document.location = u.href
+        },
+      })
+    })
 })
