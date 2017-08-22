@@ -128,21 +128,29 @@ jQuery(function ($) {
       var isHttps = u.protocol === 'https:'
       var hostnameMatches = (u.hostname === 'blog.gov.uk' || u.hostname.endsWith('.blog.gov.uk'))
 
-      // Ignore if https://blog.gov.uk or https://*.blog.gov.uk
+      //Ignore if https://blog.gov.uk or https://*.blog.gov.uk
       if (isHttps && hostnameMatches) {
-        return
-      }
-
-      if (typeof ga !== 'function') {
         return
       }
 
       e.preventDefault()
 
+      setTimeout(followLink, 1000);
+
+      var linkFollowed = false;
+
+      function followLink()
+      {
+        if (!linkFollowed) {
+          linkFollowed = true;
+          document.location = u.href
+        }
+      }
+
       ga('send', 'event', 'outbound', 'click', u.href, {
         'transport': 'beacon',
         'hitCallback': function(){
-          document.location = u.href
+          followLink();
         },
       })
     })
