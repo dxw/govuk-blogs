@@ -51,9 +51,8 @@ module.exports = function (grunt) {
                 files: {
                     'build/main.min.js': [
                         'assets/js/plugins/*.js',
-                        'bower_components/jquery-placeholder/jquery.placeholder.js',
-                        'bower_components/bowser/bowser.js',
-                        'bower_components/lte-ie/lte-ie.js',
+                        'node_modules/jquery-placeholder/jquery.placeholder.js',
+                        'node_modules/bowser/bowser.js',
                         'node_modules/url-polyfill/url-polyfill.js',
                         'assets/js/main.js',
                         'assets/js/comments.js'
@@ -67,9 +66,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            'bower_components/bsie/bootstrap/css/bootstrap-ie6.min.css',
-                            'bower_components/bootstrap/img/glyphicons-halflings.png',
-                            'bower_components/bootstrap/img/glyphicons-halflings-white.png',
+                            'node_modules/bsie/bootstrap/css/bootstrap-ie6.min.css',
+                            'node_modules/bootstrap/img/glyphicons-halflings.png',
+                            'node_modules/bootstrap/img/glyphicons-halflings-white.png',
                         ],
                         dest: 'build/',
                     },
@@ -100,15 +99,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-img')
-
-    grunt.registerTask('bower-install', 'Installs bower deps', function () {
-        var done = this.async()
-          , bower = require('bower')
-
-        bower.commands.install().on('end', function () {
-            done()
-        })
-    })
 
     grunt.registerTask('govuk_template', function () {
         var done = this.async()
@@ -148,7 +138,6 @@ module.exports = function (grunt) {
     ])
 
     grunt.registerTask('default', [
-        'bower-install',
         'copy',
         'sass',
         'uglify',

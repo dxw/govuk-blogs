@@ -11,6 +11,9 @@
     "grunt-img": "~0.1.8"
   },
   "dependencies": {
+    "bowser": "^1.9.1",
+    "bsie": "git+https://github.com/ddouble/bsie.git",
+    "jquery-placeholder": "^2.0.7",
     "url-polyfill": "^1.0.7"
   }
 }

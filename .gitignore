@@ -1,5 +1,4 @@
 /node_modules
-/bower_components
 /vendor
 /govuk_template
 /build/main.min.js.map
