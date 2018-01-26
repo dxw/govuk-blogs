@@ -146,25 +146,22 @@ jQuery(function ($) {
         return
       }
 
-      e.preventDefault()
-
-      setTimeout(followLink, 1000);
-
-      var linkFollowed = false;
-
-      function followLink()
-      {
-        if (!linkFollowed) {
-          linkFollowed = true;
-          document.location = u.href
-        }
-      }
-
-      ga('send', 'event', 'outbound', 'click', u.href, {
-        'transport': 'beacon',
-        'hitCallback': function(){
-          followLink();
-        },
+      // Create a promise which either returns once ga has fired an event, or
+      // after 500ms, whichever comes first
+      var p = new Promise(function (resolve, reject) {
+        setTimeout(reject, 500);
+        ga('send', 'event', 'outbound', 'click', u.href, {
+          'transport': 'beacon',
+          'hitCallback': resolve,
+        })
       })
+
+      // Execute the promise
+      p.finally(function () {
+        // do nothing
+      })
+
+      // Return without calling preventDefault() thus allowing the navigation
+      // to occur
     })
 })
