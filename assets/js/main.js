@@ -158,6 +158,7 @@ jQuery(function ($) {
 
       // Execute the promise
       p.finally(function () {
+        console.log('hi')
         // do nothing
       })
 
