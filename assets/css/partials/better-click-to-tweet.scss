@@ -1,0 +1,17 @@
+.bctt-click-to-tweet {
+  padding: 20px 15px 15px 30px;
+}
+.bctt-ctt-text {
+  a {
+    font-family: "nta", Helvetica, Arial, sans-serif !important;
+    @include font-size(19px, 19px);
+    @include line-height(25 / 19, 25 / 19);
+    color: $black !important; // The plugin stylesheet uses !important so we need to use it here
+    font-weight: 400;
+  }
+
+}
+a.bctt-ctt-btn {
+  background-position: right top 6px;
+  padding: 5px 24px 0 0;
+}
