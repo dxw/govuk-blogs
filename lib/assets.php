@@ -18,7 +18,7 @@ add_action('admin_enqueue_scripts', function () {
 add_action('wp_head', function () {
   ?>
     <!--[if lte IE 6]>
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/build/bower_components/bsie/bootstrap/css/bootstrap-ie6.min.css' ?>">
+      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/build/node_modules/bsie/bootstrap/css/bootstrap-ie6.min.css' ?>">
     <![endif]-->
   <?php
 }, 20);
