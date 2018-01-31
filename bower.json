@@ -1,8 +1,0 @@
-{
-  "name": "a",
-  "dependencies": {
-    "bsie": "https://github.com/ddouble/bsie.git",
-    "jquery-placeholder": "~2.0.7",
-    "lte-ie": "git@git.dxw.net:libs/lte-ie"
-  }
-}

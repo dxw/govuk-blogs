@@ -1,15 +1,20 @@
 {
   "devDependencies": {
+    "async": "~0.2.10",
+    "bower": "~1.2.8",
     "grunt": "~0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-sass": "~0.8.0",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-img": "~0.1.8",
-    "bower": "~1.2.8",
-    "async": "~0.2.10"
+    "grunt-img": "~0.1.8"
   },
   "dependencies": {
+    "bowser": "^1.9.1",
+    "bsie": "git+https://github.com/ddouble/bsie.git",
+    "es6-promise": "^4.2.4",
+    "jquery-placeholder": "^2.0.7",
     "url-polyfill": "^1.0.7"
   }
 }
