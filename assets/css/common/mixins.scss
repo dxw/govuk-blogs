@@ -7,6 +7,10 @@ $tabletMaxWidth:    979px;
 $desktopSmallWidth: 1020px;
 
 $greyTopBorder: 1px solid #bfc1c3;
+$yellow: #ffbf47;
+$focus-colour: $yellow;
+
+$is-ie: false !default;
 
 @mixin font-size($d, $m) {
   font-size: $d;
@@ -28,6 +32,18 @@ $greyTopBorder: 1px solid #bfc1c3;
   -webkit-border-radius: $radius;
   -moz-border-radius:    $radius;
   border-radius:         $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // Chrome 4.0 to 9.0, Safari 3.1 to 5.0, Mobile Safari 3.2 to 4.3, Android Browser 2.1 to 3.0
+  -moz-box-shadow:    $shadow; // Firefox 3.5 to 3.6
+  box-shadow:         $shadow;
+}
+
+@mixin opacity($trans) {
+  zoom: 1;
+  filter: unquote('alpha(opacity=' + ($trans * 100) + ')'); // IE6 to IE8
+  opacity: $trans;
 }
 
 @mixin icons {
