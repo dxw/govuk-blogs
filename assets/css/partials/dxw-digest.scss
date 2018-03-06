@@ -1,0 +1,171 @@
+.dxw-subscription input[type="submit"] {
+  // add govuk button styles
+  background-color: $buttonColour;
+  position: relative;
+  display: inline-block;
+  padding: $spacingSmall*2 $gutterHalf $spacingSmall $gutterHalf;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 $buttonBorder;
+  -moz-box-shadow: 0 2px 0 $buttonBorder;
+  box-shadow: 0 2px 0 $buttonBorder;
+  @include font-size(19px, 19px);
+  @include line-height(25 / 19, 25 / 19);
+  text-decoration: none;
+  cursor: pointer;
+  color: $white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+
+
+  &:hover, &:focus {
+    background-color: $buttonHover;
+  }
+}
+
+.dxw-subscription.dxw-subscription-option input[type="submit"] {
+  display: block;
+  float: left;
+  clear: left;
+  margin-top: 20px;
+}
+
+// radio buttons based on govuk prototyping kit .fieldset - equivalent of .multiple-choice
+.dxw-subscription .fieldset {
+  display: block;
+  float: left;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  line-height: 25px;
+
+  .subscribed-categories {
+    margin-left: 0;
+
+    .fieldset:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  input {
+    cursor: pointer;
+
+    // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements there.
+    @if ($is-ie == false) or ($ie-version == 9) {
+      margin: 0;
+      @include opacity(0);
+    }
+  }
+
+  label {
+    font-weight: normal;
+    cursor: pointer;
+    // reset label margin from the plugin
+    margin-left: 0;
+    // apply spacing from govuk
+    padding: 8px 10px 9px 12px;
+    display: block;
+
+    // remove 300ms pause on mobile
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    z-index: 1;
+    margin: 0;
+    zoom: 1;
+  }
+}
+
+.dxw-subscription .fieldset {
+  input[type="radio"] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include border-radius(50%);
+  }
+
+  input[type=radio] + label::after {
+    content: "";
+    border: 10px solid;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    @include border-radius(50%);
+    @include opacity(0);
+  }
+
+  input[type=checkbox] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  input[type=checkbox] + label::after {
+    content: "";
+    border: solid;
+    border-width: 0 0 5px 5px;
+    background: transparent;
+    width: 17px;
+    height: 7px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    -moz-transform: rotate(-45deg); // Firefox 15 compatibility
+    -o-transform: rotate(-45deg); // Opera 12.0 compatibility
+    -webkit-transform: rotate(-45deg); // Safari 8 compatibility
+    -ms-transform: rotate(-45deg); // IE9 compatibility
+    transform: rotate(-45deg);
+    @include opacity(0);
+  }
+
+  // Focused state
+  [type=radio]:focus + label::before {
+    @include box-shadow(0 0 0 4px $focus-colour);
+  }
+
+  [type=checkbox]:focus + label::before {
+    @include box-shadow(0 0 0 3px $focus-colour);
+  }
+
+  // Selected state
+  input:checked + label::after {
+    @include opacity(1);
+  }
+
+  // Disabled state
+  input:disabled + label {
+    @include opacity(0.5);
+  }
+
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
