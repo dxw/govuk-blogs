@@ -6,7 +6,6 @@ add_action('widgets_init', function () {
 
 class FeedEmailWidget extends WP_Widget {
   public $fields = array(
-    'link'          => 'Link',
   );
 
   function __construct() {
@@ -38,8 +37,6 @@ class FeedEmailWidget extends WP_Widget {
     ob_start();
     extract($args, EXTR_SKIP);
 
-    $link = apply_filters('widget_title', empty($instance['link']) ? '' : $instance['link'], $instance, $this->id_base);
-
     foreach($this->fields as $name => $label) {
       if (!isset($instance[$name])) { $instance[$name] = ''; }
     }
@@ -50,11 +47,9 @@ class FeedEmailWidget extends WP_Widget {
     <h3>Sign up for updates</h3>
     <div class="subscribe icons-buttons">
       <ul>
-        <?php if ($link) : ?>
-          <li>
-            <a href="<?php echo esc_attr($link) ?>" class="email">Email</a>
-          </li>
-        <?php endif ?>
+        <li>
+          <a href="<?php echo esc_attr('/subscribe/') ?>" class="email">Email</a>
+        </li>
         <li>
           <a href="<?php echo esc_attr(get_feed_link('atom')) ?>" class="feed">Atom</a>
         </li>
