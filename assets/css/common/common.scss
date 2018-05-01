@@ -140,7 +140,7 @@ article {
     height: 0;
     overflow: hidden;
     margin-bottom: 1.5em;
-    &[data-twttr-id] {
+    &.twitter-embed {
       margin-bottom: 0;
       padding: 0;
       height: auto;
