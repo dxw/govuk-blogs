@@ -36,6 +36,8 @@ add_filter('oembed_dataparse', function($return, $data, $url) {
 add_filter('embed_oembed_html', function ($cache, $url, $attr, $post_ID) {
     if (preg_match('/https?:\/\/www\.\instagram\.com/', $url)==1) {
         $cache = str_replace('<div class="entry-content-asset">', '<div class="entry-content-asset instagram-embed">', $cache);
+    } elseif (preg_match('/https?:\/\/twitter\.com/', $url)==1) {
+        $cache = str_replace('<div class="entry-content-asset">', '<div class="entry-content-asset twitter-embed">', $cache);
     }
     return $cache;
 }, 10, 4);
