@@ -28,9 +28,10 @@
         </div>
 
         <div class="column-one-third">
-            <?php if ($logo_options['logo']): ?>
+            <?php $result = blogIconPath() ?>
+            <?php if (!$result->isErr()): ?>
                 <div class="logo-container hidden-mobile">
-                    <img src="<?php echo $logo_options['logo']; ?>" alt="<?php bloginfo('name')?>" />
+                    <img src="<?php echo $result->unwrap() ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>">
                 </div>
             <?php endif ?>
             <div class="bottom search-container">
