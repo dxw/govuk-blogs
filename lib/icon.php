@@ -34,7 +34,7 @@ if( function_exists('acf_add_local_field_group') ) {
                 'label' => 'Logo',
                 'name' => 'icon',
                 'type' => 'image',
-                'instructions' => 'Upload a personalised icon for the blog header. Must be uploaded at 90x90px to display correctly.',
+                'instructions' => 'Logo will be displayed to the right of the blog header. Should be 180px square or larger.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
