@@ -37,6 +37,7 @@
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
+
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
         <div class="form-group">
           <a name="comment_field"></a>
@@ -62,10 +63,11 @@
               <input type="email" class="text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?>>
             </div>
           <?php endif ?>
+          <?php do_action('comment_form', $post->ID) ?>
           <p><input name="submit" class="button" type="submit" id="submit" value="<?php _e('Submit comment', 'roots') ?>"></p>
         </div>
         <?php comment_id_fields() ?>
-        <?php do_action('comment_form', $post->ID) ?>
+        
       </form>
     <?php endif ?>
   </section><!-- /#respond -->
