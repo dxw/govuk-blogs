@@ -200,6 +200,11 @@
       &[href^="mailto:"] {
         @include icon-email;
       }
+
+      // Email
+      &[href*=".podbean.com/"] {
+        @include icon-podbean;
+      }
     }
   }
 }
