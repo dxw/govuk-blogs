@@ -58,6 +58,10 @@ $is-ie: false !default;
   background-size: auto;
 }
 
+@mixin icon-blank {
+  background-image: url('../assets/img/icon-blank.svg');
+}
+
 @mixin icon-email {
   background-image: url('../assets/img/icon-email.svg');
 }

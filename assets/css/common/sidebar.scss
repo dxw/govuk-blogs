@@ -121,6 +121,9 @@
       font-size: 16px;
       @include icons;
 
+      // Fallback to a blank icon
+      @include icon-blank;
+
       // Twitter
       &[href^="http://twitter.com/"],
       &[href^="http://www.twitter.com/"],
