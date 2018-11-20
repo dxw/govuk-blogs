@@ -60,99 +60,44 @@ $is-ie: false !default;
 
 @mixin icon-email {
   background-image: url('../assets/img/icon-email.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(8);
-  }
 }
 
 @mixin icon-facebook {
   background-image: url('../assets/img/icon-facebook.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(0);
-  }
 }
 
 @mixin icon-flickr {
   background-image: url('../assets/img/icon-flickr.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(3);
-  }
 }
 
 @mixin icon-foursquare {
   background-image: url('../assets/img/icon-foursquare.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(7);
-  }
 }
 
 @mixin icon-googleplus {
   background-image: url('../assets/img/icon-google-plus.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(6);
-  }
 }
 
 @mixin icon-instagram {
   background-image: url('../assets/img/icon-instagram.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(9);
-  }
 }
 
 @mixin icon-linkedin {
   background-image: url('../assets/img/icon-linkedin.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(5);
-  }
 }
 
 @mixin icon-pinterest {
   background-image: url('../assets/img/icon-pinterest.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(4);
-  }
 }
 
 @mixin icon-rss {
   background-image: url('../assets/img/icon-rss.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(10);
-  }
 }
 
 @mixin icon-twitter {
   background-image: url('../assets/img/icon-twitter.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(1);
-  }
 }
 
 @mixin icon-youtube {
   background-image: url('../assets/img/icon-youtube.svg');
-
-  .lt-ie11 &,
-  .lte-ie8 & {
-    @include menu-follow-us(2);
-  }
 }
