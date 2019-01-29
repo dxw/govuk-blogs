@@ -67,7 +67,9 @@
           <p><input name="submit" class="button" type="submit" id="submit" value="<?php _e('Submit comment', 'roots') ?>"></p>
         </div>
         <?php comment_id_fields() ?>
-        
+        <div class="comment-privacy-notice dxw-subscription">
+            <p class="inset-text">By submitting a comment you understand it may be published on this public website. Please read our <a href="https://www.gov.uk/government/publications/govuk-blogging-platform-privacy-notice">privacy notice</a> to see how the GOV.UK blogging platform handles your information.</p>
+        </div>
       </form>
     <?php endif ?>
   </section><!-- /#respond -->
