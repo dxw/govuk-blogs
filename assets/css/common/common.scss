@@ -1,5 +1,6 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
+  word-break: break-all;
 
   @media (max-width: $mobileMaxWidth) {
     padding-right: 0;
