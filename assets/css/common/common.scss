@@ -1,6 +1,8 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
-  word-break: break-all;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   @media (max-width: $mobileMaxWidth) {
     padding-right: 0;
