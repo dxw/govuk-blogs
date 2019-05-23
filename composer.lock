@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "00579d49969facf9fc2b7b827642aa78",
-    "content-hash": "99b9ffd1f7b766a3c348806721c0276e",
+    "content-hash": "7b9db9fe52beeb281f4cbf12ae183e59",
     "packages": [
         {
             "name": "aura/autoload",
@@ -57,7 +56,7 @@
                 "autoloader",
                 "class loader"
             ],
-            "time": "2015-03-27 19:34:08"
+            "time": "2015-03-27T19:34:08+00:00"
         },
         {
             "name": "dxw/iguana",
@@ -91,7 +90,7 @@
                 "MIT"
             ],
             "homepage": "https://github.com/dxw/iguana",
-            "time": "2016-05-18 18:59:51"
+            "time": "2016-05-18T18:59:51+00:00"
         },
         {
             "name": "dxw/iguana-extras",
@@ -125,7 +124,7 @@
                 "MIT"
             ],
             "homepage": "https://github.com/dxw/iguana-extras",
-            "time": "2016-05-23 18:22:48"
+            "time": "2016-05-23T18:22:48+00:00"
         },
         {
             "name": "dxw/php-missing",
@@ -163,7 +162,49 @@
             ],
             "description": "The stdlib you wish PHP had",
             "homepage": "https://github.com/dxw/php-missing",
-            "time": "2016-05-17 16:56:43"
+            "time": "2016-05-17T16:56:43+00:00"
+        },
+        {
+            "name": "dxw/result",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/result.git",
+                "reference": "1c94eca51b06f2d54cd205c9a2b95679fd1014e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/result/zipball/1c94eca51b06f2d54cd205c9a2b95679fd1014e9",
+                "reference": "1c94eca51b06f2d54cd205c9a2b95679fd1014e9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.5",
+                "peridot-php/leo": "^1.5",
+                "peridot-php/peridot": "^1.18",
+                "peridot-php/peridot-dot-reporter": "^1.0",
+                "vimeo/psalm": "^0.3.54"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dxw\\Result\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "https://www.dxw.com/"
+                }
+            ],
+            "description": "Result values",
+            "homepage": "https://github.com/dxw/result",
+            "time": "2017-09-01T14:10:52+00:00"
         },
         {
             "name": "dxw/roots-composer",
@@ -175,7 +216,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/8feaedb984aaf465e0fce1a4af3676934cd07af9",
+                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/2fad80195fc15bd48329f398d256fcfd013ca0d5",
                 "reference": "2fad80195fc15bd48329f398d256fcfd013ca0d5",
                 "shasum": ""
             },
@@ -195,7 +236,8 @@
             ],
             "description": "Roots in a Composer module!",
             "homepage": "https://github.com/dxw/roots-composer",
-            "time": "2013-12-06 15:08:34"
+            "abandoned": true,
+            "time": "2013-12-06T15:08:34+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -240,7 +282,7 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2014-01-09 00:36:09"
+            "time": "2014-01-09T00:36:09+00:00"
         }
     ],
     "packages-dev": [
@@ -274,7 +316,7 @@
                 }
             ],
             "homepage": "https://github.com/dxw/phar-install",
-            "time": "2016-02-17 13:55:06"
+            "time": "2016-02-17T13:55:06+00:00"
         }
     ],
     "aliases": [],
