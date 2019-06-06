@@ -14,10 +14,6 @@ function share_icons($id) {
     'u' => urlencode($url),
   ], 'https://www.facebook.com/sharer/sharer.php');
 
-  $google_url = add_query_arg([
-    'url' => urlencode($url),
-  ], 'https://plus.google.com/share');
-
   $linkedin_url = add_query_arg([
     'url' => urlencode($url),
   ], 'https://www.linkedin.com/shareArticle');
@@ -32,9 +28,6 @@ function share_icons($id) {
       </li>
       <li>
         <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="facebook">Facebook</a>
-      </li>
-      <li>
-        <a target="_blank" href="<?php echo esc_attr($google_url) ?>" class="google">Google+</a>
       </li>
       <li>
         <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">LinkedIn</a>
