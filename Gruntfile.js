@@ -76,11 +76,16 @@ module.exports = function (grunt) {
                 ],
             },
         },
-
-        img: {
-            dist: {
-                src: 'assets/img',
-            },
+        
+        image: {
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: 'assets/img',
+              src: ['**/*.{png,jpg,gif,svg}'],
+              dest: 'assets/img'
+            }]
+          }
         },
 
         _watch: {
@@ -99,7 +104,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
-    grunt.loadNpmTasks('grunt-img')
+    grunt.loadNpmTasks('grunt-image')
 
     grunt.registerTask('govuk_template', function () {
         var done = this.async()
