@@ -48,10 +48,10 @@ class FeedEmailWidget extends WP_Widget {
     <div class="subscribe icons-buttons">
       <ul>
         <li>
-          <a href="<?php echo esc_attr('/subscribe/') ?>" class="email">Email</a>
+          <a aria-label="Sign up and manage updates by email" href="<?php echo esc_attr('/subscribe/') ?>" class="email">Email</a>
         </li>
         <li>
-          <a href="<?php echo esc_attr(get_feed_link('atom')) ?>" class="feed">Atom</a>
+          <a aria-label="Use this with a feed reader to subscribe" href="<?php echo esc_attr(get_feed_link('atom')) ?>" class="feed">Atom</a>
         </li>
       </ul>
       <div class="clear"></div>
