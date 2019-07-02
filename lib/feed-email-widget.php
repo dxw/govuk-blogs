@@ -44,7 +44,7 @@ class FeedEmailWidget extends WP_Widget {
     echo $before_widget;
 
   ?>
-    <h3>Sign up for updates</h3>
+    <h3>Sign up and manage updates</h3>
     <div class="subscribe icons-buttons">
       <ul>
         <li>
