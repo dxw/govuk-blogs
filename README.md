@@ -15,6 +15,8 @@ This will give you a functioning theme, but if you want to hack on it there are 
 
 ## Development
 
+Open MRs directly to `master`. We don't use a `develop` branch, as this is a theme repo rather than an app, so it doesn't trigger any deployments. Deploys are triggered by updating the whippet files in the apps that use this theme.
+
 Requirements:
 
 * node and npm
