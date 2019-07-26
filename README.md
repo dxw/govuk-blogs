@@ -42,7 +42,12 @@ To update the composer modules:
 
     % composer update
     % phar-install
+    
+## Versioning 
 
+Use the [semantic versioning](https://semver.org/) standard. 
+
+The version should be updated in `style.css`, and the appropriate commit tagged as `vX.Y.Z`.
 
 ## This theme uses
 
