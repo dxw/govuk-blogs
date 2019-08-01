@@ -17,7 +17,6 @@ require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');
 
 require(__DIR__.'/lib/image-licensing.php');
-require(__DIR__.'/lib/feeds.php');
 require(__DIR__.'/lib/options.php');
 require(__DIR__.'/lib/assets.php');
 require(__DIR__.'/lib/menus.php');
@@ -47,5 +46,3 @@ require(__DIR__.'/lib/jm-twitter-excerpt.php');
 require(__DIR__.'/lib/google-verification-code.php');
 require(__DIR__.'/lib/tiny_mce.php');
 require(__DIR__.'/lib/image-default-link-type.php');
-
-(new \Dxw\Iguana\Extras\UseAtom())->register();
