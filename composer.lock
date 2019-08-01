@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b9db9fe52beeb281f4cbf12ae183e59",
+    "content-hash": "606202c58c1dd21e7a2d5a40d668d6d4",
     "packages": [
         {
             "name": "aura/autoload",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/auraphp/Aura.Autoload.git",
-                "reference": "c2a8f5dde204bbed34e194394046f7516eff04c4"
+                "reference": "306a7f8d3cb58fb6f94bcff1dddf20c543f68668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Autoload/zipball/c2a8f5dde204bbed34e194394046f7516eff04c4",
-                "reference": "c2a8f5dde204bbed34e194394046f7516eff04c4",
+                "url": "https://api.github.com/repos/auraphp/Aura.Autoload/zipball/306a7f8d3cb58fb6f94bcff1dddf20c543f68668",
+                "reference": "306a7f8d3cb58fb6f94bcff1dddf20c543f68668",
                 "shasum": ""
             },
             "require": {
@@ -27,9 +27,6 @@
             "extra": {
                 "aura": {
                     "type": "library"
-                },
-                "branch-alias": {
-                    "dev-develop-2": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -56,28 +53,30 @@
                 "autoloader",
                 "class loader"
             ],
-            "time": "2015-03-27T19:34:08+00:00"
+            "time": "2016-10-03T19:36:19+00:00"
         },
         {
             "name": "dxw/iguana",
-            "version": "v1.0.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dxw/iguana.git",
-                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13"
+                "reference": "5a9fb4244a512315d75458cd42b19343f52623f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/iguana/zipball/7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
-                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
+                "url": "https://api.github.com/repos/dxw/iguana/zipball/5a9fb4244a512315d75458cd42b19343f52623f9",
+                "reference": "5a9fb4244a512315d75458cd42b19343f52623f9",
                 "shasum": ""
             },
             "require": {
                 "aura/autoload": "^2.0"
             },
             "require-dev": {
+                "10up/wp_mock": "^0.3.0",
+                "friendsofphp/php-cs-fixer": "^2.13",
                 "mikey179/vfsstream": "^1.6",
-                "phpunit/phpunit": "4.8.*"
+                "phpunit/phpunit": "^6.5"
             },
             "type": "library",
             "autoload": {
@@ -90,7 +89,7 @@
                 "MIT"
             ],
             "homepage": "https://github.com/dxw/iguana",
-            "time": "2016-05-18T18:59:51+00:00"
+            "time": "2018-09-28T13:16:07+00:00"
         },
         {
             "name": "dxw/iguana-extras",
@@ -166,24 +165,24 @@
         },
         {
             "name": "dxw/result",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dxw/result.git",
-                "reference": "1c94eca51b06f2d54cd205c9a2b95679fd1014e9"
+                "reference": "eaa71abf0f9bba74cf5c832811a3a66a887e86d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/result/zipball/1c94eca51b06f2d54cd205c9a2b95679fd1014e9",
-                "reference": "1c94eca51b06f2d54cd205c9a2b95679fd1014e9",
+                "url": "https://api.github.com/repos/dxw/result/zipball/eaa71abf0f9bba74cf5c832811a3a66a887e86d2",
+                "reference": "eaa71abf0f9bba74cf5c832811a3a66a887e86d2",
                 "shasum": ""
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.5",
-                "peridot-php/leo": "^1.5",
-                "peridot-php/peridot": "^1.18",
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "peridot-php/leo": "^1.6",
+                "peridot-php/peridot": "^1.19",
                 "peridot-php/peridot-dot-reporter": "^1.0",
-                "vimeo/psalm": "^0.3.54"
+                "vimeo/psalm": "^3.2"
             },
             "type": "library",
             "autoload": {
@@ -197,14 +196,14 @@
             ],
             "authors": [
                 {
-                    "name": "Tom Adams",
-                    "email": "tom@dxw.com",
+                    "name": "Mallory Adams",
+                    "email": "mallory@dxw.com",
                     "homepage": "https://www.dxw.com/"
                 }
             ],
             "description": "Result values",
             "homepage": "https://github.com/dxw/result",
-            "time": "2017-09-01T14:10:52+00:00"
+            "time": "2019-07-18T16:52:47+00:00"
         },
         {
             "name": "dxw/roots-composer",
@@ -288,16 +287,16 @@
     "packages-dev": [
         {
             "name": "dxw/phar-install",
-            "version": "v1.0.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dxw/phar-install.git",
-                "reference": "7cdc3081296a1009393382ccb338461a747e5732"
+                "reference": "3a86cb30393f311bebec49d1aae9536ff1655cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/phar-install/zipball/7cdc3081296a1009393382ccb338461a747e5732",
-                "reference": "7cdc3081296a1009393382ccb338461a747e5732",
+                "url": "https://api.github.com/repos/dxw/phar-install/zipball/3a86cb30393f311bebec49d1aae9536ff1655cf1",
+                "reference": "3a86cb30393f311bebec49d1aae9536ff1655cf1",
                 "shasum": ""
             },
             "bin": [
@@ -310,13 +309,13 @@
             ],
             "authors": [
                 {
-                    "name": "Tom Adams",
-                    "email": "tom@dxw.com",
-                    "homepage": "http://dxw.com"
+                    "name": "Mallory Adams",
+                    "email": "mallory@dxw.com",
+                    "homepage": "https://www.dxw.com"
                 }
             ],
             "homepage": "https://github.com/dxw/phar-install",
-            "time": "2016-02-17T13:55:06+00:00"
+            "time": "2019-06-20T17:17:03+00:00"
         }
     ],
     "aliases": [],
@@ -327,5 +326,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.0.22"
+    }
 }
