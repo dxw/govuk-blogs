@@ -21,3 +21,8 @@ add_action('init', function () {
     remove_action('do_feed_rss', 'do_feed_rss', 10, 1);
     remove_action('do_feed_rss2', 'do_feed_rss2', 10, 1);
 });
+
+// Do not display comments feed
+add_filter('feed_links_show_comments_feed', function () {
+    return false;
+});
