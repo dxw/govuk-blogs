@@ -17,7 +17,6 @@ require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');
 
 require(__DIR__.'/lib/image-licensing.php');
-require(__DIR__.'/lib/feeds.php');
 require(__DIR__.'/lib/options.php');
 require(__DIR__.'/lib/assets.php');
 require(__DIR__.'/lib/menus.php');
@@ -42,11 +41,9 @@ require(__DIR__.'/lib/google-maps.php');
 require(__DIR__.'/lib/tableau-shortcode.php');
 require(__DIR__.'/lib/disable-wptexturize.php');
 require(__DIR__.'/lib/co-authors-plus.php');
-require(__DIR__.'/lib/enable-rss2.php');
 require(__DIR__.'/lib/unhook_wpmudev_scheduled_jobs.php');
 require(__DIR__.'/lib/jm-twitter-excerpt.php');
 require(__DIR__.'/lib/google-verification-code.php');
 require(__DIR__.'/lib/tiny_mce.php');
 require(__DIR__.'/lib/image-default-link-type.php');
-
-(new \Dxw\Iguana\Extras\UseAtom())->register();
+require(__DIR__.'/lib/feeds.php');
