@@ -1,0 +1,14 @@
+language: php
+sudo: false
+git:
+  submodules: false
+cache:
+  directories:
+    - vendor
+php:
+  - 7.0.22
+  - 7.3
+install:
+  - composer install
+script:
+  - vendor/bin/php-cs-fixer fix --dry-run -v --diff
