@@ -10,7 +10,7 @@ function blogIconPath() : \Dxw\Result\Result
 
     // Old style
     $icon_options = get_option('theme_logo_options');
-    if ( $icon_options['logo'] != '' ) {
+    if ($icon_options['logo'] != '') {
         return \Dxw\Result\Result::ok($icon_options['logo']);
     }
 
@@ -24,12 +24,12 @@ if (function_exists('acf_add_options_sub_page')) {
     ]);
 }
 
-if( function_exists('acf_add_local_field_group') ) {
-    acf_add_local_field_group(array (
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group([
         'key' => 'group_59429ab4dab8a',
         'title' => 'Logo Options',
-        'fields' => array (
-            array (
+        'fields' => [
+            [
                 'key' => 'field_59429b2ceb54c',
                 'label' => 'Logo',
                 'name' => 'icon',
@@ -37,11 +37,11 @@ if( function_exists('acf_add_local_field_group') ) {
                 'instructions' => 'Logo will be displayed to the right of the blog header. Should be 180px square or larger.',
                 'required' => 0,
                 'conditional_logic' => 0,
-                'wrapper' => array (
+                'wrapper' => [
                     'width' => '',
                     'class' => '',
                     'id' => '',
-                ),
+                ],
                 'return_format' => 'array',
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
@@ -52,17 +52,17 @@ if( function_exists('acf_add_local_field_group') ) {
                 'max_height' => '',
                 'max_size' => '',
                 'mime_types' => '',
-            ),
-        ),
-        'location' => array (
-            array (
-                array (
+            ],
+        ],
+        'location' => [
+            [
+                [
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-logo-options',
-                ),
-            ),
-        ),
+                ],
+            ],
+        ],
         'menu_order' => 0,
         'position' => 'normal',
         'style' => 'seamless',
@@ -71,5 +71,5 @@ if( function_exists('acf_add_local_field_group') ) {
         'hide_on_screen' => '',
         'active' => 1,
         'description' => '',
-    ));
+    ]);
 }

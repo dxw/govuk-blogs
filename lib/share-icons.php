@@ -1,24 +1,23 @@
 <?php
 
-function share_icons($id) {
-  $url = get_permalink($id);
-  $title = html_entity_decode(get_the_title($id)); // decode entities so we can UTF-8 escape URLs properly
-  $thumbnail_id = get_post_thumbnail_id($id);
+function share_icons($id)
+{
+    $url = get_permalink($id);
+    $title = html_entity_decode(get_the_title($id)); // decode entities so we can UTF-8 escape URLs properly
+    $thumbnail_id = get_post_thumbnail_id($id);
 
-  $twitter_url = add_query_arg([
+    $twitter_url = add_query_arg([
     'url' => urlencode($url),
     'text' => urlencode($title),
   ], 'https://twitter.com/intent/tweet?original_referer=');
 
-  $facebook_url = add_query_arg([
+    $facebook_url = add_query_arg([
     'u' => urlencode($url),
   ], 'https://www.facebook.com/sharer/sharer.php');
 
-  $linkedin_url = add_query_arg([
+    $linkedin_url = add_query_arg([
     'url' => urlencode($url),
-  ], 'https://www.linkedin.com/shareArticle');
-
-  ?>
+  ], 'https://www.linkedin.com/shareArticle'); ?>
 
   <div class="icons-buttons">
     <h3>Share this page</h3>

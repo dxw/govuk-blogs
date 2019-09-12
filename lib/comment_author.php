@@ -1,6 +1,7 @@
 <?php
 
-function comment_author_page() {
+function comment_author_page()
+{
     global $comment;
 
     if ($comment->user_id == '0') {

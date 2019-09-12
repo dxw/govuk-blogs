@@ -1,7 +1,7 @@
 <?php
 
 add_action('after_setup_theme', function () {
-  $filters = [
+    $filters = [
     // wp-includes/default-filters.php line 94
     'comment_author', 'term_name', 'link_name', 'link_description', 'link_notes', 'bloginfo', 'wp_title', 'widget_title',
     // wp-includes/default-filters.php line 106
@@ -20,7 +20,7 @@ add_action('after_setup_theme', function () {
     'list_cats',
   ];
 
-  foreach ($filters as $filter) {
-    remove_filter($filter, 'wptexturize');
-  }
+    foreach ($filters as $filter) {
+        remove_filter($filter, 'wptexturize');
+    }
 });
