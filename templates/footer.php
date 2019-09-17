@@ -6,5 +6,6 @@
     <li class="menu-all-departments"><a href="https://www.gov.uk/government/organisations">All departments</a></li>
     <li class="menu-all-policies"><a href="https://www.gov.uk/government/policies">All policies</a></li>
     <li class="menu-cookies"><a href="https://www.blog.gov.uk/cookies">Cookies</a></li>
+    <li class="menu-a11y"><a href="/accessibility-statement/">Accessibility statement</a></li>
   </ul>
 </nav>
