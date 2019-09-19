@@ -111,7 +111,6 @@ form#commentform {
 
     a.comment-reply-link {
       font-weight: 700;
-      text-decoration: none;
     }
   }
 
@@ -124,10 +123,6 @@ form#commentform {
       @include font-size(19px, 19px);
       @include line-height(25 / 19, 25 / 19);
       font-weight: 700;
-
-      a {
-        text-decoration: none;
-      }
     }
 
     time {
