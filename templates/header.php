@@ -1,4 +1,4 @@
-<header class="header" role="banner">
+<header class="header" aria-label="blog name">
     <div class="grid-row">
 
         <?php $logo_options = get_option('theme_logo_options'); ?>
