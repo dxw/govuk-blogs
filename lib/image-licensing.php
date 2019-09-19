@@ -46,20 +46,20 @@ $gds_image_licences = [
 ];
 
 add_filter('image_send_to_editor', function ($html, $id, $caption, $title, $align, $url, $size, $alt) {
-  global $gds_image_licences;
+    global $gds_image_licences;
 
-  $_licence = get_post_meta($id, 'licence', true);
-  $licence = $gds_image_licences[$_licence];
-  $copyright_holder = get_post_meta($id, 'copyright_holder', true);
-  $link_to_source = get_post_meta($id, 'link_to_source', true);
+    $_licence = get_post_meta($id, 'licence', true);
+    $licence = $gds_image_licences[$_licence];
+    $copyright_holder = get_post_meta($id, 'copyright_holder', true);
+    $link_to_source = get_post_meta($id, 'link_to_source', true);
 
-  $caption = 'Licence: ';
-  if ($licence['display'] === true) {
-    $caption .= '<a href="'.esc_attr($licence['link']).'">'.esc_html($licence['name']).'</a>';
-  } else {
-    return $html;
-  }
-  $caption .= ' <a href="'.esc_attr($link_to_source).'">'.esc_html($copyright_holder).'</a>';
+    $caption = 'Licence: ';
+    if ($licence['display'] === true) {
+        $caption .= '<a href="'.esc_attr($licence['link']).'">'.esc_html($licence['name']).'</a>';
+    } else {
+        return $html;
+    }
+    $caption .= ' <a href="'.esc_attr($link_to_source).'">'.esc_html($copyright_holder).'</a>';
 
-  return '<figure class="thumbnail">'.$html.'<figcaption class="caption">'.$caption.'</figcaption></figure>';
+    return '<figure class="thumbnail">'.$html.'<figcaption class="caption">'.$caption.'</figcaption></figure>';
 }, 999, 8);

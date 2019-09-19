@@ -14,6 +14,7 @@
         "post-update-cmd": "vendor/bin/phar-install"
     },
     "require-dev": {
-        "dxw/phar-install": "^1.0"
+        "dxw/phar-install": "^1.0",
+        "friendsofphp/php-cs-fixer": "^2.15"
     }
 }

@@ -6,11 +6,11 @@ if (function_exists('acf_add_options_sub_page')) {
 }
 
 if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+    acf_add_local_field_group([
         'key' => 'group_5846892ea7f02',
         'title' => 'Banner',
-        'fields' => array(
-            array(
+        'fields' => [
+            [
                 'key' => 'field_584689440d481',
                 'label' => 'Show banner',
                 'name' => 'show_banner',
@@ -18,24 +18,24 @@ if (function_exists('acf_add_local_field_group')) {
                 'instructions' => 'Show banner on this site',
                 'required' => 0,
                 'conditional_logic' => 0,
-                'wrapper' => array(
+                'wrapper' => [
                     'width' => '',
                     'class' => '',
                     'id' => '',
-                ),
+                ],
                 'message' => '',
                 'default_value' => 1,
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
+            ],
+        ],
+        'location' => [
+            [
+                [
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-banner',
-                ),
-            ),
-        ),
+                ],
+            ],
+        ],
         'menu_order' => 0,
         'position' => 'normal',
         'style' => 'default',
@@ -44,12 +44,12 @@ if (function_exists('acf_add_local_field_group')) {
         'hide_on_screen' => '',
         'active' => 1,
         'description' => '',
-    ));
-    acf_add_local_field_group(array(
+    ]);
+    acf_add_local_field_group([
         'key' => 'group_5846892ea7h09',
         'title' => 'Google verification code',
-        'fields' => array(
-            array(
+        'fields' => [
+            [
                 'key' => 'field_584689440g473',
                 'label' => 'Google Search Console verification code',
                 'name' => 'google_verification_code',
@@ -57,24 +57,24 @@ if (function_exists('acf_add_local_field_group')) {
                 'instructions' => 'Enter the meta code provided by Google',
                 'required' => 0,
                 'conditional_logic' => 0,
-                'wrapper' => array(
+                'wrapper' => [
                     'width' => '',
                     'class' => '',
                     'id' => '',
-                ),
+                ],
                 'message' => '',
                 'default_value' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
+            ],
+        ],
+        'location' => [
+            [
+                [
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-google-verification-code',
-                ),
-            ),
-        ),
+                ],
+            ],
+        ],
         'menu_order' => 0,
         'position' => 'normal',
         'style' => 'default',
@@ -83,24 +83,24 @@ if (function_exists('acf_add_local_field_group')) {
         'hide_on_screen' => '',
         'active' => 1,
         'description' => '',
-    ));
+    ]);
 }
 
 if (function_exists("register_field_group")) {
 
   // Related posts
 
-  register_field_group(array(
+    register_field_group([
     'id' => 'acf_related-posts',
     'title' => 'Related posts',
-    'fields' => array(
-      array(
+    'fields' => [
+      [
         'key' => 'field_53022510c191d',
         'label' => 'Related posts',
         'name' => 'related_posts',
         'type' => 'repeater',
-        'sub_fields' => array(
-          array(
+        'sub_fields' => [
+          [
             'key' => 'field_5302251ec191e',
             'label' => 'Title',
             'name' => 'title',
@@ -112,8 +112,8 @@ if (function_exists("register_field_group")) {
             'append' => '',
             'formatting' => 'html',
             'maxlength' => '',
-          ),
-          array(
+          ],
+          [
             'key' => 'field_5302252ec191f',
             'label' => 'URL',
             'name' => 'url',
@@ -125,41 +125,41 @@ if (function_exists("register_field_group")) {
             'append' => '',
             'formatting' => 'html',
             'maxlength' => '',
-          ),
-        ),
+          ],
+        ],
         'row_min' => '',
         'row_limit' => '',
         'layout' => 'table',
         'button_label' => 'Add Row',
-      ),
-    ),
-    'location' => array(
-      array(
-        array(
+      ],
+    ],
+    'location' => [
+      [
+        [
           'param' => 'post_type',
           'operator' => '==',
           'value' => 'post',
           'order_no' => 0,
           'group_no' => 0,
-        ),
-      ),
-    ),
-    'options' => array(
+        ],
+      ],
+    ],
+    'options' => [
       'position' => 'normal',
       'layout' => 'no_box',
-      'hide_on_screen' => array(
-      ),
-    ),
+      'hide_on_screen' => [
+      ],
+    ],
     'menu_order' => 0,
-  ));
+  ]);
 
-  // Theme Options
+    // Theme Options
 
-  register_field_group(array(
+    register_field_group([
     'id' => 'acf_theme-options',
     'title' => 'Theme Options',
-    'fields' => array(
-      array(
+    'fields' => [
+      [
         'key' => 'field_53061c4e7dec9',
         'label' => 'Email Alerts link',
         'name' => 'gds_email_alerts',
@@ -170,8 +170,8 @@ if (function_exists("register_field_group")) {
         'append' => '',
         'formatting' => 'html',
         'maxlength' => '',
-      ),
-      array(
+      ],
+      [
         'key' => 'field_53061c717deca',
         'label' => 'Organisations',
         'name' => 'gds_organisations',
@@ -179,8 +179,8 @@ if (function_exists("register_field_group")) {
         'default_value' => '',
         'toolbar' => 'full',
         'media_upload' => 'yes',
-      ),
-      array(
+      ],
+      [
         'key' => 'field_53061c9c7decc',
         'label' => 'Location',
         'name' => 'gds_location',
@@ -188,35 +188,35 @@ if (function_exists("register_field_group")) {
         'default_value' => '',
         'toolbar' => 'full',
         'media_upload' => 'yes',
-      ),
-    ),
-    'location' => array(
-      array(
-        array(
+      ],
+    ],
+    'location' => [
+      [
+        [
           'param' => 'options_page',
           'operator' => '==',
           'value' => 'acf-options-theme-options',
           'order_no' => 0,
           'group_no' => 0,
-        ),
-      ),
-    ),
-    'options' => array(
+        ],
+      ],
+    ],
+    'options' => [
       'position' => 'normal',
       'layout' => 'no_box',
-      'hide_on_screen' => array(
-      ),
-    ),
+      'hide_on_screen' => [
+      ],
+    ],
     'menu_order' => 0,
-  ));
+  ]);
 
-  // Featured video
+    // Featured video
 
-  register_field_group(array(
+    register_field_group([
     'id' => 'acf_featured-video',
     'title' => 'Featured video',
-    'fields' => array(
-      array(
+    'fields' => [
+      [
         'key' => 'field_5328943e15f2c',
         'label' => 'Video URL',
         'name' => 'video_url',
@@ -227,55 +227,57 @@ if (function_exists("register_field_group")) {
         'append' => '',
         'formatting' => 'html',
         'maxlength' => '',
-      ),
-    ),
-    'location' => array(
-      array(
-        array(
+      ],
+    ],
+    'location' => [
+      [
+        [
           'param' => 'post_type',
           'operator' => '==',
           'value' => 'post',
           'order_no' => 0,
           'group_no' => 0,
-        ),
-      ),
-    ),
-    'options' => array(
+        ],
+      ],
+    ],
+    'options' => [
       'position' => 'side',
       'layout' => 'default',
       'priority' => 'low',
-      'hide_on_screen' => array(
-      ),
-    ),
+      'hide_on_screen' => [
+      ],
+    ],
     'menu_order' => 0,
-  ));
+  ]);
 
-  // Fix priority for "Featured video"
-  add_filter('acf/input/meta_box_priority', function ($priority, $acf) {
-    if (isset($acf['options']['priority'])) {
-        return $acf['options']['priority'];
-    }
+    // Fix priority for "Featured video"
+    add_filter('acf/input/meta_box_priority', function ($priority, $acf) {
+        if (isset($acf['options']['priority'])) {
+            return $acf['options']['priority'];
+        }
 
-    return $priority;
-  }, 10, 2);
+        return $priority;
+    }, 10, 2);
 
     global $gds_image_licences;
 
-    register_field_group(array(
+    register_field_group([
     'id' => 'acf_image-licensing',
     'title' => 'Image licensing',
-    'fields' => array(
-      array(
+    'fields' => [
+      [
         'key' => 'field_5463adf92808a',
         'label' => 'Licence',
         'name' => 'licence',
         'type' => 'select',
-        'choices' => array_map(function ($licence) {return $licence['name'];}, $gds_image_licences),
+        'choices' => array_map(function ($licence) {
+            return $licence['name'];
+        }, $gds_image_licences),
         'default_value' => '',
         'allow_null' => 1,
         'multiple' => 0,
-      ),
-      array(
+      ],
+      [
         'key' => 'field_5463b0f72808b',
         'label' => 'Copyright holder',
         'name' => 'copyright_holder',
@@ -286,8 +288,8 @@ if (function_exists("register_field_group")) {
         'append' => '',
         'formatting' => 'html',
         'maxlength' => '',
-      ),
-      array(
+      ],
+      [
         'key' => 'field_5463b1152808c',
         'label' => 'Link to source',
         'name' => 'link_to_source',
@@ -298,23 +300,23 @@ if (function_exists("register_field_group")) {
         'append' => '',
         'formatting' => 'html',
         'maxlength' => '',
-      ),
-    ),
-    'location' => array(
-      array(
-        array(
+      ],
+    ],
+    'location' => [
+      [
+        [
           'param' => 'attachment',
           'operator' => '==',
           'value' => 'all',
-        ),
-      ),
-    ),
-    'options' => array(
+        ],
+      ],
+    ],
+    'options' => [
       'position' => 'normal',
       'layout' => 'no_box',
-      'hide_on_screen' => array(
-      ),
-    ),
+      'hide_on_screen' => [
+      ],
+    ],
     'menu_order' => 0,
-  ));
+  ]);
 }

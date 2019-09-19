@@ -1,1 +1,1 @@
-<?php get_template_part('templates/author'); ?>
+<?php get_template_part('templates/author');

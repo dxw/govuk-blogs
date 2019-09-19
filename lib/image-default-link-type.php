@@ -1,6 +1,7 @@
 <?php
 
-function setDefaultLinkType() {
+function setDefaultLinkType()
+{
     if (get_option('image_default_link_type') !== 'none') {
         update_option('image_default_link_type', 'none');
     }

@@ -14,7 +14,7 @@
                         <?php if ($orgs = gds_organisations()) : ?>
                             <dl>
                                 <dt>Organisations:</dt>
-                                <dd><?php echo $orgs # this is pre-escaped ?></dd>
+                                <dd><?php echo $orgs # this is pre-escaped?></dd>
                             </dl>
                         <?php endif ?>
                         <?php if (get_option('options_gds_location')) : ?>

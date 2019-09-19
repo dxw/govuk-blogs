@@ -1,7 +1,7 @@
 <?php
 
 if (function_exists('acf_add_options_sub_page')) {
-  acf_add_options_sub_page([
+    acf_add_options_sub_page([
     'title' => 'Theme Options',
     'parent' => 'themes.php',
   ]);
@@ -10,7 +10,7 @@ if (function_exists('acf_add_options_sub_page')) {
 add_action('network_admin_menu', function () {
     add_submenu_page('settings.php', 'Banner', 'Banner', 'manage_options', 'banner-settings', function () {
         if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'banner-settings')) {
-            if(isset($_POST['banner_setting'])) {
+            if (isset($_POST['banner_setting'])) {
                 $banner_setting = absint($_POST['banner_setting']);
                 update_site_option('banner_setting', $banner_setting);
             } else {
@@ -22,8 +22,7 @@ add_action('network_admin_menu', function () {
             update_site_option('banner_title', $banner_title);
             update_site_option('banner_link_text', $banner_link_text);
             update_site_option('banner_link', $banner_link);
-        }
-        ?>
+        } ?>
 
         <div class="wrap">
             <h2>Banner setting</h2>
@@ -40,7 +39,7 @@ add_action('network_admin_menu', function () {
                     <tr>
                         <td>
                             <label>
-                                Display banner <input type="checkbox" name="banner_setting" value="1" <?php checked( get_site_option('banner_setting'), 1 ) ?> >
+                                Display banner <input type="checkbox" name="banner_setting" value="1" <?php checked(get_site_option('banner_setting'), 1) ?> >
                             </label>
                         </td>
                     </tr>
@@ -73,6 +72,5 @@ add_action('network_admin_menu', function () {
         </div>
 
         <?php
-
     });
 });

@@ -1,5 +1,5 @@
 <?php if ($depth > 1) : ?>
-  <span class="visuallyhidden">Replies to <?php comment_author( $comment->comment_parent ); ?>></span>
+  <span class="visuallyhidden">Replies to <?php comment_author($comment->comment_parent); ?>></span>
 <?php endif; ?>
 
 <div class="media-body">
@@ -24,6 +24,6 @@
          <a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" rel="external nofollow">Link to this comment</a>
       </li>
     </ul>
-    <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    <?php comment_reply_link(array_merge($args, ['depth' => $depth, 'max_depth' => $args['max_depth']])) ?>
   </div>
-  <?php # There is a missing DIV tag here due to a bug in roots ?>
+  <?php # There is a missing DIV tag here due to a bug in roots?>

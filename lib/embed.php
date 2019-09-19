@@ -10,26 +10,26 @@ wp_oembed_add_provider('#https?://storify.com/.*#', 'https://api.embed.ly/1/oemb
 
 # Youtube: force to HTTPS
 add_filter('embed_oembed_html', function ($cache, $url=null, $attr=null, $post_ID=null) {
-  $cache = preg_replace('$http://www.youtube.com$', 'https://www.youtube.com', $cache);
-  return $cache;
+    $cache = preg_replace('$http://www.youtube.com$', 'https://www.youtube.com', $cache);
+    return $cache;
 });
 
 
 # Youtube: Don't show related videos
 # Credit: http://wordpress.org/plugins/hide-youtube-related-videos/
-add_filter('oembed_result', function ($data, $url, $args = array()) {
-  $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?wmode=transparent&amp;rel=0$3', $data);
-  return $data;
+add_filter('oembed_result', function ($data, $url, $args = []) {
+    $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?wmode=transparent&amp;rel=0$3', $data);
+    return $data;
 }, 10, 3);
 
 # Youtube: Add title attribute to iframe
-add_filter('oembed_dataparse', function($return, $data, $url) {
+add_filter('oembed_dataparse', function ($return, $data, $url) {
     if (preg_match('/https?:\/\/((m|www)\.)?youtube\.com\/watch.*/', $url)==1 || preg_match('/https?:\/\/youtu\.be\/.*/', $url)==1) {
-        if(isset($data->title)) {
+        if (isset($data->title)) {
             $return = str_replace('></iframe>', ' title="Video: ' . esc_attr($data->title) . '"></iframe>', $return);
         }
-     }
-     return $return;
+    }
+    return $return;
 }, 10, 3);
 
 # Instagram: add class so Instagram embeds can be styled independently
@@ -45,12 +45,12 @@ add_filter('embed_oembed_html', function ($cache, $url, $attr, $post_ID) {
 
 # CoverItLive
 add_filter('the_content', function ($content) {
-  global $content_width;
+    global $content_width;
 
-  $ex = "_<p>(https?://(www\.)?coveritlive\.com/\S+)</p>_i";
-  $replacement = '<iframe src="${1}&width='.$content_width.'" class="coveritlive"></iframe>';
+    $ex = "_<p>(https?://(www\.)?coveritlive\.com/\S+)</p>_i";
+    $replacement = '<iframe src="${1}&width='.$content_width.'" class="coveritlive"></iframe>';
 
-  return preg_replace($ex, $replacement, $content);
+    return preg_replace($ex, $replacement, $content);
 });
 
 
