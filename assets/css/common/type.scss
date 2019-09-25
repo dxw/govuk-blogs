@@ -48,7 +48,7 @@ blockquote {
 
     p {
       padding-left: 0;
-      
+
       &:last-of-type {
 
         &:after {
@@ -74,13 +74,11 @@ cite {
 }
 
 a, a:visited {
-  color: #2e3191;
-  text-decoration: none;
+  color: #4c2c92;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #2e3191;
+  color: #003078;
 }
 
 a:focus {
