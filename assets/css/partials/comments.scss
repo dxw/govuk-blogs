@@ -172,7 +172,7 @@ form#commentform {
     padding-left: 0;
     list-style: none;
 
-    li {
+    a {
       display: inline-block;
       margin-left: $gutter;
       @include font-size(16px, 16px);
