@@ -11,4 +11,5 @@ php:
 install:
   - composer install
 script:
+  - vendor/bin/peridot -C spec/
   - vendor/bin/php-cs-fixer fix --dry-run -v --diff
