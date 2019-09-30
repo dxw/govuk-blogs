@@ -134,8 +134,12 @@ $is-ie: false !default;
   box-sizing: border-box;
   vertical-align: top;
 
-
   &:hover, &:focus {
     background-color: $buttonHover;
+  }
+
+  &:focus {
+    outline: 3px solid #fd0;
+    outline-offset: 0;
   }
 }
