@@ -12,7 +12,7 @@ class Widget extends \WP_Widget
         ]);
     }
 
-    public function widget(array $args, array $instance)
+    public function widget($args, $instance)
     {
         $title = 'Categories';
 
