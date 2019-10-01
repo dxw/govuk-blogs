@@ -94,3 +94,16 @@ label {
     margin-bottom: $gutterHalf;
   }
 }
+
+// Widget Categories Dropdown With Submit
+.widget_categories form {
+  display: flex;
+
+  select {
+    margin-right: 5px;
+  }
+
+  input[type="submit"] {
+    @include govuk-button;
+  }
+}
