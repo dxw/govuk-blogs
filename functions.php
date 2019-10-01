@@ -1,6 +1,7 @@
 <?php
 
-require(__DIR__.'/vendor.phar');
+$registrar = require(__DIR__.'/app/load.php');
+$registrar->register();
 
 roots_require('lib/utils.php');
 roots_require('lib/init.php');
