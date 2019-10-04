@@ -8,7 +8,7 @@ class Widget extends \WP_Widget
     {
         parent::__construct('categories-dropdown-with-submit', 'Categories Dropdown With Submit', [
             'classname' => 'widget_categories',
-            'description' => 'TODO',
+            'description' => 'The same as "Categories" but with a submit button',
         ]);
     }
 
