@@ -86,7 +86,7 @@
   .blog {
     line-height: 1.1111111111;
     @include font-size(27px, 20px);
-    color: $greyText;
+    color: $blogTitleColour;
     padding-top: 4px;
     padding-bottom: 8px;
     font-weight: normal;
