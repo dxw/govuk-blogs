@@ -27,8 +27,6 @@
     </footer>
   </article>
 
-  <h2 class="visually-hidden">Sharing and comments</h2>
-
   <nav class="page-numbers-container page-navigation" aria-label="Pagination">
     <div class="previous">
       <?php previous_post_link('%link') ?>
@@ -38,6 +36,7 @@
     </div>
   </nav>
 
+  <h2 class="visually-hidden">Sharing and comments</h2>
   <?php share_icons(get_the_ID()) ?>
   <?php comments_template('/templates/comments.php') ?>
 <?php endwhile ?>
