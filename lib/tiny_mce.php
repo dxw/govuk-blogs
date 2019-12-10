@@ -12,19 +12,13 @@ function add_style_button($buttons)
 function init($settings)
 {
     $style_formats = [
-    [
-      'title' => 'No quotes',
-      'block' => 'blockquote',
-      'classes' => 'noquotes',
-      'wrapper' => true
-    ],
-    [
-      'title' => 'Highlight',
-      'block' => 'div',
-      'classes' => 'highlight',
-      'wrapper' => true
-    ]
-  ];
+        [
+          'title' => 'Highlight',
+          'block' => 'div',
+          'classes' => 'highlight',
+          'wrapper' => true
+        ]
+    ];
 
     $settings['style_formats'] = json_encode($style_formats);
 
