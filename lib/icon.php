@@ -21,6 +21,8 @@ if (function_exists('acf_add_options_sub_page')) {
     acf_add_options_sub_page([
         'title' => 'Logo Options',
         'parent_slug' => 'themes.php',
+        // Super-admin capability
+        'capability' => 'manage_network_themes',
     ]);
 }
 
