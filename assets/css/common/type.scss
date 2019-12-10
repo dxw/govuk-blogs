@@ -187,3 +187,7 @@ ul.children {
 .entry-content-asset {
   padding: $gutter 0 $gutterHalf;
 }
+
+::placeholder {
+  color: $placeHolderColour;
+}
