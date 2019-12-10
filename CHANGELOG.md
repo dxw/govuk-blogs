@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Hidden "Sharing and Comments" heading moved below pagination elements
 - Colour contrast increased for search placeholder text and "Blog" title
+- The "No quotes" option in the "Formats" dropdown in the editor is replaced by a "Highlight" option. This produces the same styles, but using a div to wrap the content rather than a blockquote, as the blockquote use was semantically incorrect.
 
 ## Earlier releases
 
