@@ -18,6 +18,12 @@ function init($settings)
       'classes' => 'noquotes',
       'wrapper' => true
     ],
+    [
+      'title' => 'Highlight',
+      'block' => 'div',
+      'classes' => 'highlight',
+      'wrapper' => true
+    ]
   ];
 
     $settings['style_formats'] = json_encode($style_formats);
