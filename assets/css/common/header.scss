@@ -27,6 +27,7 @@
     &:focus {
       border-bottom: 1px solid $white;
       color: $white;
+      outline: 3px solid $focusColour;
     }
 
     img {
