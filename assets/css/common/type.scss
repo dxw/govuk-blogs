@@ -96,9 +96,17 @@ a:hover {
 }
 
 a:focus {
-  background: $focusColour;
-  outline: 3px solid $focusColour;
+  color: $black;
   outline-offset: 0;
+  outline: 3px solid transparent;
+  background-color: $focusColour;
+  -webkit-box-shadow: 0 -2px $focusColour, 0 4px $black;
+  box-shadow: 0 -2px $focusColour, 0 4px $black;
+  text-decoration: none;
+}
+
+a:link:focus {
+  color: $black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -195,6 +203,10 @@ ul.children {
 
   &:hover {
     color: #2e8aca;
+  }
+
+  &:focus {
+    text-decoration: none;
   }
 }
 

@@ -112,6 +112,10 @@ form#commentform {
     a.comment-reply-link {
       font-weight: 700;
     }
+
+    a:focus {
+      text-decoration: none;
+    }
   }
 
   .media-heading {
