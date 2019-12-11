@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <h2 class="visually-hidden">Sharing and comments</h2>
+  <h2 class="visuallyhidden">Sharing and comments</h2>
   <?php share_icons(get_the_ID()) ?>
   <?php comments_template('/templates/comments.php') ?>
 <?php endwhile ?>
