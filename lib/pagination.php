@@ -48,31 +48,20 @@ function pagination($q = null, $mode = null, $uri = null)
     $old_wq = $wp_query;
     $wp_query = $q;
 
+    echo '<div class="previous">' . "\n";
+
     // previous page
     if (get_previous_posts_link()) {
         $uri = previous_posts(false);
         if ($mode) {
             $uri = add_query_arg(['mode' => $mode], $uri);
         }
-        printf('<div class="previous">
-    <a href="%s" rel="previous">
+        printf('<a href="%s" rel="previous">
       Previous <span class="hidden-mobile">page</span>
-    </a>
-  </div>', $uri);
+    </a>', $uri);
     }
 
-    // next page
-    if (get_next_posts_link()) {
-        $uri = next_posts($q->max_num_pages, false);
-        if ($mode) {
-            $uri = add_query_arg(['mode' => $mode], $uri);
-        }
-        printf('<div class="next">
-    <a href="%s" rel="next">
-      Next <span class="hidden-mobile">page</span>
-    </a>
-  </div>', $uri);
-    }
+    echo "</div>";
 
     // Restore $wp_query
     $wp_query = $old_wq;
@@ -120,6 +109,19 @@ function pagination($q = null, $mode = null, $uri = null)
     }
 
     echo '</ul></div>' . "\n";
+
+    // next page
+    if (get_next_posts_link()) {
+        $uri = next_posts($q->max_num_pages, false);
+        if ($mode) {
+            $uri = add_query_arg(['mode' => $mode], $uri);
+        }
+        printf('<div class="next">
+    <a href="%s" rel="next">
+      Next <span class="hidden-mobile">page</span>
+    </a>
+  </div>', $uri);
+    }
 
     $_SERVER['REQUEST_URI'] = $_;
 }
