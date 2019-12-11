@@ -54,13 +54,13 @@
             <div class="form-group">
               <a name="name_field"></a>
               <label for="author"><?php _e('Name', 'roots'); ?></label>
-              <input type="text" class="text<?php echo $req ? ' required' : '' ?>" name="author" id="author" value="<?php echo esc_attr($comment_author) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?>>
+              <input type="text" class="text<?php echo $req ? ' required' : '' ?>" name="author" id="author" value="<?php echo esc_attr($comment_author) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="name">
             </div>
             <div class="form-group">
               <a name="email_field"></a>
               <label for="email"><?php _e('Email', 'roots'); ?></label>
               <span class="form-hint">We only ask for your email address so we know you're a real person</span>
-              <input type="email" class="text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?>>
+              <input type="email" class="text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="email">
             </div>
           <?php endif ?>
           <?php do_action('comment_form', $post->ID) ?>

@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+- Autocomplete attributes for comment form name & email fields
+
 ### Changed
 - Link focus style updated to reflect Gov.uk design system
 
