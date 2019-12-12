@@ -70,13 +70,15 @@ function pagination($q = null, $mode = null, $uri = null)
 
     /** Link to first page, plus ellipses if necessary */
     if (!in_array(1, $links)) {
-        $class = 1 == $paged ? ' class="active"' : '';
-
-        $uri = get_pagenum_link(1);
-        if ($mode) {
-            $uri = add_query_arg(['mode' => $mode], $uri);
+        if ($paged == 1) {
+            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", '1');
+        } else {
+            $uri = get_pagenum_link(1);
+            if ($mode) {
+                $uri = add_query_arg(['mode' => $mode], $uri);
+            }
+            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), '1');
         }
-        printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), '1');
 
         if (!in_array(2, $links)) {
             echo '<li>…</li>';
@@ -86,12 +88,15 @@ function pagination($q = null, $mode = null, $uri = null)
     /** Link to current page, plus 2 pages in either direction if necessary */
     sort($links);
     foreach ((array) $links as $link) {
-        $class = $paged == $link ? ' class="active"' : '';
-        $uri = get_pagenum_link($link);
-        if ($mode) {
-            $uri = add_query_arg(['mode' => $mode], $uri);
+        if ($paged == $link) {
+            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $link);
+        } else {
+            $uri = get_pagenum_link($link);
+            if ($mode) {
+                $uri = add_query_arg(['mode' => $mode], $uri);
+            }
+            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $link);
         }
-        printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), $link);
     }
 
     /** Link to last page, plus ellipses if necessary */
@@ -100,12 +105,15 @@ function pagination($q = null, $mode = null, $uri = null)
             echo '<li>…</li>' . "\n";
         }
 
-        $class = $paged == $max ? ' class="active"' : '';
-        $uri = get_pagenum_link($max);
-        if ($mode) {
-            $uri = add_query_arg(['mode' => $mode], $uri);
+        if ($paged == $max) {
+            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $max);
+        } else {
+            $uri = get_pagenum_link($max);
+            if ($mode) {
+                $uri = add_query_arg(['mode' => $mode], $uri);
+            }
+            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $max);
         }
-        printf('<li%s><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", $class, esc_url($uri), $max);
     }
 
     echo '</ul></div>' . "\n";

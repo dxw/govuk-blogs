@@ -63,6 +63,11 @@
       }
     }
 
+    li.active {
+      padding: 4px 12px;
+      color: #999;
+    }
+
     > .active {
 
       span, a {
