@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Link focus style updated to reflect Gov.uk design system
 - Pagination link HTML is now rendered in the same order as it is displayed, to ensure tab order is easy to follow
 - Change all ".visually-hidden" class to ".visuallyhidden" for consistency reason
+- The current page number in pagination has no link attached to it
 
 
 ## [2.5.0] — 2019-12-10
