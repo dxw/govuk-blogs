@@ -1,5 +1,5 @@
 <nav>
-  <h2 class="visually-hidden">Useful links</h2>
+  <h2 class="visuallyhidden">Useful links</h2>
   <ul id="menu-footer" class="menu">
     <li class="menu-all-government-blogs"><a href="https://www.blog.gov.uk">All GOV.UK blogs</a></li>
     <li class="menu-all-government-blog-posts"><a href="https://www.blog.gov.uk/all-posts/">All GOV.UK blog posts</a></li>
