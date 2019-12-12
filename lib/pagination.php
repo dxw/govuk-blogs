@@ -71,13 +71,9 @@ function pagination($q = null, $mode = null, $uri = null)
     /** Link to first page, plus ellipses if necessary */
     if (!in_array(1, $links)) {
         if ($paged == 1) {
-            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", '1');
+            createCurrentPaginationItem('1');
         } else {
-            $uri = get_pagenum_link(1);
-            if ($mode) {
-                $uri = add_query_arg(['mode' => $mode], $uri);
-            }
-            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), '1');
+            createPaginationItem($mode, '1');
         }
 
         if (!in_array(2, $links)) {
@@ -89,13 +85,9 @@ function pagination($q = null, $mode = null, $uri = null)
     sort($links);
     foreach ((array) $links as $link) {
         if ($paged == $link) {
-            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $link);
+            createCurrentPaginationItem($link);
         } else {
-            $uri = get_pagenum_link($link);
-            if ($mode) {
-                $uri = add_query_arg(['mode' => $mode], $uri);
-            }
-            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $link);
+            createPaginationItem($mode, $link);
         }
     }
 
@@ -106,13 +98,9 @@ function pagination($q = null, $mode = null, $uri = null)
         }
 
         if ($paged == $max) {
-            printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $max);
+            createCurrentPaginationItem($max);
         } else {
-            $uri = get_pagenum_link($max);
-            if ($mode) {
-                $uri = add_query_arg(['mode' => $mode], $uri);
-            }
-            printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $max);
+            createPaginationItem($mode, $max);
         }
     }
 
@@ -132,4 +120,18 @@ function pagination($q = null, $mode = null, $uri = null)
     }
 
     $_SERVER['REQUEST_URI'] = $_;
+}
+
+function createCurrentPaginationItem($pageNum)
+{
+    printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $pageNum);
+}
+
+function createPaginationItem($mode, $pageNum)
+{
+    $uri = get_pagenum_link($pageNum);
+    if ($mode) {
+        $uri = add_query_arg(['mode' => $mode], $uri);
+    }
+    printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $pageNum);
 }
