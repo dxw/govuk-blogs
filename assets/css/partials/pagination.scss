@@ -1,5 +1,16 @@
 .pagination-container {
   margin-bottom: $gutter;
+  .previous, .next {
+    width: 30%;
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .pagination {
+    width: 40%;
+    float: left;
+  }
 }
 
 .pagination {
