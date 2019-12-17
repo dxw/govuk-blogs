@@ -251,6 +251,15 @@ img {
   }
 }
 
+a:focus {
+  img {
+    border-color: $black;
+    outline: 3px solid $black;
+    -webkit-box-shadow: 0 0 0 6px $focusColour;
+    box-shadow: 0 0 0 6px $focusColour;
+  }
+}
+
 @media (max-width: 500px) {
   .alignleft,
   .alignright,
