@@ -251,6 +251,15 @@ img {
   }
 }
 
+a:focus {
+  img {
+    border-color: $black;
+    outline: 3px solid $black;
+    -webkit-box-shadow: 0 0 0 6px $focusColour;
+    box-shadow: 0 0 0 6px $focusColour;
+  }
+}
+
 @media (max-width: 500px) {
   .alignleft,
   .alignright,
@@ -492,7 +501,7 @@ sup {
 
     @media (max-width: $mobileMaxWidth) {
       width: 50%;
-      margin-right: 0; 
+      margin-right: 0;
       margin-bottom: $spacingSmall;
     }
 
@@ -540,7 +549,7 @@ sup {
       margin-left: 0;
     }
 
-    li {      
+    li {
       width: 50%;
       float: left;
       margin-right: 0;
