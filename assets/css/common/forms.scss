@@ -45,13 +45,15 @@ input[type="color"],
   &:focus {
     outline: 3px solid $focusColour;
     outline-offset: 0;
-    box-shadow: none;
+    -webkit-box-shadow: inset 0 0 0 2px;
+    box-shadow: inset 0 0 0 2px;
     border-color: $black;
 
     // WordPress adds invalid property to the comments form so I'm overwriting it below
     &:invalid:focus {
       color: $black;
-      box-shadow: none;
+      -webkit-box-shadow: inset 0 0 0 2px;
+      box-shadow: inset 0 0 0 2px;
       border-color: $black;
     }
   }
