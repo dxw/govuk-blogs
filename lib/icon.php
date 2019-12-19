@@ -18,12 +18,17 @@ function blogIconPath() : \Dxw\Result\Result
 }
 
 if (function_exists('acf_add_options_sub_page')) {
-    acf_add_options_sub_page([
+    $options = [
         'title' => 'Logo Options',
         'parent_slug' => 'themes.php',
-        // Super-admin capability
-        'capability' => 'manage_network_themes',
-    ]);
+    ];
+
+    // Only allow super-admins to edit these option, if this constant is set
+    if (defined('LOGO_OPTIONS_SUPERADMIN_ONLY') && LOGO_OPTIONS_SUPERADMIN_ONLY) {
+        $options['capability'] = 'manage_network_themes';
+    }
+
+    acf_add_options_sub_page($options);
 }
 
 if (function_exists('acf_add_local_field_group')) {
