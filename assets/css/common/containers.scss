@@ -14,9 +14,13 @@
 }
 
 #global-cookie-message {
-
+  padding: 0;
+  height: 0;
+  .cookie-message p {
+    display: none;
+  }
   @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
-    
+
     .inner-block {
       padding-left: $gutterHalf;
       padding-right: $gutterHalf;
