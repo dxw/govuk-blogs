@@ -146,6 +146,10 @@ jQuery(function ($) {
         return
       }
 
+      if (typeof ga !== 'function') {
+        return
+      }
+
       // Create a promise which either returns once ga has fired an event, or
       // after 500ms, whichever comes first
       var p = new Promise(function (resolve, reject) {
