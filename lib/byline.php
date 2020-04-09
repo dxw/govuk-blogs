@@ -9,6 +9,6 @@ function gds_byline()
   if (function_exists('coauthors_posts_links')) {
       coauthors_posts_links(', ');
   } else {
-      ?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>" rel="author" class="fn"><?php echo get_the_author() ?></a> <?php
+      ?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>" rel="author" class="govuk-link"><?php echo get_the_author() ?></a> <?php
   }
 }
