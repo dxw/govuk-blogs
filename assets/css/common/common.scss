@@ -191,7 +191,7 @@ iframe.coveritlive {
 
 .main-content article {
   border-top: $greyTopBorder;
-  padding: 0 0 $gutter 0;
+  padding: $gutter 0 $gutter 0;
 
   h2.entry-title {
     @include font-size(24px, 24px);
