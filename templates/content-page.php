@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post() ?>
   <article class="govuk-grid-column-full">
-    <div class="govuk-visible-print">
+    <div class="govuk-visible-print visible-print">
       <p><?php echo esc_html(get_permalink()) ?></p>
     </div>
     <header>
