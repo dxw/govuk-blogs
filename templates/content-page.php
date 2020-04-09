@@ -1,13 +1,11 @@
 <?php while (have_posts()) : the_post() ?>
-  <article class="page-content clearfix">
-    <div class="visible-print">
+  <article class="govuk-grid-column-full">
+    <div class="govuk-visible-print">
       <p><?php echo esc_html(get_permalink()) ?></p>
     </div>
     <header>
-      <h1 class="entry-title"><?php the_title() ?></h1>
+      <h1 class="govuk-heading-xl "><?php the_title() ?></h1>
     </header>
-    <div class="entry-content">
-      <?php the_content() ?>
-    </div>
+    <?php the_content() ?>
   </article>
 <?php endwhile ?>
