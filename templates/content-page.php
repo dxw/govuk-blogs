@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post() ?>
   <article>
-    <div class="govuk-visible-print">
+    <div class="visible-print">
       <p><?php echo esc_html(get_permalink()) ?></p>
     </div>
     <header>
