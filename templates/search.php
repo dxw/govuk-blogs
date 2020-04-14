@@ -1,3 +1,4 @@
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 <h2 class="govuk-heading-l">Search results for <?php the_search_query(); ?> </h2>
 
 <?php if (have_posts()) { ?>
