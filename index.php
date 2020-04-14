@@ -1,14 +1,17 @@
-<?php get_template_part('templates/title') ?>
-
 <?php if (!have_posts()) : ?>
-  <div class="alert">
-    <?php _e('Sorry, no results were found.', 'roots') ?>
-  </div>
-  <?php get_search_form() ?>
+    <div class="govuk-error-summary">
+        <h2 class="govuk-error-summary__title">
+          Sorry, no blog posts were found
+        </h2>
+        <p class="govuk-body">This may be because:<p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>No blog posts have yet been published on this blog</li>
+            <li>There is a problem with the service</li>
+        </ul>
+        <p>Please try again later.</p>
+    </div>
 <?php endif ?>
 
 <?php while (have_posts()) : the_post() ?>
-  <?php get_template_part('templates/content', get_post_format()) ?>
+    <?php get_template_part('templates/content', get_post_format()) ?>
 <?php endwhile ?>
-
-<?php get_template_part('templates/pagination') ?>
