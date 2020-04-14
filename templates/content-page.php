@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post() ?>
-  <article class="govuk-grid-column-full">
+  <article>
     <div class="govuk-visible-print">
       <p><?php echo esc_html(get_permalink()) ?></p>
     </div>
