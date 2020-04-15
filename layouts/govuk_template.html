@@ -1,7 +1,7 @@
 {{{ topOfPage }}}
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="{{ htmlLang }}"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="{{ htmlLang }}"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ htmlLang }}" class="govuk-template"><!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <title>{{ pageTitle }}</title>
@@ -33,7 +33,7 @@
     {{{ head }}}
   </head>
 
-  <body class="{{ bodyClasses }}">
+  <body class="govuk-template__body {{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     {{{ bodyStart }}}
