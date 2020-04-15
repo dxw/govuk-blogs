@@ -1,7 +1,7 @@
 <?php
 
 $engine = new Mustache_Engine([
-  'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/build/govuk_template/views/layouts', [
+  'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/layouts', [
     'extension' => '.html',
   ]),
 ]);
