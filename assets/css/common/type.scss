@@ -189,11 +189,6 @@ ol {
   padding-left: 20px;
 }
 
-li {
-  @include font-size(19px, 19px);
-  @include line-height(25 / 19, 25 / 19);
-}
-
 ul.children {
   margin-top: 0;
 }
