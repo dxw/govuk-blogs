@@ -1,5 +1,9 @@
 // Grid and containers
 
+.govuk-header__container {
+  border-bottom-color: $blogColour;
+}
+
 .bar {
   border-top: 10px solid $blogColour;
   margin: 0 auto;
