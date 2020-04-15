@@ -5,7 +5,7 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
     $bannerTitle = get_site_option('banner_title');
     $bannerLinkText = get_site_option('banner_link_text');
     $bannerLink = get_site_option('banner_link'); ?>
-    <div id="user-satisfaction-survey-container" class="container">
+    <div id="user-satisfaction-survey-container" class="govuk-width-container">
       <section id="user-satisfaction-survey" class="visible" aria-hidden="false">
         <div class="grid-row">
             <div class="column-three-quarters">
