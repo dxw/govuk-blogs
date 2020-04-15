@@ -4,7 +4,7 @@
         <?php $logo_options = get_option('theme_logo_options'); ?>
 
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="blog-title">
+            <h1 class="blog-title govuk-heading-xl">
                 <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span>
                 <a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
             </h1>
