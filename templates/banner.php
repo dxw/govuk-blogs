@@ -7,12 +7,12 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
     $bannerLink = get_site_option('banner_link'); ?>
     <div id="user-satisfaction-survey-container" class="govuk-width-container">
       <section id="user-satisfaction-survey" class="visible" aria-hidden="false">
-        <div class="grid-row">
-            <div class="column-three-quarters">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
                 <h3><?php echo esc_html($bannerTitle) ?></h2>
                 <p><a href="<?php echo esc_url($bannerLink)?>" id="take-survey" target="_blank"><?php echo esc_html($bannerLinkText) ?></a></p>
             </div>
-            <div class="column-one-quarter">
+            <div class="govuk-grid-column-one-quarter">
                 <p><a href="#survey-no-thanks" id="survey-no-thanks">No thanks</a></p>
             </div>
         </div>
