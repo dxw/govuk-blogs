@@ -189,25 +189,10 @@ iframe.coveritlive {
   }
 }
 
-.main-content article {
-  border-top: $greyTopBorder;
-  padding: $gutter 0 $gutter/2 0;
-
-  h2.entry-title {
-    @include font-size(24px, 24px);
-    @include line-height(30 / 24, 30 / 24);
-    margin-top: $gutter;
-  }
-}
-
 body.single .main-content article,
 body.page .main-content article {
   border-bottom: none;
   padding-bottom: 0px;
-
-  h1.entry-title {
-    margin-top: $gutterHalf * 3;
-  }
 }
 
 img {
