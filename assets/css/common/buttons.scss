@@ -12,7 +12,6 @@
   -moz-box-shadow: 0 2px 0 $buttonBorder;
   box-shadow: 0 2px 0 $buttonBorder;
   @include govuk-font(19);
-  @include line-height(25 / 19, 25 / 19);
   text-decoration: none;
   cursor: pointer;
   color: $white;
@@ -33,7 +32,6 @@
   text-decoration: none;
   position: relative;
   @include govuk-font(14);
-  @include line-height(20 / 16, 20 / 16);
   padding: 8px 16px;
   cursor: pointer;
   background-image: none;
