@@ -40,6 +40,12 @@ $is-ie: false !default;
   box-shadow:         $shadow;
 }
 
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing:    $sizing;
+  box-sizing:         $sizing;
+}
+
 @mixin opacity($trans) {
   zoom: 1;
   filter: unquote('alpha(opacity=' + ($trans * 100) + ')'); // IE6 to IE8

@@ -4,20 +4,14 @@
   display: inline-block;
   padding: $spacingSmall*2 $gutterHalf $spacingSmall $gutterHalf;
   border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  @include border-radius(0px);
   -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 $buttonBorder;
-  -moz-box-shadow: 0 2px 0 $buttonBorder;
-  box-shadow: 0 2px 0 $buttonBorder;
+  @include box-shadow(0 2px 0 $buttonBorder);
   @include govuk-font(19);
   text-decoration: none;
   cursor: pointer;
   color: $white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   vertical-align: top;
 
   &:hover, &:focus {
@@ -139,9 +133,7 @@ input{
 
   .next,
   .previous {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
 
     a {
       display: block;
