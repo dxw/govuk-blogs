@@ -80,13 +80,6 @@ article {
   word-wrap: break-word;
 
   header {
-
-    .byline {
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-      margin-bottom: $gutterHalf;
-    }
-
     .wp-post-image {
       margin-bottom: $gutterHalf;
     }
@@ -97,8 +90,7 @@ article {
   }
 
   .footer {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
 
     &.single {
       margin-top: $gutter;
@@ -106,25 +98,6 @@ article {
 
     p.tags {
       margin-top: $gutter;
-    }
-  }
-}
-
-.entry-footer {
-
-  ul {
-    margin-bottom: 0;
-    padding-left: 0;
-
-    li {
-      list-style: none;
-      display: inline-block;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-
-      .lte-ie8 & {
-        float: left;
-      }
     }
   }
 }
@@ -483,8 +456,7 @@ sup {
     }
     a {
       @include icons;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
 
       &.twitter {
         @include icon-twitter;

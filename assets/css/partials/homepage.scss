@@ -24,8 +24,7 @@
 
   .meta {
     color: $greyText;
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
 
     a {
       color: $greyText;
@@ -40,8 +39,7 @@
   p {
     margin-top: 0;
     margin-bottom: $gutter;
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
   }
 
   .latest {
@@ -78,8 +76,7 @@
 
     p.link {
       margin-bottom: 0;
-      @include font-size(19px, 19px);
-      @include line-height(25 / 19, 25 / 19);
+      @include govuk-font(19);
 
       a {
         font-weight: bold;
@@ -107,16 +104,14 @@ hr {
   }
 
   p {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
   }
 
   label {
     margin-bottom: 0;
     padding-bottom: 2px;
     font-weight: 700;
-    @include font-size(19px, 19px);
-    @include line-height(25 / 19, 25 / 19);
+    @include govuk-font(19);
   }
 
   input {
@@ -148,14 +143,13 @@ hr {
     float: left;
     display: inline;
     padding-right: $spacingSmall * 2;
-    @include font-size(48px, 36px);
-    @include line-height(50 / 48, 35 / 32);
+    @include govuk-font(48)
   }
 
   span.terms,
   span.name {
     display: inline-block;
-    @include font-size(16px, 16px);
+    @include govuk-font(16);
     line-height: 1;
   }
 
@@ -185,7 +179,7 @@ hr {
     color: $greyText;
     border: none;
     background: transparent;
-    @include font-size(16px, 16px);
+    @include govuk-font(16);
     line-height: 1;
     font-family: "nta", Helvetica, Arial, sans-serif;
 
@@ -231,8 +225,7 @@ hr {
       }
 
       p {
-        @include font-size(19px, 19px);
-        @include line-height(25 / 19, 25 / 19);
+        @include govuk-font(19);
         margin-bottom: $spacingSmall;
       }
 
@@ -250,8 +243,7 @@ hr {
     .meta {
       padding-bottom: $spacingSmall;
       color: $greyText;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
 
       a {
         color: $greyText;
@@ -267,8 +259,7 @@ hr {
   p {
     margin-top: 0;
     margin-bottom: $gutterHalf;
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
   }
 }
 

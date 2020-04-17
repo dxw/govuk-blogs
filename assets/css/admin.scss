@@ -7,7 +7,7 @@ $govuk-fonts-path: "../build/node_modules/govuk-frontend/govuk/assets/fonts/";
   @import "common/variables";
   @import "common/mixins";
   @import "common/common";
-  @extend .entry-content;
+  @extend .entry-content !optional;
 
   a {
     text-decoration: underline;
