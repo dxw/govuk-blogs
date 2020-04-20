@@ -76,32 +76,32 @@ cite {
 }
 
 a, a:visited {
-  color: #4c2c92;
+  color: $govuk-link-visited-colour;
 }
 
 a:hover {
-  color: #003078;
+  color: $govuk-link-hover-colour;
 }
 
 a:focus {
-  color: $black;
+  color: $govuk-focus-text-colour;
   outline-offset: 0;
   outline: 3px solid transparent;
-  background-color: $focusColour;
-  -webkit-box-shadow: 0 -2px $focusColour, 0 4px $black;
-  box-shadow: 0 -2px $focusColour, 0 4px $black;
+  background-color: $govuk-focus-colour;
+  -webkit-box-shadow: 0 -2px $govuk-focus-colour, 0 4px $black;
+  box-shadow: 0 -2px $govuk-focus-colour, 0 4px $black;
   text-decoration: none;
 }
 
 a:link:focus {
-  color: $black;
+  color: $govuk-focus-text-colour;
 }
 
 .entry-content a, .page-content a {
   text-decoration: underline;
 
   &:hover {
-    color: #2e8aca;
+    color: $govuk-link-hover-colour;
   }
 
   &:focus {

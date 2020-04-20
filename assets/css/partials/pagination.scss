@@ -56,8 +56,8 @@
         }
 
         &:focus {
-          background: $focusColour;
-          outline: 3px solid $focusColour;
+          background: $govuk-focus-colour;
+          outline: 3px solid $govuk-focus-colour;
           outline-offset: 0;
         }
       }

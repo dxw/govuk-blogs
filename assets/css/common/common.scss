@@ -213,8 +213,7 @@ a:focus {
   img {
     border-color: $black;
     outline: 3px solid $black;
-    -webkit-box-shadow: 0 0 0 6px $focusColour;
-    box-shadow: 0 0 0 6px $focusColour;
+    @include box-shadow(0 0 0 6px $govuk-focus-colour);
   }
 }
 
@@ -244,15 +243,12 @@ a:focus {
 figure {
   max-width: 100%;
   margin: 0 0 $gutter 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 figcaption {
   margin-top: $gutterHalf;
-  font-size: 14px;
-  line-height: 20px;
+  @include govuk-font(14);
 }
 
 figure.thumbnail {
@@ -403,9 +399,7 @@ sup {
     padding: 6px;
     background: $black url('../assets/img/search-button.png') no-repeat 2px 50%;
     text-indent: -5000px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
 
     &:active, &:hover {
       background-color: lighten($black, 5%);

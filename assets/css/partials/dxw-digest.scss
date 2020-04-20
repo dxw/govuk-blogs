@@ -17,8 +17,7 @@
   position: relative;
   padding: 0 0 0 38px;
   margin-bottom: 10px;
-  font-size: 19px;
-  line-height: 25px;
+  @include govuk-font(19);
 
   .subscribed-categories {
     margin-left: 0;
@@ -111,11 +110,7 @@
     position: absolute;
     top: 10px;
     left: 8px;
-    -moz-transform: rotate(-45deg); // Firefox 15 compatibility
-    -o-transform: rotate(-45deg); // Opera 12.0 compatibility
-    -webkit-transform: rotate(-45deg); // Safari 8 compatibility
-    -ms-transform: rotate(-45deg); // IE9 compatibility
-    transform: rotate(-45deg);
+    @include transform(rotate(-45deg));
     @include opacity(0);
   }
 
@@ -150,8 +145,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    @include govuk-font(16);
     color: #0b0c0c;
     padding: 15px;
     margin-top: 20px;
@@ -166,16 +160,14 @@
     @media print {
         .inset-text {
             font-family: sans-serif;
-            font-size: 14pt;
-            line-height: 1.15;
+            @include govuk-font(14);
             color: #000;
         }
     }
 
     @media (min-width: 40.0625em) {
         .inset-text {
-            font-size:19px;
-            line-height: 25px;
+          @include govuk-font(19);
             margin-top:30px;
             margin-bottom:30px;
         }

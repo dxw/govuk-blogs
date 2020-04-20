@@ -150,7 +150,6 @@ hr {
   span.name {
     display: inline-block;
     @include govuk-font(16);
-    line-height: 1;
   }
 
   .name {
@@ -180,7 +179,6 @@ hr {
     border: none;
     background: transparent;
     @include govuk-font(16);
-    line-height: 1;
     font-family: "nta", Helvetica, Arial, sans-serif;
 
     &:hover, &:focus {
@@ -189,8 +187,8 @@ hr {
     }
 
     &:focus {
-      background: $focusColour;
-      outline: 3px solid $focusColour;
+      background: $govuk-focus-colour;
+      outline: 3px solid $govuk-focus-colour;
       outline-offset: 0;
       border: none;
     }

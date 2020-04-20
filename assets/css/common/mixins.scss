@@ -46,6 +46,14 @@ $is-ie: false !default;
   box-sizing:         $sizing;
 }
 
+@mixin transform($transform) {
+  -moz-transform: $transform; // Firefox 15 compatibility
+  -o-transform: $transform; // Opera 12.0 compatibility
+  -webkit-transform: $transform; // Safari 8 compatibility
+  -ms-transform: $transform; // IE9 compatibility
+  transform: $transform;
+}
+
 @mixin opacity($trans) {
   zoom: 1;
   filter: unquote('alpha(opacity=' + ($trans * 100) + ')'); // IE6 to IE8
@@ -123,20 +131,14 @@ $is-ie: false !default;
   display: inline-block;
   padding: $spacingSmall*2 $gutterHalf $spacingSmall $gutterHalf;
   border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  @include border-radius(0);
   -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 $buttonBorder;
-  -moz-box-shadow: 0 2px 0 $buttonBorder;
-  box-shadow: 0 2px 0 $buttonBorder;
+  @include box-shadow(0 2px 0 $buttonBorder);
   @include govuk-font(19);
   text-decoration: none;
   cursor: pointer;
   color: $white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   vertical-align: top;
 
   &:hover, &:focus {

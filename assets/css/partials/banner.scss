@@ -6,7 +6,7 @@
   display: none;
   background-color: #2B358B;
   padding: 0.8em 0;
-  color: #fff;
+  color: $white;
 
   &.visible {
     @media(desktop) {
@@ -22,24 +22,24 @@
   h3 {
     margin-top: 0;
     margin-left: 20px;
-    font-size: 19px;
+    @include govuk-font(19);
     margin-bottom: 0;
   }
 
   p {
     margin: 0 0 0 20px;
-    font-size: 16px;
+    @include govuk-font(16);
 
     a {
       &:link,
       &:active,
       &:visited {
-        color: #fff;
+        color: $white;
         text-decoration: underline;
       }
 
       &:hover {
-        color: #fff;
+        color: $white;
       }
     }
   }
