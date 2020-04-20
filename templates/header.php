@@ -1,10 +1,10 @@
 <header class="header" aria-label="blog name">
-    <div class="grid-row">
+    <div class="govuk-grid-row">
 
         <?php $logo_options = get_option('theme_logo_options'); ?>
 
-        <div class="column-two-thirds">
-            <h1 class="blog-title">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="blog-title govuk-heading-xl">
                 <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span>
                 <a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
             </h1>
@@ -27,7 +27,7 @@
             <?php endif ?>
         </div>
 
-        <div class="column-one-third">
+        <div class="govuk-grid-column-one-third">
             <?php $result = blogIconPath() ?>
             <?php if (!$result->isErr()): ?>
                 <div class="logo-container hidden-mobile">
@@ -42,7 +42,7 @@
     </div>
 
     <?php if (function_exists('history_mode_notice') && (is_single() || is_page())) { ?>
-        <div class="grid-row">
+        <div class="govuk-grid-row">
             <?php history_mode_notice(get_the_ID(), 'blog post'); ?>
         </div>
     <?php } ?>
