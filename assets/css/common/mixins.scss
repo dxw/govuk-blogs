@@ -6,9 +6,9 @@ $tabletMinWidth:    768px;
 $tabletMaxWidth:    979px;
 $desktopSmallWidth: 1020px;
 
-$greyTopBorder: 1px solid #bfc1c3;
-$yellow: #ffbf47;
-$focus-colour: $yellow;
+$greyTopBorder: 1px solid $govuk-border-colour; // govuk-colour("light-grey")
+$yellow: govuk-colour("yellow");
+$focus-colour: govuk-colour("yellow");
 
 $is-ie: false !default;
 
@@ -44,14 +44,6 @@ $is-ie: false !default;
   -webkit-box-sizing: $sizing;
   -moz-box-sizing:    $sizing;
   box-sizing:         $sizing;
-}
-
-@mixin transform($transform) {
-  -moz-transform: $transform; // Firefox 15 compatibility
-  -o-transform: $transform; // Opera 12.0 compatibility
-  -webkit-transform: $transform; // Safari 8 compatibility
-  -ms-transform: $transform; // IE9 compatibility
-  transform: $transform;
 }
 
 @mixin opacity($trans) {
@@ -146,7 +138,7 @@ $is-ie: false !default;
   }
 
   &:focus {
-    outline: 3px solid #fd0;
+    outline: 3px solid govuk-colour("yellow");
     outline-offset: 0;
   }
 }

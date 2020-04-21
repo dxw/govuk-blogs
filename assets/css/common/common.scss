@@ -286,21 +286,21 @@ table th, table td {
 }
 
 table tr:nth-child(even) td {
-  background-color: #fff;
+  background-color: govuk-colour("white");
 }
 
 table td {
-  background: #fafafa;
-  border: dotted 1px #bbb;
+  background: $tableCellColour;
+  border: dotted 1px $govuk-border-colour;
 }
 
 table th {
   line-height: 1.25em;
   text-align: left;
-  color: #000;
+  color: govuk-colour("black");
   font-weight: normal;
-  background-color: #e1e8e8;
-  border: solid 1px #bbb;
+  background-color: $tableHeadCellColour;
+  border: solid 1px $govuk-border-colour;
 }
 
 table td small {
@@ -308,7 +308,7 @@ table td small {
 }
 
 .address {
-  border-left: 1px solid #bfc1c3;
+  border-left: 1px solid $govuk-border-colour;
   padding-left: $gutterHalf;
   margin-bottom: 0.75em;
 }
@@ -503,7 +503,7 @@ sup {
 }
 
 .footer.single div.related-posts {
-  background: #e1e8e8;
+  background: $background;
   padding: $gutterHalf $gutter;
   ul {
     margin-bottom: 0;

@@ -110,7 +110,7 @@
     position: absolute;
     top: 10px;
     left: 8px;
-    @include transform(rotate(-45deg));
+    transform: rotate(-45deg);
     @include opacity(0);
   }
 
@@ -146,12 +146,12 @@
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     @include govuk-font(16);
-    color: #0b0c0c;
+    color: govuk-colour("black");
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
     clear: both;
-    border-left: 10px solid #bfc1c3;
+    border-left: 10px solid $govuk-border-colour;
         &:first-child {
             margin-top: 0
         }        
@@ -161,7 +161,7 @@
         .inset-text {
             font-family: sans-serif;
             @include govuk-font(14);
-            color: #000;
+            color: govuk-colour("black");
         }
     }
 

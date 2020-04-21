@@ -65,13 +65,13 @@
 
     li.active {
       padding: 4px 12px;
-      color: #999;
+      color: $govuk-border-colour;
     }
 
     > .active {
 
       span, a {
-        color: #999;
+        color: $govuk-border-colour;
         cursor: default;
         background: transparent;
       }

@@ -37,7 +37,7 @@
 .btn,
 .btn:visited {
   background-color: $blueDark;
-  color: #fff;
+  color: govuk-colour("white");
   @include border-radius(0px);
   font-weight: 400;
   overflow: visible;

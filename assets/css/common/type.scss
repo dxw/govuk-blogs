@@ -32,7 +32,7 @@ blockquote {
 
   &.noquotes {
     padding: $gutterHalf;
-    background-color: #e1e8e8;
+    background-color: $background;
 
     p {
       padding-left: 0;
@@ -55,7 +55,7 @@ blockquote {
 div.highlight {
   margin: 0 0 $gutter 0;
   padding: $gutterHalf;
-  background-color: #e1e8e8;
+  background-color: $background;
 
   p {
     margin-bottom: $gutterHalf;
