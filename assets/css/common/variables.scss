@@ -19,37 +19,42 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 // COLOURS
 // --------------------------------------------------
 
-$greyText: 		#6f777b;
-$greyLight:		#919496;
+$greyText: 		$govuk-secondary-text-colour; // govuk-colour("dark-grey")
+$greyLight:		$govuk-border-colour; // govuk-colour("light-grey")
 
-$blueDark:		#2e3191;
+$blueDark:		 $govuk-link-hover-colour; // govuk-colour("dark-blue")
 
-$red:         #df3034;
+$red:         govuk-colour("red");
 
-$black:       #0b0c0c;
-$white:       #ffffff;
+$black:        govuk-colour("black");
+$white:        govuk-colour("white");
 
-$background:  #f0f0f0;
+$background:   #f3f2f1 ; // govuk-colour("light-grey")
 
-$panelColour: #dee0e2;
+$panelColour:  $govuk-border-colour ; // govuk-colour("mid-grey")
 
-$borderColour: #bfc1c3;
+$borderColour: $govuk-border-colour;
 
-$focusColour: #ffdd00;
+$focusColour:  govuk-colour("yellow");
 
-$linkColour:  #1d70b8;
-$linkHover:   #003078;
+$linkColour:  govuk-colour("blue");
+$linkHover:   $govuk-link-hover-colour;
 
-$blogColour:  #57da95;
+$blogColour:  govuk-colour("turquoise");
 
-$alertColour: #B10E1E;
+$alertColour: govuk-colour("red");
 
-$buttonColour: #00823b;
+$buttonColour: govuk-colour("green");
 $buttonHover:  #006435;
 $buttonBorder: #003618;
 
-$blogTitleColour: #505050;
-$placeHolderColour: #505050;
+$blogTitleColour: $govuk-secondary-text-colour;
+$placeHolderColour: $govuk-secondary-text-colour;
+
+$selectionColour: #b3d4fc;
+
+$tableHeadCellColour: #fafafa;
+$tableCellColour: #e1e8e8;
 
 // ICON FONT
 // --------------------------------------------------

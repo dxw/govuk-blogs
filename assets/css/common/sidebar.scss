@@ -49,8 +49,7 @@
     border: none;
 
     select {
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
       width: 100%;
     }
 
@@ -118,7 +117,7 @@
       padding: 0;
       border-bottom: none;
       vertical-align: middle;
-      font-size: 16px;
+      @include govuk-font(16);
       @include icons;
 
       // Fallback to a blank icon

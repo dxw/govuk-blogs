@@ -80,13 +80,6 @@ article {
   word-wrap: break-word;
 
   header {
-
-    .byline {
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-      margin-bottom: $gutterHalf;
-    }
-
     .wp-post-image {
       margin-bottom: $gutterHalf;
     }
@@ -97,8 +90,7 @@ article {
   }
 
   .footer {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
 
     &.single {
       margin-top: $gutter;
@@ -106,25 +98,6 @@ article {
 
     p.tags {
       margin-top: $gutter;
-    }
-  }
-}
-
-.entry-footer {
-
-  ul {
-    margin-bottom: 0;
-    padding-left: 0;
-
-    li {
-      list-style: none;
-      display: inline-block;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
-
-      .lte-ie8 & {
-        float: left;
-      }
     }
   }
 }
@@ -189,25 +162,10 @@ iframe.coveritlive {
   }
 }
 
-.main-content article {
-  border-top: $greyTopBorder;
-  padding: $gutter 0 $gutter/2 0;
-
-  h2.entry-title {
-    @include font-size(24px, 24px);
-    @include line-height(30 / 24, 30 / 24);
-    margin-top: $gutter;
-  }
-}
-
 body.single .main-content article,
 body.page .main-content article {
   border-bottom: none;
   padding-bottom: 0px;
-
-  h1.entry-title {
-    margin-top: $gutterHalf * 3;
-  }
 }
 
 img {
@@ -255,8 +213,7 @@ a:focus {
   img {
     border-color: $black;
     outline: 3px solid $black;
-    -webkit-box-shadow: 0 0 0 6px $focusColour;
-    box-shadow: 0 0 0 6px $focusColour;
+    @include box-shadow(0 0 0 6px $govuk-focus-colour);
   }
 }
 
@@ -286,15 +243,12 @@ a:focus {
 figure {
   max-width: 100%;
   margin: 0 0 $gutter 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 figcaption {
   margin-top: $gutterHalf;
-  font-size: 14px;
-  line-height: 20px;
+  @include govuk-font(14);
 }
 
 figure.thumbnail {
@@ -332,21 +286,21 @@ table th, table td {
 }
 
 table tr:nth-child(even) td {
-  background-color: #fff;
+  background-color: govuk-colour("white");
 }
 
 table td {
-  background: #fafafa;
-  border: dotted 1px #bbb;
+  background: $tableCellColour;
+  border: dotted 1px $govuk-border-colour;
 }
 
 table th {
   line-height: 1.25em;
   text-align: left;
-  color: #000;
+  color: govuk-colour("black");
   font-weight: normal;
-  background-color: #e1e8e8;
-  border: solid 1px #bbb;
+  background-color: $tableHeadCellColour;
+  border: solid 1px $govuk-border-colour;
 }
 
 table td small {
@@ -354,7 +308,7 @@ table td small {
 }
 
 .address {
-  border-left: 1px solid #bfc1c3;
+  border-left: 1px solid $govuk-border-colour;
   padding-left: $gutterHalf;
   margin-bottom: 0.75em;
 }
@@ -445,9 +399,7 @@ sup {
     padding: 6px;
     background: $black url('../assets/img/search-button.png') no-repeat 2px 50%;
     text-indent: -5000px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
 
     &:active, &:hover {
       background-color: lighten($black, 5%);
@@ -498,8 +450,7 @@ sup {
     }
     a {
       @include icons;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
 
       &.twitter {
         @include icon-twitter;
@@ -552,7 +503,7 @@ sup {
 }
 
 .footer.single div.related-posts {
-  background: #e1e8e8;
+  background: $background;
   padding: $gutterHalf $gutter;
   ul {
     margin-bottom: 0;

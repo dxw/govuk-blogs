@@ -15,7 +15,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: govuk-colour("black");
 }
 
 body {
@@ -30,12 +30,12 @@ body {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $selectionColour;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $selectionColour;
     text-shadow: none;
 }
 
@@ -47,7 +47,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $govuk-border-colour;
     margin: 1em 0;
     padding: 0;
 }
@@ -84,8 +84,8 @@ textarea {
 
 .chromeframe {
     margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
+    background: $background;
+    color: govuk-colour("black");
     padding: 0.2em 0;
 }
 
@@ -267,7 +267,7 @@ textarea {
 // 
 //     pre,
 //     blockquote {
-//         border: 1px solid #999;
+//         border: 1px solid $govuk-border-colour;
 //         page-break-inside: avoid;
 //     }
 // 

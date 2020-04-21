@@ -1,0 +1,65 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "nta", Helvetica, Arial, sans-serif;
+  @include govuk-font(19);
+  font-weight: 400;
+  text-transform: none;
+  color: $black;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  @extend %govuk-heading-xl;
+}
+
+h2{
+  @extend %govuk-heading-l;
+}
+
+h3 {
+  @extend %govuk-heading-m;
+}
+
+h4  {
+  @extend %govuk-heading-s;
+}
+
+h5, h6 {
+  @include govuk-font(16);
+}
+
+//extend
+ul {
+  @extend %govuk-list;
+  @extend %govuk-list--bullet;
+}
+ol {
+  @extend %govuk-list;
+  @extend %govuk-list--number;
+}
+table {
+  @extend %govuk-body-m;
+}
+
+ul {
+//pagination
+  &.list-inline {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      display: inline-block;
+    }
+  }
+}
+ul.children {
+  margin-top: 0;
+}
+

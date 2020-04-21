@@ -56,8 +56,8 @@
         }
 
         &:focus {
-          background: $focusColour;
-          outline: 3px solid $focusColour;
+          background: $govuk-focus-colour;
+          outline: 3px solid $govuk-focus-colour;
           outline-offset: 0;
         }
       }
@@ -65,13 +65,13 @@
 
     li.active {
       padding: 4px 12px;
-      color: #999;
+      color: $govuk-border-colour;
     }
 
     > .active {
 
       span, a {
-        color: #999;
+        color: $govuk-border-colour;
         cursor: default;
         background: transparent;
       }
