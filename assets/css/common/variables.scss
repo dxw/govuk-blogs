@@ -19,19 +19,19 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 // COLOURS
 // --------------------------------------------------
 
-$greyText: 		$govuk-secondary-text-colour; // govuk-colour("dark-grey")
-$greyLight:		$govuk-border-colour; // govuk-colour("light-grey")
+$greyText: 		govuk-colour("dark-grey");
+$greyLight:		govuk-colour("light-grey");
 
-$blueDark:		 $govuk-link-hover-colour; // govuk-colour("dark-blue")
+$blueDark:		 govuk-colour("dark-blue");
 
 $red:         govuk-colour("red");
 
 $black:        govuk-colour("black");
 $white:        govuk-colour("white");
 
-$background:   #f3f2f1 ; // govuk-colour("light-grey")
+$background:   govuk-colour("light-grey");
 
-$panelColour:  $govuk-border-colour ; // govuk-colour("mid-grey")
+$panelColour:  govuk-colour("mid-grey");
 
 $borderColour: $govuk-border-colour;
 

@@ -1,4 +1,6 @@
 $govuk-compatibility-govuktemplate: true;
+$govuk-use-legacy-palette: false;
+
 $govuk-images-path: "../build/node_modules/govuk-frontend/govuk/assets/images/";
 $govuk-fonts-path: "../build/node_modules/govuk-frontend/govuk/assets/fonts/";
 
