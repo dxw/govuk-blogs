@@ -1,7 +1,6 @@
 .main-content article {
   border-top: $greyTopBorder;
   padding: $gutter 0 $gutter/2 0;
-
   h2.entry-title {
     @extend %govuk-heading-m;
   }

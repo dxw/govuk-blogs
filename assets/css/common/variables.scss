@@ -9,7 +9,6 @@ $spacingSmall:            5px;
 
 $gutter:                  30px;
 $gutterHalf:              15px;
-
 $gridColumns:             12;
 $gridColumnWidth:         62px;
 $gridGutterWidth:         20px;
@@ -19,42 +18,59 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 // COLOURS
 // --------------------------------------------------
 
-$greyText: 		govuk-colour("dark-grey");
-$greyLight:		govuk-colour("light-grey");
-
+$greyText: 		 govuk-colour("dark-grey");
+$greyLight:		 govuk-colour("light-grey");
 $blueDark:		 govuk-colour("dark-blue");
-
-$red:         govuk-colour("red");
-
+$red:          govuk-colour("red");
 $black:        govuk-colour("black");
 $white:        govuk-colour("white");
-
 $background:   govuk-colour("light-grey");
-
 $panelColour:  govuk-colour("mid-grey");
-
 $borderColour: $govuk-border-colour;
-
 $focusColour:  govuk-colour("yellow");
-
-$linkColour:  govuk-colour("blue");
-$linkHover:   $govuk-link-hover-colour;
-
-$blogColour:  govuk-colour("turquoise");
-
-$alertColour: govuk-colour("red");
-
+$linkColour:   govuk-colour("blue");
+$linkHover:    $govuk-link-hover-colour;
+$blogColour:   govuk-colour("turquoise");
+$alertColour:  govuk-colour("red");
 $buttonColour: govuk-colour("green");
-$buttonHover:  #006435;
-$buttonBorder: #003618;
 
+$buttonHover:darken(govuk-colour("green"), 2); //006435
+$buttonBorder:darken(govuk-colour("green"), 5); //#003618;
 $blogTitleColour: $govuk-secondary-text-colour;
 $placeHolderColour: $govuk-secondary-text-colour;
-
-$selectionColour: #b3d4fc;
-
-$tableHeadCellColour: #fafafa;
+$selectionColour:lighten(govuk-colour("green"), 2);
+$tableHeadCellColour: govuk-colour("light-grey");;
 $tableCellColour: #e1e8e8;
+
+
+// REFERENCE OF THE GOVUK Modern Colour Palette
+// https://github.com/alphagov/govuk-frontend/blob/063cd8e2470b62b824c6e50ca66342ac7a95d2d8/src/govuk/settings/_colours-palette.scss
+
+// $_govuk-colour-palette-modern: (
+//   "red": #d4351c,
+//   "yellow": #ffdd00,
+//   "green": #00703c,
+//   "blue": #1d70b8,
+//   "dark-blue": #003078,
+//   "light-blue": #5694ca,
+//   "purple": #4c2c92,
+
+//   "black": #0b0c0c,
+//   "dark-grey": #626a6e,
+//   "mid-grey": #b1b4b6,
+//   "light-grey": #f3f2f1,
+//   "white": #ffffff,
+
+//   "light-purple": #6f72af,
+//   "bright-purple": #912b88,
+//   "pink": #d53880,
+//   "light-pink": #f499be,
+//   "orange": #f47738,
+//   "brown": #b58840,
+//   "light-green": #85994b,
+//   "turquoise": #28a197
+// );
+
 
 // ICON FONT
 // --------------------------------------------------

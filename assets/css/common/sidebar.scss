@@ -1,26 +1,21 @@
 .sidebar {
-  
   .widget {
     margin-bottom: $gutter;
     border-top: 4px solid $black;
-
     h3 {
       margin-top: $gutterHalf;
       margin-bottom: $gutterHalf;
     }
-
     .textwidget {
       margin-bottom: $gutter;
     }
   }
 
   .widget_nav_menu {
-
     ul {
       margin: 0px 0px $gutter 0px;
       padding-left: 0;
     }
-
     li {
       list-style: none;
       margin: $spacingSmall 0px;
@@ -60,15 +55,12 @@
 
   .widget_recent_entries,
   .widget_recent_comments {
-
     ul {
       padding-left: 0;
     }
-
     li {
       list-style: none;
       margin-bottom: $spacingSmall*2;
-
       &:last-child {
         margin-bottom: 0;
       }
@@ -76,7 +68,6 @@
 
     span.post-date {
       color: $greyText;
-
       &:before {
         content: " ";
       }
@@ -84,11 +75,8 @@
   }
 
   .widget_recent_entries {
-
     ul li {
-
       a {
-
         &:after {
           content: ",";
         }
@@ -100,14 +88,11 @@
     width: 100%;
     display: inline-block;
     margin-bottom: 0;
-
     li {
       margin: 7px 0;
-
       &:first-child {
         margin-top: 0;
       }
-
       &:last-child {
         margin-bottom: 0;
       }
@@ -119,7 +104,6 @@
       vertical-align: middle;
       @include govuk-font(16);
       @include icons;
-
       // Fallback to a blank icon
       @include icon-blank;
 
