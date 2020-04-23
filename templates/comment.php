@@ -1,12 +1,12 @@
 <?php if ($depth > 1) : ?>
-  <span class="visuallyhidden">Replies to <?php comment_author($comment->comment_parent); ?>></span>
+  <span class="govuk-visually-hidden">Replies to <?php comment_author($comment->comment_parent); ?>></span>
 <?php endif; ?>
 
 <div class="media-body">
-  <p class="media-heading">
-    <span class="visuallyhidden">Comment by</span>
+  <p class="govuk-body media-heading">
+    <span class="govuk-visually-hidden">Comment by</span>
     <span class="author"><?php comment_author_page(); ?></span>
-    <span class="visuallyhidden">posted on</span>
+    <span class="govuk-visually-hidden">posted on</span>
     <time datetime="<?php echo comment_date('c') ?>">on <?php echo esc_html(get_comment_date('d F Y')) ?></time>
   </p>
   <div class="comment-body">
