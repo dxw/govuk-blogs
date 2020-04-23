@@ -34,7 +34,7 @@ body {
 }
 
 .visible-tablet {
-  display: none;
+  display: none !important;
   visibility: hidden;
   @media screen and (max-width: $tabletMaxWidth) {
     display: block !important;
@@ -50,7 +50,7 @@ body {
 }
 
 .visible-mobile {
-  display: none;
+  display: none !important;
   visibility: hidden;
   @media screen and (max-width: $mobileMaxWidth) {
     display: block !important;
