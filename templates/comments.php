@@ -29,10 +29,10 @@
 
 <?php if (comments_open()) : ?>
   <section id="respond" class="leave-a-comment">
-    <header class="group">
+    <div class="group">
       <h3 class="govuk-heading-m"><?php comment_form_title(__('Leave a comment', 'roots'), __('Leave a reply to %s', 'roots'), __(false, 'roots')); ?></h3>
       <p class="govuk-body cancel-comment-reply"><?php cancel_comment_reply_link('Cancel reply') ?></p>
-    </header>
+    </div>
 
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p class="govuk-body"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
