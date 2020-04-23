@@ -41,9 +41,13 @@
 
     </div>
 
-    <?php if (function_exists('history_mode_notice') && (is_single() || is_page())) { ?>
+    <?php if (function_exists('history_mode_notice') && (history_mode_notice_active(get_the_ID()))) { ?>
         <div class="govuk-grid-row">
-            <?php history_mode_notice(get_the_ID(), 'blog post'); ?>
+            <div class="history-status-block">
+                <h2 class="govuk-heading-l">
+                    <?php history_mode_notice(get_the_ID(), 'blog post'); ?>
+                </h2>
+            </div>
         </div>
     <?php } ?>
 
