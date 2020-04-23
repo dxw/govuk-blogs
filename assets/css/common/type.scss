@@ -3,24 +3,18 @@ h5, h6 {
   margin-bottom: 1.0526315789em;
 }
 
-
 blockquote {
   margin: 0 0 $gutter 0;
-
   p {
     padding-left: $gutter;
     margin-bottom: $gutterHalf;
-
     &:last-of-type {
       margin-bottom: 0;
-
       &:after {
         content: "\201D";
       }
     }
-
     &:first-child {
-
       &:before {
         content: "\201C";
         float: left;
@@ -33,30 +27,24 @@ blockquote {
   &.noquotes {
     padding: $gutterHalf;
     background-color: $background;
-
     p {
       padding-left: 0;
-
       &:last-of-type {
-
         &:after {
           content: "";
         }
       }
-
       &:before {
         content: "";
       }
     }
   }
-
 }
 
 div.highlight {
   margin: 0 0 $gutter 0;
   padding: $gutterHalf;
   background-color: $background;
-
   p {
     margin-bottom: $gutterHalf;
     padding-left: 0;
@@ -99,11 +87,9 @@ a:link:focus {
 
 .entry-content a, .page-content a {
   text-decoration: underline;
-
   &:hover {
     color: $govuk-link-hover-colour;
   }
-
   &:focus {
     text-decoration: none;
   }

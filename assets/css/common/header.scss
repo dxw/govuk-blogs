@@ -1,10 +1,7 @@
 // https://github.com/alphagov/govuk_template/blob/master/source/assets/stylesheets/_header.scss
 #global-header {
-
   .header-wrapper {
-
     .header-global {
-
       .header-logo {
         margin: 2px 0 0 0;
       }
@@ -29,7 +26,6 @@
       color: $white;
       outline: 3px solid $govuk-focus-colour;
     }
-
     img {
       width: 36px;
       margin: 2px 1px 0 0;
@@ -38,14 +34,12 @@
 }
 
 .header-global {
-
   @media screen and (max-width: $tabletMaxWidth) {
     margin-left: auto;
     margin-right: auto;
     width: auto;
     padding: 0 $gutterHalf;
   }
-
   @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
     padding: 0;
   }
@@ -66,7 +60,6 @@
 
   .blog, .blog-title, .site-title {
     margin-bottom: 0;
-
     a {
       color: inherit;
     }
@@ -119,7 +112,6 @@
     dl {
       @include govuk-font(16);
       margin: 0;
-
       dt {
         width: 130px;
         font-weight: normal;
@@ -127,7 +119,6 @@
         overflow: hidden;
         padding: 0px;
         display: table-cell;
-
         @media screen and (max-width: $tabletMaxWidth) {
           width: 105px;
         }
@@ -143,14 +134,12 @@
 
   .logo-container {
     height: 90px;
-
     img {
       max-height: 90px;
     }
   }
 
   .search-container, .logo-container {
-
     img {
       float: right;
     }
@@ -164,7 +153,6 @@
   .bottom {
     margin-top: $gutter;
     position: relative;
-
     @media (max-width: $tabletMaxWidth) and (min-width: $tabletMinWidth) {
       margin-top: $spacingSmall;
     }
@@ -175,7 +163,6 @@
   }
 
   @media (max-width: $mobileMaxWidth) {
-
     .logo-container {
       float: none;
       margin-left: 0;

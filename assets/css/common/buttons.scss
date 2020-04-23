@@ -145,7 +145,6 @@ input{
   .next {
     float: right;
     text-align: right;
-    
     a {
       padding-right: $gutter;
       background-image: url('../assets/img/arrow-pagination-right.svg');
@@ -161,7 +160,6 @@ input{
   .previous {
     float: left;
     text-align: left;
-    
     a {
       padding-left: $gutter;
       background-image: url('../assets/img/arrow-pagination-left.svg');
@@ -176,10 +174,8 @@ input{
 }
 
 .page-navigation {
-
   .previous, .next {
     width: 49%;
-
     @media (max-width: $mobileSmallWidth) {
       width: 100%;
     }
@@ -187,7 +183,6 @@ input{
 
   .previous {
     margin-right: 2%;
-
     @media (max-width: $mobileSmallWidth) {
       margin-right: 0;
       margin-bottom: $gutterHalf;
