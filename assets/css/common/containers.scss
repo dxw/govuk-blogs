@@ -7,11 +7,9 @@
 .bar {
   border-top: 10px solid $blogColour;
   margin: 0 auto;
-
   @media screen and (max-width: $tabletMaxWidth) {
     margin: 0 $gutter;
   }
-
   @media screen and (max-width: $mobileMaxWidth) {
     margin: 0 $gutterHalf;
   }
@@ -24,7 +22,6 @@
     display: none;
   }
   @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
-
     .inner-block {
       padding-left: $gutterHalf;
       padding-right: $gutterHalf;
@@ -32,7 +29,6 @@
   }
 
   @media screen and (max-width: $mobileMaxWidth) {
-
     .full-width {
       margin: 0;
       padding: 0;
@@ -47,23 +43,19 @@
   max-width: 964px;
   margin: 0 auto;
   width: auto;
-
   &:before,
   &:after {
     display: table;
     content: "";
     line-height: 0;
   }
-
   &:after {
     clear: both;
   }
-
   @media screen and (max-width: $desktopSmallWidth) {
     margin: 0 $gutter;
     max-width: none;
   }
-
   @media screen and (max-width: $mobileMaxWidth) {
     margin: 0 $gutterHalf;
   }
@@ -85,7 +77,6 @@
 
 .grid-row {
   margin: 0 -$gutterHalf;
-
   &:before,
   &:after {
     content: "";
@@ -120,7 +111,6 @@
 .column-one-quarter {
   float: left;
   width: 25%;
-
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
   }
@@ -129,7 +119,6 @@
 .column-three-quarters {
   float: left;
   width: 75%;
-
   @media (max-width: $mobileMaxWidth) {
     width: 100%;
   }

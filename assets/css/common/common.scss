@@ -1,6 +1,5 @@
 body {
   font-family: 'nta', 'helvetica', 'arial';
-
   overflow-wrap: break-word;
   word-wrap: break-word;
 
@@ -199,7 +198,6 @@ img {
 }
 
 img {
-
   &.alignnone,
   &.alignright,
   &.alignleft,
@@ -229,7 +227,6 @@ a:focus {
 }
 
 .page .main-content {
-
   // Allow ordered lists to have numbers
   ol {
     list-style-type: decimal;
@@ -322,7 +319,6 @@ table td small {
   margin-bottom: $gutter;
   border-top: $greyTopBorder;
   padding-top: $gutterHalf;
-
   ul {
     li {
       .number {
@@ -350,17 +346,14 @@ sup {
   max-width: 350px;
   display: inline-block;
   margin-bottom: 0;
-
   @media (max-width: $mobileMaxWidth) {
     max-width: 99.5%;
   }
-
   .search-input-wrapper {
     width: 100%;
     display: inline-block;
     position: relative;
   }
-
   input.search-query {
     height: 40px;
     float: left;
