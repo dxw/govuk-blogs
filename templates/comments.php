@@ -35,7 +35,7 @@
     </header>
 
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
-      <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
+      <p class="govuk-body"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
     <?php else : ?>
 
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
@@ -46,7 +46,7 @@
         </div>
         <div class="js-comment-extra">
           <?php if (is_user_logged_in()) : ?>
-            <p>
+            <p class="govuk-body">
               <?php printf(__('You are logged in as <strong>%s</strong>.', 'roots'), $user_identity) ?>
               <a href="<?php echo wp_logout_url(get_permalink()) ?>"><?php _e('Log out', 'roots') ?></a>
             </p>
@@ -64,7 +64,7 @@
             </div>
           <?php endif ?>
           <?php do_action('comment_form', $post->ID) ?>
-          <p><input name="submit" class="button" type="submit" id="submit" value="<?php _e('Submit comment', 'roots') ?>"></p>
+          <p class="govuk-body"><input name="submit" class="button" type="submit" id="submit" value="<?php _e('Submit comment', 'roots') ?>"></p>
         </div>
         <?php comment_id_fields() ?>
         <div class="comment-privacy-notice dxw-subscription">
