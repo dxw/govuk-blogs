@@ -1,10 +1,9 @@
 // Mixins
 
-$mobileSmallWidth:  370px;
-$mobileMaxWidth:    767px;
-$tabletMinWidth:    768px;
-$tabletMaxWidth:    979px;
-$desktopSmallWidth: 1020px;
+$mobileSmallWidth:  $mobile;
+$mobileMaxWidth:    $tablet - 1px;
+$tabletMinWidth:    $tablet;
+$tabletMaxWidth:    $desktop - 1px;
 
 $greyTopBorder: 1px solid govuk-colour("light-grey");
 $yellow: govuk-colour("yellow");
