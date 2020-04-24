@@ -19,16 +19,9 @@
     margin-bottom: 5px;
   }
 
-  h3 {
-    margin-top: 0;
-    margin-left: 20px;
-    @include govuk-font(19);
-    margin-bottom: 0;
-  }
-
   p {
-    margin: 0 0 0 20px;
-    @include govuk-font(16);
+    margin: 0 0 10px 20px;
+    color: $white;
 
     a {
       &:link,
