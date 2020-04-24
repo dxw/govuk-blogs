@@ -1,6 +1,13 @@
 $govuk-compatibility-govuktemplate: true;
 $govuk-use-legacy-palette: false;
-
+$mobile: 370px;
+$tablet: 768px;
+$desktop: 980px;
+$govuk-breakpoints: (
+  mobile:  $mobile,
+  tablet:  $tablet,
+  desktop: $desktop
+);
 $govuk-images-path: "../build/node_modules/govuk-frontend/govuk/assets/images/";
 $govuk-fonts-path: "../build/node_modules/govuk-frontend/govuk/assets/fonts/";
 
