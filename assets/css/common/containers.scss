@@ -36,31 +36,6 @@
   }
 }
 
-.container,
-.navbar-static-top .container,
-.navbar-fixed-top .container,
-.navbar-fixed-bottom .container {
-  max-width: 964px;
-  margin: 0 auto;
-  width: auto;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear: both;
-  }
-  @media screen and (max-width: $desktopSmallWidth) {
-    margin: 0 $gutter;
-    max-width: none;
-  }
-  @media screen and (max-width: $mobileMaxWidth) {
-    margin: 0 $gutterHalf;
-  }
-}
-
 .column-full,
 .column-one-half,
 .column-third,
