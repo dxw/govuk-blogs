@@ -84,8 +84,7 @@ form#commentform {
     margin: 2.6em 0 0 0;
     padding: 0;
     text-align: right;
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
 
     a {
       text-decoration: underline;
@@ -119,13 +118,11 @@ form#commentform {
   }
 
   .media-heading {
-    @include font-size(16px, 16px);
-    @include line-height(20 / 16, 20 / 16);
+    @include govuk-font(16);
     margin-bottom: $gutterHalf;
 
     .author {
-      @include font-size(19px, 19px);
-      @include line-height(25 / 19, 25 / 19);
+      @include govuk-font(19);
       font-weight: 700;
     }
 
@@ -174,8 +171,7 @@ form#commentform {
     a {
       display: inline-block;
       margin-left: $gutter;
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
 
       &:first-child {
         margin-left: 0;

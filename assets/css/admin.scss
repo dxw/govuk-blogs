@@ -1,3 +1,6 @@
+@import "common/global_settings";
+@import "govuk-frontend/govuk/all";
+
 .hallo-editor {
   @import "common/variables";
   @import "common/mixins";

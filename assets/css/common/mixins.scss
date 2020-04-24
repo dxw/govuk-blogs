@@ -1,14 +1,13 @@
 // Mixins
 
-$mobileSmallWidth:  370px;
-$mobileMaxWidth:    767px;
-$tabletMinWidth:    768px;
-$tabletMaxWidth:    979px;
-$desktopSmallWidth: 1020px;
+$mobileSmallWidth:  $mobile;
+$mobileMaxWidth:    $tablet - 1px;
+$tabletMinWidth:    $tablet;
+$tabletMaxWidth:    $desktop - 1px;
 
-$greyTopBorder: 1px solid #bfc1c3;
-$yellow: #ffbf47;
-$focus-colour: $yellow;
+$greyTopBorder: 1px solid govuk-colour("light-grey");
+$yellow: govuk-colour("yellow");
+$focus-colour: govuk-colour("yellow");
 
 $is-ie: false !default;
 
@@ -38,6 +37,12 @@ $is-ie: false !default;
   -webkit-box-shadow: $shadow; // Chrome 4.0 to 9.0, Safari 3.1 to 5.0, Mobile Safari 3.2 to 4.3, Android Browser 2.1 to 3.0
   -moz-box-shadow:    $shadow; // Firefox 3.5 to 3.6
   box-shadow:         $shadow;
+}
+
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing:    $sizing;
+  box-sizing:         $sizing;
 }
 
 @mixin opacity($trans) {
@@ -117,21 +122,14 @@ $is-ie: false !default;
   display: inline-block;
   padding: $spacingSmall*2 $gutterHalf $spacingSmall $gutterHalf;
   border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  @include border-radius(0);
   -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 $buttonBorder;
-  -moz-box-shadow: 0 2px 0 $buttonBorder;
-  box-shadow: 0 2px 0 $buttonBorder;
-  @include font-size(19px, 19px);
-  @include line-height(25 / 19, 25 / 19);
+  @include box-shadow(0 2px 0 $buttonBorder);
+  @include govuk-font(19);
   text-decoration: none;
   cursor: pointer;
   color: $white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   vertical-align: top;
 
   &:hover, &:focus {
@@ -139,7 +137,7 @@ $is-ie: false !default;
   }
 
   &:focus {
-    outline: 3px solid #fd0;
+    outline: 3px solid govuk-colour("yellow");
     outline-offset: 0;
   }
 }

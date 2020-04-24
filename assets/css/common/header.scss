@@ -1,10 +1,7 @@
 // https://github.com/alphagov/govuk_template/blob/master/source/assets/stylesheets/_header.scss
 #global-header {
-
   .header-wrapper {
-
     .header-global {
-
       .header-logo {
         margin: 2px 0 0 0;
       }
@@ -27,9 +24,8 @@
     &:focus {
       border-bottom: 1px solid $white;
       color: $white;
-      outline: 3px solid $focusColour;
+      outline: 3px solid $govuk-focus-colour;
     }
-
     img {
       width: 36px;
       margin: 2px 1px 0 0;
@@ -38,14 +34,12 @@
 }
 
 .header-global {
-
   @media screen and (max-width: $tabletMaxWidth) {
     margin-left: auto;
     margin-right: auto;
     width: auto;
     padding: 0 $gutterHalf;
   }
-
   @media screen and (max-width: $mobileMaxWidth) and (min-width: 641px) {
     padding: 0;
   }
@@ -66,7 +60,6 @@
 
   .blog, .blog-title, .site-title {
     margin-bottom: 0;
-
     a {
       color: inherit;
     }
@@ -74,7 +67,7 @@
 
   table, th, tr, td {
     padding: 0 2px;
-    background-color: #fff;
+    background-color: govuk-colour("white");
     border: 0;
     line-height: 1;
   }
@@ -85,8 +78,7 @@
   }
 
   .blog {
-    line-height: 1.1111111111;
-    @include font-size(27px, 20px);
+    @include govuk-font(27);
     color: $blogTitleColour;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -118,10 +110,8 @@
     }
 
     dl {
-      @include font-size(16px, 16px);
-      @include line-height(20 / 16, 20 / 16);
+      @include govuk-font(16);
       margin: 0;
-
       dt {
         width: 130px;
         font-weight: normal;
@@ -129,7 +119,6 @@
         overflow: hidden;
         padding: 0px;
         display: table-cell;
-
         @media screen and (max-width: $tabletMaxWidth) {
           width: 105px;
         }
@@ -145,14 +134,12 @@
 
   .logo-container {
     height: 90px;
-
     img {
       max-height: 90px;
     }
   }
 
   .search-container, .logo-container {
-
     img {
       float: right;
     }
@@ -166,7 +153,6 @@
   .bottom {
     margin-top: $gutter;
     position: relative;
-
     @media (max-width: $tabletMaxWidth) and (min-width: $tabletMinWidth) {
       margin-top: $spacingSmall;
     }
@@ -177,7 +163,6 @@
   }
 
   @media (max-width: $mobileMaxWidth) {
-
     .logo-container {
       float: none;
       margin-left: 0;
@@ -200,7 +185,7 @@
   margin: $gutterHalf 0;
   padding: $gutterHalf;
   color: $white;
-  background: $linkColour;
+  background: $govuk-link-colour;
 
   @media screen and (min-width: $tabletMaxWidth) {
     margin: $gutter $gutterHalf;
@@ -208,21 +193,16 @@
   }
 
   h2 {
-    font-family: "nta", Arial, sans-serif;
     text-transform: none;
-    font-weight: bold;
     margin: 0;
     padding-top: 8px;
     padding-bottom: 7px;
-
-    font-size: 24px;
-    line-height: 1.04167;
+    color: $white;
 
     @media screen and (min-width: $tabletMaxWidth) {
       padding-top: 6px;
       padding-bottom: 9px;
-      font-size: 36px;
-      line-height: 1.11111;
+      color: $white;
     }
 
     .government {

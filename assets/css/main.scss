@@ -1,3 +1,7 @@
+@import "common/global_settings";
+
+@import "govuk-frontend/govuk/all";
+
 @import "common/variables";
 @import "h5bp";
 
@@ -5,6 +9,8 @@
 @import "common/containers";
 @import "common/common";
 @import "common/type";
+@import "common/article";
+@import "common/typography";
 @import "common/forms";
 @import "common/header";
 @import "common/sidebar";

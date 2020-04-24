@@ -1,7 +1,7 @@
 <?php
 
 $engine = new Mustache_Engine([
-  'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/build/govuk_template/views/layouts', [
+  'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/layouts', [
     'extension' => '.html',
   ]),
 ]);
@@ -12,6 +12,7 @@ echo $template->render([
   'htmlLang' => 'en',
   'pageTitle' => html_entity_decode(wp_title('-', false, 'right'), ENT_HTML5 | ENT_QUOTES), // Apparently it doesn't unescape quotes by default for some reason
   'assetPath' => get_template_directory_uri().'/build/govuk_template/assets/',
+  'govukFrontendAssetPath' => get_template_directory_uri().'/build/node_modules/govuk-frontend/govuk/assets/',
   'head' => \Missing\Strings::getOutput('wp_head'),
   'bodyClasses' => implode(' ', array_map('esc_attr', get_body_class())),
   'afterHeader' => \Missing\Strings::getOutput(function () {
@@ -23,7 +24,6 @@ echo $template->render([
   }),
   'homepageUrl' => 'https://www.gov.uk/',
   'logoLinkTitle' => 'Go to the GOV.UK homepage',
-  'globalHeaderText' => 'GOV.UK',
   'content' => \Missing\Strings::getOutput(function () {
       get_template_part('templates/base');
   }),

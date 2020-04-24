@@ -4,9 +4,9 @@
    * JavaScript enabled.
    */
   display: none;
-  background-color: #2B358B;
+  background-color: $govuk-link-hover-colour;
   padding: 0.8em 0;
-  color: #fff;
+  color: $white;
 
   &.visible {
     @media(desktop) {
@@ -19,27 +19,20 @@
     margin-bottom: 5px;
   }
 
-  h3 {
-    margin-top: 0;
-    margin-left: 20px;
-    font-size: 19px;
-    margin-bottom: 0;
-  }
-
   p {
-    margin: 0 0 0 20px;
-    font-size: 16px;
+    margin: 0 0 10px 20px;
+    color: $white;
 
     a {
       &:link,
       &:active,
       &:visited {
-        color: #fff;
+        color: $white;
         text-decoration: underline;
       }
 
       &:hover {
-        color: #fff;
+        color: $white;
       }
     }
   }

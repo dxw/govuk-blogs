@@ -4,8 +4,7 @@
 .bctt-ctt-text {
   a {
     font-family: "nta", Helvetica, Arial, sans-serif !important;
-    @include font-size(19px, 19px);
-    @include line-height(25 / 19, 25 / 19);
+    @include govuk-font(19);
     color: $black !important; // The plugin stylesheet uses !important so we need to use it here
     font-weight: 400;
   }
