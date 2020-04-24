@@ -9,7 +9,7 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
       <section id="user-satisfaction-survey" class="visible" aria-hidden="false">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-three-quarters">
-                <h3><?php echo esc_html($bannerTitle) ?></h2>
+                <p class="govuk-heading-s"><?php echo esc_html($bannerTitle) ?></p>
                 <p class="govuk-body"><a href="<?php echo esc_url($bannerLink)?>" id="take-survey" target="_blank"><?php echo esc_html($bannerLinkText) ?></a></p>
             </div>
             <div class="govuk-grid-column-one-quarter">
