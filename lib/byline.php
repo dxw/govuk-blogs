@@ -4,7 +4,7 @@
 function gds_byline()
 {
     ?>
-  <span class="visuallyhidden">Posted by: </span>
+  <span class="govuk-visually-hidden">Posted by: </span>
   <?php
   if (function_exists('coauthors_posts_links')) {
       coauthors_posts_links(', ');
