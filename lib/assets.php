@@ -13,16 +13,6 @@ add_action('admin_enqueue_scripts', function () {
     wp_enqueue_style('admin', get_template_directory_uri().'/build/admin.min.css');
 });
 
-# Emit ie6 stylesheet.
-# wp_head with priority 20 - runs after other styles get output
-add_action('wp_head', function () {
-    ?>
-    <!--[if lte IE 6]>
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/build/node_modules/bsie/bootstrap/css/bootstrap-ie6.min.css' ?>">
-    <![endif]-->
-  <?php
-}, 20);
-
 add_action('wp_head', function () {
     ?>
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">

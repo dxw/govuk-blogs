@@ -69,7 +69,6 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            'node_modules/bsie/bootstrap/css/bootstrap-ie6.min.css',
                             'node_modules/bootstrap/img/glyphicons-halflings.png',
                             'node_modules/bootstrap/img/glyphicons-halflings-white.png',
                             'node_modules/govuk-frontend/govuk/assets/fonts/*',

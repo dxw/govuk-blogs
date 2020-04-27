@@ -253,10 +253,6 @@ braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-"bsie@git+https://github.com/ddouble/bsie.git":
-  version "0.0.0"
-  resolved "git+https://github.com/ddouble/bsie.git#fe3a04ab8de79280d10a15211ab66cc4f8f297e3"
-
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
