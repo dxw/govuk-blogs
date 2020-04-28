@@ -124,7 +124,7 @@ function pagination($q = null, $mode = null, $uri = null)
 
 function createCurrentPaginationItem($pageNum)
 {
-    printf('<li class="active"><span class="visuallyhidden">Page </span>%s</li>' . "\n", $pageNum);
+    printf('<li class="active"><span class="govuk-visually-hidden">Page </span>%s</li>' . "\n", $pageNum);
 }
 
 function createPaginationItem($mode, $pageNum)
@@ -133,5 +133,5 @@ function createPaginationItem($mode, $pageNum)
     if ($mode) {
         $uri = add_query_arg(['mode' => $mode], $uri);
     }
-    printf('<li><a href="%s"><span class="visuallyhidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $pageNum);
+    printf('<li><a href="%s"><span class="govuk-visually-hidden">Page </span>%s</a></li>' . "\n", esc_url($uri), $pageNum);
 }

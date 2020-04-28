@@ -69,7 +69,6 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            'node_modules/bsie/bootstrap/css/bootstrap-ie6.min.css',
                             'node_modules/bootstrap/img/glyphicons-halflings.png',
                             'node_modules/bootstrap/img/glyphicons-halflings-white.png',
                             'node_modules/govuk-frontend/govuk/assets/fonts/*',
@@ -109,37 +108,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-image')
-
-    grunt.registerTask('govuk_template', function () {
-        var done = this.async()
-          , child_process = require('child_process')
-          , async = require('async')
-
-          , runCommands = function (commands, callback) {
-              async.series(commands.map(function (command) {
-                  return function (callback) {
-                      child_process.exec(command, function (error, stdout, stderr) {
-                          if (error !== null) {
-                              console.log('error executing command')
-                              callback(true)
-                          }
-                          callback(null)
-                      })
-                  }
-              }), callback)
-            }
-
-        runCommands([
-            'test -d govuk_template || git clone https://github.com/alphagov/govuk_template.git',
-            'git -C govuk_template fetch',
-            'git -C govuk_template checkout origin/master',
-            'cd govuk_template && bundle install --path=vendor/bundle',
-            'rm -rf govuk_template/pkg/*',
-            'cd govuk_template && bundle exec rake build:mustache',
-            'rm -rf build/govuk_template',
-            'cp -r govuk_template/pkg/mustache_govuk_template-*/ build/govuk_template',
-        ], done)
-    })
 
     grunt.renameTask('watch', '_watch')
     grunt.registerTask('watch', [

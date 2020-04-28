@@ -1,34 +1,23 @@
 {{{ topOfPage }}}
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="lte-ie8" lang="{{ htmlLang }}"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="{{ htmlLang }}" class="govuk-template"><!--<![endif]-->
+<html lang="en" class="govuk-template ">
   <head>
     <meta charset="utf-8" />
     <title>{{ pageTitle }}</title>
 
-    <!--[if gt IE 8]><!--><link href="{{{ assetPath }}}stylesheets/govuk-template.css?0.22.3" media="screen" rel="stylesheet" /><!--<![endif]-->
-    <!--[if IE 6]><link href="{{{ assetPath }}}stylesheets/govuk-template-ie6.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
-    <!--[if IE 7]><link href="{{{ assetPath }}}stylesheets/govuk-template-ie7.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
-    <!--[if IE 8]><link href="{{{ assetPath }}}stylesheets/govuk-template-ie8.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
-    <link href="{{{ assetPath }}}stylesheets/govuk-template-print.css?0.22.3" media="print" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
 
-    <!--[if IE 8]><link href="{{{ assetPath }}}stylesheets/fonts-ie8.css?0.22.3" media="all" rel="stylesheet" /><![endif]-->
-    <!--[if gte IE 9]><!--><link href="{{{ assetPath }}}stylesheets/fonts.css?0.22.3" media="all" rel="stylesheet" /><!--<![endif]-->
-    <!--[if lt IE 9]><script src="{{{ assetPath }}}javascripts/ie.js?0.22.3"></script><![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="shortcut icon" href="{{{ assetPath }}}images/favicon.ico?0.22.3" type="image/x-icon" />
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="{{ govukFrontendAssetPath }}images/favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="{{ govukFrontendAssetPath }}images/govuk-mask-icon.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ govukFrontendAssetPath }}images/govuk-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ govukFrontendAssetPath }}images/govuk-apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ govukFrontendAssetPath }}images/govuk-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" href="{{ govukFrontendAssetPath }}images/govuk-apple-touch-icon.png">
 
-    <link rel="mask-icon" href="{{{ assetPath }}}images/gov.uk_logotype_crown.svg?0.22.3" color="#0b0c0c">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{{ assetPath }}}images/apple-touch-icon-180x180.png?0.22.3">
-    <link rel="apple-touch-icon" sizes="167x167" href="{{{ assetPath }}}images/apple-touch-icon-167x167.png?0.22.3">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{{ assetPath }}}images/apple-touch-icon-152x152.png?0.22.3">
-    <link rel="apple-touch-icon" href="{{{ assetPath }}}images/apple-touch-icon.png?0.22.3">
-
-
-    <meta name="theme-color" content="#0b0c0c" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="{{{ assetPath }}}images/opengraph-image.png?0.22.3">
+    <meta property="og:image" content="{{ govukFrontendAssetPath }}images/govuk-opengraph-image.png">
 
     {{{ head }}}
   </head>
@@ -77,9 +66,9 @@
             </svg>
 
             <span class="govuk-footer__licence-description">
-              
+
                 {{{ licenceMessage }}}
-              
+
             </span>
           </div>
 
@@ -92,11 +81,7 @@
 
     <div id="global-app-error" class="app-error hidden"></div>
 
-    <script src="{{{ assetPath }}}javascripts/govuk-template.js?0.22.3"></script>
-
     {{{ bodyEnd }}}
 
-
-    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   </body>
 </html>
