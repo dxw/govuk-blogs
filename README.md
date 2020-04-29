@@ -21,7 +21,6 @@ Requirements:
 
 * [yarn](https://yarnpkg.com/)
 * [composer](https://getcomposer.org/)
-* [sass ruby gem](https://rubygems.org/gems/sass/versions/3.4.22)
 * Run this in the theme: yarn install
 
 If it's in build, don't touch it because it'll get overwritten.
@@ -34,11 +33,7 @@ Images can be optimised like so:
 
     % yarn run grunt img
 
-This theme is based on [govuk_template](https://github.com/alphagov/govuk_template) which is what many gov.uk sites use. We used mustache because that's the only format it generates for which a PHP implementation exists. The mustache template is included from base.php where all the variables are defined. And to grab the latest version of govuk_template run this:
-
-    % yarn run grunt govuk_template
-
-The latest version of govuk_template removes the `{{ banner }}` variable from below the `<header>` element so it needs to be added back to the template manually.
+This theme is based on [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
 To update the composer modules:
 
@@ -50,13 +45,14 @@ Use the [semantic versioning](https://semver.org/) standard.
 
 The version should be updated in `style.css`, and the appropriate commit tagged as `vX.Y.Z`.
 
+Update [the changelog](CHANGELOG.md) following the standard at https://keepachangelog.com/en/1.0.0/.
+
 ## This theme uses
 
 * http://www.rootstheme.com/
-* http://twitter.github.io/bootstrap/
 * https://sass-lang.com/
 * http://gruntjs.com/
-* https://github.com/alphagov/govuk_template
+* https://github.com/alphagov/govuk-frontend
 * https://github.com/bobthecow/mustache.php
 * https://github.com/dxw/php-missing
 

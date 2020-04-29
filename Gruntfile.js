@@ -21,18 +21,20 @@
 //
 
 module.exports = function (grunt) {
-
     'use strict';
+
+    const sass = require('node-sass')
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
+            options: {
+                implementation: sass,
+                outputStyle: 'compressed',
+                sourceMap: true,
+                includePaths: ['node_modules/'],
+            },
             production: {
-                options: {
-                    loadPath: 'node_modules/',
-                    style: 'compressed',
-                    sourcemap: 'auto'
-                },
                 files: {
                     'build/main.min.css': 'assets/css/main.scss',
                     'build/admin.min.css': 'assets/css/admin.scss',
@@ -103,7 +105,7 @@ module.exports = function (grunt) {
         },
     })
 
-    grunt.loadNpmTasks('grunt-contrib-sass')
+    grunt.loadNpmTasks('grunt-sass')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
