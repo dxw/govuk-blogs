@@ -60,7 +60,11 @@ cite {
   top: -10px;
 }
 
-a, a:visited {
+a {
+  color: $govuk-link-colour;
+}
+
+a:visited {
   color: $govuk-link-visited-colour;
 }
 
