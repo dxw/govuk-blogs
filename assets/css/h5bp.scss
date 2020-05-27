@@ -30,12 +30,10 @@ body {
  */
 
 ::-moz-selection {
-    background: $selectionColour;
     text-shadow: none;
 }
 
 ::selection {
-    background: $selectionColour;
     text-shadow: none;
 }
 
