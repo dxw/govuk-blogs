@@ -1,7 +1,7 @@
 {
     "config": {
         "platform": {
-            "php": "7.0.22"
+            "php": "7.2"
         }
     },
     "autoload": {
