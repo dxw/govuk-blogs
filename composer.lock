@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38215c3c6e14d32cfd662ffbf8b0daec",
+    "content-hash": "89d6fbd4a44231dde4b01b56ea2188c5",
     "packages": [
         {
             "name": "aura/autoload",
@@ -2495,7 +2495,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.2"
+    },
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.2"
