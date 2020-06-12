@@ -1,7 +1,7 @@
 {
     "config": {
         "platform": {
-            "php": "7.0.22"
+            "php": "7.2"
         }
     },
     "autoload": {
@@ -10,6 +10,7 @@
         }
     },
     "require": {
+        "php": "^7.2",
         "dxw/roots-composer": "dev-master#2fad80195fc15bd48329f398d256fcfd013ca0d5",
         "mustache/mustache": "2.5.1",
         "dxw/php-missing": "^1.0",
