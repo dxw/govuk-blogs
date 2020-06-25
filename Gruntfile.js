@@ -1,23 +1,19 @@
 //
 // == Installation ==
 //
-// Install the grunt command-line tool (-g puts it in /usr/local/bin):
-// % sudo npm install -g grunt-cli
-//
 // Install all the packages required to build this:
 // (Packages will be installed in ./node_modules - don't accidentally commit this)
-// % cd wp-content/themes/theme-name
-// % npm install
+// % yarn install
 //
 // == Building ==
 //
-// % grunt
+// % yarn run grunt
 //
 // Watch for changes:
-// % grunt watch
+// % yarn run grunt watch
 //
 // Compress images (not done by the above tasks):
-// % grunt img
+// % yarn run grunt img
 //
 
 module.exports = function (grunt) {
