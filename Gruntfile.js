@@ -23,6 +23,9 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        clean: ['build'],
+
         sass: {
             options: {
                 implementation: sass,
@@ -106,6 +109,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-image')
+    grunt.loadNpmTasks('grunt-contrib-clean')
 
     grunt.renameTask('watch', '_watch')
     grunt.registerTask('watch', [
@@ -114,6 +118,7 @@ module.exports = function (grunt) {
     ])
 
     grunt.registerTask('default', [
+        'clean',
         'copy',
         'sass',
         'uglify',
