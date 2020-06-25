@@ -26,6 +26,7 @@
         "peridot-php/peridot": "^1.19",
         "peridot-php/leo": "^1.6",
         "peridot-php/peridot-dot-reporter": "^1.0",
-        "php-mock/php-mock-mockery": "^1.3"
+        "php-mock/php-mock-mockery": "^1.3",
+        "vimeo/psalm": "^3.12"
     }
 }
