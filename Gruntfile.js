@@ -1,23 +1,19 @@
 //
 // == Installation ==
 //
-// Install the grunt command-line tool (-g puts it in /usr/local/bin):
-// % sudo npm install -g grunt-cli
-//
 // Install all the packages required to build this:
 // (Packages will be installed in ./node_modules - don't accidentally commit this)
-// % cd wp-content/themes/theme-name
-// % npm install
+// % yarn install
 //
 // == Building ==
 //
-// % grunt
+// % yarn run grunt
 //
 // Watch for changes:
-// % grunt watch
+// % yarn run grunt watch
 //
 // Compress images (not done by the above tasks):
-// % grunt img
+// % yarn run grunt img
 //
 
 module.exports = function (grunt) {
@@ -27,6 +23,9 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        clean: ['build'],
+
         sass: {
             options: {
                 implementation: sass,
@@ -110,6 +109,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-image')
+    grunt.loadNpmTasks('grunt-contrib-clean')
 
     grunt.renameTask('watch', '_watch')
     grunt.registerTask('watch', [
@@ -118,6 +118,7 @@ module.exports = function (grunt) {
     ])
 
     grunt.registerTask('default', [
+        'clean',
         'copy',
         'sass',
         'uglify',
