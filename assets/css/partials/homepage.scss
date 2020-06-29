@@ -150,6 +150,12 @@ hr {
   span.name {
     display: inline-block;
     @include govuk-font(16);
+    vertical-align: top;
+    margin-top: 5px;
+  }
+
+  span.name {
+    font-weight: 600;
   }
 
   .name {
