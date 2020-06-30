@@ -6,8 +6,8 @@ class YouTube implements \Dxw\Iguana\Registerable
 {
     public function register() : void
     {
-        add_filter('embed_oembed_html', [$this, 'forceHttps']);
-        add_filter('oembed_result', [$this, 'hideRelated']);
+        add_filter('oembed_dataparse', [$this, 'forceHttps']);
+        add_filter('oembed_dataparse', [$this, 'hideRelated']);
         add_filter('oembed_dataparse', [$this, 'addTitleAttribute'], 10, 3);
     }
 

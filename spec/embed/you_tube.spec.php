@@ -24,8 +24,8 @@ describe(YouTube::class, function () {
     describe('->register()', function () {
         it('registers hooks', function () {
             $addFilter = PHPMockery::mock(__NAMESPACE__, 'add_filter');
-            $addFilter->with('embed_oembed_html', [$this->youTube, 'forceHttps'])->once();
-            $addFilter->with('oembed_result', [$this->youTube, 'hideRelated'])->once();
+            $addFilter->with('oembed_dataparse', [$this->youTube, 'forceHttps'])->once();
+            $addFilter->with('oembed_dataparse', [$this->youTube, 'hideRelated'])->once();
             $addFilter->with('oembed_dataparse', [$this->youTube, 'addTitleAttribute'], 10, 3)->once();
 
             $this->youTube->register();
