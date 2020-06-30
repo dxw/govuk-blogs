@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 - "Read more" links include hidden text specifying the post name for screenreader users
+- License switched to MIT
 
 ## [3.1.5] - 2020-06-24
 
