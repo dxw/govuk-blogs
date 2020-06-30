@@ -25,6 +25,7 @@ describe(YouTube::class, function () {
         it('registers hooks', function () {
             $addFilter = PHPMockery::mock(__NAMESPACE__, 'add_filter');
             $addFilter->with('oembed_dataparse', [$this->youTube, 'hideRelated'])->once();
+            $addFilter->with('oembed_dataparse', [$this->youTube, 'useNocookie'])->once();
 
             $this->youTube->register();
         });
@@ -48,6 +49,36 @@ describe(YouTube::class, function () {
         context('when there are extra parameters', function () {
             it('does nothing', function () {
                 $output = $this->youTube->hideRelated('foo', 'http://xyz.invalid/', [1, 2, 3]);
+                expect($output)->to->equal('foo');
+            });
+        });
+    });
+
+    describe('->useNocookie()', function () {
+        context('when it does not contain youtube links', function () {
+            it('does nothing', function () {
+                $output = $this->youTube->useNocookie('abc http://foo.bar.invalid/');
+                expect($output)->to->equal('abc http://foo.bar.invalid/');
+            });
+        });
+
+        context('when it contains youtube links (1)', function () {
+            it('replaces www.youtube.com with www.youtube-nocookie.com', function () {
+                $output = $this->youTube->useNocookie('abc https://www.youtube.com/');
+                expect($output)->to->equal('abc https://www.youtube-nocookie.com/');
+            });
+        });
+
+        context('when it contains youtube links (2)', function () {
+            it('replaces youtube.com with www.youtube-nocookie.com', function () {
+                $output = $this->youTube->useNocookie('abc https://youtube.com/');
+                expect($output)->to->equal('abc https://www.youtube-nocookie.com/');
+            });
+        });
+
+        context('when there are extra parameters', function () {
+            it('does nothing', function () {
+                $output = $this->youTube->useNocookie('foo', 'http://xyz.invalid/', 'bar', 123);
                 expect($output)->to->equal('foo');
             });
         });
