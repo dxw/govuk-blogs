@@ -29,7 +29,7 @@ class YouTube implements \Dxw\Iguana\Registerable
     // Youtube: Add title attribute to iframe
     public function addTitleAttribute(string $return, object $data, string $url) : string
     {
-        if (preg_match('/https?:\/\/((m|www)\.)?youtube\.com\/watch.*/', $url)==1 || preg_match('/https?:\/\/youtu\.be\/.*/', $url)==1) {
+        if (preg_match('/https?:\/\/((m|www)\.)?youtube\.com\/watch.*/', $url)===1 || preg_match('/https?:\/\/youtu\.be\/.*/', $url)===1) {
             if (isset($data->title)) {
                 $return = str_replace('></iframe>', ' title="Video: ' . esc_attr($data->title) . '"></iframe>', $return);
             }
