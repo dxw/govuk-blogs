@@ -4,8 +4,15 @@
     max-height: 197px;
     margin: 0 0 10px 0;
     border: none;
-    overflow: hidden;
     background: transparent;
+
+    a {
+      display: block;
+      &:focus {
+        @include box-shadow(inset 0 0 0 2px);
+        border-color: $black;
+      }
+    }
 
     @media (max-width: $tabletMaxWidth) {
       max-height: 144px;
@@ -14,7 +21,6 @@
     @media (max-width: $mobileMaxWidth) {
       max-width: 100% !important;
       max-height: none;
-      overflow: visible;
 
       img {
         width: 100%;
