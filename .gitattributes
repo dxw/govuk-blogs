@@ -1,2 +1,4 @@
 /build/** -diff
 /yarn.lock -diff
+/composer.lock -diff
+/vendor.phar -diff
