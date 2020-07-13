@@ -19,7 +19,9 @@ describe(YouTube::class, function () {
 
     describe('->register()', function () {
         it('registers hooks', function () {
-            PHPMockery::mock(__NAMESPACE__, 'add_filter')->with('embed_oembed_html', [$this->youTube, 'forceHttps'])->once();
+            $addFilter = PHPMockery::mock(__NAMESPACE__, 'add_filter');
+            $addFilter->with('embed_oembed_html', [$this->youTube, 'forceHttps'])->once();
+            $addFilter->with('oembed_result', [$this->youTube, 'hideRelated'])->once();
 
             $this->youTube->register();
         });
@@ -43,6 +45,29 @@ describe(YouTube::class, function () {
         context('when there are extra parameters', function () {
             it('does nothing', function () {
                 $output = $this->youTube->forceHttps('foo', 'http://xyz.invalid/', 'bar', 123);
+                expect($output)->to->equal('foo');
+            });
+        });
+    });
+
+    describe('->hideRelated()', function () {
+        context('with no youtube link', function () {
+            it('does nothing', function () {
+                $output = $this->youTube->hideRelated('abc http://foo.bar.invalid/');
+                expect($output)->to->equal('abc http://foo.bar.invalid/');
+            });
+        });
+
+        context('with youtube link', function () {
+            it('modifies link', function () {
+                $output = $this->youTube->hideRelated('abc https://youtube.com/xyz?feature=oembed&xyz');
+                expect($output)->to->equal('abc https://youtube.com/xyz?wmode=transparent&amp;rel=0&xyz');
+            });
+        });
+
+        context('when there are extra parameters', function () {
+            it('does nothing', function () {
+                $output = $this->youTube->hideRelated('foo', 'http://xyz.invalid/', [1, 2, 3]);
                 expect($output)->to->equal('foo');
             });
         });

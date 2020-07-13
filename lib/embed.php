@@ -8,13 +8,6 @@
 wp_oembed_add_provider('#https?://storify.com/.*#', 'https://api.embed.ly/1/oembed', true);
 
 
-# Youtube: Don't show related videos
-# Credit: http://wordpress.org/plugins/hide-youtube-related-videos/
-add_filter('oembed_result', function ($data, $url, $args = []) {
-    $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?wmode=transparent&amp;rel=0$3', $data);
-    return $data;
-}, 10, 3);
-
 # Youtube: Add title attribute to iframe
 add_filter('oembed_dataparse', function ($return, $data, $url) {
     if (preg_match('/https?:\/\/((m|www)\.)?youtube\.com\/watch.*/', $url)==1 || preg_match('/https?:\/\/youtu\.be\/.*/', $url)==1) {
