@@ -8,13 +8,6 @@
 wp_oembed_add_provider('#https?://storify.com/.*#', 'https://api.embed.ly/1/oembed', true);
 
 
-# Youtube: force to HTTPS
-add_filter('embed_oembed_html', function ($cache, $url=null, $attr=null, $post_ID=null) {
-    $cache = preg_replace('$http://www.youtube.com$', 'https://www.youtube.com', $cache);
-    return $cache;
-});
-
-
 # Youtube: Don't show related videos
 # Credit: http://wordpress.org/plugins/hide-youtube-related-videos/
 add_filter('oembed_result', function ($data, $url, $args = []) {
