@@ -8,16 +8,6 @@
 wp_oembed_add_provider('#https?://storify.com/.*#', 'https://api.embed.ly/1/oembed', true);
 
 
-# Youtube: Add title attribute to iframe
-add_filter('oembed_dataparse', function ($return, $data, $url) {
-    if (preg_match('/https?:\/\/((m|www)\.)?youtube\.com\/watch.*/', $url)==1 || preg_match('/https?:\/\/youtu\.be\/.*/', $url)==1) {
-        if (isset($data->title)) {
-            $return = str_replace('></iframe>', ' title="Video: ' . esc_attr($data->title) . '"></iframe>', $return);
-        }
-    }
-    return $return;
-}, 10, 3);
-
 # Instagram: add class so Instagram embeds can be styled independently
 add_filter('embed_oembed_html', function ($cache, $url, $attr, $post_ID) {
     if (preg_match('/https?:\/\/www\.\instagram\.com/', $url)==1) {
