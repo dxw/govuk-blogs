@@ -7,7 +7,6 @@ class YouTube implements \Dxw\Iguana\Registerable
     public function register() : void
     {
         add_filter('oembed_dataparse', [$this, 'hideRelated']);
-        add_filter('oembed_dataparse', [$this, 'addTitleAttribute'], 10, 3);
     }
 
     // Don't show related videos
@@ -16,16 +15,5 @@ class YouTube implements \Dxw\Iguana\Registerable
     {
         $data = preg_replace('_(youtube\.com.*)(\?feature=oembed)(.*)_', '$1?wmode=transparent&amp;rel=0$3', $data);
         return $data;
-    }
-
-    // Youtube: Add title attribute to iframe
-    public function addTitleAttribute(string $return, object $data, string $url) : string
-    {
-        if (preg_match('_https?://((m|www)\.)?youtube\.com/watch.*_', $url)===1 || preg_match('_https?://youtu\.be/.*_', $url)===1) {
-            if (isset($data->title)) {
-                $return = str_replace('></iframe>', ' title="Video: ' . esc_attr($data->title) . '"></iframe>', $return);
-            }
-        }
-        return $return;
     }
 }
