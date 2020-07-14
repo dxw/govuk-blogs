@@ -24,34 +24,10 @@ describe(YouTube::class, function () {
     describe('->register()', function () {
         it('registers hooks', function () {
             $addFilter = PHPMockery::mock(__NAMESPACE__, 'add_filter');
-            $addFilter->with('oembed_dataparse', [$this->youTube, 'forceHttps'])->once();
             $addFilter->with('oembed_dataparse', [$this->youTube, 'hideRelated'])->once();
             $addFilter->with('oembed_dataparse', [$this->youTube, 'addTitleAttribute'], 10, 3)->once();
 
             $this->youTube->register();
-        });
-    });
-
-    describe('->forceHttps()', function () {
-        context('when it does not contain youtube links', function () {
-            it('does nothing', function () {
-                $output = $this->youTube->forceHttps('abc http://foo.bar.invalid/');
-                expect($output)->to->equal('abc http://foo.bar.invalid/');
-            });
-        });
-
-        context('when it contains youtube links', function () {
-            it('replaces http:// with https://', function () {
-                $output = $this->youTube->forceHttps('abc http://www.youtube.com/');
-                expect($output)->to->equal('abc https://www.youtube.com/');
-            });
-        });
-
-        context('when there are extra parameters', function () {
-            it('does nothing', function () {
-                $output = $this->youTube->forceHttps('foo', 'http://xyz.invalid/', 'bar', 123);
-                expect($output)->to->equal('foo');
-            });
         });
     });
 

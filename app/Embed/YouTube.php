@@ -6,16 +6,8 @@ class YouTube implements \Dxw\Iguana\Registerable
 {
     public function register() : void
     {
-        add_filter('oembed_dataparse', [$this, 'forceHttps']);
         add_filter('oembed_dataparse', [$this, 'hideRelated']);
         add_filter('oembed_dataparse', [$this, 'addTitleAttribute'], 10, 3);
-    }
-
-    // Force to HTTPS
-    public function forceHttps(string $cache) : string
-    {
-        $cache = preg_replace('_http://www.youtube.com_', 'https://www.youtube.com', $cache);
-        return $cache;
     }
 
     // Don't show related videos
