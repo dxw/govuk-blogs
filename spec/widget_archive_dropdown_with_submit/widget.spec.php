@@ -2,7 +2,7 @@
 
 namespace GovUKBlogs\WidgetArchiveDropdownWithSubmit;
 
-require_once(dirname(__DIR__).'/widget_categories_dropdown_with_submit/helpers.php');
+require_once(dirname(__DIR__).'/helpers/wp_widget.php');
 
 use \phpmock\mockery\PHPMockery;
 
