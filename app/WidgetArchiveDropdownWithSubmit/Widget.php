@@ -22,6 +22,8 @@ class Widget extends \WP_Widget
  
         $dropdown_id = "{$this->id_base}-archive-dropdown-with-submit-{$this->number}";
         
+        echo '<div class="archive-dropdown-js-enabled">';
+
         echo '<label class="screen-reader-text" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
 
         echo '<select id="' . esc_attr($dropdown_id) . '" name="archive-dropdown">';
@@ -37,6 +39,8 @@ class Widget extends \WP_Widget
         echo '</select>';
 
         echo '<button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\''. esc_attr($dropdown_id) .'\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button>';
+
+        echo '</div>';
  
         echo $args['after_widget'];
     }

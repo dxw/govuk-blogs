@@ -190,4 +190,16 @@
       }
     }
   }
+
+  .archive-dropdown-js-enabled {
+    display: none;
+  }
+}
+
+.js-enabled {
+  .sidebar {
+    .archive-dropdown-js-enabled {
+      display: block;
+    }
+  }
 }
