@@ -23,7 +23,7 @@ class Widget extends \WP_Widget
         echo sprintf('<form action="%s" method="get">', esc_url(home_url()));
         $dropdown_id    = "{$this->id_base}-dropdown-with-submit-{$this->number}";
 
-        echo '<label class="screen-reader-text" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
+        echo '<label class="govuk-visually-hidden" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
 
         wp_dropdown_categories([
             'orderby'      => 'name',
@@ -31,9 +31,10 @@ class Widget extends \WP_Widget
             'hierarchical' => '0',
             'show_option_none' => 'Select Category',
             'id'               => $dropdown_id,
+            'class' => 'govuk-select'
         ]);
 
-        echo '<input type="submit" value="Go">';
+        echo '<button class="govuk-button" data-module="govuk-button">Go</button>';
 
         echo '</form>';
 

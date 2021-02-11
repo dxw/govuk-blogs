@@ -43,11 +43,6 @@
   .widget_categories {
     border: none;
 
-    select {
-      @include govuk-font(16);
-      width: 100%;
-    }
-
     ul {
       margin-bottom: $gutter;
     }
@@ -188,6 +183,24 @@
       &[href*=".podbean.com/"] {
         @include icon-podbean;
       }
+    }
+  }
+
+  .archive-dropdown-with-submit-js-enabled {
+    display: none;
+  }
+}
+
+.js-enabled {
+  .sidebar {
+    .archive-dropdown-with-submit-js-enabled {
+      display: block;
+      select {
+        margin-right: 5px;
+      }
+    }
+    .archive-dropdown-with-submit-js-disabled {
+      display: none;
     }
   }
 }
