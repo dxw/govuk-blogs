@@ -191,14 +191,14 @@
     }
   }
 
-  .archive-dropdown-js-enabled {
+  .archive-dropdown-with-submit-js-enabled {
     display: none;
   }
 }
 
 .js-enabled {
   .sidebar {
-    .archive-dropdown-js-enabled {
+    .archive-dropdown-with-submit-js-enabled {
       display: block;
     }
   }

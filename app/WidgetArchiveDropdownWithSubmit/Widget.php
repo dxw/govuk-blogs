@@ -22,7 +22,7 @@ class Widget extends \WP_Widget
  
         $dropdown_id = "{$this->id_base}-archive-dropdown-with-submit-{$this->number}";
         
-        echo '<div class="archive-dropdown-js-enabled">';
+        echo '<div class="archive-dropdown-with-submit-js-enabled">';
 
         echo '<label class="screen-reader-text" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
 
