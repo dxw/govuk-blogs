@@ -42,12 +42,20 @@ describe(Widget::class, function () {
             PHPMockery::mock(__NAMESPACE__, 'esc_url')->with('x')->andReturn('X');
             PHPMockery::mock(__NAMESPACE__, 'home_url')->with()->andReturn('x');
             PHPMockery::mock(__NAMESPACE__, 'esc_attr')->with('aaa-archive-dropdown-with-submit-3')->andReturn('y');
-            PHPMockery::mock(__NAMESPACE__, 'wp_get_archives')->with([
+            $wpGetArchivesMock = PHPMockery::mock(__NAMESPACE__, 'wp_get_archives');
+            $wpGetArchivesMock->with([
                 'type' => 'monthly',
                 'format' => 'option',
                 'show_post_count' => true
             ])->andReturnUsing(function () {
                 echo 'HELLO FROM wp_get_archives';
+            });
+            $wpGetArchivesMock->with([
+                'type' => 'monthly',
+                'format' => 'html',
+                'show_post_count' => true
+            ])->andReturnUsing(function () {
+                echo 'HELLO FROM list-format wp_get_archives';
             });
 
             ob_start();
@@ -59,7 +67,7 @@ describe(Widget::class, function () {
             ], []);
             $output = ob_get_clean();
 
-            expect($output)->to->equal('AAABBBArchivesCCC<div class="archive-dropdown-with-submit-js-enabled"><label class="screen-reader-text" for="y">Archives</label><select id="y" name="archive-dropdown"><option value="">Select month</option>HELLO FROM wp_get_archives</select><button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\'y\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button></div>DDD');
+            expect($output)->to->equal('AAABBBArchivesCCC<div class="archive-dropdown-with-submit-js-enabled"><label class="screen-reader-text" for="y">Archives</label><select id="y" name="archive-dropdown"><option value="">Select month</option>HELLO FROM wp_get_archives</select><button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\'y\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button></div><div class="archive-dropdown-with-submit-js-disabled">HELLO FROM list-format wp_get_archives</div>DDD');
         });
     });
 });

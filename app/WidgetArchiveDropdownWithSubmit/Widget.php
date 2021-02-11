@@ -41,6 +41,16 @@ class Widget extends \WP_Widget
         echo '<button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\''. esc_attr($dropdown_id) .'\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button>';
 
         echo '</div>';
+
+        echo '<div class="archive-dropdown-with-submit-js-disabled">';
+
+        wp_get_archives([
+            'type' => 'monthly',
+            'format' => 'html',
+            'show_post_count' => true
+        ]);
+
+        echo '</div>';
  
         echo $args['after_widget'];
     }
