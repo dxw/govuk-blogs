@@ -24,9 +24,9 @@ class Widget extends \WP_Widget
         
         echo '<div class="archive-dropdown-with-submit-js-enabled">';
 
-        echo '<label class="screen-reader-text" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
+        echo '<label class="govuk-visually-hidden" for="' . esc_attr($dropdown_id) . '">' . $title . '</label>';
 
-        echo '<select id="' . esc_attr($dropdown_id) . '" name="archive-dropdown">';
+        echo '<select class="govuk-select" id="' . esc_attr($dropdown_id) . '" name="archive-dropdown">';
  
         echo '<option value="">Select month</option>';
  

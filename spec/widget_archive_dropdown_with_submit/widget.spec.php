@@ -67,7 +67,7 @@ describe(Widget::class, function () {
             ], []);
             $output = ob_get_clean();
 
-            expect($output)->to->equal('AAABBBArchivesCCC<div class="archive-dropdown-with-submit-js-enabled"><label class="screen-reader-text" for="y">Archives</label><select id="y" name="archive-dropdown"><option value="">Select month</option>HELLO FROM wp_get_archives</select><button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\'y\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button></div><div class="archive-dropdown-with-submit-js-disabled">HELLO FROM list-format wp_get_archives</div>DDD');
+            expect($output)->to->equal('AAABBBArchivesCCC<div class="archive-dropdown-with-submit-js-enabled"><label class="govuk-visually-hidden" for="y">Archives</label><select class="govuk-select" id="y" name="archive-dropdown"><option value="">Select month</option>HELLO FROM wp_get_archives</select><button class="govuk-button" data-module="govuk-button" onclick="newLocation = document.getElementById(\'y\').value; if ( newLocation != \'\' ) { window.location = newLocation; }">Go</button></div><div class="archive-dropdown-with-submit-js-disabled">HELLO FROM list-format wp_get_archives</div>DDD');
         });
     });
 });

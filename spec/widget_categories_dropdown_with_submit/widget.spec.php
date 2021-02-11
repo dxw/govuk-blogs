@@ -48,6 +48,7 @@ describe(Widget::class, function () {
                 'hierarchical' => '0',
                 'show_option_none' => 'Select Category',
                 'id'               => 'aaa-dropdown-with-submit-3',
+                'class' => 'govuk-select'
             ])->andReturnUsing(function () {
                 echo 'HELLO FROM wp_dropdown_categories';
             });
@@ -61,7 +62,7 @@ describe(Widget::class, function () {
             ], []);
             $output = ob_get_clean();
 
-            expect($output)->to->equal('AAABBBCategoriesCCC<form action="X" method="get"><label class="screen-reader-text" for="y">Categories</label>HELLO FROM wp_dropdown_categories<input type="submit" value="Go"></form>DDD');
+            expect($output)->to->equal('AAABBBCategoriesCCC<form action="X" method="get"><label class="govuk-visually-hidden" for="y">Categories</label>HELLO FROM wp_dropdown_categories<button class="govuk-button" data-module="govuk-button">Go</button></form>DDD');
         });
     });
 });
