@@ -43,11 +43,6 @@
   .widget_categories {
     border: none;
 
-    select {
-      @include govuk-font(16);
-      width: 100%;
-    }
-
     ul {
       margin-bottom: $gutter;
     }
