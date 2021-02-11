@@ -200,6 +200,9 @@
   .sidebar {
     .archive-dropdown-with-submit-js-enabled {
       display: block;
+      select {
+        margin-right: 5px;
+      }
     }
     .archive-dropdown-with-submit-js-disabled {
       display: none;
