@@ -29,10 +29,12 @@
 
 <?php if (comments_open()) : ?>
   <section id="respond" class="leave-a-comment">
-    <div class="group">
-      <h3 class="govuk-heading-m"><?php comment_form_title(__('Leave a comment', 'roots'), __('Leave a reply to %s', 'roots'), __(false, 'roots')); ?></h3>
-      <p class="govuk-body cancel-comment-reply"><?php cancel_comment_reply_link('Cancel reply') ?></p>
-    </div>
+    <header aria-label="Leave a comment" class="govuk-grid-row group">
+        <div class="govuk-grid-column-full">
+          <h3 class="govuk-heading-m"><?php comment_form_title(__('Leave a comment', 'roots'), __('Leave a reply to %s', 'roots'), __(false, 'roots')); ?></h3>
+          <p class="govuk-body cancel-comment-reply"><?php cancel_comment_reply_link('Cancel reply') ?></p>
+        </div>
+    </header>
 
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p class="govuk-body"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())) ?></p>
@@ -41,8 +43,8 @@
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
         <div class="govuk-form-group">
           <a name="comment_field"></a>
-          <label for="comment" class="govuk-label govuk-visually-hidden"><?php _e('Comment', 'roots') ?></label>
-          <textarea class="govuk-textarea" name="comment" id="comment" class="required" cols="50" rows="10" required aria-required="true"></textarea>
+          <label for="comment" class="govuk-label"><?php _e('Enter your comment', 'roots') ?></label>
+          <textarea class="govuk-textarea required" name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
         </div>
         <div class="js-comment-extra">
           <?php if (is_user_logged_in()) : ?>

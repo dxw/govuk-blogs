@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+- Fixed jQuery plugin (assets/js/comments.js) to restore display of error information when a user tries to submit a form with empty required fields
+
 ### Added
 
 - Accessible "Archives with dropdown" widget

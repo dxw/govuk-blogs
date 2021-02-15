@@ -24,29 +24,30 @@ function invalidEmailInput(input) {
 
 function addErrorPanel(errors) {
     $("#comment-validation").remove();
-    var html = '<div id="comment-validation" class="error-summary alert" role="alert">';
-    html += '<h3>Please complete the required fields</h3>';
+    var html = '<div id="comment-validation" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">';
+    html += '<h3 id="error-summary-title" class="govuk-error-summary__title">Please complete the required fields</h3><div class="govuk-error-summary__body"><ul class="govuk-list govuk-error-summary__list">';
     errors.forEach(function(error) {
-        html += '<p>' + error + '</p>';
+        html += '<li>' + error + '</li>';
     });
-    html += '</div>';
+    html += '</ul></div></div>';
     $("#respond header").after(html);
 }
 
 function addErrorMarker(field, errorText) {
-    field.parent("div.form-group").addClass("error");
-    field.siblings("label").append("<span class='error'>" + errorText + "</span>");
+    field.parent("div.govuk-form-group").addClass("govuk-form-group--error");
+    field.siblings("label").append("<span class='govuk-error-message'>" + errorText + "</span>");
 }
 
 function removeErrorMarker(field) {
-    field.siblings("label").find("span.error").remove();
-    field.parent("div.form-group").removeClass("error");
+    field.siblings("label").find("span.govuk-error-message").remove();
+    field.parent("div.govuk-form-group").removeClass("govuk-form-group--error");
 }
 
 jQuery(function ($) {
     'use strict';
 
-    $("#commentform input#submit").click(function () {
+    $("#commentform .govuk-button").click(function () {
+
         var errors = [];
         var commentField = $("#commentform #comment");
         var nameField = $("#commentform #author");
