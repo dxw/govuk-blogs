@@ -42,7 +42,7 @@ class Widget extends \WP_Widget
 
         echo '</div>';
 
-        echo '<div class="archive-dropdown-with-submit-js-disabled">';
+        echo '<div class="archive-dropdown-with-submit-js-disabled"><ul>';
 
         wp_get_archives([
             'type' => 'monthly',
@@ -50,7 +50,7 @@ class Widget extends \WP_Widget
             'show_post_count' => true
         ]);
 
-        echo '</div>';
+        echo '</ul></div>';
  
         echo $args['after_widget'];
     }
