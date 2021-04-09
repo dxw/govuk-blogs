@@ -106,8 +106,11 @@ jQuery(function ($) {
 
     //Get survey cookie, show banner if not set to true
     $(document).ready(function() {
-        var surveyTaken = GOVUK.cookie('no-more-survey');
+        var surveyTaken = GOVUK.getCookie('no-more-survey');
         if(surveyTaken != 'true') {
+            $('#user-satisfaction-survey').show();
+        }
+        if($('#user-satisfaction-survey').hasClass('non-dismissable')) {
             $('#user-satisfaction-survey').show();
         }
     })

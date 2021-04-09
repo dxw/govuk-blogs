@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [3.3.0] - 2021-04-09
+
+### Changed
+
+- The network-wide banner has an extra configuration options: additional text field, background colour, and ability to make non-dismissable
+
 ## [3.2.1] - 2021-03-10
 
 ### Changed

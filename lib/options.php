@@ -16,10 +16,20 @@ add_action('network_admin_menu', function () {
             } else {
                 delete_site_option('banner_setting');
             }
+            if (isset($_POST['banner_dismissable'])) {
+                $banner_setting = absint($_POST['banner_dismissable']);
+                update_site_option('banner_dismissable', $banner_setting);
+            } else {
+                delete_site_option('banner_dismissable');
+            }
+            $banner_colour = $_POST['banner_colour'];
             $banner_title = $_POST['banner_title'];
+            $banner_text = $_POST['banner_text'];
             $banner_link_text = $_POST['banner_link_text'];
             $banner_link = $_POST['banner_link'];
+            update_site_option('banner_colour', $banner_colour);
             update_site_option('banner_title', $banner_title);
+            update_site_option('banner_text', $banner_text);
             update_site_option('banner_link_text', $banner_link_text);
             update_site_option('banner_link', $banner_link);
         } ?>
@@ -46,7 +56,32 @@ add_action('network_admin_menu', function () {
                     <tr>
                         <td>
                             <label>
+                                Allow users to dismiss banner <input type="checkbox" name="banner_dismissable" value="1" <?php checked(get_site_option('banner_dismissable'), 1) ?> >
+                            </label>
+                            <br/>
+                            <p>If checked, users will be able to click a "No thanks" link to dismiss the banner for a year</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner background colour <input type="text" name="banner_colour" value="<?php echo esc_attr(get_site_option('banner_colour')) ?>">
+                                <br/>
+                                <p>Enter a CSS colour code (e.g. "#000000" for black). If left blank, default is blue.</p>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
                                 Banner title <input type="text" name="banner_title" value="<?php echo esc_attr(get_site_option('banner_title')) ?>">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner text <input type="text" name="banner_text" value="<?php echo esc_attr(get_site_option('banner_text')) ?>">
                             </label>
                         </td>
                     </tr>
