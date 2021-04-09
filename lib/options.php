@@ -16,6 +16,12 @@ add_action('network_admin_menu', function () {
             } else {
                 delete_site_option('banner_setting');
             }
+            if (isset($_POST['banner_dismissable'])) {
+                $banner_setting = absint($_POST['banner_dismissable']);
+                update_site_option('banner_dismissable', $banner_setting);
+            } else {
+                delete_site_option('banner_dismissable');
+            }
             $banner_title = $_POST['banner_title'];
             $banner_text = $_POST['banner_text'];
             $banner_link_text = $_POST['banner_link_text'];
@@ -43,6 +49,15 @@ add_action('network_admin_menu', function () {
                             <label>
                                 Display banner <input type="checkbox" name="banner_setting" value="1" <?php checked(get_site_option('banner_setting'), 1) ?> >
                             </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Allow users to dismiss banner <input type="checkbox" name="banner_dismissable" value="1" <?php checked(get_site_option('banner_dismissable'), 1) ?> >
+                            </label>
+                            <br/>
+                            <p>If checked, users will be able to click a "No thanks" link to dismiss the banner for a year</p>
                         </td>
                     </tr>
                     <tr>

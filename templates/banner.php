@@ -2,6 +2,7 @@
 $showBannerOnNetwork = get_site_option('banner_setting');
 $showBannerBySite = get_field('show_banner', 'options');
 if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerBySite === null)) {
+    $bannerDismissable = get_site_option('banner_dismissable');
     $bannerTitle = get_site_option('banner_title');
     $bannerText = get_site_option('banner_text');
     $bannerLinkText = get_site_option('banner_link_text');
@@ -14,9 +15,11 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
                 <p class="govuk-body"><?php echo esc_html($bannerText) ?></p>
                 <p class="govuk-body"><a href="<?php echo esc_url($bannerLink)?>" id="take-survey" class="govuk-link" target="_blank" rel="noopener noreferrer nofollow"><?php echo esc_html($bannerLinkText) ?></a></p>
             </div>
-            <div class="govuk-grid-column-one-quarter">
-                <p class="govuk-body"><a href="#survey-no-thanks" id="survey-no-thanks" class="govuk-link" role="button" aria-controls="user-satisfaction-survey">No thanks</a></p>
-            </div>
+            <?php if ($bannerDismissable) : ?>
+              <div class="govuk-grid-column-one-quarter">
+                  <p class="govuk-body"><a href="#survey-no-thanks" id="survey-no-thanks" class="govuk-link" role="button" aria-controls="user-satisfaction-survey">No thanks</a></p>
+              </div>
+            <?php endif; ?>
         </div>
       </section>
     </aside>
