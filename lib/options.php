@@ -17,9 +17,11 @@ add_action('network_admin_menu', function () {
                 delete_site_option('banner_setting');
             }
             $banner_title = $_POST['banner_title'];
+            $banner_text = $_POST['banner_text'];
             $banner_link_text = $_POST['banner_link_text'];
             $banner_link = $_POST['banner_link'];
             update_site_option('banner_title', $banner_title);
+            update_site_option('banner_text', $banner_text);
             update_site_option('banner_link_text', $banner_link_text);
             update_site_option('banner_link', $banner_link);
         } ?>
@@ -47,6 +49,13 @@ add_action('network_admin_menu', function () {
                         <td>
                             <label>
                                 Banner title <input type="text" name="banner_title" value="<?php echo esc_attr(get_site_option('banner_title')) ?>">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Banner text <input type="text" name="banner_text" value="<?php echo esc_attr(get_site_option('banner_text')) ?>">
                             </label>
                         </td>
                     </tr>
