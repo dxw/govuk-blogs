@@ -9,7 +9,7 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
     $bannerLinkText = get_site_option('banner_link_text');
     $bannerLink = get_site_option('banner_link'); ?>
     <aside id="user-satisfaction-survey-container" class="govuk-width-container">
-      <section id="user-satisfaction-survey" class="visible" aria-hidden="false" style="<?php echo $bannerColour ? 'background-color:' . esc_attr($bannerColour) : ''; ?>">
+      <section id="user-satisfaction-survey" class="visible <?php echo $bannerDismissable ? '' : 'non-dismissable' ?>" aria-hidden="false" style="<?php echo $bannerColour ? 'background-color:' . esc_attr($bannerColour) : ''; ?>">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-three-quarters">
                 <p class="govuk-heading-s"><?php echo esc_html($bannerTitle) ?></p>
