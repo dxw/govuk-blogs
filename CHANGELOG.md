@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [3.3.1] - 2021-08-25
+
+### Changed
+
+- Customised override styles to improve accessibility of cookie consent overlay, including better focus states and layout for smaller screen sizes
+
 ## [3.3.0] - 2021-04-09
 
 ### Changed
