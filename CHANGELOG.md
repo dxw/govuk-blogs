@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [3.3.2] - 2021-08-27
+
+- Escape author and co-author names in atom feeds
+
 ## [3.3.1] - 2021-08-25
 
 ### Changed
