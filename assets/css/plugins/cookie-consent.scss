@@ -39,6 +39,7 @@
 #ccc .ccc-notify-button:hover,
 #ccc .ccc-content--dark .ccc-button-solid:hover {
     background-color: #171919;
+    color: govuk-colour("white") !important;
 }
 
 #ccc .ccc-content--light .ccc-notify-button:hover {
