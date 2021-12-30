@@ -1,20 +1,15 @@
 <?xml version="1.0"?>
-<psalm>
-  <projectFiles>
-    <directory name="app"/>
-    <ignoreFiles>
-      <file name="app/load.php"/>
-      <file name="app/di.php"/>
-      <file name="app/FixRoots.php"/>
-      <file name="app/WidgetArchiveDropdownWithSubmit/Register.php"/>
-      <file name="app/WidgetArchiveDropdownWithSubmit/Widget.php"/>
-      <file name="app/WidgetCategoriesDropdownWithSubmit/Register.php"/>
-      <file name="app/WidgetCategoriesDropdownWithSubmit/Widget.php"/>
-      <file name="app/OpenGraphImage.php"/>
-    </ignoreFiles>
-  </projectFiles>
-  <issueHandlers>
-    <!-- WordPress functions are going to be tripping this one constantly -->
-    <UndefinedFunction errorLevel="suppress"/>
-  </issueHandlers>
+<psalm
+    errorLevel="1"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="app" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
 </psalm>
