@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [3.3.4] - 2022-01-07
+
+- Redirect search results from `/?s=query to /search/query/`
+
 ## [3.3.3] - 2021-11-29
 
 - Fix contrast for cookie consent button 
