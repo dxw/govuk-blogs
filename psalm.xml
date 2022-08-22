@@ -11,7 +11,7 @@
       <file name="app/WidgetCategoriesDropdownWithSubmit/Register.php"/>
       <file name="app/WidgetCategoriesDropdownWithSubmit/Widget.php"/>
       <file name="app/OpenGraphImage.php"/>
-      <directory name="vendor/bin" />
+      <directory name="vendor" />
     </ignoreFiles>
   </projectFiles>
   <issueHandlers>
