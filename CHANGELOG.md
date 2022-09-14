@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+### Removed
+
+- Support for PHP versions below 7.4
+
 ## [3.3.4] - 2022-02-15
 
 ### Changed
