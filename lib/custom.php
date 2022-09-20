@@ -35,3 +35,24 @@ function remove_class($classes)
 
     return $classes;
 }
+
+# Gives Editors perms for Widgets and Menus
+
+$role = get_role('editor');
+$role->add_cap('edit_theme_options');
+
+function custom_admin_menu()
+{
+    $user = new WP_User(get_current_user_id());
+    if (!empty($user->roles) && is_array($user->roles)) {
+        foreach ($user->roles as $role) {
+            $role = $role;
+        }
+    }
+
+    if ($role == "editor") {
+        remove_submenu_page('themes.php', 'themes.php');
+    }
+}
+
+add_action('admin_menu', 'custom_admin_menu');
