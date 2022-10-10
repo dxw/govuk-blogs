@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Support for PHP versions below 7.4
 
-## [3.3.4] - 2022-02-15
+## [3.3.5] - 2022-10-10
 
 ### Changed
 
