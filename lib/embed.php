@@ -4,10 +4,6 @@
 # Add non-default embed handlers, and fix ones which are not HTTPS aware
 #
 
-# Storify
-wp_oembed_add_provider('#https?://storify.com/.*#', 'https://api.embed.ly/1/oembed', true);
-
-
 # Instagram: add class so Instagram embeds can be styled independently
 add_filter('embed_oembed_html', function ($cache, $url, $attr, $post_ID) {
     if (preg_match('/https?:\/\/www\.\instagram\.com/', $url)==1) {
