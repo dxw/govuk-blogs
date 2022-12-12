@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - 2022-12-12
+
+- Removed Storify handling
+- Updated various dependencies via Dependabot
+- Replaced node-sass with dart-sass
+
 ## [3.3.5] - 2022-10-10
 
 ### Changed
@@ -21,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [3.3.3] - 2021-11-29
 
-- Fix contrast for cookie consent button 
+- Fix contrast for cookie consent button
 
 ## [3.3.2] - 2021-08-27
 
