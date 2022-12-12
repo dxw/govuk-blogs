@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - 2022-12-12
 
-- Removed Storify handling
+### Changed
+
 - Updated various dependencies via Dependabot
 - Replaced node-sass with dart-sass
+
+### Removed
+
+- Removed Storify handling
 
 ## [3.3.5] - 2022-10-10
 
