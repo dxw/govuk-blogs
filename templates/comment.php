@@ -6,8 +6,8 @@
   <p class="govuk-body media-heading">
     <span class="govuk-visually-hidden">Comment by</span>
     <span class="author"><?php comment_author_page(); ?></span>
-    <span class="govuk-visually-hidden">posted on</span>
-    <time datetime="<?php echo comment_date('c') ?>">on <?php echo esc_html(get_comment_date('d F Y')) ?></time>
+    <span class="govuk-visually-hidden">posted on </span>
+    <time datetime="<?php echo comment_date('c') ?>"><?php echo esc_html(get_comment_date('d F Y')) ?></time>
   </p>
   <div class="comment-body">
     <?php if ($comment->comment_approved == '0') : ?>
