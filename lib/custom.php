@@ -49,10 +49,6 @@ function custom_admin_menu()
             $role = $role;
         }
     }
-
-    if ($role == "editor") {
-        remove_submenu_page('themes.php', 'themes.php');
-    }
 }
 
 add_action('admin_menu', 'custom_admin_menu');
