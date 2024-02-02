@@ -218,3 +218,13 @@
     }
   }
 }
+
+.govuk-header__logotype-crown[width="32"] {
+  margin-right: 2px;
+  top: -3px;
+}
+
+.govuk-header__logotype-crown-fallback-image[width="32"] {
+  width: 32px;
+  height: 30px;
+}
