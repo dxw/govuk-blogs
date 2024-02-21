@@ -35,11 +35,11 @@ function addErrorPanel(errors) {
 
 function addErrorMarker(field, errorText) {
     field.parent("div.govuk-form-group").addClass("govuk-form-group--error");
-    field.siblings("label").append("<span class='govuk-error-message'>" + errorText + "</span>");
+    field.siblings("label").append("<p class='govuk-error-message'>" + errorText + "</p>");
 }
 
 function removeErrorMarker(field) {
-    field.siblings("label").find("span.govuk-error-message").remove();
+    field.siblings("label").find("p.govuk-error-message").remove();
     field.parent("div.govuk-form-group").removeClass("govuk-form-group--error");
 }
 
