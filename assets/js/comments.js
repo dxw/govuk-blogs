@@ -1,6 +1,6 @@
 function scrollToId(id) {
-    var idTag = $(id);
-    $('html,body').animate({scrollTop: idTag.offset().top},'slow');
+    var idTag = jQuery(id);
+    jQuery('html,body').animate({scrollTop: idTag.offset().top},'slow');
 }
 
 function inputEmpty(input) {
@@ -23,14 +23,14 @@ function invalidEmailInput(input) {
 }
 
 function addErrorPanel(errors) {
-    $("#comment-validation").remove();
+    jQuery("#comment-validation").remove();
     var html = '<div id="comment-validation" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">';
     html += '<h3 id="error-summary-title" class="govuk-error-summary__title">Please complete the required fields</h3><div class="govuk-error-summary__body"><ul class="govuk-list govuk-error-summary__list">';
     errors.forEach(function(error) {
         html += '<li>' + error + '</li>';
     });
     html += '</ul></div></div>';
-    $("#respond header").after(html);
+    jQuery("#respond header").after(html);
 }
 
 function addErrorMarker(field, errorText) {
