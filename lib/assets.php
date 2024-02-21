@@ -5,7 +5,7 @@ add_action('init', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('main', get_template_directory_uri().'/build/main.min.js');
+    wp_enqueue_script('main', get_template_directory_uri().'/build/main.min.js', ['jquery']);
     wp_enqueue_style('main', get_template_directory_uri().'/build/main.min.css');
 });
 
