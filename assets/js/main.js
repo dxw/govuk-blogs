@@ -2,7 +2,8 @@
 /* global jQuery: false */
 /* global cookie: false */
 
-window.GOVUKFrontend.initAll()
+import { initAll } from '../node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js';
+initAll()
 
 jQuery(function ($) {
     'use strict';

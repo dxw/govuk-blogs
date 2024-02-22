@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                         'node_modules/bowser/bowser.js',
                         'node_modules/url-polyfill/url-polyfill.js',
                         'node_modules/es6-promise/dist/es6-promise.auto.js',
-                        'node_modules/govuk-frontend/govuk/all.js',
+                        'node_modules/govuk-frontend/dist/govuk/all.js',
                         'assets/js/main.js',
                         'assets/js/comments.js'
                     ],
@@ -72,8 +72,8 @@ module.exports = function (grunt) {
                         src: [
                             'node_modules/bootstrap/img/glyphicons-halflings.png',
                             'node_modules/bootstrap/img/glyphicons-halflings-white.png',
-                            'node_modules/govuk-frontend/govuk/assets/fonts/*',
-                            'node_modules/govuk-frontend/govuk/assets/images/*'
+                            'node_modules/govuk-frontend/dist/govuk/assets/fonts/*',
+                            'node_modules/govuk-frontend/dist/govuk/assets/images/*'
                         ],
                         dest: 'build/',
                     },

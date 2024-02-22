@@ -18,3 +18,18 @@ add_action('wp_head', function () {
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
   <?php
 });
+
+add_filter('wp_script_attributes', 'addScriptTypeToJs', 10, 1);
+
+function addScriptTypeToJs($attr)
+{
+    if (empty($attr['id']) || empty($attr['src'])) {
+        return $attr;
+    }
+
+    if ($attr['id'] === 'main-js') {
+        $attr['type'] = 'module';
+    }
+
+    return $attr;
+}
