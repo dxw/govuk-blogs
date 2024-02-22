@@ -77,6 +77,13 @@ module.exports = function (grunt) {
                         ],
                         dest: 'build/',
                     },
+					{
+						expand: true,
+						cwd: 'assets/js/',
+						flatten: true,
+						src: 'govuk-frontend-load.js',
+						dest: 'build/'
+					}
                 ],
             },
         },

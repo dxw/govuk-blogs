@@ -6,6 +6,7 @@ add_action('init', function () {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('main', get_template_directory_uri().'/build/main.min.js', ['jquery']);
+    wp_enqueue_script('govuk-frontend', get_template_directory_uri().'/build/govuk-frontend-load.js');
     wp_enqueue_style('main', get_template_directory_uri().'/build/main.min.css');
 });
 
@@ -27,7 +28,7 @@ function addScriptTypeToJs($attr)
         return $attr;
     }
 
-    if ($attr['id'] === 'main-js') {
+    if ($attr['id'] === 'govuk-frontend-js') {
         $attr['type'] = 'module';
     }
 
