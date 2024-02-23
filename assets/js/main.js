@@ -2,8 +2,6 @@
 /* global jQuery: false */
 /* global cookie: false */
 
-window.GOVUKFrontend.initAll()
-
 jQuery(function ($) {
     'use strict';
 
