@@ -61,7 +61,7 @@
             <div class="govuk-form-group">
               <a name="email_field"></a>
               <label class="govuk-label" for="email"><?php _e('Email', 'roots'); ?></label>
-              <span class="govuk-hint">We only ask for your email address so we know you're a real person</span>
+              <div class="govuk-hint">We only ask for your email address so we know you're a real person</div>
               <input type="email" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="email">
             </div>
           <?php endif ?>
