@@ -54,7 +54,6 @@ module.exports = function (grunt) {
                     'build/main.min.js': [
                         'assets/js/plugins/*.js',
                         'node_modules/jquery-placeholder/jquery.placeholder.js',
-                        'node_modules/bowser/bowser.js',
                         'node_modules/url-polyfill/url-polyfill.js',
                         'node_modules/es6-promise/dist/es6-promise.auto.js',
                         'node_modules/govuk-frontend/dist/govuk/all.js',
