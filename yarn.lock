@@ -1888,11 +1888,6 @@ jpeg-recompress-bin@^4.0.0:
     bin-wrapper "^4.1.0"
     logalot "^2.0.0"
 
-jquery-placeholder@^2.0.7:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/jquery-placeholder/-/jquery-placeholder-2.3.1.tgz#6025a1241019c08a8fb3ab8ed076285c05ba5e91"
-  integrity sha512-5MK5cRqAfgLrnky1vlLOoK/1SSivYmCFDWwYWLI92aD7VhiIBMmmI6V56F5xyROIXCJnd4BtTBtWzEZ3SiIGTw==
-
 js-yaml@^3.13.1, js-yaml@~3.14.0:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"

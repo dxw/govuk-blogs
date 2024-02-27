@@ -36,9 +36,6 @@ jQuery(function ($) {
 
     // Polyfills
 
-    $('input, textarea').placeholder()
-
-
     // Transform category list into select box on mobile view
 
     var mobileMaxWidth = $(window).width();
