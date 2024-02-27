@@ -73,7 +73,8 @@ module.exports = function (grunt) {
                             'node_modules/bootstrap/img/glyphicons-halflings.png',
                             'node_modules/bootstrap/img/glyphicons-halflings-white.png',
                             'node_modules/govuk-frontend/dist/govuk/assets/fonts/*',
-                            'node_modules/govuk-frontend/dist/govuk/assets/images/*'
+                            'node_modules/govuk-frontend/dist/govuk/assets/images/*',
+							'node_modules/govuk-frontend/dist/govuk/assets/manifest.json'
                         ],
                         dest: 'build/',
                     },
