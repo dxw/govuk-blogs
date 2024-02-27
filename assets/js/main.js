@@ -122,20 +122,6 @@ jQuery(function ($) {
         GOVUK.cookie('no-more-survey', 'true', { days: 365 });
     });
 
-    // From git@git.dxw.net:libs/lte-ie
-    if (bowser.msie) {
-      var h = $('html')
-
-      for (var v = 0; v <= 15; v++) {
-        if (bowser.version <= v) {
-          h.addClass('lte-ie'+v)
-        }
-        if (bowser.version < v) {
-          h.addClass('lt-ie'+v)
-        }
-      }
-    }
-
     // Analytics for external links
     $('a').click(function (e) {
       var href = $(e.currentTarget).attr('href')
