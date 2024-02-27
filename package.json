@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.4",
-    "govuk-frontend": "^5.0.0",
-    "url-polyfill": "^1.0.7"
+    "govuk-frontend": "^5.0.0"
   }
 }
