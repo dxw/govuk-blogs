@@ -53,7 +53,6 @@ module.exports = function (grunt) {
                 files: {
                     'build/main.min.js': [
                         'assets/js/plugins/*.js',
-                        'node_modules/url-polyfill/url-polyfill.js',
                         'node_modules/es6-promise/dist/es6-promise.auto.js',
                         'node_modules/govuk-frontend/dist/govuk/all.js',
                         'assets/js/main.js',
