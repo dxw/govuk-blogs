@@ -14,7 +14,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Update markup in line with 5.0
 - Update build file paths
 - Set jquery as dependency for main.js
-- Update govuk-frontend to 4.0
 
 ## [3.3.12] - 2024-02-21
 
