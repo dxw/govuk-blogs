@@ -19,7 +19,6 @@ require(__DIR__.'/lib/custom.php');
 
 require(__DIR__.'/lib/image-licensing.php');
 require(__DIR__.'/lib/options.php');
-require(__DIR__.'/lib/assets.php');
 require(__DIR__.'/lib/menus.php');
 require(__DIR__.'/lib/excerpt.php');
 require(__DIR__.'/lib/featured.php');
