@@ -41,6 +41,18 @@ module.exports = function (grunt) {
             }
         },
 
+		fingerprint: {
+			production: {
+			  options: {
+				json: 'build/fingerprint.json',
+			  },
+			  src: [
+				'build/*.min.css',
+				'build/main.min.js'
+				],
+			},
+		},
+
         uglify: {
             dist: {
                 options: {
@@ -98,14 +110,8 @@ module.exports = function (grunt) {
         },
 
         _watch: {
-            css: {
-                files: ['assets/css/**/*.scss'],
-                tasks: ['sass'],
-            },
-            js: {
-                files: ['assets/js/**/*.js'],
-                tasks: ['uglify'],
-            },
+			files: ['assets/css/**/*.scss', 'assets/js/**/*.js'],
+			tasks: ['clean', 'copy', 'sass', 'uglify', 'fingerprint' ],
         },
     })
 
@@ -114,6 +120,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-image')
+	grunt.loadNpmTasks('@dxw-digital/grunt-fingerprint')
     grunt.loadNpmTasks('grunt-contrib-clean')
 
     grunt.renameTask('watch', '_watch')
@@ -127,6 +134,7 @@ module.exports = function (grunt) {
         'copy',
         'sass',
         'uglify',
+		'fingerprint'
     ])
 
 }
