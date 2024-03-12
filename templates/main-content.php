@@ -11,7 +11,7 @@
   <?php endif ?>
   <main id="content" class="govuk-grid-row" role="main">
     <div class="govuk-grid-column-two-thirds main-content">
-      <?php include roots_template_path() ?>
+		<?php h()->w_requested_template() ?>
       <?php if (!is_single() || !is_page()) {
       	get_template_part('templates/paging');
       } ?>
