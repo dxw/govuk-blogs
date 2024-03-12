@@ -2,26 +2,18 @@
 
 namespace GovUKBlogs\WidgetCategoriesDropdownWithSubmit;
 
-require_once(dirname(__DIR__).'/helpers/wp_widget.php');
-
-use \phpmock\mockery\PHPMockery;
-
 describe(Widget::class, function () {
     beforeEach(function () {
         $this->widget = new Widget();
     });
 
-    afterEach(function () {
-        \Mockery::close();
-    });
-
     it('extends WP_Widget', function () {
-        expect($this->widget)->to->be->an->instanceof(\WP_Widget::class);
+        expect($this->widget)->toBeAnInstanceOf(\WP_Widget::class);
     });
 
     describe('->__construct()', function () {
         it("calls its parent's constructor", function () {
-            expect($this->widget->__constructorArguments)->to->equal([
+            expect($this->widget->__constructorArguments)->toEqual([
                 'categories-dropdown-with-submit',
                 'Categories Dropdown With Submit',
                 [
@@ -39,30 +31,23 @@ describe(Widget::class, function () {
         });
 
         it('outputs HTML', function () {
-            PHPMockery::mock(__NAMESPACE__, 'esc_url')->with('x')->andReturn('X');
-            PHPMockery::mock(__NAMESPACE__, 'home_url')->with()->andReturn('x');
-            PHPMockery::mock(__NAMESPACE__, 'esc_attr')->with('aaa-dropdown-with-submit-3')->andReturn('y');
-            PHPMockery::mock(__NAMESPACE__, 'wp_dropdown_categories')->with([
-                'orderby'      => 'name',
-                'show_count'   => '0',
-                'hierarchical' => '0',
-                'show_option_none' => 'Select Category',
-                'id'               => 'aaa-dropdown-with-submit-3',
-                'class' => 'govuk-select'
-            ])->andReturnUsing(function () {
+            allow('esc_url')->toBeCalled()->with('x')->andReturn('X');
+            allow('home_url')->toBeCalled()->with()->andReturn('x');
+            allow('esc_attr')->toBeCalled()->with('aaa-dropdown-with-submit-3')->andReturn('y');
+            allow('wp_dropdown_categories')->toBeCalled()->andRun(function () {
                 echo 'HELLO FROM wp_dropdown_categories';
             });
 
-            ob_start();
-            $this->widget->widget([
-                'before_widget' => 'AAA',
-                'before_title' => 'BBB',
-                'after_title' => 'CCC',
-                'after_widget' => 'DDD',
-            ], []);
-            $output = ob_get_clean();
+            $closure = function () {
+                $this->widget->widget([
+                    'before_widget' => 'AAA',
+                    'before_title' => 'BBB',
+                    'after_title' => 'CCC',
+                    'after_widget' => 'DDD',
+                ], []);
+            };
 
-            expect($output)->to->equal('AAABBBCategoriesCCC<form action="X" method="get"><label class="govuk-visually-hidden" for="y">Categories</label>HELLO FROM wp_dropdown_categories<button class="govuk-button" data-module="govuk-button">Go</button></form>DDD');
+            expect($closure)->toEcho('AAABBBCategoriesCCC<form action="X" method="get"><label class="govuk-visually-hidden" for="y">Categories</label>HELLO FROM wp_dropdown_categories<button class="govuk-button" data-module="govuk-button">Go</button></form>DDD');
         });
     });
 });

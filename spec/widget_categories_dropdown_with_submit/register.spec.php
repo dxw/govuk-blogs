@@ -2,24 +2,20 @@
 
 namespace GovUKBlogs\WidgetCategoriesDropdownWithSubmit;
 
-use \phpmock\mockery\PHPMockery;
-
 describe(Register::class, function () {
     beforeEach(function () {
         $this->register = new Register();
     });
 
-    afterEach(function () {
-        \Mockery::close();
-    });
-
     it('is registerable', function () {
-        expect($this->register)->to->be->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->register)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
-        it('does something', function () {
-            PHPMockery::mock(__NAMESPACE__, 'add_action')->with('widgets_init', [$this->register, 'widgetsInit'])->once();
+        it('adds the action', function () {
+            allow('add_action')->toBeCalled();
+
+            expect('add_action')->toBeCalled()->with('widgets_init', [$this->register, 'widgetsInit'])->once();
 
             $this->register->register();
         });
@@ -27,7 +23,9 @@ describe(Register::class, function () {
 
     describe('->widgetsInit()', function () {
         it('registers the widget', function () {
-            PHPMockery::mock(__NAMESPACE__, 'register_widget')->with(Widget::class)->once();
+            allow('register_widget')->toBeCalled();
+            
+            expect('register_widget')->toBeCalled()->with(Widget::class)->once();
 
             $this->register->widgetsInit();
         });
