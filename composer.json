@@ -15,7 +15,8 @@
         "mustache/mustache": "^2.14",
         "dxw/php-missing": "^1.0",
         "dxw/result": "^1.0",
-        "dxw/iguana": "^1.1"
+        "dxw/iguana": "^1.1",
+		"dxw/iguana-theme": "^1.1"
     },
     "scripts": {
         "post-update-cmd": "vendor/bin/phar-install"
