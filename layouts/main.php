@@ -5,23 +5,22 @@
 <html lang="en" class="govuk-template">
 	<head>
 		<meta charset="utf-8" />
-		<title><?php echo esc_html(get_the_title()); ?></title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<meta name="theme-color" content="#0b0c0c">
 
-		<link rel="icon" sizes="48x48" href="<?php echo esc_attr($govukFrontendAssetPath); ?>images/favicon.ico">
-		<link rel="icon" sizes="any" href="<?php echo esc_attr($govukFrontendAssetPath); ?>images/favicon.svg" type="image/svg+xml">
-		<link rel="mask-icon" href="<?php echo esc_attr($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
-		<link rel="apple-touch-icon" href="<?php echo esc_attr($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
-		<link rel="manifest" href="<?php echo esc_attr($govukFrontendAssetPath); ?>manifest.json">
+		<link rel="icon" sizes="48x48" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.ico">
+		<link rel="icon" sizes="any" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.svg" type="image/svg+xml">
+		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
+		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
+		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
 
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class('govuk-template__body'); ?>>
    		<script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
-   		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">{{ skipLinkMessage }}</a>
+   		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 		<header role="banner" class="govuk-header" data-module="govuk-header">
 			<div class="govuk-header__container govuk-width-container">
 				<div class="govuk-header__logo">

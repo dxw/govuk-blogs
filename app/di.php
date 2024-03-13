@@ -6,6 +6,9 @@ $registrar->addInstance(new \Dxw\Iguana\Theme\LayoutRegister(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 
+// Theme
+$registrar->addInstance(new \GovUKBlogs\Theme\ThemeSupports());
+
 $registrar->addInstance(new \GovUKBlogs\WidgetCategoriesDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\WidgetArchiveDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\FixRoots());
