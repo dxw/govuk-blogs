@@ -24,7 +24,7 @@
     "require-dev": {
         "roave/security-advisories": "dev-latest",
         "dxw/phar-install": "^1.1",
-        "dxw/php-cs-fixer-config": "^1.0",
+        "dxw/php-cs-fixer-config": "^2.0",
         "kahlan/kahlan": "^5.2"
     }
 }
