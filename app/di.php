@@ -3,7 +3,7 @@
 // Iguana theme setup
 $registrar->addInstance(new \Dxw\Iguana\Theme\Helpers());
 $registrar->addInstance(new \Dxw\Iguana\Theme\LayoutRegister(
-    $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
+	$registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 
 // Theme

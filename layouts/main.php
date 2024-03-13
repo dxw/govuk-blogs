@@ -1,5 +1,5 @@
 <?php
-    $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/';
+$govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/';
 ?>
 <!doctype html>
 <html lang="en" class="govuk-template">
