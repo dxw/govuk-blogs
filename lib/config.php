@@ -1,4 +1,5 @@
 <?php
+
 // Roots uses locate_template() to import /lib/activation.php, so this doesn't need to be included by functions.php
 
 /**
@@ -29,5 +30,5 @@ define('POST_EXCERPT_LENGTH', 40);
  * Default: 940px is the default Bootstrap container width.
  */
 if (!isset($content_width)) {
-    $content_width = 620;
+	$content_width = 620;
 }

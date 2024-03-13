@@ -3,69 +3,69 @@
 namespace GovUKBlogs;
 
 describe(OpenGraphImage::class, function () {
-    beforeEach(function () {
-        $this->openGraphImage = new OpenGraphImage();
-    });
+	beforeEach(function () {
+		$this->openGraphImage = new OpenGraphImage();
+	});
 
-    it('is registerable', function () {
-        expect($this->openGraphImage)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
-    });
+	it('is registerable', function () {
+		expect($this->openGraphImage)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
+	});
 
-    describe('->register()', function () {
-        it('adds action', function () {
-            allow('add_action')->toBeCalled();
-            
-            expect('add_action')->toBeCalled()->with('wp_head', [$this->openGraphImage, 'wpHead'])->once();
+	describe('->register()', function () {
+		it('adds action', function () {
+			allow('add_action')->toBeCalled();
 
-            $this->openGraphImage->register();
-        });
-    });
+			expect('add_action')->toBeCalled()->with('wp_head', [$this->openGraphImage, 'wpHead'])->once();
 
-    describe('->wpHead()', function () {
-        context('when not on a post/page', function () {
-            beforeEach(function () {
-                allow('is_single')->toBeCalled()->andReturn(false);
-            });
+			$this->openGraphImage->register();
+		});
+	});
 
-            it('does nothing', function () {
-                ob_start();
-                $this->openGraphImage->wpHead();
-                $output = ob_get_clean();
-                expect($output)->toEqual('');
-            });
-        });
+	describe('->wpHead()', function () {
+		context('when not on a post/page', function () {
+			beforeEach(function () {
+				allow('is_single')->toBeCalled()->andReturn(false);
+			});
 
-        context('when on a post', function () {
-            beforeEach(function () {
-                allow('is_single')->toBeCalled()->andReturn(true);
-            });
+			it('does nothing', function () {
+				ob_start();
+				$this->openGraphImage->wpHead();
+				$output = ob_get_clean();
+				expect($output)->toEqual('');
+			});
+		});
 
-            context('when there is no featured image', function () {
-                beforeEach(function () {
-                    allow('has_post_thumbnail')->toBeCalled()->andReturn(false);
-                });
+		context('when on a post', function () {
+			beforeEach(function () {
+				allow('is_single')->toBeCalled()->andReturn(true);
+			});
 
-                it('does nothing', function () {
-                    ob_start();
-                    $this->openGraphImage->wpHead();
-                    $output = ob_get_clean();
-                    expect($output)->toEqual('');
-                });
-            });
+			context('when there is no featured image', function () {
+				beforeEach(function () {
+					allow('has_post_thumbnail')->toBeCalled()->andReturn(false);
+				});
 
-            context('there is a featured image', function () {
-                beforeEach(function () {
-                    allow('has_post_thumbnail')->toBeCalled()->andReturn(true);
-                    allow('get_the_post_thumbnail_url')->toBeCalled()->andReturn('https://govuk-blog.invalid/wp-content/uploads/my-image.png');
-                });
+				it('does nothing', function () {
+					ob_start();
+					$this->openGraphImage->wpHead();
+					$output = ob_get_clean();
+					expect($output)->toEqual('');
+				});
+			});
 
-                it('outputs an og:image tag', function () {
-                    ob_start();
-                    $this->openGraphImage->wpHead();
-                    $output = ob_get_clean();
-                    expect($output)->toEqual('<meta property="og:image" content="https://govuk-blog.invalid/wp-content/uploads/my-image.png">'."\n");
-                });
-            });
-        });
-    });
+			context('there is a featured image', function () {
+				beforeEach(function () {
+					allow('has_post_thumbnail')->toBeCalled()->andReturn(true);
+					allow('get_the_post_thumbnail_url')->toBeCalled()->andReturn('https://govuk-blog.invalid/wp-content/uploads/my-image.png');
+				});
+
+				it('outputs an og:image tag', function () {
+					ob_start();
+					$this->openGraphImage->wpHead();
+					$output = ob_get_clean();
+					expect($output)->toEqual('<meta property="og:image" content="https://govuk-blog.invalid/wp-content/uploads/my-image.png">'."\n");
+				});
+			});
+		});
+	});
 });

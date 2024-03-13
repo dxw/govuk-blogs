@@ -1,14 +1,14 @@
 <?php
-  if (post_password_required()) {
-      return;
-  }
+if (post_password_required()) {
+	return;
+}
 
- if (have_comments()) : ?>
+if (have_comments()) : ?>
   <section id="comments" class="comments">
     <h3 class="govuk-heading-m"><?php printf(_n('1 comment', '%1$s comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number())) ?></h3>
 
     <ol class="media-list">
-      <?php wp_list_comments(['walker' => new Roots_Walker_Comment]) ?>
+      <?php wp_list_comments(['walker' => new Roots_Walker_Comment()]) ?>
     </ol>
 
     <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
