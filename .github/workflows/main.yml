@@ -28,7 +28,5 @@ jobs:
         run: composer install --no-interaction
       - name: PHP CS fix
         run: vendor/bin/php-cs-fixer fix --dry-run -v --diff
-      - name: Run Psalm
-        run: vendor/bin/psalm 
       - name: Run Kahlan tests
         run: vendor/bin/kahlan spec

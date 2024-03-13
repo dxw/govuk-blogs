@@ -13,8 +13,8 @@
     <div class="govuk-grid-column-two-thirds main-content">
       <?php include roots_template_path() ?>
       <?php if (!is_single() || !is_page()) {
-    get_template_part('templates/paging');
-} ?>
+      	get_template_part('templates/paging');
+      } ?>
     </div>
     <div class="govuk-grid-column-one-third sidebar-contain">
       <?php get_template_part('templates/sidebar') ?>
