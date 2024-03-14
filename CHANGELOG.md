@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Replaced Roots with Iguana-theme for handling templates
+- Created new main template file and removed Mustache variables
 - Migrate unit tests from Peridot to Kahlan
 
 ## [4.0.1] - 2024-03-08

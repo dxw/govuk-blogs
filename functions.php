@@ -5,7 +5,6 @@ $registrar->register();
 
 roots_require('lib/utils.php');
 roots_require('lib/init.php');
-roots_require('lib/wrapper.php');
 roots_require('lib/sidebar.php');
 require(__DIR__.'/lib/config.php');
 require(__DIR__.'/lib/activation.php');
