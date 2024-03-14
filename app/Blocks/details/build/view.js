@@ -1,0 +1,1 @@
+console.log("Hello World! (from govukblogs-details block)");
