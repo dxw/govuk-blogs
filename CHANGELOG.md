@@ -3,13 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [4.1.0] - 2024-03-14
 
 ### Changed
 
 - Replaced Roots with Iguana-theme for handling templates
 - Created new main template file and removed Mustache variables
 - Migrate unit tests from Peridot to Kahlan
+- Introduce fingerprinting for JS and CSS
 
 ## [4.0.1] - 2024-03-08
 
