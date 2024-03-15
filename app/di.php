@@ -6,6 +6,9 @@ $registrar->addInstance(new \Dxw\Iguana\Theme\LayoutRegister(
 	$registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 
+// Blocks
+$registrar->addInstance(new \GovUKBlogs\Blocks\Details\Block());
+
 // Theme
 $registrar->addInstance(new \GovUKBlogs\Theme\ThemeSupports());
 
