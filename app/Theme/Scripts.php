@@ -14,7 +14,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 	public function register()
 	{
 		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
-		add_action('admin_enqueue_scripts', [$this, 'wpEnqueueEditorStyles']);
+		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
 		add_action('init', [$this, 'removeRootsScript']);
 		add_filter('wp_script_attributes', [$this, 'addScriptTypeToJs'], 10, 1);
 	}
@@ -23,6 +23,11 @@ class Scripts implements \Dxw\Iguana\Registerable
 	{
 		$newFileName = $this->cssManifest->get($path);
 		return get_template_directory_uri() . '/' . $newFileName;
+	}
+
+	private function getFingerPrintedRelativePath($path)
+	{
+		return $this->cssManifest->get($path);
 	}
 
 	public function removeRootsScript()
@@ -39,7 +44,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 
 	public function wpEnqueueEditorStyles()
 	{
-		wp_enqueue_style('admin', $this->getFingerPrintedPath('build/admin.min.css'));
+		add_editor_style($this->getFingerPrintedRelativePath('build/admin.min.css'));
 	}
 
 	public function addScriptTypeToJs($attr)
