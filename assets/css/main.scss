@@ -1,37 +1,78 @@
-@import "common/global_settings";
+/*
+ *    TABLE OF CONTENTS
+ *
+ *    - GOV.UK Frontend
+ *    - Settings
+ *    - Tools
+ *    - Helpers
+ *    - Core
+ *    - Objects
+ *    - Components
+ *    - Utilities
+ *    - Overrides
+ *
+ */
 
+/*--------------------------------------------------------------
+ #GOV.UK Frontend
+--------------------------------------------------------------*/
+@import "settings/govuk-frontend";
 @import "govuk-frontend/dist/govuk/all";
 
-@import "common/variables";
-@import "h5bp";
+/*--------------------------------------------------------------
+ #Settings
+--------------------------------------------------------------*/
+@import "settings/variables";
 
-@import "common/mixins";
-@import "common/containers";
-@import "common/common";
-@import "common/type";
-@import "common/article";
-@import "common/typography";
-@import "common/forms";
-@import "common/header";
-@import "common/sidebar";
-@import "common/footer";
-@import "common/buttons";
-@import "common/alerts";
-@import "common/private-notice";
+/*--------------------------------------------------------------
+ #Tools
+--------------------------------------------------------------*/
 
-@import "partials/banner";
+/*--------------------------------------------------------------
+ #Helpers
+--------------------------------------------------------------*/
+@import "helpers/mixins";
 
-@import "partials/comments";
-@import "partials/featured";
-@import "partials/subpages";
-@import "partials/pagination";
-@import "partials/better-click-to-tweet";
-@import "partials/dxw-digest";
+/*--------------------------------------------------------------
+ #Core
+--------------------------------------------------------------*/
+@import "core/h5bp";
+@import "core/common";
+@import "core/type";
+@import "core/typography";
 
-@import "partials/404";
+/*--------------------------------------------------------------
+ #Objects
+--------------------------------------------------------------*/
+@import "objects/containers";
 
-@import "partials/homepage";
+/*--------------------------------------------------------------
+ #Components
+--------------------------------------------------------------*/
+@import "components/article";
+@import "components/forms";
+@import "components/header";
+@import "components/sidebar";
+@import "components/footer";
+@import "components/buttons";
+@import "components/alerts";
+@import "components/private-notice";
+@import "components/banner";
+@import "components/comments";
+@import "components/featured";
+@import "components/subpages";
+@import "components/pagination";
+@import "components/better-click-to-tweet";
+@import "components/dxw-digest";
+@import "components/404";
+@import "components/homepage";
+@import "components/cookie-consent";
 
-@import "plugins/cookie-consent";
+/*--------------------------------------------------------------
+ #Utilities
+--------------------------------------------------------------*/
 
-@import "print";
+/*--------------------------------------------------------------
+ #Overrides
+--------------------------------------------------------------*/
+@import "overrides/print";
