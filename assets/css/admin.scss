@@ -1,28 +1,59 @@
-@import "common/global_settings";
+/*
+ *    TABLE OF CONTENTS
+ *
+ *    - GOV.UK Frontend
+ *    - Settings
+ *    - Tools
+ *    - Helpers
+ *    - Core
+ *    - Objects
+ *    - Components
+ *    - Utilities
+ *    - Overrides
+ *
+ */
+
+/*--------------------------------------------------------------
+ #GOV.UK Frontend
+--------------------------------------------------------------*/
+@import "settings/govuk-frontend";
 @import "govuk-frontend/dist/govuk/all";
 
-.hallo-editor {
-  @import "common/variables";
-  @import "common/mixins";
-  @import "common/common";
-  @extend .entry-content;
+/*--------------------------------------------------------------
+ #Settings
+--------------------------------------------------------------*/
+@import "settings/variables";
 
-  a {
-    text-decoration: underline;
-  }
+/*--------------------------------------------------------------
+ #Tools
+--------------------------------------------------------------*/
 
-  ul {
-    list-style: disc;
-    margin-left: 2em;
-  }
+/*--------------------------------------------------------------
+ #Helpers
+--------------------------------------------------------------*/
 
-  table {
-    max-width: 620px;
-  }
-}
+/*--------------------------------------------------------------
+ #Core
+--------------------------------------------------------------*/
 
-label.setting[data-setting="alt"] {
-    ::after {
-        content: " (should convey what point the image is making)";
-    }
-}
+/*--------------------------------------------------------------
+ #Objects
+--------------------------------------------------------------*/
+@import "objects/alignment";
+
+/*--------------------------------------------------------------
+ #Components
+--------------------------------------------------------------*/
+@import "components/entry";
+@import "components/footnotes";
+@import "components/related-posts";
+
+/*--------------------------------------------------------------
+ #Utilities
+--------------------------------------------------------------*/
+@import "utilities/visibility";
+
+/*--------------------------------------------------------------
+ #Overrides
+--------------------------------------------------------------*/
+@import "overrides/hallo-editor";

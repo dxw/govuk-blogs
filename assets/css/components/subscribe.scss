@@ -1,0 +1,23 @@
+.subscribe {
+  margin: 0;
+
+  ul {
+
+    .lte-ie8 & {
+      margin-left: 0;
+    }
+
+    li {
+      width: 50%;
+      float: left;
+      margin-right: 0;
+      padding-left: 0;
+
+      a {
+        @include icons;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
