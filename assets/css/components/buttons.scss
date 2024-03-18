@@ -189,3 +189,61 @@ input{
     }
   }
 }
+
+.icons-buttons {
+  margin: $gutter 0;
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+
+    .lte-ie8 & {
+      margin-left: 0;
+    }
+  }
+
+  li {
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0;
+
+    @media (max-width: $mobileMaxWidth) {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: $spacingSmall;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+    a {
+      @include icons;
+      @include govuk-font(16);
+
+      &.twitter {
+        @include icon-twitter;
+      }
+
+      &.facebook {
+        @include icon-facebook;
+      }
+
+      &.google {
+        @include icon-googleplus;
+      }
+
+      &.linkedin {
+        @include icon-linkedin;
+      }
+
+      &.email {
+        @include icon-email;
+      }
+
+      &.feed {
+        @include icon-rss;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.footnotes {
+  margin-bottom: $gutter;
+  border-top: $greyTopBorder;
+  padding-top: $gutterHalf;
+  ul {
+    li {
+      .number {
+        padding-right: $spacingSmall;
+        font-weight: bold;
+      }
+    }
+  }
+}

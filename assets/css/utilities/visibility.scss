@@ -1,0 +1,60 @@
+.no-js .hide-if-no-js {
+  display: none;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visible-desktop {
+  display: block !important;
+  visibility: visible !important;
+  @media screen and (max-width: $mobileMaxWidth) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.hidden-tablet {
+  @media screen and (max-width: $tabletMaxWidth) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.visible-tablet {
+  display: none !important;
+  visibility: hidden;
+  @media screen and (max-width: $tabletMaxWidth) {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.hidden-mobile {
+  @media screen and (max-width: $mobileMaxWidth) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.visible-mobile {
+  display: none !important;
+  visibility: hidden;
+  @media screen and (max-width: $mobileMaxWidth) {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.visible-print {
+  display: none !important;
+}
+
+// Hide screen reader text
+.screen-reader-text{
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}

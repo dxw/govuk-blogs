@@ -1,0 +1,54 @@
+.alignnone {
+	display: block;
+}
+
+.alignright {
+	float: right;
+	margin: 0px 0px $gutterHalf $gutterHalf;
+}
+
+.alignleft {
+	float: left;
+	margin: 0px $gutterHalf $gutterHalf 0px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto $gutter auto;
+	clear: both;
+}
+
+.size-full {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	&.alignnone,
+	&.alignright,
+	&.alignleft,
+	&.aligncenter,
+	{
+		border: solid 1px $borderColour;
+	}
+}
+
+@media (max-width: 500px) {
+	.alignleft,
+	.alignright,
+	.aligncenter {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		float: none;
+	}
+}
+
+.full-width {
+  @media (max-width: $mobileMaxWidth) {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
