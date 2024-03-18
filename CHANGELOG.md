@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Update theme name and version, to differentiate from (Classic Editor) version 4 of the theme.
+- Refactor stylesheet structure to align with GOV.UK Frontend framework.
 
 ### Removed
 
