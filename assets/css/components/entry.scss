@@ -1,0 +1,33 @@
+.entry-summary, .entry-content, .page-content, .main-content {
+
+  // iframe container
+  .entry-content-asset {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    &.twitter-embed {
+      margin-bottom: 0;
+      padding: 0;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  .instagram-embed {
+    padding: 35px 0 0 0;
+    height: auto;
+  }
+
+  .storify {
+    iframe {
+      position: static;
+    }
+  }
+}
+
+.entry-summary, .entry-content, .page-content {
+  margin: 0px 0px $gutterHalf 0px;
+}

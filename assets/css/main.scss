@@ -37,18 +37,21 @@
  #Core
 --------------------------------------------------------------*/
 @import "core/global-styles";
-@import "core/common";
 @import "core/typography";
 
 /*--------------------------------------------------------------
  #Objects
 --------------------------------------------------------------*/
+@import "objects/alignment";
 @import "objects/containers";
 
 /*--------------------------------------------------------------
  #Components
 --------------------------------------------------------------*/
+@import "components/address";
 @import "components/article";
+@import "components/entry";
+@import "components/main-content";
 @import "components/forms";
 @import "components/header";
 @import "components/sidebar";
@@ -66,10 +69,14 @@
 @import "components/404";
 @import "components/homepage";
 @import "components/cookie-consent";
+@import "components/footnotes";
+@import "components/related-posts";
+@import "components/subscribe";
 
 /*--------------------------------------------------------------
  #Utilities
 --------------------------------------------------------------*/
+@import "utilities/visibility";
 
 /*--------------------------------------------------------------
  #Overrides

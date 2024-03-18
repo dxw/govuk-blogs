@@ -8,7 +8,14 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.4;
+	line-height: 1.4;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	@media (max-width: $mobileMaxWidth) {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 hr {
@@ -25,7 +32,21 @@ hr {
  */
 
 img {
+	max-width: 100%;
+	height: auto;
     vertical-align: middle;
+}
+
+a:focus {
+  img {
+    border-color: $black;
+    outline: 3px solid $black;
+    @include box-shadow(0 0 0 6px $govuk-focus-colour);
+  }
+}
+
+.avatar img {
+  float: right;
 }
 
 /*
@@ -44,4 +65,138 @@ fieldset {
 
 textarea {
     resize: vertical;
+}
+
+figure {
+  max-width: 100%;
+  margin: 0 0 $gutter 0;
+  @include box-sizing(border-box);
+}
+
+figcaption {
+  margin-top: $gutterHalf;
+  @include govuk-font(14);
+}
+
+figure.thumbnail {
+
+  img {
+    margin-bottom: 0;
+    border: solid 1px $borderColour;
+  }
+
+  // WordPress sometimes adds <br> to the container with image and caption
+  br {
+    display: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 7px;
+  padding-top: 0.7rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+  margin-bottom: $gutter;
+}
+
+table th, table td {
+  vertical-align: top;
+  padding: 0.7em 0.5em 0.7em 1em;
+  @media (max-width: $mobileSmallWidth) {
+    padding-left: 0.5em;
+  }
+}
+
+table tr:nth-child(even) td {
+  background-color: govuk-colour("white");
+}
+
+table td {
+  background: $tableCellColour;
+  border: dotted 1px $govuk-border-colour;
+}
+
+table th {
+  line-height: 1.25em;
+  text-align: left;
+  color: govuk-colour("black");
+  font-weight: normal;
+  background-color: $tableHeadCellColour;
+  border: solid 1px $govuk-border-colour;
+}
+
+table td small {
+  font-size: 1em;
+}
+
+sup {
+  a.footnote {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+article {
+  word-wrap: break-word;
+
+  header {
+    .wp-post-image {
+      margin-bottom: $gutterHalf;
+    }
+  }
+
+  time {
+    color: $greyText;
+  }
+
+  .footer {
+    @include govuk-font(16);
+
+    &.single {
+      margin-top: $gutter;
+    }
+
+    p.tags {
+      margin-top: $gutter;
+    }
+  }
+}
+
+body.single .main-content article,
+body.page .main-content article {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+iframe[src^="https://www.youtube.com/"],
+iframe[src^="https://w.soundcloud.com/"] {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+iframe[src^="http://www.bbc.co.uk/"] {
+	width: 100%;
+}
+
+iframe.coveritlive {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+
+.googlemap, .tableau {
+  margin-bottom: 1.5em;
+  iframe {
+    width: 100%;
+  }
 }
