@@ -1,9 +1,12 @@
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 export default function save() {
+
+	const blockProps = useBlockProps.save( { className: 'govuk-inset-text' } );
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Inset Text – hello from the saved content!' }
-		</p>
+		<div { ...blockProps }>
+			<InnerBlocks.Content />
+		</div>
 	);
 }
