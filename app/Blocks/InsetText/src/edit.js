@@ -5,7 +5,7 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Type / to choose a block' )
+			placeholder: __( 'Add text, or type / to choose a block' )
 		},
 	],
 ];

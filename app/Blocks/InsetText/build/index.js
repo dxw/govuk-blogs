@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const TEMPLATE = [['core/paragraph', {
-  placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Type / to choose a block')
+  placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add text, or type / to choose a block')
 }]];
 function Edit() {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
