@@ -223,7 +223,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/inset-text","version":"0.1.0","title":"Inset Text","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"inset-text","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/inset-text","version":"0.1.0","title":"GOV.UK Inset Text","category":"theme","icon":"smiley","description":"GOV.UK inset text component.","example":{},"supports":{"align":false,"html":false,"layout":{"allowEditing":false},"spacing":{"margin":["top","bottom"],"padding":false,"blockGap":false}},"textdomain":"govukblogs/inset-text","editorScript":"file:./index.js"}');
 
 /***/ })
 
