@@ -7,7 +7,16 @@
   "category": "theme",
   "icon": "smiley",
   "description": "GOV.UK inset text component.",
-  "example": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+        }
+      }
+    ]
+  },
   "supports": {
     "align": false,
     "html": false,
