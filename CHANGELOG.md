@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add barebones `theme.json` with editor options heavily constrained, in readiness for introduction of GOV.UK design system.
 - Ensure the admin stylesheet is loaded in the Block Editor.
+- Add native GOV.UK Details block
 
 ### Changed
 
