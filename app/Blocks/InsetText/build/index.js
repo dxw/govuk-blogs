@@ -21,10 +21,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const TEMPLATE = [['core/paragraph', {
+  placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Type / to choose a block')
+}]];
 function Edit() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inset Text – hello from the editor!', 'inset-text'));
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: "govuk-inset-text"
+  });
+  const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)(blockProps, {
+    template: TEMPLATE,
+    allowedBlocks: ['core/paragraph', 'core/list']
+  });
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...innerBlockProps
+  }, innerBlockProps.children);
 }
 
 /***/ }),

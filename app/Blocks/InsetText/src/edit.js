@@ -1,10 +1,32 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps, store as blockEditorStore } from '@wordpress/block-editor';
+
+const TEMPLATE = [
+	[
+		'core/paragraph',
+		{
+			placeholder: __( 'Type / to choose a block' )
+		},
+	],
+];
 
 export default function Edit() {
+
+	const blockProps = useBlockProps(
+		{ className: "govuk-inset-text" }
+	);
+
+	const innerBlockProps = useInnerBlocksProps(
+		blockProps,
+		{
+			template: TEMPLATE,
+			allowedBlocks: ['core/paragraph', 'core/list']
+		}
+	);
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Inset Text – hello from the editor!', 'inset-text' ) }
-		</p>
+		<div { ...innerBlockProps }>
+			{ innerBlockProps.children }
+		</div>
 	);
 }
