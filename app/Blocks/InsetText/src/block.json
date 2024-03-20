@@ -5,7 +5,6 @@
 	"version": "0.1.0",
 	"title": "GOV.UK Inset Text",
 	"category": "theme",
-	"icon": "smiley",
 	"description": "GOV.UK inset text component.",
 	"example": {
 		"innerBlocks": [
