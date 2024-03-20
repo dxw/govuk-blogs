@@ -22,6 +22,14 @@ add_action('init', function () {
 	remove_action('do_feed_rss2', 'do_feed_rss2', 10, 1);
 });
 
+// Redirect non-Atom feeds
+add_action('template_redirect', function () {
+	if (is_feed() && !is_feed('atom')) {
+		wp_redirect(home_url('/feed/atom/'), 302);
+		exit;
+	}
+});
+
 // Do not display comments feed
 add_filter('feed_links_show_comments_feed', function () {
 	return false;
