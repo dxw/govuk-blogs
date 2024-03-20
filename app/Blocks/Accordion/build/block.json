@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "govukblogs/accordion",
+  "version": "0.1.0",
+  "title": "GOV.UK Accordion",
+  "category": "widgets",
+  "icon": "smiley",
+  "allowedBlocks": [
+    "govukblogs/accordion-row"
+  ],
+  "description": "Accordion block using GOV.UK markup.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "govukblogs/accordion",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js"
+}
