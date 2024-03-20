@@ -15,6 +15,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 	{
 		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
 		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
+		add_action('enqueue_block_assets', [$this, 'wpEnqueueBlockAssets']);
 		add_action('init', [$this, 'removeRootsScript']);
 		add_filter('wp_script_attributes', [$this, 'addScriptTypeToJs'], 10, 1);
 	}
@@ -45,6 +46,13 @@ class Scripts implements \Dxw\Iguana\Registerable
 	public function wpEnqueueEditorStyles()
 	{
 		add_editor_style($this->getFingerPrintedRelativePath('build/admin.min.css'));
+	}
+
+	public function wpEnqueueBlockAssets()
+	{
+		if (is_admin()) {
+			wp_enqueue_script('govuk-frontend', get_template_directory_uri().'/build/node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js');
+		}
 	}
 
 	public function addScriptTypeToJs($attr)

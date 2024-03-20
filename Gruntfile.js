@@ -68,7 +68,8 @@ module.exports = function (grunt) {
                         'node_modules/es6-promise/dist/es6-promise.auto.js',
                         'node_modules/govuk-frontend/dist/govuk/all.js',
                         'assets/js/main.js',
-                        'assets/js/comments.js'
+                        'assets/js/comments.js',
+						'assets/js/accordion.js'
                     ],
                 },
             },

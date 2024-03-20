@@ -4,7 +4,11 @@ import { useSelect } from '@wordpress/data';
 
 const TEMPLATE = [
 	[
-		"core/paragraph"
+		"core/paragraph",
+		{
+			placeholder: __( 'Add text, or type / to choose a block' ),
+			align: 'left'
+		},
 	]
 ]
 
