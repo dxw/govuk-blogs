@@ -9,6 +9,8 @@ $registrar->addInstance(new \Dxw\Iguana\Theme\LayoutRegister(
 // Blocks
 $registrar->addInstance(new \GovUKBlogs\Blocks\Details\Block());
 $registrar->addInstance(new \GovUKBlogs\Blocks\InsetText\Block());
+$registrar->addInstance(new \GovUKBlogs\Blocks\Accordion\Block());
+$registrar->addInstance(new \GovUKBlogs\Blocks\AccordionRow\Block());
 
 // Theme
 $registrar->addInstance(new \GovUKBlogs\Theme\ThemeSupports());
