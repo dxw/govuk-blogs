@@ -21,7 +21,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Edit() {
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    showAll
+  } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: "govuk-accordion",
     id: "accordion-default"
@@ -32,10 +38,28 @@ function Edit() {
     templateInsertUpdatesSelection: true,
     allowedBlocks: ['govukblogs/accordion-row']
   });
+  const toggleAll = () => {
+    setAttributes({
+      showAll: !showAll
+    });
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "govuk-frontend-supported"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "govuk-accordion__controls"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    type: "button",
+    className: "govuk-accordion__show-all",
+    "aria-expanded": "false",
+    onClick: toggleAll
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion__show-all-text"
+  }, "Show all sections"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     "data-module": "govuk-accordion",
     ...innerBlocksProps
-  });
+  }));
 }
 
 /***/ }),
@@ -115,7 +139,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/accordion","version":"0.1.0","title":"GOV.UK Accordion","category":"theme","allowedBlocks":["govukblogs/accordion-row"],"description":"Accordion block using GOV.UK markup.","example":{"innerBlocks":[{"name":"core/heading","attributes":{"content":"Writing well for the web"}},{"name":"core/paragraph","attributes":{"content":"This is the content for Writing well on the web."}},{"name":"core/heading","attributes":{"content":"Writing well for specialists"}},{"name":"core/heading","attributes":{"content":"Know your audience"}}]},"supports":{"html":false},"textdomain":"govukblogs/accordion","editorScript":"file:./index.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/accordion","version":"0.1.0","title":"GOV.UK Accordion","category":"theme","allowedBlocks":["govukblogs/accordion-row"],"description":"Accordion block using GOV.UK markup.","example":{"innerBlocks":[{"name":"core/heading","attributes":{"content":"Writing well for the web"}},{"name":"core/paragraph","attributes":{"content":"This is the content for Writing well on the web."}},{"name":"core/heading","attributes":{"content":"Writing well for specialists"}},{"name":"core/heading","attributes":{"content":"Know your audience"}}]},"supports":{"html":false},"attributes":{"showAll":{"type":"boolean","default":false}},"providesContext":{"govukblogs/showAll":"showAll"},"textdomain":"govukblogs/accordion","editorScript":"file:./index.js"}');
 
 /***/ })
 

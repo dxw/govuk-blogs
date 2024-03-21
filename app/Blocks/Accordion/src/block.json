@@ -38,6 +38,15 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"showAll": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"providesContext": {
+		"govukblogs/showAll": "showAll"
+	},
 	"textdomain": "govukblogs/accordion",
 	"editorScript": "file:./index.js"
 }

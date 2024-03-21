@@ -31,18 +31,21 @@ const TEMPLATE = [["core/paragraph", {
 function Edit({
   attributes,
   setAttributes,
-  clientId
+  clientId,
+  context
 }) {
   const {
     header
   } = attributes;
+  const showAll = context['govukblogs/showAll'];
+  console.log(showAll);
   const isSelected = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
     const {
       isBlockSelected,
       hasSelectedInnerBlock
     } = select(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store);
-    return hasSelectedInnerBlock(clientId, true) || isBlockSelected(clientId) ? false : true;
-  }, [clientId]);
+    return hasSelectedInnerBlock(clientId, true) || isBlockSelected(clientId) || showAll ? 'block' : 'none';
+  }, [clientId, showAll]);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: "govuk-accordion__section"
   });
@@ -67,9 +70,20 @@ function Edit({
     onChange: newHeader => setAttributes({
       header: newHeader
     })
-  })))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion__section-toggle",
+    "data-nosnippet": ""
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion__section-toggle-focus"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "govuk-accordion__section-toggle-text"
+  }, "Show")))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "govuk-accordion__section-content",
-    hidden: isSelected
+    style: {
+      display: isSelected
+    }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "govuk-body"
   }, innerBlocksProps.children)));
@@ -174,7 +188,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/accordion-row","version":"0.1.0","title":"GOV.UK Accordion Row","category":"theme","parent":["govukblogs/accordion"],"description":"A individual row to add to a GOV.UK accordion.","example":{},"supports":{"html":false},"attributes":{"header":{"type":"string","source":"html","selector":".govuk-accordion__section-button"}},"textdomain":"govukblogs/accordion-row","editorScript":"file:./index.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/accordion-row","version":"0.1.0","title":"GOV.UK Accordion Row","category":"theme","parent":["govukblogs/accordion"],"description":"A individual row to add to a GOV.UK accordion.","example":{},"supports":{"html":false},"attributes":{"header":{"type":"string","source":"html","selector":".govuk-accordion__section-button"}},"usesContext":["govukblogs/showAll"],"textdomain":"govukblogs/accordion-row","editorScript":"file:./index.js"}');
 
 /***/ })
 
