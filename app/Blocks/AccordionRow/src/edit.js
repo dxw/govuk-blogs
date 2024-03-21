@@ -12,18 +12,20 @@ const TEMPLATE = [
 	]
 ]
 
-export default function Edit( { attributes, setAttributes, clientId } ) {
+export default function Edit( { attributes, setAttributes, clientId, context } ) {
 
 	const { header } = attributes;
+	const showAll = context['govukblogs/showAll'];	
+	console.log(showAll)
 
 	const isSelected = useSelect(
 		( select ) => {
 			const { isBlockSelected, hasSelectedInnerBlock } = select( blockEditorStore );
 			return (
-				hasSelectedInnerBlock( clientId, true ) ||  isBlockSelected( clientId ) ? false : true
+				hasSelectedInnerBlock( clientId, true ) ||  isBlockSelected( clientId ) || showAll ? 'block' : 'none'
 			);
 		},
-		[ clientId ]
+		[ clientId, showAll ]
 	);
 
 	const blockProps = useBlockProps({
@@ -56,10 +58,19 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 								setAttributes( { header: newHeader })
 							}
 						/>
+						<span className="govuk-accordion__section-toggle" data-nosnippet="">
+							<span className="govuk-accordion__section-toggle-focus">
+								<span className="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span>
+								<span className="govuk-accordion__section-toggle-text">Show</span>
+							</span>
+						</span>
 					</span>
 				</h2>
     		</div>
-			<div className="govuk-accordion__section-content" hidden={ isSelected }>
+			
+				
+			
+			<div className="govuk-accordion__section-content" style={{display: isSelected}}>
 				<div className='govuk-body'>
 					{ innerBlocksProps.children }
 				</div>

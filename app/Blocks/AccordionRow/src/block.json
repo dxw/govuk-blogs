@@ -18,6 +18,7 @@
 			"selector": ".govuk-accordion__section-button"
 		}
 	},
+	"usesContext": [ "govukblogs/showAll" ],
 	"textdomain": "govukblogs/accordion-row",
 	"editorScript": "file:./index.js"
 }
