@@ -11,8 +11,8 @@ $registrar->addInstance(new \GovUKBlogs\Blocks\Details\Block());
 $registrar->addInstance(new \GovUKBlogs\Blocks\InsetText\Block());
 
 // Theme
+$registrar->addInstance(new \GovUKBlogs\Theme\BlockCategory());
 $registrar->addInstance(new \GovUKBlogs\Theme\ThemeSupports());
-
 $registrar->addInstance(new \GovUKBlogs\WidgetCategoriesDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\WidgetArchiveDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\FixRoots());
