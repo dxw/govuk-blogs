@@ -13,8 +13,8 @@ $registrar->addInstance(new \GovUKBlogs\Blocks\Accordion\Block());
 $registrar->addInstance(new \GovUKBlogs\Blocks\AccordionRow\Block());
 
 // Theme
+$registrar->addInstance(new \GovUKBlogs\Theme\BlockCategory());
 $registrar->addInstance(new \GovUKBlogs\Theme\ThemeSupports());
-
 $registrar->addInstance(new \GovUKBlogs\WidgetCategoriesDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\WidgetArchiveDropdownWithSubmit\Register());
 $registrar->addInstance(new \GovUKBlogs\FixRoots());
