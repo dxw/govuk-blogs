@@ -25,16 +25,14 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<div className='govuk-frontend-supported'>
-		<div className="govuk-accordion__controls">
-			<button type="button" className="govuk-accordion__show-all" aria-expanded="false" onClick={toggleAll}>
-				<span className="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span>
-				<span className="govuk-accordion__show-all-text">Show all sections</span>
-			</button>
-		</div>
-		<div data-module="govuk-accordion" { ...innerBlocksProps }> 
-			
-		</div>
-	
+			<div className="govuk-accordion__controls">
+				<button type="button" className="govuk-accordion__show-all" aria-expanded="false" onClick={toggleAll}>
+					<span className="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span>
+					<span className="govuk-accordion__show-all-text">{showAll ? 'Hide all sections' : 'Show all sections'}</span>
+				</button>
+			</div>
+			<div data-module="govuk-accordion" { ...innerBlocksProps }> 
+			</div>
 		</div>
 	);
 }
