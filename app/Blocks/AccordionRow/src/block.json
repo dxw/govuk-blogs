@@ -16,6 +16,10 @@
 			"type": "string",
 			"source": "html",
 			"selector": ".govuk-accordion__section-button"
+		},
+		"isSelected": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"usesContext": [ "govukblogs/showAll" ],

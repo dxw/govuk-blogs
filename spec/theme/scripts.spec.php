@@ -19,7 +19,7 @@ describe(GovUKBlogs\Theme\Scripts::class, function () {
 	describe('->register()', function () {
 		it('adds the action', function () {
 			allow('add_action')->toBeCalled();
-			expect('add_action')->toBeCalled()->times(4);
+			expect('add_action')->toBeCalled()->times(3);
 			expect('add_action')->toBeCalled()->with('wp_enqueue_scripts', [$this->scripts, 'wpEnqueueScripts']);
 			expect('add_action')->toBeCalled()->with('after_setup_theme', [$this->scripts, 'wpEnqueueEditorStyles']);
 			expect('add_action')->toBeCalled()->with('init', [$this->scripts, 'removeRootsScript']);

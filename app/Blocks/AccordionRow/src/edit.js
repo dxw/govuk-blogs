@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { store as blockEditorStore, useBlockProps, useInnerBlocksProps, RichText } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
+import { useEffect, useState } from 'react';
 
 const TEMPLATE = [
 	[
@@ -14,19 +14,21 @@ const TEMPLATE = [
 
 export default function Edit( { attributes, setAttributes, clientId, context } ) {
 
-	const { header } = attributes;
-	const showAll = context['govukblogs/showAll'];	
-	console.log(showAll)
+	const { header, isSelected } = attributes;
 
-	const isSelected = useSelect(
-		( select ) => {
-			const { isBlockSelected, hasSelectedInnerBlock } = select( blockEditorStore );
-			return (
-				hasSelectedInnerBlock( clientId, true ) ||  isBlockSelected( clientId ) || showAll ? 'block' : 'none'
-			);
-		},
-		[ clientId, showAll ]
-	);
+	const showAll = context['govukblogs/showAll'];
+
+	const toggleDisplay = () => {
+		setAttributes({isSelected: !isSelected})
+	}
+	
+	const displayStatus = () => {
+		return isSelected ? 'block' : 'none';
+	}
+
+	useEffect(() => {
+		setAttributes({isSelected: showAll})
+	}, [showAll])
 
 	const blockProps = useBlockProps({
 		className: "govuk-accordion__section"
@@ -44,6 +46,7 @@ export default function Edit( { attributes, setAttributes, clientId, context } )
 	);
 
 	return (
+		<>
 		<div { ...innerBlocksProps }>
 			<div className="govuk-accordion__section-header">
 				<h2 className="govuk-accordion__section-heading">
@@ -58,23 +61,22 @@ export default function Edit( { attributes, setAttributes, clientId, context } )
 								setAttributes( { header: newHeader })
 							}
 						/>
-						<span className="govuk-accordion__section-toggle" data-nosnippet="">
+						<span className="govuk-accordion__section-toggle" data-nosnippet="" onClick={toggleDisplay}>
 							<span className="govuk-accordion__section-toggle-focus">
 								<span className="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span>
-								<span className="govuk-accordion__section-toggle-text">Show</span>
+								<span className="govuk-accordion__section-toggle-text">{isSelected ? 'Hide' : 'Show'}</span>
 							</span>
 						</span>
 					</span>
 				</h2>
     		</div>
 			
-				
-			
-			<div className="govuk-accordion__section-content" style={{display: isSelected}}>
+			<div className="govuk-accordion__section-content" style={{display: displayStatus()}}>
 				<div className='govuk-body'>
 					{ innerBlocksProps.children }
 				</div>
 			</div>
 		</div>
+		</>
 	);
 }

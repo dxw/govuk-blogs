@@ -56,7 +56,7 @@ function Edit({
     className: "govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "govuk-accordion__show-all-text"
-  }, "Show all sections"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, showAll ? 'Hide all sections' : 'Show all sections'))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     "data-module": "govuk-accordion",
     ...innerBlocksProps
   }));
