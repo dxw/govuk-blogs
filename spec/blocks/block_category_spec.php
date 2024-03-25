@@ -1,8 +1,8 @@
 <?php
 
-describe(GovUKBlogs\Theme\BlockCategory::class, function () {
+describe(GovUKBlogs\Blocks\BlockCategory::class, function () {
 	beforeEach(function () {
-		$this->blockCategory = new GovUKBlogs\Theme\BlockCategory();
+		$this->blockCategory = new GovUKBlogs\Blocks\BlockCategory();
 	});
 
 	it('implements \Dxw\Iguana\Registerable', function () {
