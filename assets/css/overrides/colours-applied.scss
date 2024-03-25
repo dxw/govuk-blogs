@@ -1,0 +1,12 @@
+$with-light-text-colour: (
+ "black",
+ "blue",
+ "dark-grey",
+ "green",
+);
+
+@each $colour in $with-light-text-colour {
+	.has-#{$colour}-background-color {
+		color: var(--wp--preset--color--white);
+	}
+}
