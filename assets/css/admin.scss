@@ -31,10 +31,13 @@
 /*--------------------------------------------------------------
  #Helpers
 --------------------------------------------------------------*/
+@import "helpers/mixins";
 
 /*--------------------------------------------------------------
  #Core
 --------------------------------------------------------------*/
+@import "core/global-styles";
+@import "core/typography";
 
 /*--------------------------------------------------------------
  #Objects
@@ -56,5 +59,7 @@
 /*--------------------------------------------------------------
  #Overrides
 --------------------------------------------------------------*/
-@import "overrides/edit-govuk-inset-text";
+@import "overrides/editor-global-styles";
+@import "overrides/editor-govuk-inset-text";
+@import "overrides/editor-typography";
 @import "overrides/hallo-editor";

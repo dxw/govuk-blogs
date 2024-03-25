@@ -4,17 +4,17 @@
 
 .alignright {
 	float: right;
-	margin: 0px 0px $gutterHalf $gutterHalf;
+	margin: 0px 0px $gutterHalf $gutterHalf !important; /* Bump specificity to override Classic block styles */
 }
 
 .alignleft {
 	float: left;
-	margin: 0px $gutterHalf $gutterHalf 0px;
+	margin: 0px $gutterHalf $gutterHalf 0px !important; /* Bump specificity to override Classic block styles */
 }
 
 .aligncenter {
 	display: block;
-	margin: 0 auto $gutter auto;
+	margin: 0 auto $gutter auto !important; /* Bump specificity to override Classic block styles */
 	clear: both;
 }
 

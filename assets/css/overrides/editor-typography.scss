@@ -1,0 +1,28 @@
+.wp-block-freeform.block-library-rich-text__tinymce {
+	p,
+	li {
+		@include govuk-font(19);
+	}
+
+	ul {
+		@extend %govuk-list;
+		@extend %govuk-list--bullet;
+	}
+
+	ol {
+		@extend %govuk-list;
+		@extend %govuk-list--number;
+	}
+
+	blockquote {
+		margin-bottom: $gutter;
+		padding-left: 0;
+		border-left: none;
+		box-shadow: none;
+	}
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce dl.wp-caption .wp-caption-dd { // specificity match for WP styles
+	@extend figcaption;
+	padding: 0;
+}
