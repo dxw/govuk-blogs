@@ -1,6 +1,6 @@
 <?php
 
-namespace GovUKBlogs\Theme;
+namespace GovUKBlogs\Blocks;
 
 class BlockCategory implements \Dxw\Iguana\Registerable
 {
