@@ -1,0 +1,33 @@
+.has-16-font-size {
+	line-height: 1.25;
+}
+
+.has-19-font-size {
+	line-height: 1.31578947;
+}
+
+.has-24-font-size {
+	line-height: 1.25;
+
+	@media (max-width: 40.0625em) {
+		font-size: 1.3125rem !important; // override WordPress !important in utility class
+		line-height: 1.19047619;
+	}
+}
+
+.has-36-font-size {
+	line-height: 1.11111111;
+
+	@media (max-width: 40.0625em) {
+		font-size: 1.6875rem !important; // override WordPress !important in utility class
+	}
+}
+
+.has-48-font-size {
+	line-height: 1.04166667;
+
+	@media (max-width: 40.0625em) {
+		font-size: 2rem !important; // override WordPress !important in utility class
+		line-height: 1.09375;
+	}
+}
