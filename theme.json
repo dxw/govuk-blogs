@@ -15,7 +15,48 @@
 			"duotone": [],
 			"gradients": [],
 			"link": false,
-			"palette": [],
+			"palette": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#0b0c0c"
+				},
+				{
+					"name": "Dark Grey",
+					"slug": "dark-grey",
+					"color": "#505a5f"
+				},
+				{
+					"name": "Mid Grey",
+					"slug": "mid-grey",
+					"color": "#b1b4b6"
+				},
+				{
+					"name": "Light Grey",
+					"slug": "light-grey",
+					"color": "#f3f2f1"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				},
+				{
+					"name": "Blue",
+					"slug": "blue",
+					"color": "#1d70b8"
+				},
+				{
+					"name": "Green",
+					"slug": "green",
+					"color": "#00703c"
+				},
+				{
+					"name": "Turquoise",
+					"slug": "turquoise",
+					"color": "#28a197"
+				}
+			],
 			"text": true,
 			"background": true,
 			"defaultGradients": false,
