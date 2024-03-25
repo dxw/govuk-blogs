@@ -19,42 +19,42 @@
 				{
 					"name": "Black",
 					"slug": "black",
-					"color": "#0b0c0c"
+					"color": "var(--wp--custom--govuk-color--black)"
 				},
 				{
 					"name": "Dark Grey",
 					"slug": "dark-grey",
-					"color": "#505a5f"
+					"color": "var(--wp--custom--govuk-color--dark-grey)"
 				},
 				{
 					"name": "Mid Grey",
 					"slug": "mid-grey",
-					"color": "#b1b4b6"
+					"color": "var(--wp--custom--govuk-color--mid-grey)"
 				},
 				{
 					"name": "Light Grey",
 					"slug": "light-grey",
-					"color": "#f3f2f1"
+					"color": "var(--wp--custom--govuk-color--light-grey)"
 				},
 				{
 					"name": "White",
 					"slug": "white",
-					"color": "#ffffff"
+					"color": "var(--wp--custom--govuk-color--white)"
 				},
 				{
 					"name": "Blue",
 					"slug": "blue",
-					"color": "#1d70b8"
+					"color": "var(--wp--custom--govuk-color--blue)"
 				},
 				{
 					"name": "Green",
 					"slug": "green",
-					"color": "#00703c"
+					"color": "var(--wp--custom--govuk-color--green)"
 				},
 				{
 					"name": "Turquoise",
 					"slug": "turquoise",
-					"color": "#28a197"
+					"color": "var(--wp--custom--govuk-color--turquoise)"
 				}
 			],
 			"text": true,
@@ -62,7 +62,18 @@
 			"defaultGradients": false,
 			"defaultPalette": false
 		},
-		"custom": {},
+		"custom": {
+			"govuk-color": {
+				"black": "#0b0c0c",
+				"dark-grey": "#505a5f",
+				"mid-grey": "#b1b4b6",
+				"light-grey": "#f3f2f1",
+				"white": "#ffffff",
+				"blue": "#1d70b8",
+				"green": "#00703c",
+				"turquoise": "#28a197"
+			}
+		},
 		"layout": {
 			"contentSize": "630px",
 			"wideSize": "960px"
