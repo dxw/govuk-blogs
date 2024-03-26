@@ -100,32 +100,32 @@
 					"name": "3"
 				},
 				{
-					"size": "1.25rem",
+					"size": "clamp(0.9375rem, (100vw - 40rem) * 1000, 1.25rem)",
 					"slug": "4",
 					"name": "4"
 				},
 				{
-					"size": "1.5625rem",
+					"size": "clamp(0.9375rem, (100vw - 40rem) * 1000, 1.5625rem)",
 					"slug": "5",
 					"name": "5"
 				},
 				{
-					"size": "1.875rem",
+					"size": "clamp(1.25rem, (100vw - 40rem) * 1000, 1.875rem)",
 					"slug": "6",
 					"name": "6"
 				},
 				{
-					"size": "2.5rem",
+					"size": "clamp(1.5625rem, (100vw - 40rem) * 1000, 2.5rem)",
 					"slug": "7",
 					"name": "7"
 				},
 				{
-					"size": "3.125rem",
+					"size": "clamp(1.875rem, (100vw - 40rem) * 1000, 3.125rem)",
 					"slug": "8",
 					"name": "8"
 				},
 				{
-					"size": "3.75rem",
+					"size": "clamp(2.5rem, (100vw - 40rem) * 1000, 3.75rem)",
 					"slug": "9",
 					"name": "9"
 				}
