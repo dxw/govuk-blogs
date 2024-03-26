@@ -15,13 +15,65 @@
 			"duotone": [],
 			"gradients": [],
 			"link": false,
-			"palette": [],
+			"palette": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "var(--wp--custom--govuk-color--black)"
+				},
+				{
+					"name": "Dark Grey",
+					"slug": "dark-grey",
+					"color": "var(--wp--custom--govuk-color--dark-grey)"
+				},
+				{
+					"name": "Mid Grey",
+					"slug": "mid-grey",
+					"color": "var(--wp--custom--govuk-color--mid-grey)"
+				},
+				{
+					"name": "Light Grey",
+					"slug": "light-grey",
+					"color": "var(--wp--custom--govuk-color--light-grey)"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "var(--wp--custom--govuk-color--white)"
+				},
+				{
+					"name": "Blue",
+					"slug": "blue",
+					"color": "var(--wp--custom--govuk-color--blue)"
+				},
+				{
+					"name": "Green",
+					"slug": "green",
+					"color": "var(--wp--custom--govuk-color--green)"
+				},
+				{
+					"name": "Turquoise",
+					"slug": "turquoise",
+					"color": "var(--wp--custom--govuk-color--turquoise)"
+				}
+			],
 			"text": true,
 			"background": true,
 			"defaultGradients": false,
 			"defaultPalette": false
 		},
-		"custom": {},
+		"custom": {
+			"govuk-color": {
+				"black": "#0b0c0c",
+				"dark-grey": "#505a5f",
+				"mid-grey": "#b1b4b6",
+				"light-grey": "#f3f2f1",
+				"white": "#ffffff",
+				"blue": "#1d70b8",
+				"green": "#00703c",
+				"turquoise": "#28a197"
+			}
+		},
 		"layout": {
 			"contentSize": "630px",
 			"wideSize": "960px"
