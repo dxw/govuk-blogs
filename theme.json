@@ -83,6 +83,7 @@
 			"padding": true,
 			"blockGap": null,
 			"units": [ "px", "rem" ],
+			"customSpacingSize": false,
 			"spacingSizes": [
 				{
 					"size": "0.3125rem",
