@@ -47,6 +47,7 @@
 /*--------------------------------------------------------------
  #Components
 --------------------------------------------------------------*/
+@import "components/buttons";
 @import "components/govuk-accordion";
 @import "components/entry";
 @import "components/footnotes";
@@ -61,6 +62,7 @@
  #Overrides
 --------------------------------------------------------------*/
 @import "overrides/editor-global-styles";
+@import "overrides/editor-govuk-buttons";
 @import "overrides/editor-govuk-inset-text";
 @import "overrides/editor-typography";
 @import "overrides/hallo-editor";

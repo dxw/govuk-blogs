@@ -92,7 +92,8 @@ class AllowedBlocks implements \Dxw\Iguana\Registerable
 				'govukblogs/accordion',
 				'govukblogs/accordion-row',
 				'govukblogs/details',
-				'govukblogs/inset-text'
+				'govukblogs/inset-text',
+				'govukblogs/buttons'
 			];
 		}
 
