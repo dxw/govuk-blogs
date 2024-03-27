@@ -31,3 +31,7 @@
 .entry-summary, .entry-content, .page-content {
   margin: 0px 0px $gutterHalf 0px;
 }
+
+.entry-content-asset {
+	padding: $gutter 0 $gutterHalf;
+}
