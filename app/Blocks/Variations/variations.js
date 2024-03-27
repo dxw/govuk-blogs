@@ -1,9 +1,9 @@
 // wp.domReady(() => {
 
 // 	wp.blocks.registerBlockVariation(
-// 		'core/buttons',
+// 		'core/button',
 // 		{
-// 			name: 'govukblogs/buttons',
+// 			name: 'govukblogs/button',
 // 			title: 'GOV.UK buttons',
 // 			description: 'Buttons using GOV.UK markup',
 // 			category: 'govuk-components',
@@ -23,24 +23,3 @@
 // 	)
 // })
 
-function wrapCoverBlockInContainer( element, blockType, attributes ) {
-    // skip if element is undefined
-    
-	if ( ! element ) {
-        return;
-    }
-	
-    // only apply to cover blocks
-    if ( blockType.name !== 'core/button' ) {
-        return element;
-    }
-
-    // return the element wrapped in a div
-    return <div className="cover-block-wrapper">{ element }</div>;
-}
-
-wp.hooks.addFilter(
-    'blocks.getSaveElement',
-    'my-plugin/wrap-cover-block-in-container',
-    wrapCoverBlockInContainer
-);
