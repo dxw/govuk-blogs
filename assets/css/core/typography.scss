@@ -44,19 +44,6 @@ table {
 	@extend %govuk-body-m;
 }
 
-ul {
-	//pagination
-	&.list-inline {
-		list-style-type: none;
-		padding-left: 0;
-		li {
-			display: inline-block;
-		}
-	}
-}
-ul.children {
-	margin-top: 0;
-}
 
 blockquote {
 	margin: 0 0 $gutter 0;
@@ -105,20 +92,6 @@ cite {
 	top: -10px;
 }
 
-.entry-content-asset {
-	padding: $gutter 0 $gutterHalf;
-}
-
 ::placeholder {
 	color: $placeHolderColour;
-}
-
-div.highlight {
-	margin: 0 0 $gutter 0;
-	padding: $gutterHalf;
-	background-color: $background;
-	p {
-		margin-bottom: $gutterHalf;
-		padding-left: 0;
-	}
 }
