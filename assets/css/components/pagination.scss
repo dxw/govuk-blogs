@@ -13,6 +13,21 @@
   }
 }
 
+ul {
+	//pagination
+	&.list-inline {
+		list-style-type: none;
+		padding-left: 0;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+ul.children {
+	margin-top: 0;
+}
+
 .pagination {
   margin: 0 auto;
   text-align: center;
