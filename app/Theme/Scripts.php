@@ -64,6 +64,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 
 	public function enqueueBlocksVariations()
 	{
+<<<<<<< HEAD
 		wp_enqueue_script(
 			'blocks-variations',
 			get_theme_file_uri('/assets/js/block-variations.js'),
@@ -75,6 +76,13 @@ class Scripts implements \Dxw\Iguana\Registerable
 			'',
 			true
 		);
+=======
+		wp_enqueue_script('blocks-variations', get_theme_file_uri('/assets/js/block-variations.js'), [
+			'wp-blocks',
+			'wp-dom',
+			'wp-edit-post',
+		], '', true);
+>>>>>>> 7594f5cb (Add style for focused buttons which are also active. Reorganise block variation JS files within theme structure.)
 	}
 
 	public function enqueueBlockStyleVariations()
