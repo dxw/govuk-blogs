@@ -67,7 +67,7 @@ describe(GovUKBlogs\Theme\Scripts::class, function () {
 			allow('get_theme_file_uri')->toBeCalled()->andReturn('/wp-content/themes/govuk-blogs/assets/js/block-variations.js');
 			expect('wp_enqueue_script')->toBeCalled()->once()->with('blocks-variations', '/wp-content/themes/govuk-blogs/assets/js/block-variations.js', [
 				'wp-blocks',
-				'wp-dom',
+				'wp-dom-ready',
 				'wp-edit-post',
 			], '', true);
 

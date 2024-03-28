@@ -64,11 +64,17 @@ class Scripts implements \Dxw\Iguana\Registerable
 
 	public function enqueueBlocksVariations()
 	{
-		wp_enqueue_script('blocks-variations', get_theme_file_uri('/assets/js/block-variations.js'), [
-			'wp-blocks',
-			'wp-dom',
-			'wp-edit-post',
-		], '', true);
+		wp_enqueue_script(
+			'blocks-variations',
+			get_theme_file_uri('/assets/js/block-variations.js'),
+			[
+				'wp-blocks',
+				'wp-dom-ready',
+				'wp-edit-post',
+			],
+			'',
+			true
+		);
 	}
 
 	public function enqueueBlockStyleVariations()
