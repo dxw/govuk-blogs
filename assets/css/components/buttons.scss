@@ -12,7 +12,7 @@
 				margin-left: 10px;
 			}
 
-			&:focus {
+			&:focus:not(:active, :hover) {
 				&:after {
 					content: url("data:image/svg+xml,%3Csvg class='govuk-button__start-icon' xmlns='http://www.w3.org/2000/svg' width='17.5' height='19' viewBox='0 0 33 40' aria-hidden='true' focusable='false'%3E%3Cpath fill='currentColor' d='M0 0h13l20 20-20 20H0l20-20z' /%3E%3C/svg%3E");
 				}
