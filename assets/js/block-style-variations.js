@@ -27,3 +27,6 @@ wp.domReady(function(){
 	wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
 })
 
+wp.domReady(function(){
+	wp.blocks.unregisterBlockStyle( 'core/quote', ['plain', 'default'] );
+})

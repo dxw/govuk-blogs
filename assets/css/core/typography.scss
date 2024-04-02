@@ -46,50 +46,18 @@ table {
 
 
 blockquote {
-	margin: 0 0 $gutter 0;
-	p {
-		padding-left: $gutter;
-		margin-bottom: $gutterHalf;
-		&:last-of-type {
-			margin-bottom: 0;
-			&:after {
-				content: "\201D";
-			}
-		}
-		&:first-child {
-			&:before {
-				content: "\201C";
-				float: left;
-				clear: both;
-				margin-left: -$gutterHalf;
-			}
-		}
-	}
+	@extend .govuk-inset-text;
+	margin-left: unset;
+	margin-right: unset;
 
-	&.noquotes {
-		padding: $gutterHalf;
-		background-color: $background;
-		p {
-			padding-left: 0;
-			&:last-of-type {
-				&:after {
-					content: "";
-				}
-			}
-			&:before {
-				content: "";
-			}
-		}
+	cite {
+		font-style: normal;
+		font-weight: 700;
+		color: inherit;
+		font-size: inherit;
+		position: static;
+		line-height: inherit;
 	}
-}
-
-cite {
-	color: $greyText;
-	font-style: normal;
-	position: relative;
-	font-size: 18px;
-	font-size: 1.8rem;
-	top: -10px;
 }
 
 ::placeholder {
