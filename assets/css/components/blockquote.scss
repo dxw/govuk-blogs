@@ -1,0 +1,10 @@
+blockquote {
+	@extend .govuk-inset-text;
+	margin-left: unset;
+	margin-right: unset;
+
+	cite {
+		font-style: normal;
+		font-weight: 700;	
+	}
+}
