@@ -17,6 +17,8 @@ class Scripts implements \Dxw\Iguana\Registerable
 		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
 		add_action('init', [$this, 'removeRootsScript']);
 		add_filter('wp_script_attributes', [$this, 'addScriptTypeToJs'], 10, 1);
+		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlocksVariations']);
+		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations']);
 	}
 
 	private function getFingerPrintedPath($path)
@@ -58,5 +60,33 @@ class Scripts implements \Dxw\Iguana\Registerable
 		}
 
 		return $attr;
+	}
+
+	public function enqueueBlocksVariations()
+	{
+		wp_enqueue_script(
+			'blocks-variations',
+			get_theme_file_uri('/assets/js/block-variations.js'),
+			[
+				'wp-blocks',
+				'wp-dom-ready',
+				'wp-edit-post',
+			],
+			'',
+			true
+		);
+	}
+
+	public function enqueueBlockStyleVariations()
+	{
+		wp_enqueue_script(
+			'block-style-variations',
+			get_theme_file_uri('/assets/js/block-style-variations.js'),
+			[
+				'wp-blocks',
+				'wp-dom-ready',
+				'wp-edit-post'
+			]
+		);
 	}
 }

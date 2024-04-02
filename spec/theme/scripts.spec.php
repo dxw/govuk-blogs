@@ -19,10 +19,12 @@ describe(GovUKBlogs\Theme\Scripts::class, function () {
 	describe('->register()', function () {
 		it('adds the action', function () {
 			allow('add_action')->toBeCalled();
-			expect('add_action')->toBeCalled()->times(3);
+			expect('add_action')->toBeCalled()->times(5);
 			expect('add_action')->toBeCalled()->with('wp_enqueue_scripts', [$this->scripts, 'wpEnqueueScripts']);
 			expect('add_action')->toBeCalled()->with('after_setup_theme', [$this->scripts, 'wpEnqueueEditorStyles']);
 			expect('add_action')->toBeCalled()->with('init', [$this->scripts, 'removeRootsScript']);
+			expect('add_action')->toBeCalled()->once()->with('enqueue_block_editor_assets', [$this->scripts, 'enqueueBlocksVariations']);
+			expect('add_action')->toBeCalled()->once()->with('enqueue_block_editor_assets', [$this->scripts, 'enqueueBlockStyleVariations']);
 			allow('get_template_directory_uri')->toBeCalled()->andReturn('/wp-content/themes/theme/templates');
 			allow('add_filter')->toBeCalled();
 			expect('add_filter')->toBeCalled()->with('wp_script_attributes', [$this->scripts, 'addScriptTypeToJs'], 10, 1);
@@ -56,6 +58,34 @@ describe(GovUKBlogs\Theme\Scripts::class, function () {
 			expect('add_editor_style')->toBeCalled()->with('build/admin.min.1234.css');
 
 			$this->scripts->wpEnqueueEditorStyles();
+		});
+	});
+
+	describe('->enqueueBlocksVariations()', function () {
+		it('enqueues block variations script', function () {
+			allow('wp_enqueue_script')->toBeCalled();
+			allow('get_theme_file_uri')->toBeCalled()->andReturn('/wp-content/themes/govuk-blogs/assets/js/block-variations.js');
+			expect('wp_enqueue_script')->toBeCalled()->once()->with('blocks-variations', '/wp-content/themes/govuk-blogs/assets/js/block-variations.js', [
+				'wp-blocks',
+				'wp-dom-ready',
+				'wp-edit-post',
+			], '', true);
+
+			$this->scripts->enqueueBlocksVariations();
+		});
+	});
+
+	describe('->enqueueBlockStyleVariations()', function () {
+		it('enqueues block variations script', function () {
+			allow('wp_enqueue_script')->toBeCalled();
+			allow('get_theme_file_uri')->toBeCalled()->andReturn('/wp-content/themes/govuk-blogs/assets/js/block-style-variations.js');
+			expect('wp_enqueue_script')->toBeCalled()->once()->with('block-style-variations', '/wp-content/themes/govuk-blogs/assets/js/block-style-variations.js', [
+				'wp-blocks',
+				'wp-dom-ready',
+				'wp-edit-post',
+			]);
+
+			$this->scripts->enqueueBlockStyleVariations();
 		});
 	});
 });
