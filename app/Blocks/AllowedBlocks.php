@@ -65,7 +65,6 @@ class AllowedBlocks implements \Dxw\Iguana\Registerable
 				'core/post-time-to-read',
 				'core/post-title',
 				'core/preformatted',
-				'core/pullquote',
 				'core/query',
 				'core/query-no-results',
 				'core/query-pagination',
