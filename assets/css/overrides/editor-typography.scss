@@ -15,9 +15,9 @@
 	}
 
 	blockquote {
-		margin-top: 20px;
-  		margin-bottom: 20px;
-  		border-left: 10px solid #b1b4b6;
+			@include govuk-responsive-margin(6, "top");
+			@include govuk-responsive-margin(6, "bottom");
+			border-left: $govuk-border-width-wide solid $govuk-border-colour;
 	}
 }
 
