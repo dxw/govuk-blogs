@@ -15,10 +15,9 @@
 	}
 
 	blockquote {
-		margin-bottom: $gutter;
-		padding-left: 0;
-		border-left: none;
-		box-shadow: none;
+			@include govuk-responsive-margin(6, "top");
+			@include govuk-responsive-margin(6, "bottom");
+			border-left: $govuk-border-width-wide solid $govuk-border-colour;
 	}
 }
 
