@@ -141,14 +141,19 @@ table td small {
   font-size: 1em;
 }
 
-sup {
-  a.footnote {
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+sup a.footnote,
+sup.fn a {
+    line-height: 0;
+	margin-left: 1px;
+
+    &::before {
+      content: '[';
     }
+
+	&::after {
+		content: ']';
+	}
   }
-}
 
 article {
   word-wrap: break-word;
