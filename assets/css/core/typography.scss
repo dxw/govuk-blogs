@@ -29,6 +29,28 @@ ol {
 
 	&.is-style-spaced {
 		@extend %govuk-list--spaced;
+
+		ul,
+		ol {
+			margin-bottom: govuk-spacing(1);
+			margin-top: govuk-spacing(1);
+
+			@include govuk-media-query($from: tablet) {
+				margin-bottom: govuk-spacing(2);
+				margin-top: govuk-spacing(2);
+			}
+		}
+	}
+
+	ul,
+	ol {
+		margin-top: 0;
+		margin-bottom: 0;
+
+    	@include govuk-media-query($from: tablet) {
+      		margin-bottom: govuk-spacing(1);
+			margin-top: govuk-spacing(1);
+    	}
 	}
 }
 
