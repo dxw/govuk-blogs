@@ -35,6 +35,11 @@ wp.blocks.registerBlockStyle( 'core/separator', {
 	label: 'Extra large'
 } );
 
+wp.blocks.registerBlockStyle( 'core/list', {
+	name: 'spaced',
+	label: 'Extra spacing'
+} );
+
 wp.domReady(function(){
 	wp.blocks.unregisterBlockStyle( 'core/button', 'fill' );
 });

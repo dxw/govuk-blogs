@@ -26,6 +26,10 @@ b {
 ul,
 ol {
 	@extend %govuk-list;
+
+	&.is-style-spaced {
+		@extend %govuk-list--spaced;
+	}
 }
 
 ol {
