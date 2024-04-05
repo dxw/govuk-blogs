@@ -1,0 +1,45 @@
+table {
+	@extend .govuk-table;
+}
+
+.wp-block-table {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.wp-block-table figcaption {
+	@extend .govuk-table__caption;
+	@extend .govuk-table__caption--m;
+}
+
+.wp-block-post-content table thead,
+.main-content table thead {
+	border: none;
+}
+
+.wp-block-post-content table th,
+.wp-block-post-content table td,
+.main-content table th, 
+.main-content table td {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+table td,
+.wp-block-table table td {
+	@extend .govuk-table__cell;
+}
+
+table th,
+.wp-block-table table th {
+	@extend .govuk-table__header;
+}
+
+table td small {
+	font-size: 1em;
+}
+
+tr > td:first-child { 
+	@include govuk-typography-weight-bold; 
+}
