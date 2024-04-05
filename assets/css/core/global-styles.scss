@@ -21,7 +21,17 @@ body {
 hr {
 	@extend %govuk-section-break;
 	@extend %govuk-section-break--visible;
-	@extend %govuk-section-break--xl;
+	border-top: none !important;
+	border-bottom: 1px solid var(--wp--preset--color--mid-grey) !important;
+	@extend %govuk-section-break--m;
+
+	&.is-style-large {
+		@extend %govuk-section-break--l;
+	}
+
+	&.is-style-x-large {
+		@extend %govuk-section-break--xl;
+	}
 }
 
 /*
