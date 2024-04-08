@@ -1,0 +1,10 @@
+.wp-block-file__content-wrapper {
+	
+	align-items: center;
+	flex-direction: column;
+	gap: $gutterHalf;
+
+	@media (min-width:$mobileMaxWidth) {
+		flex-direction: row;
+	}
+}

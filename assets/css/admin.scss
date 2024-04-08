@@ -51,6 +51,7 @@
 @import "components/govuk-accordion";
 @import "components/entry";
 @import "components/footnotes";
+@import "components/file";
 @import "components/highlight";
 @import "components/related-posts";
 @import "components/tables";
@@ -65,6 +66,7 @@
 --------------------------------------------------------------*/
 @import "overrides/colours-applied";
 @import "overrides/typography";
+@import "overrides/editor-file";
 @import "overrides/editor-global-styles";
 @import "overrides/editor-govuk-buttons";
 @import "overrides/editor-govuk-inset-text";
