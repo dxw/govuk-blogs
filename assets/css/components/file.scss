@@ -1,0 +1,25 @@
+.wp-block-file {
+	@extend .govuk-body;
+	align-items: baseline;
+	flex-direction: column;
+	gap: $gutterHalf;
+
+	object {
+		display: inline-block;
+		vertical-align: baseline;
+	}
+
+	@media (min-width:$mobileMaxWidth) {
+		flex-direction: row;
+	}
+
+	a {
+		font-size: 1.1875rem;
+	}
+
+	.wp-block-file__button {
+		@extend .govuk-button;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+}
