@@ -58,7 +58,7 @@ function pagination($q = null, $mode = null, $uri = null)
 			$uri = add_query_arg(['mode' => $mode], $uri);
 		}
 		printf('<a href="%s" rel="previous">
-      Previous <span class="hidden-mobile">page</span>
+      Previous <span class="hidden">page</span>
     </a>', $uri);
 	}
 
@@ -115,7 +115,7 @@ function pagination($q = null, $mode = null, $uri = null)
 		}
 		printf('<div class="next">
     <a href="%s" rel="next">
-      Next <span class="hidden-mobile">page</span>
+      Next <span class="hidden">page</span>
     </a>
   </div>', $uri);
 	}

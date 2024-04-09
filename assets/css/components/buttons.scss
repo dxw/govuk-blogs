@@ -184,7 +184,7 @@ input{
     a {
       padding-right: $gutter;
       background-image: url('../assets/img/arrow-pagination-right.svg');
-      background-position: 100% 4px;
+      background-position: 100% 6px;
 
       .lt-ie11 &,
       .lte-ie8 & {
@@ -199,7 +199,7 @@ input{
     a {
       padding-left: $gutter;
       background-image: url('../assets/img/arrow-pagination-left.svg');
-      background-position: 0 4px;
+      background-position: 0 6px;
 
       .lte-ie11 &,
       .lte-ie8 & {

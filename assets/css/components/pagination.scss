@@ -1,101 +1,39 @@
 .pagination-container {
-  margin-bottom: $gutter;
-  .previous, .next {
-    width: 30%;
-    float: left;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .pagination {
-    width: 40%;
-    float: left;
-  }
-}
+  
+	.govuk-grid-row {
+	width: 100%;
+	@extend .govuk-pagination;
+	margin-left: 0;
+	margin-right: 0;
+	}
 
-ul {
-	//pagination
-	&.list-inline {
-		list-style-type: none;
-		padding-left: 0;
-		li {
-			display: inline-block;
+	.previous {
+	@extend .govuk-pagination__prev;
+	}
+
+	.next {
+	@extend .govuk-pagination__next;
+	}
+
+	.list-inline {
+		@extend .govuk-pagination__list;
+	}
+
+	li {
+		@extend .govuk-pagination__item;
+		display: none;
+
+		@media (min-width: 870px) {
+			display: block;
 		}
 	}
-}
 
-ul.children {
-	margin-top: 0;
-}
+	a {
+		@extend .govuk-pagination__link;
+	}
 
-.pagination {
-  margin: 0 auto;
-  text-align: center;
-
-  ul {
-    display: inline-block;
-    margin: 0 $spacingSmall*2;
-
-    @media (max-width: $mobileSmallWidth) {
-      margin-top: $gutterHalf;
-    }
-
-    > li {
-      padding-left: 0;
-
-      &:first-child {
-
-        > a {
-          border-left-width: 0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      }
-
-      &:last-child {
-
-        > a {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-      }
-
-      > a {
-        padding: 4px 12px;
-        line-height: 20px;
-        text-decoration: none;
-
-        &:hover, &:focus {
-          text-decoration: underline;
-          background: transparent;
-        }
-
-        &:focus {
-          background: $govuk-focus-colour;
-          outline: 3px solid $govuk-focus-colour;
-          outline-offset: 0;
-        }
-      }
-    }
-
-    li.active {
-      padding: 4px 12px;
-      color: $govuk-border-colour;
-    }
-
-    > .active {
-
-      span, a {
-        color: $govuk-border-colour;
-        cursor: default;
-        background: transparent;
-      }
-
-      a {
-        &:hover, &:focus {
-          text-decoration: none;
-        }
-      }
-    }
-  }
+	li.active {
+		@extend .govuk-pagination__item--current;
+		color: white;
+	}
 }
