@@ -1,3 +1,55 @@
+#ccc {
+	
+	#ccc-title {
+		@extend .govuk-heading-m;
+	}
+
+	#cc-panel p {
+		@extend .govuk-body;
+	}
+
+	#ccc-button-holder {
+		.ccc-notify-button {
+			@extend .govuk-button;
+
+			&:first-of-type {
+				margin-right: $gutterHalf;
+			}
+		}
+	}
+
+	#ccc-content h3 {
+		@extend .govuk-heading-s;
+
+		&.optional-cookie-header {
+			padding-bottom: 0;
+		}
+	}
+
+	#ccc-content .ccc-svg-element {
+		display: none;
+	}
+
+	#ccc-icon #triangle {
+		fill: govuk-colour('blue');
+
+		&:hover {
+			fill: #207dce;
+		}
+	}
+
+	#ccc-icon:focus {
+		#triangle {
+			fill: govuk-colour('yellow');
+		}
+		#star path {
+			fill: govuk-colour('black') !important;
+		}
+	}
+	
+}
+
+
 /* default plugin styles */
 #ccc #ccc-icon.ccc-icon--no-outline:focus {
     outline: 3px solid #171919;
@@ -13,12 +65,6 @@
 
 #ccc #ccc-icon.ccc-icon--no-outline:focus #star path {
     fill: #171919;
-}
-
-
-#ccc[light] .ccc-notify-button:focus,
-#ccc[light] .ccc-notify-button:active {
-    color: govuk-colour("white") !important;
 }
 
 #ccc .ccc-notify-button:focus,
