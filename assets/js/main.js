@@ -56,17 +56,6 @@ jQuery(function ($) {
         });
     }
 
-    $(function(){
-        $('input.search-query').data('holder',$('input.search-query').attr('placeholder'));
-        $('input.search-query').focusin(function(){
-            $(this).attr('placeholder','');
-        });
-        $('input.search-query').focusout(function(){
-            $(this).attr('placeholder',$(this).data('holder'));
-        });
-    })
-
-
     // Transform category list into select and back on screen resize
 
     $(window).resize(function() {
