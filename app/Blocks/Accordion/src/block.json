@@ -4,7 +4,7 @@
 	"name": "govukblogs/accordion",
 	"version": "0.1.0",
 	"title": "GOV.UK Accordion",
-	"category": "theme",
+	"category": "govuk-components",
 	"allowedBlocks": [ "govukblogs/accordion-row" ],
 	"description": "Accordion block using GOV.UK markup.",
 	"example": {

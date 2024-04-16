@@ -4,7 +4,7 @@
   "name": "govukblogs/inset-text",
   "version": "0.1.0",
   "title": "GOV.UK Inset Text",
-  "category": "theme",
+  "category": "govuk-components",
   "description": "GOV.UK inset text component.",
   "example": {
     "innerBlocks": [

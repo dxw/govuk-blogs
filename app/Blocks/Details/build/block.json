@@ -4,7 +4,7 @@
   "name": "govukblogs/details",
   "version": "0.1.0",
   "title": "GOV.UK Details",
-  "category": "theme",
+  "category": "govuk-components",
   "description": "GOV.UK details component",
   "example": {},
   "attributes": {
