@@ -4,7 +4,7 @@
   "name": "govukblogs/accordion-row",
   "version": "0.1.0",
   "title": "GOV.UK Accordion Row",
-  "category": "theme",
+  "category": "govuk-components",
   "parent": [
     "govukblogs/accordion"
   ],

@@ -112,7 +112,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/inset-text","version":"0.1.0","title":"GOV.UK Inset Text","category":"theme","description":"GOV.UK inset text component.","example":{"innerBlocks":[{"name":"core/paragraph","attributes":{"content":"It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."}}]},"supports":{"align":false,"html":false,"layout":{"allowEditing":false},"spacing":{"margin":["top","bottom"],"padding":false,"blockGap":false}},"textdomain":"govukblogs/inset-text","editorScript":"file:./index.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"govukblogs/inset-text","version":"0.1.0","title":"GOV.UK Inset Text","category":"govuk-components","description":"GOV.UK inset text component.","example":{"innerBlocks":[{"name":"core/paragraph","attributes":{"content":"It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."}}]},"supports":{"align":false,"html":false,"layout":{"allowEditing":false},"spacing":{"margin":["top","bottom"],"padding":false,"blockGap":false}},"textdomain":"govukblogs/inset-text","editorScript":"file:./index.js"}');
 
 /***/ })
 
