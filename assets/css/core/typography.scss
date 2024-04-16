@@ -27,7 +27,8 @@ ul,
 ol {
 	@extend %govuk-list;
 
-	&.is-style-spaced {
+	&.is-style-spaced,
+	&.is-style-no-bullet-spaced {
 		@extend %govuk-list--spaced;
 
 		ul,
@@ -40,6 +41,12 @@ ol {
 				margin-top: govuk-spacing(2);
 			}
 		}
+	}
+
+	&.is-style-no-bullet,
+	&.is-style-no-bullet-spaced {
+		list-style-type: none;
+		padding-left: 0;
 	}
 
 	ul,

@@ -40,6 +40,16 @@ wp.blocks.registerBlockStyle( 'core/list', {
 	label: 'Extra spacing'
 } );
 
+wp.blocks.registerBlockStyle( 'core/list', {
+	name: 'no-bullet',
+	label: 'No bullet'
+} );
+
+wp.blocks.registerBlockStyle( 'core/list', {
+	name: 'no-bullet-spaced',
+	label: 'No bullet & extra spacing' 
+} );
+
 wp.domReady(function(){
 	wp.blocks.unregisterBlockStyle( 'core/button', 'fill' );
 });
