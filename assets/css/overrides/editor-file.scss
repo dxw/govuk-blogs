@@ -1,5 +1,5 @@
 .wp-block-file__content-wrapper {
-	
+	display: flex;
 	align-items: center;
 	flex-direction: column;
 	gap: $gutterHalf;
@@ -7,4 +7,11 @@
 	@media (min-width:$mobileMaxWidth) {
 		flex-direction: row;
 	}
+}
+
+.wp-block-file__button-richtext-wrapper {
+	@media (max-width:$mobileMaxWidth) {
+		width: 100%;
+	}
+	
 }
