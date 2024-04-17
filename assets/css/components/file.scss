@@ -1,0 +1,30 @@
+.wp-block-file {
+	@extend .govuk-body;
+	display: flex;
+	align-items: baseline;
+	flex-direction: column;
+	gap: $gutterHalf;
+	flex-wrap: wrap;
+
+	object {
+		width: 100%;
+	}
+
+	@media (min-width:$mobileMaxWidth) {
+		flex-direction: row;
+	}
+
+	a {
+		font-size: 1.1875rem;
+	}
+
+	.wp-block-file__button {
+		@extend .govuk-button;
+		margin-bottom: 0;
+		margin-left: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
