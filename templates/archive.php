@@ -1,6 +1,6 @@
 <?php if (is_category()) : ?>
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-  <h2 class="govuk-heading-l"><?php single_cat_title(); ?></h2>
+  <h1 class="govuk-heading-l"><?php single_cat_title(); ?></h1>
   <?php echo category_description(); ?>
 <?php endif; ?>
 <?php while (have_posts()) : the_post() ?>
