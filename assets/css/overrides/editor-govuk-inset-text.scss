@@ -1,3 +1,7 @@
 .govuk-inset-text > [data-custom-placeholder="true"] {
 	margin-bottom: 0;
 }
+
+.wp-block-govukblogs-inset-text-is-layout-flow {
+	box-sizing: border-box;
+}
