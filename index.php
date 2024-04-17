@@ -1,8 +1,8 @@
 <?php if (!have_posts()) : ?>
     <div class="govuk-error-summary">
-        <h2 class="govuk-error-summary__title">
+        <h1 class="govuk-error-summary__title">
           Sorry, no blog posts were found
-        </h2>
+        </h1>
         <p class="govuk-body">This may be because:<p>
         <ul class="govuk-list govuk-list--bullet">
             <li>No blog posts have yet been published on this blog</li>
