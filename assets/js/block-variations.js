@@ -4,7 +4,7 @@ wp.domReady(() => {
 		'core/buttons',
 		{
 			name: 'govukblogs/buttons',
-			title: 'GOV.UK buttons',
+			title: 'GOV.UK Buttons',
 			description: 'Buttons using GOV.UK markup and styling',
 			category: 'govuk-components',
 			isDefault: true,
