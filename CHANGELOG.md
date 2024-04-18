@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Update theme name and version, to differentiate from (Classic Editor) version 4 of the theme.
 - Refactor stylesheet structure to align with GOV.UK Frontend framework.
-- Update header and page templates to ensure only obe h1 tag outputted
+- Update header and page templates to ensure only one h1 tag outputted
 - Update sidebar, cookie banner and search bar styling to bring in line with GOV.UK site
 - Update File, Footnotes, Divider, List, Quote and Table blocks styling to bring in line with GOV.UK design system
 
