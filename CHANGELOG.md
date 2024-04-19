@@ -9,14 +9,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add barebones `theme.json` with editor options heavily constrained, in readiness for introduction of GOV.UK design system.
 - Ensure the admin stylesheet is loaded in the Block Editor.
-- Add native GOV.UK Details block
+- Native GOV.UK Details block
+- Native GOV.UK Accordion block
+- Native GOV.UK Inset Text block
+- GOV.UK variation of Buttons block
+- No-bullets list style
 
 ### Changed
 
 - Update theme name and version, to differentiate from (Classic Editor) version 4 of the theme.
 - Refactor stylesheet structure to align with GOV.UK Frontend framework.
+- Update header and page templates to ensure only one h1 tag outputted
+- Update sidebar, cookie banner and search bar styling to bring in line with GOV.UK site
+- Update File, Footnotes, Divider, List, Quote and Table blocks styling to bring in line with GOV.UK design system
 
 ### Removed
+
+- Function enforcing https url on uploaded media
 
 ### Fixed
 
