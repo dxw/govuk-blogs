@@ -77,7 +77,7 @@ class AllowedBlocks implements \Dxw\Iguana\Registerable
 				// 'core/rss',
 				// 'core/search',
 				'core/separator',
-				// 'core/shortcode',
+				'core/shortcode',
 				// 'core/site-logo',
 				// 'core/site-tagline',
 				// 'core/site-title',
