@@ -75,6 +75,10 @@ a {
 	@extend %govuk-link;
 }
 
+.has-background a:focus {
+	color: $black;
+}
+
 table {
 	@extend %govuk-body-m;
 }
