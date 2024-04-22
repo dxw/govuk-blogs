@@ -21,5 +21,15 @@ wp.domReady(() => {
 			isActive: [ 'className' ]
 		}
 	)
-})
 
+	const allowedEmbedBlocks = [
+		'vimeo',
+		'youtube',
+	];
+	  
+	wp.blocks.getBlockVariations('core/embed').forEach((blockVariation) => {
+		if (allowedEmbedBlocks.indexOf(blockVariation.name) === -1) {
+		  wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name);
+		}
+	});
+})
