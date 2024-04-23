@@ -1,230 +1,221 @@
 .sidebar {
 	border-top: 2px solid $blueDark;
 
-  .widget {
-	padding-top: $gutterHalf;
-    margin-bottom: $gutter;
-	border-top: 1px solid var(--wp--preset--color--mid-grey);
-	
-	&:first-of-type {
-		border-top: none;
-	}
+	.widget {
+		padding-top: $gutterHalf;
+		margin-bottom: $gutter;
+		border-top: 1px solid var(--wp--preset--color--mid-grey);
 
-	ol {
-		padding-left: 0;
-	}
-	
-	li,
-	table,
-	p,
-	.wp-block-heading,
-	h3,
-	select {
-		font-size: 1rem;
-	}
+		&:first-of-type {
+			border-top: none;
+		}
 
-	.widget-inner > * > *,
-	.wp-block-latest-posts__list li,
-	.wp-block-latest-comments__comment {
-		margin-bottom: govuk-spacing(3);
-	}
+		ol {
+			padding-left: 0;
+		}
 
-	.govuk-button {
-		margin-bottom: 0;
-		height: 38px;
-	}
+		li,
+		table,
+		p,
+		.wp-block-heading,
+		h3,
+		select {
+			font-size: 1rem;
+		}
 
-	@media (min-width: $mobileMaxWidth) {
+		.widget-inner > * > *,
+		.wp-block-latest-posts__list li,
+		.wp-block-latest-comments__comment {
+			margin-bottom: govuk-spacing(3);
+		}
+
+		.govuk-button {
+			margin-bottom: 0;
+			height: 38px;
+		}
+
+		@media (min-width: $mobileMaxWidth) {
+			.wp-block-heading,
+			h3 {
+				font-size: var(--wp--preset--font-size--19);
+			}
+		}
+
 		.wp-block-heading,
 		h3 {
-			font-size: var(--wp--preset--font-size--19);
+			margin-bottom: 10px;
+		}
+
+		select {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.textwidget {
+			margin-bottom: $gutter;
 		}
 	}
 
-	.wp-block-heading,
-	h3 {
-		margin-bottom: 10px;
-	  }
+	.widget_nav_menu {
+		ul {
+			margin: 0px 0px $gutter 0px;
+			padding-left: 0;
+		}
 
-	select {
-		max-width: 100%;
-		width: 100%;
+		li {
+			list-style: none;
+			padding-left: 0px;
+		}
 	}
-    
-    .textwidget {
-      margin-bottom: $gutter;
-    }
-  }
 
-  .widget_nav_menu {
-    ul {
-      margin: 0px 0px $gutter 0px;
-      padding-left: 0;
-    }
+	.about_widget {
+		p {
+			margin-bottom: $gutterHalf;
+		}
+	}
 
-    li {
-      list-style: none;
-      padding-left: 0px;
-    }
-  }
+	.widget_categories {
 
-  #menu-main-menu, .menu {
-    li {
-      margin: 0;
-    }
-    a {
-      display: block;
-    }
-  }
+		ul {
+			margin-bottom: $gutter;
+		}
+	}
 
-  .about_widget {
-    p {
-      margin-bottom: $gutterHalf;
-    }
-  }
+	.widget_recent_entries,
+	.widget_recent_comments {
 
-  .widget_categories {
+		span.post-date {
+			color: $greyText;
+			&:before {
+				content: " ";
+			}
+		}
+	}
 
-    ul {
-      margin-bottom: $gutter;
-    }
-  }
+	.widget_recent_entries {
+		ul li {
+			a {
+				&:after {
+					content: ",";
+				}
+			}
+		}
+	}
 
-  .widget_recent_entries,
-  .widget_recent_comments {
+	#menu-follow-us {
 
-    span.post-date {
-      color: $greyText;
-      &:before {
-        content: " ";
-      }
-    }
-  }
+		a {
+			padding: 0;
+			border-bottom: none;
+			vertical-align: middle;
+			@include govuk-font(16);
+			@include icons;
+			// Fallback to a blank icon
+			@include icon-blank;
 
-  .widget_recent_entries {
-    ul li {
-      a {
-        &:after {
-          content: ",";
-        }
-      }
-    }
-  }
+			@media (min-width: $mobileMaxWidth) {
+				line-height: 1.3157894737;
+			}
 
-  #menu-follow-us {
+			// Twitter
+			&[href^="http://twitter.com/"],
+			&[href^="http://www.twitter.com/"],
+			&[href^="https://twitter.com/"],
+			&[href^="https://www.twitter.com/"] {
+				@include icon-twitter;
+			}
 
-    a {
-      padding: 0;
-      border-bottom: none;
-      vertical-align: middle;
-      @include govuk-font(16);
-      @include icons;
-      // Fallback to a blank icon
-      @include icon-blank;
+			// Facebook
+			&[href^="http://facebook.com/"],
+			&[href^="http://www.facebook.com/"],
+			&[href^="https://facebook.com/"],
+			&[href^="https://www.facebook.com/"] {
+				@include icon-facebook;
+			}
 
-	  @media (min-width: $mobileMaxWidth) {
-		line-height: 1.3157894737;
-	  }
+			// YouTube
+			&[href^="http://youtube.com/"],
+			&[href^="http://www.youtube.com/"],
+			&[href^="https://youtube.com/"],
+			&[href^="https://www.youtube.com/"] {
+				@include icon-youtube;
+			}
 
-      // Twitter
-      &[href^="http://twitter.com/"],
-      &[href^="http://www.twitter.com/"],
-      &[href^="https://twitter.com/"],
-      &[href^="https://www.twitter.com/"] {
-        @include icon-twitter;
-      }
+			// Flickr
+			&[href^="http://flickr.com/"],
+			&[href^="http://www.flickr.com/"],
+			&[href^="https://flickr.com/"],
+			&[href^="https://www.flickr.com/"] {
+				@include icon-flickr;
+			}
 
-      // Facebook
-      &[href^="http://facebook.com/"],
-      &[href^="http://www.facebook.com/"],
-      &[href^="https://facebook.com/"],
-      &[href^="https://www.facebook.com/"] {
-        @include icon-facebook;
-      }
+			// Google +
+			&[href^="http://plus.google.com/"],
+			&[href^="https://plus.google.com/"] {
+				@include icon-googleplus;
+			}
 
-      // YouTube
-      &[href^="http://youtube.com/"],
-      &[href^="http://www.youtube.com/"],
-      &[href^="https://youtube.com/"],
-      &[href^="https://www.youtube.com/"] {
-        @include icon-youtube;
-      }
+			// Foursquare
+			&[href^="http://foursquare.com/"],
+			&[href^="http://www.foursquare.com/"],
+			&[href^="https://foursquare.com/"],
+			&[href^="https://www.foursquare.com/"] {
+				@include icon-foursquare;
+			}
 
-      // Flickr
-      &[href^="http://flickr.com/"],
-      &[href^="http://www.flickr.com/"],
-      &[href^="https://flickr.com/"],
-      &[href^="https://www.flickr.com/"] {
-        @include icon-flickr;
-      }
+			// LinkedIn
+			&[href^="http://linkedin.com/"],
+			&[href^="http://www.linkedin.com/"],
+			&[href^="https://linkedin.com/"],
+			&[href^="https://www.linkedin.com/"] {
+				@include icon-linkedin;
+			}
 
-      // Google +
-      &[href^="http://plus.google.com/"],
-      &[href^="https://plus.google.com/"] {
-        @include icon-googleplus;
-      }
+			// Pinterest
+			&[href^="http://pinterest.com/"],
+			&[href^="http://www.pinterest.com/"],
+			&[href^="https://pinterest.com/"],
+			&[href^="https://www.pinterest.com/"],
+			&[href^="http://uk.pinterest.com/"],
+			&[href^="https://uk.pinterest.com/"] {
+				@include icon-pinterest;
+			}
 
-      // Foursquare
-      &[href^="http://foursquare.com/"],
-      &[href^="http://www.foursquare.com/"],
-      &[href^="https://foursquare.com/"],
-      &[href^="https://www.foursquare.com/"] {
-        @include icon-foursquare;
-      }
+			// Instagram
+			&[href^="http://instagram.com/"],
+			&[href^="http://www.instagram.com/"],
+			&[href^="https://instagram.com/"],
+			&[href^="https://www.instagram.com/"] {
+				@include icon-instagram;
+			}
 
-      // LinkedIn
-      &[href^="http://linkedin.com/"],
-      &[href^="http://www.linkedin.com/"],
-      &[href^="https://linkedin.com/"],
-      &[href^="https://www.linkedin.com/"] {
-        @include icon-linkedin;
-      }
+			// Email
+			&[href^="mailto:"] {
+				@include icon-email;
+			}
 
-      // Pinterest
-      &[href^="http://pinterest.com/"],
-      &[href^="http://www.pinterest.com/"],
-      &[href^="https://pinterest.com/"],
-      &[href^="https://www.pinterest.com/"],
-      &[href^="http://uk.pinterest.com/"],
-      &[href^="https://uk.pinterest.com/"] {
-        @include icon-pinterest;
-      }
+			// Email
+			&[href*=".podbean.com/"] {
+				@include icon-podbean;
+			}
+		}
+	}
 
-      // Instagram
-      &[href^="http://instagram.com/"],
-      &[href^="http://www.instagram.com/"],
-      &[href^="https://instagram.com/"],
-      &[href^="https://www.instagram.com/"] {
-        @include icon-instagram;
-      }
-
-      // Email
-      &[href^="mailto:"] {
-        @include icon-email;
-      }
-
-      // Email
-      &[href*=".podbean.com/"] {
-        @include icon-podbean;
-      }
-    }
-  }
-
-  .archive-dropdown-with-submit-js-enabled {
-    display: none;
-  }
+	.archive-dropdown-with-submit-js-enabled {
+		display: none;
+	}
 }
 
 .js-enabled {
-  .sidebar {
-    .archive-dropdown-with-submit-js-enabled {
-      display: block;
-      select {
-        margin-right: 5px;
-      }
-    }
-    .archive-dropdown-with-submit-js-disabled {
-      display: none;
-    }
-  }
+	.sidebar {
+		.archive-dropdown-with-submit-js-enabled {
+			display: block;
+			select {
+				margin-right: 5px;
+			}
+		}
+		.archive-dropdown-with-submit-js-disabled {
+			display: none;
+		}
+	}
 }
