@@ -32,7 +32,8 @@
     color: govuk-colour("white");
 }
 
-#ccc #ccc-close:focus path {
+#ccc[light] #ccc-close:focus path,
+.ccc-content--light #ccc-close:focus path {
     fill: govuk-colour("white") !important;
 }
 
