@@ -25,7 +25,7 @@ add_action('init', function () {
 // Redirect non-Atom feeds
 add_action('template_redirect', function () {
 	if (is_feed() && !is_feed('atom')) {
-		wp_redirect(home_url('/feed/atom/'), 302);
+		wp_redirect(home_url('/feed/atom/'), 302, 'govuk-blogs theme');
 		exit;
 	}
 });
