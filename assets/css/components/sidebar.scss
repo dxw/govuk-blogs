@@ -37,7 +37,8 @@
 		@media (min-width: $mobileMaxWidth) {
 			.wp-block-heading,
 			h3 {
-				font-size: var(--wp--preset--font-size--19);
+				@include govuk-font(19);
+				font-weight: 700;
 			}
 		}
 
