@@ -57,8 +57,8 @@
 					"color": "var(--wp--custom--govuk-color--turquoise)"
 				}
 			],
-			"text": true,
-			"background": true,
+			"text": false,
+			"background": false,
 			"defaultGradients": false,
 			"defaultPalette": false
 		},
@@ -79,8 +79,8 @@
 			"wideSize": "960px"
 		},
 		"spacing": {
-			"margin": true,
-			"padding": true,
+			"margin": false,
+			"padding": false,
 			"blockGap": null,
 			"units": [ "px", "rem" ],
 			"customSpacingSize": false,
@@ -142,38 +142,7 @@
 			"letterSpacing": false,
 			"textDecoration": false,
 			"textTransform": true,
-			"fontSizes": [
-				{
-					"fluid": false,
-					"name": "16px",
-					"size": "1rem",
-					"slug": "16"
-				},
-				{
-					"fluid": false,
-					"name": "19px",
-					"size": "1.1875rem",
-					"slug": "19"
-				},
-				{
-					"fluid": false,
-					"name": "24px",
-					"size": "1.5rem",
-					"slug": "24"
-				},
-				{
-					"fluid": false,
-					"name": "36px",
-					"size": "2.25rem",
-					"slug": "36"
-				},
-				{
-					"fluid": false,
-					"name": "48px",
-					"size": "3rem",
-					"slug": "48"
-				}
-			],
+			"fontSizes": [],
 			"fontFamilies": []
 		}
 	},
