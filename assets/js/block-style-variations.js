@@ -19,22 +19,6 @@ wp.blocks.registerBlockStyle( 'core/button', {
 	label: 'Inverse'
 } );
 
-wp.blocks.registerBlockStyle( 'core/separator', {
-	name: 'medium',
-	label: 'Medium',
-	isDefault: true
-} );
-
-wp.blocks.registerBlockStyle( 'core/separator', {
-	name: 'large',
-	label: 'Large'
-} );
-
-wp.blocks.registerBlockStyle( 'core/separator', {
-	name: 'x-large',
-	label: 'Extra large'
-} );
-
 wp.blocks.registerBlockStyle( 'core/list', {
 	name: 'spaced',
 	label: 'Extra spacing'
