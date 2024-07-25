@@ -1,8 +1,8 @@
-.entry-content-asset.entry-content-asset { // concatenate to bump specificity to (0,2,0)
+.wp-embed-aspect-16-9 .entry-content-asset {
   padding-top: 0;
 }
 
-.entry-content-asset iframe {
+.wp-embed-aspect-16-9 iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -10,8 +10,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.wp-block-embed:has(.wp-element-caption) .entry-content-asset {
-  margin-bottom: 0;
 }
