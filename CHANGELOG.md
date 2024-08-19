@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [4.2.0] - 2024-08-19
+
+### Changed
+
+- Remove `pubdate` attribute from `<time>` element.
+- Pass `x_directed_by` argument to `wp_redirect()`, to aid debugging.
+
 ### Fixed
 
 - Video embed blocks maintain consistent aspect ratio across all screen sizes.
