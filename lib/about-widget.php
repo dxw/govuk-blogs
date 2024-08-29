@@ -8,7 +8,7 @@ class AboutWidget extends WP_Widget
 {
 	public function __construct()
 	{
-		$this->WP_Widget('about_widget', 'About Widget', ['classname' => 'about_widget', 'description' => 'Information about blog']);
+		parent::__construct('about_widget', 'About Widget', ['classname' => 'about_widget', 'description' => 'Information about blog']);
 		$this->alt_option_name = 'about_widget';
 	}
 
