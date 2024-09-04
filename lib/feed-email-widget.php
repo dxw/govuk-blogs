@@ -11,7 +11,7 @@ class FeedEmailWidget extends WP_Widget
 
 	public function __construct()
 	{
-		$this->WP_Widget('feed_email_widget', 'Feed Email Widget', ['classname' => 'feed_email_widget', 'description' => 'Shows feed/email buttons']);
+		parent::__construct('feed_email_widget', 'Feed Email Widget', ['classname' => 'feed_email_widget', 'description' => 'Shows feed/email buttons']);
 		$this->alt_option_name = 'feed_email_widget';
 
 		add_action('save_post', [&$this, 'flush_widget_cache']);
