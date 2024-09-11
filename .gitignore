@@ -3,6 +3,7 @@
 /govuk_template
 /build/main.min.js.map
 /build/main.min.css.map
+/build/admin.min.css.map
 .DS_Store
 .sass-cache/
 /.php_cs.cache
