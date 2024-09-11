@@ -75,7 +75,7 @@
     outline: 3px solid transparent;
     -webkit-box-shadow: inset 0 0 0 1px govuk-colour("yellow");
     box-shadow: inset 0 0 0 1px govuk-colour("yellow");
-    color: govuk-colour("white");
+    color: govuk-colour("black");
 }
 
 #ccc[light] #ccc-close:focus path,
@@ -93,14 +93,16 @@
     background-color: #333;
 }
 
-#ccc .ccc-content--light .ccc-notify-button:hover span,
-#ccc .ccc-content--light .ccc-notify-button:focus span,
-#ccc .ccc-content--dark .ccc-notify-button:hover span,
-#ccc .ccc-content--dark .ccc-notify-button:focus span,
-#ccc .ccc-content--dark .ccc-button-solid:focus span,
-#ccc .ccc-content--dark .ccc-button-solid:hover span {
-    color: govuk-colour("white");
-    background-color: transparent;
+#ccc .ccc-content--light .ccc-notify-button,
+#ccc .ccc-content--dark .ccc-notify-button,
+#ccc .ccc-content--dark .ccc-button-solid {
+	span {
+		color: govuk-colour("white") !important;
+	}
+
+	&:focus span {
+		color: govuk-colour("black") !important;
+	}
 }
 
 #ccc .checkbox-toggle--dark .checkbox-toggle-toggle,
