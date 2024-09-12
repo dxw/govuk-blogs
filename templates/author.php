@@ -4,7 +4,7 @@
             <?php gds_avatar() ?>
         </div>
         <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-l"><?php the_author_meta('display_name'); ?></h2>
+            <h1 class="govuk-heading-l"><?php the_author_meta('display_name'); ?></h1>
             <?php $content = get_the_author_meta('description');
             echo apply_filters('the_content', $content); ?>
         </div>

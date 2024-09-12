@@ -1,0 +1,231 @@
+#ccc {
+	
+	#ccc-title {
+		@extend .govuk-heading-m;
+	}
+
+	#cc-panel p {
+		@extend .govuk-body;
+	}
+
+	#ccc-button-holder {
+		.ccc-notify-button {
+			@extend .govuk-button;
+
+			&:first-of-type {
+				margin-right: $gutterHalf;
+			}
+		}
+	}
+
+	#ccc-content h2,
+	#ccc-content h3 {
+		@extend .govuk-heading-s;
+
+		&.optional-cookie-header {
+			padding-bottom: 0;
+		}
+	}
+
+	#ccc-content .ccc-svg-element {
+		display: none;
+	}
+
+	#ccc-icon #triangle {
+		fill: govuk-colour('blue');
+
+		&:hover {
+			fill: #207dce;
+		}
+	}
+
+	#ccc-icon:focus {
+		#triangle {
+			fill: govuk-colour('yellow');
+		}
+		#star path {
+			fill: govuk-colour('black') !important;
+		}
+	}
+	
+}
+
+
+/* default plugin styles */
+#ccc #ccc-icon.ccc-icon--no-outline:focus {
+    outline: 3px solid #171919;
+}
+
+#ccc #ccc-icon.ccc-icon--no-outline:hover #triangle path {
+    fill: #171919;
+}
+
+#ccc #ccc-icon.ccc-icon--no-outline:focus #triangle path {
+    fill: govuk-colour("yellow");
+}
+
+#ccc #ccc-icon.ccc-icon--no-outline:focus #star path {
+    fill: #171919;
+}
+
+#ccc .ccc-notify-button:focus,
+#ccc .ccc-content--dark .ccc-button-solid:focus,
+#ccc-close:focus {
+    background-color: #171919;
+    border-color: govuk-colour("yellow") !important;
+    outline: 3px solid transparent;
+    -webkit-box-shadow: inset 0 0 0 1px govuk-colour("yellow");
+    box-shadow: inset 0 0 0 1px govuk-colour("yellow");
+    color: govuk-colour("black");
+}
+
+#ccc[light] #ccc-close:focus path,
+.ccc-content--light #ccc-close:focus path {
+    fill: govuk-colour("white") !important;
+}
+
+#ccc .ccc-notify-button:hover,
+#ccc .ccc-content--dark .ccc-button-solid:hover {
+    background-color: #171919;
+    color: govuk-colour("white") !important;
+}
+
+#ccc .ccc-content--light .ccc-notify-button:hover {
+    background-color: #333;
+}
+
+#ccc .ccc-content--light .ccc-notify-button,
+#ccc .ccc-content--dark .ccc-notify-button,
+#ccc .ccc-content--dark .ccc-button-solid {
+	span {
+		color: govuk-colour("white") !important;
+	}
+
+	&:focus span {
+		color: govuk-colour("black") !important;
+	}
+}
+
+#ccc .checkbox-toggle--dark .checkbox-toggle-toggle,
+#ccc .checkbox-toggle--light .checkbox-toggle-toggle {
+    background-color: govuk-colour("white") !important;
+}
+
+#ccc .checkbox-toggle--checkbox,
+#ccc .checkbox-toggle {
+    right: auto;
+    left: 0;
+}
+
+#ccc .checkbox-toggle--checkbox label {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 0;
+}
+
+#ccc .checkbox-toggle-input {
+    cursor: pointer;
+}
+
+#ccc .checkbox-toggle--checkbox.checkbox-toggle--dark {
+    border-color: govuk-colour("black") !important;
+    border-width: 3px !important;
+}
+
+#ccc .checkbox-toggle--dark .checkbox-toggle-toggle {
+    background-color: govuk-colour("white") !important;
+}
+
+#ccc .checkbox-toggle--checkbox input:checked~.checkbox-toggle-toggle:after {
+    left: 16px !important;
+    width: 10px !important;
+    height: 25px !important; 
+    border-color: govuk-colour("black") !important;
+}
+
+#ccc .checkbox-toggle:focus-within {
+    background-color: #171919;;
+    border-color: govuk-colour("yellow") !important;
+    outline: 3px solid transparent;
+    -webkit-box-shadow: inset 0 0 0 1px govuk-colour("yellow");
+    box-shadow: inset 0 0 0 1px govuk-colour("yellow");
+}
+
+#ccc[slider-optin] .checkbox-toggle-on,
+#ccc[slider-optin] .checkbox-toggle-off,
+#ccc .checkbox-toggle--slider .checkbox-toggle-on,
+#ccc .checkbox-toggle--slider .checkbox-toggle-off {
+    opacity: 1 !important;
+    color: govuk-colour("white") !important;
+}
+
+.ccc-link:focus,
+#ccc a:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c !important;;
+    background-color: govuk-colour("yellow");
+    -webkit-box-shadow: 0 -2px govuk-colour("yellow"),0 4px #0b0c0c;
+    box-shadow: 0 -2px govuk-colour("yellow"),0 4px #0b0c0c;
+    text-decoration: none;
+}
+
+#ccc a:focus svg path {
+    fill: #0b0c0c;
+}
+
+#ccc {
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+#ccc h3.optional-cookie-header {
+    padding: 3rem 0 1rem 0;
+}
+
+@media screen and (max-width:768px) {
+
+    #ccc {
+        position: absolute !important;
+        top: 0 !important;
+    }
+
+    #ccc-module,
+    #ccc[slideout][left][open] #ccc-module {
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+    }
+
+    #ccc[slideout] #ccc-module {
+        max-width: 100% !important;
+    }
+
+    #ccc-module,
+    #ccc-content,
+    .ccc-panel {
+        position: relative !important;
+    }
+
+    #ccc-content {
+        overflow: visible !important;
+    }
+
+    #ccc-module.ccc-module--slideout {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    #ccc-content,
+    #ccc-title, .ccc-title {
+        padding: 0 !important;
+    }
+
+    .ccc-panel {
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        position: relative;
+        padding: 15px;
+    }    
+}

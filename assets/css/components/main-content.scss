@@ -1,0 +1,10 @@
+.page .main-content {
+  // Allow ordered lists to have numbers
+  ol {
+    list-style-type: decimal;
+  }
+}
+.page-template-templatesall-posts-php .main-content {
+  border-top: none;
+  padding-top: 0;
+}

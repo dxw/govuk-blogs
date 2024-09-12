@@ -39,6 +39,8 @@ To update the composer modules:
 
     % composer update
 
+To work on the native blocks run `npm start` from within the block root directory - a recent or LTS version of Node is recommended.
+
 ## Versioning
 
 Use the [semantic versioning](https://semver.org/) standard.

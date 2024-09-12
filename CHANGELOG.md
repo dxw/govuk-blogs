@@ -3,7 +3,47 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [Unreleased]
+
+### Added
+
+- Use `theme.json` to configure theme and Block Editor options.
+- Constrain Block Editor options to [GOV.UK Design System](https://design-system.service.gov.uk/).
+  - [Colour palette](https://design-system.service.gov.uk/styles/colour/)
+  - [Type scale](https://design-system.service.gov.uk/styles/type-scale/)
+  - [Spacing scale](https://design-system.service.gov.uk/styles/spacing/)
+- Ensure theme stylesheet is loaded in Block Editor
+- Add custom block for [GOV.UK Inset text component](https://design-system.service.gov.uk/components/inset-text/).
+- Add custom block for [GOV.UK Accordion component](https://design-system.service.gov.uk/components/accordion/).
+- Add custom block for [GOV.UK Details component](https://design-system.service.gov.uk/components/details/).
+- Style _List_ block, as per [GOV.UK Design System][https://design-system.service.gov.uk/styles/lists/].
+- Style _Quote_ block, as per _Inset text_ component.
+- Style _Table_ block, as per [GOV.UK Table component](https://design-system.service.gov.uk/components/table/).
+- Ensure visual parity between front-end and Block Editor.
+- Apply theme styles to content within _Classic_ block.
+- Constrain WordPress core blocks available to the editor for selection.
+
+### Changed
+
+- Update theme name and version, to differentiate from (Classic Editor) version 4 of the theme.
+- Restructure stylesheets, to align with [GOV.UK Frontend Framework](https://github.com/alphagov/govuk-frontend).
+- Update header and page templates to ensure only one h1 tag outputted
+- Update footnote style.
+- Style site pagination, as per [GOV.UK Pagination component](https://design-system.service.gov.uk/components/pagination/).
+- Apply GOV.UK styles to the cookie banner.
+- Extend GOV.UK styling to sidebar, principally adjustments to borders and font sizes.
+- Style search form button, to align with GOV.UK.
+- Apply [GOV.UK heading styles](https://design-system.service.gov.uk/styles/headings/) to all heading levels.
+
+### Removed
+
+- Function enforcing https url on uploaded media.
+- Call to deprecated constructor method for `WP_Widget`.
+
+### Fixed
+
+- Video embed blocks maintain consistent aspect ratio across all screen sizes.
+- Category dropdown no longer overflows sidebar.
 
 ## [4.2.0] - 2024-08-19
 

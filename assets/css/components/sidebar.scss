@@ -1,0 +1,222 @@
+.sidebar {
+	border-top: 2px solid $blueDark;
+
+	.widget {
+		padding-top: $gutterHalf;
+		margin-bottom: $gutter;
+		border-top: 1px solid var(--wp--preset--color--mid-grey);
+
+		&:first-of-type {
+			border-top: none;
+		}
+
+		ol {
+			padding-left: 0;
+		}
+
+		li,
+		table,
+		p,
+		.wp-block-heading,
+		h3,
+		select {
+			font-size: 1rem;
+		}
+
+		.widget-inner > * > *,
+		.wp-block-latest-posts__list li,
+		.wp-block-latest-comments__comment {
+			margin-bottom: govuk-spacing(3);
+		}
+
+		.govuk-button {
+			margin-bottom: 0;
+			height: 38px;
+		}
+
+		@media (min-width: $mobileMaxWidth) {
+			.wp-block-heading,
+			h3 {
+				@include govuk-font(19);
+				font-weight: 700;
+			}
+		}
+
+		.wp-block-heading,
+		h3 {
+			margin-bottom: 10px;
+		}
+
+		select {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.textwidget {
+			margin-bottom: $gutter;
+		}
+	}
+
+	.widget_nav_menu {
+		ul {
+			margin: 0px 0px $gutter 0px;
+			padding-left: 0;
+		}
+
+		li {
+			list-style: none;
+			padding-left: 0px;
+		}
+	}
+
+	.about_widget {
+		p {
+			margin-bottom: $gutterHalf;
+		}
+	}
+
+	.widget_categories {
+
+		ul {
+			margin-bottom: $gutter;
+		}
+	}
+
+	.widget_recent_entries,
+	.widget_recent_comments {
+
+		span.post-date {
+			color: $greyText;
+			&:before {
+				content: " ";
+			}
+		}
+	}
+
+	.widget_recent_entries {
+		ul li {
+			a {
+				&:after {
+					content: ",";
+				}
+			}
+		}
+	}
+
+	#menu-follow-us {
+
+		a {
+			padding: 0;
+			border-bottom: none;
+			vertical-align: middle;
+			@include govuk-font(16);
+			@include icons;
+			// Fallback to a blank icon
+			@include icon-blank;
+
+			@media (min-width: $mobileMaxWidth) {
+				line-height: 1.3157894737;
+			}
+
+			// Twitter
+			&[href^="http://twitter.com/"],
+			&[href^="http://www.twitter.com/"],
+			&[href^="https://twitter.com/"],
+			&[href^="https://www.twitter.com/"] {
+				@include icon-twitter;
+			}
+
+			// Facebook
+			&[href^="http://facebook.com/"],
+			&[href^="http://www.facebook.com/"],
+			&[href^="https://facebook.com/"],
+			&[href^="https://www.facebook.com/"] {
+				@include icon-facebook;
+			}
+
+			// YouTube
+			&[href^="http://youtube.com/"],
+			&[href^="http://www.youtube.com/"],
+			&[href^="https://youtube.com/"],
+			&[href^="https://www.youtube.com/"] {
+				@include icon-youtube;
+			}
+
+			// Flickr
+			&[href^="http://flickr.com/"],
+			&[href^="http://www.flickr.com/"],
+			&[href^="https://flickr.com/"],
+			&[href^="https://www.flickr.com/"] {
+				@include icon-flickr;
+			}
+
+			// Google +
+			&[href^="http://plus.google.com/"],
+			&[href^="https://plus.google.com/"] {
+				@include icon-googleplus;
+			}
+
+			// Foursquare
+			&[href^="http://foursquare.com/"],
+			&[href^="http://www.foursquare.com/"],
+			&[href^="https://foursquare.com/"],
+			&[href^="https://www.foursquare.com/"] {
+				@include icon-foursquare;
+			}
+
+			// LinkedIn
+			&[href^="http://linkedin.com/"],
+			&[href^="http://www.linkedin.com/"],
+			&[href^="https://linkedin.com/"],
+			&[href^="https://www.linkedin.com/"] {
+				@include icon-linkedin;
+			}
+
+			// Pinterest
+			&[href^="http://pinterest.com/"],
+			&[href^="http://www.pinterest.com/"],
+			&[href^="https://pinterest.com/"],
+			&[href^="https://www.pinterest.com/"],
+			&[href^="http://uk.pinterest.com/"],
+			&[href^="https://uk.pinterest.com/"] {
+				@include icon-pinterest;
+			}
+
+			// Instagram
+			&[href^="http://instagram.com/"],
+			&[href^="http://www.instagram.com/"],
+			&[href^="https://instagram.com/"],
+			&[href^="https://www.instagram.com/"] {
+				@include icon-instagram;
+			}
+
+			// Email
+			&[href^="mailto:"] {
+				@include icon-email;
+			}
+
+			// Email
+			&[href*=".podbean.com/"] {
+				@include icon-podbean;
+			}
+		}
+	}
+
+	.archive-dropdown-with-submit-js-enabled {
+		display: none;
+	}
+}
+
+.js-enabled {
+	.sidebar {
+		.archive-dropdown-with-submit-js-enabled {
+			display: block;
+			select {
+				margin-right: 5px;
+			}
+		}
+		.archive-dropdown-with-submit-js-disabled {
+			display: none;
+		}
+	}
+}

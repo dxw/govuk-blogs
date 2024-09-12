@@ -1,0 +1,25 @@
+.hallo-editor {
+  @import "../settings/variables";
+  @import "../helpers/mixins";
+  @import "../core/common";
+  @extend .entry-content;
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 2em;
+  }
+
+  table {
+    max-width: 620px;
+  }
+}
+
+label.setting[data-setting="alt"] {
+    ::after {
+        content: " (should convey what point the image is making)";
+    }
+}

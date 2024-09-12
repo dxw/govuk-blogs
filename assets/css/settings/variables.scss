@@ -1,0 +1,104 @@
+// Spacing
+// -------------------------
+
+$spacingSmall:            5px;
+
+
+// Default 940px grid
+// -------------------------
+
+$gutter:                  30px;
+$gutterHalf:              15px;
+$gridColumns:             12;
+$gridColumnWidth:         62px;
+$gridGutterWidth:         20px;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+
+// COLOURS
+// --------------------------------------------------
+
+$greyText: 		 govuk-colour("dark-grey");
+$greyLight:		 govuk-colour("light-grey");
+$blueDark:		 govuk-colour("dark-blue");
+$red:          govuk-colour("red");
+$black:        govuk-colour("black");
+$white:        govuk-colour("white");
+$background:   govuk-colour("light-grey");
+$panelColour:  govuk-colour("mid-grey");
+$borderColour: $govuk-border-colour;
+$focusColour:  govuk-colour("yellow");
+$linkColour:   govuk-colour("blue");
+$linkHover:    $govuk-link-hover-colour;
+$blogColour:   govuk-colour("turquoise");
+$alertColour:  govuk-colour("red");
+$buttonColour: govuk-colour("green");
+
+$buttonHover:darken(govuk-colour("green"), 2); //006435
+$buttonBorder:darken(govuk-colour("green"), 5); //#003618;
+$blogTitleColour: $govuk-secondary-text-colour;
+$placeHolderColour: $govuk-secondary-text-colour;
+$tableHeadCellColour: govuk-colour("light-grey");;
+$tableCellColour: #e1e8e8;
+
+
+// REFERENCE OF THE GOVUK Modern Colour Palette
+// https://github.com/alphagov/govuk-frontend/blob/063cd8e2470b62b824c6e50ca66342ac7a95d2d8/src/govuk/settings/_colours-palette.scss
+
+// $_govuk-colour-palette-modern: (
+//   "red": #d4351c,
+//   "yellow": #ffdd00,
+//   "green": #00703c,
+//   "blue": #1d70b8,
+//   "dark-blue": #003078,
+//   "light-blue": #5694ca,
+//   "purple": #4c2c92,
+
+//   "black": #0b0c0c,
+//   "dark-grey": #626a6e,
+//   "mid-grey": #b1b4b6,
+//   "light-grey": #f3f2f1,
+//   "white": #ffffff,
+
+//   "light-purple": #6f72af,
+//   "bright-purple": #912b88,
+//   "pink": #d53880,
+//   "light-pink": #f499be,
+//   "orange": #f47738,
+//   "brown": #b58840,
+//   "light-green": #85994b,
+//   "turquoise": #28a197
+// );
+
+
+// ICON FONT
+// --------------------------------------------------
+
+$fontPath:	"../assets/fonts";
+
+$icon-envelope:		"\e601";
+$icon-search:			"\e604";
+$icon-play:				"\e600";
+$icon-feed:				"\e60d";
+$icon-foursquare:	"\e607";
+$icon-link:				"\e605";
+$icon-flickr:			"\e608";
+$icon-twitter:		"\e60b";
+$icon-facebook:		"\e60a";
+$icon-googleplus:	"\e606";
+$icon-pinterest:	"\e603";
+$icon-linkedin:		"\e60c";
+$icon-instagram:  "\e60e";
+
+
+$mobileSmallWidth:  $mobile;
+$mobileMaxWidth:    $tablet - 1px;
+$tabletMinWidth:    $tablet;
+$tabletMaxWidth:    $desktop - 1px;
+
+$greyTopBorder: 1px solid govuk-colour("mid-grey");
+$yellow: govuk-colour("yellow");
+$focus-colour: govuk-colour("yellow");
+
+$is-ie: false !default;
+

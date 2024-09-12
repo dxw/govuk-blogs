@@ -1,0 +1,14 @@
+.footnotes,
+.wp-block-footnotes {
+  margin-bottom: $gutter;
+  border-top: $greyTopBorder;
+  padding-top: $gutterHalf;
+  
+    li {
+      .number,
+	  &::marker {
+        padding-right: $spacingSmall;
+        font-weight: bold;
+      }
+    }
+}

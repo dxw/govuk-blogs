@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "govukblogs/accordion-row",
+  "version": "0.1.0",
+  "title": "GOV.UK Accordion Row",
+  "category": "govuk-components",
+  "parent": [
+    "govukblogs/accordion"
+  ],
+  "description": "A individual row to add to a GOV.UK accordion.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "header": {
+      "type": "string",
+      "source": "html",
+      "selector": ".govuk-accordion__section-button"
+    },
+    "isSelected": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "usesContext": [
+    "govukblogs/showAll"
+  ],
+  "textdomain": "govukblogs/accordion-row",
+  "editorScript": "file:./index.js"
+}

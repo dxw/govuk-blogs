@@ -35,7 +35,7 @@ function share_icons($id)
         <a href="mailto:?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php echo esc_attr($title) ?> <?php echo esc_attr($url) ?>" class="email">Email</a>
       </li>
     </ul>
-    <div class="clearfix"></div>
+    <div class="govuk-clearfix"></div>
   </div>
 
   <?php

@@ -1,0 +1,39 @@
+.pagination-container {
+  
+	.govuk-grid-row {
+	width: 100%;
+	@extend .govuk-pagination;
+	margin-left: 0;
+	margin-right: 0;
+	}
+
+	.previous {
+	@extend .govuk-pagination__prev;
+	}
+
+	.next {
+	@extend .govuk-pagination__next;
+	}
+
+	.list-inline {
+		@extend .govuk-pagination__list;
+	}
+
+	li {
+		@extend .govuk-pagination__item;
+		display: none;
+
+		@media (min-width: 870px) {
+			display: block;
+		}
+	}
+
+	a {
+		@extend .govuk-pagination__link;
+	}
+
+	li.active {
+		@extend .govuk-pagination__item--current;
+		color: white;
+	}
+}

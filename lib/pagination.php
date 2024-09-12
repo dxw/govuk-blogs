@@ -49,20 +49,19 @@ function pagination($q = null, $mode = null, $uri = null)
 	$old_wq = $wp_query;
 	$wp_query = $q;
 
-	echo '<div class="previous">' . "\n";
-
 	// previous page
 	if (get_previous_posts_link()) {
+		echo '<div class="previous">' . "\n";
 		$uri = previous_posts(false);
 		if ($mode) {
 			$uri = add_query_arg(['mode' => $mode], $uri);
 		}
 		printf('<a href="%s" rel="previous">
-      Previous <span class="hidden-mobile">page</span>
+      Previous <span class="hidden">page</span>
     </a>', $uri);
+		echo "</div>";
 	}
 
-	echo "</div>";
 
 	// Restore $wp_query
 	$wp_query = $old_wq;
@@ -115,7 +114,7 @@ function pagination($q = null, $mode = null, $uri = null)
 		}
 		printf('<div class="next">
     <a href="%s" rel="next">
-      Next <span class="hidden-mobile">page</span>
+      Next <span class="hidden">page</span>
     </a>
   </div>', $uri);
 	}

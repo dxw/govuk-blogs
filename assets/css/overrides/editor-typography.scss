@@ -1,0 +1,27 @@
+.wp-block-freeform.block-library-rich-text__tinymce {
+	p,
+	li {
+		@include govuk-font(19);
+	}
+
+	ul {
+		@extend %govuk-list;
+		@extend %govuk-list--bullet;
+	}
+
+	ol {
+		@extend %govuk-list;
+		@extend %govuk-list--number;
+	}
+
+	blockquote {
+			@include govuk-responsive-margin(6, "top");
+			@include govuk-responsive-margin(6, "bottom");
+			border-left: $govuk-border-width-wide solid $govuk-border-colour;
+	}
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce dl.wp-caption .wp-caption-dd { // specificity match for WP styles
+	@extend figcaption;
+	padding: 0;
+}
