@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Apply GOV.UK font family to `<body>` so that content without surrounding markup is styled accordingly, rather than receiving browser defaults.
+
+### Fixed
+
+- Ensure accessible colour contrast when the cookie banner buttons are in :focus state, combined with :hover and/or :active states.
+
 ## [5.0.0] - 2024-09-12
 
 ### Added
