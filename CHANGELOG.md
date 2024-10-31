@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.1.0] - 2024-10-31
+
 ### Added
 
 - Apply GOV.UK font family to `<body>` so that content without surrounding markup is styled accordingly, rather than receiving browser defaults.
