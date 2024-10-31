@@ -101,7 +101,7 @@
 		color: govuk-colour("white") !important;
 	}
 
-	&:focus span {
+	&:focus:not(:hover, :active) span {
 		color: govuk-colour("black") !important;
 	}
 }
