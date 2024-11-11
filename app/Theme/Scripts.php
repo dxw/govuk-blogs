@@ -15,7 +15,6 @@ class Scripts implements \Dxw\Iguana\Registerable
 	{
 		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
 		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
-		add_action('init', [$this, 'removeRootsScript']);
 		add_filter('wp_script_attributes', [$this, 'addScriptTypeToJs'], 10, 1);
 		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlocksVariations']);
 		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations']);

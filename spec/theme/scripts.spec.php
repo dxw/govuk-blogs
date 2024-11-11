@@ -19,10 +19,9 @@ describe(GovUKBlogs\Theme\Scripts::class, function () {
 	describe('->register()', function () {
 		it('adds the action', function () {
 			allow('add_action')->toBeCalled();
-			expect('add_action')->toBeCalled()->times(5);
+			expect('add_action')->toBeCalled()->times(4);
 			expect('add_action')->toBeCalled()->with('wp_enqueue_scripts', [$this->scripts, 'wpEnqueueScripts']);
 			expect('add_action')->toBeCalled()->with('after_setup_theme', [$this->scripts, 'wpEnqueueEditorStyles']);
-			expect('add_action')->toBeCalled()->with('init', [$this->scripts, 'removeRootsScript']);
 			expect('add_action')->toBeCalled()->once()->with('enqueue_block_editor_assets', [$this->scripts, 'enqueueBlocksVariations']);
 			expect('add_action')->toBeCalled()->once()->with('enqueue_block_editor_assets', [$this->scripts, 'enqueueBlockStyleVariations']);
 			allow('get_template_directory_uri')->toBeCalled()->andReturn('/wp-content/themes/theme/templates');
