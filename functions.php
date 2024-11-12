@@ -3,19 +3,12 @@
 $registrar = require(__DIR__.'/app/load.php');
 $registrar->register();
 
-roots_require('lib/utils.php');
-roots_require('lib/init.php');
-roots_require('lib/sidebar.php');
 require(__DIR__.'/lib/config.php');
 require(__DIR__.'/lib/activation.php');
-roots_require('lib/titles.php');
-roots_require('lib/cleanup.php');
-roots_require('lib/nav.php');
-roots_require('lib/comments.php');
 require(__DIR__.'/lib/widgets.php');
 require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');
-
+require(__DIR__.'/lib/comments_walker.php');
 require(__DIR__.'/lib/image-licensing.php');
 require(__DIR__.'/lib/options.php');
 require(__DIR__.'/lib/menus.php');
