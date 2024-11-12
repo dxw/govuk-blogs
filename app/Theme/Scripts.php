@@ -31,11 +31,6 @@ class Scripts implements \Dxw\Iguana\Registerable
 		return $this->cssManifest->get($path);
 	}
 
-	public function removeRootsScript()
-	{
-		remove_action('wp_enqueue_scripts', 'roots_scripts', 100);
-	}
-
 	public function wpEnqueueScripts()
 	{
 		wp_enqueue_script('main', $this->getFingerPrintedPath('build/main.min.js'), ['jquery']);
