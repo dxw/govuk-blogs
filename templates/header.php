@@ -39,7 +39,7 @@ $headerTag = is_home() ? 'h1' : 'div';
                 </div>
             <?php endif ?>
             <div class="bottom search-container">
-                <?php get_search_form() ?>
+                <?php get_template_part('templates/searchform'); ?>
             </div>
         </div>
 
