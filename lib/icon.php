@@ -10,7 +10,7 @@ function blogIconPath(): \Dxw\Result\Result
 
 	// Old style
 	$icon_options = get_option('theme_logo_options');
-	if ($icon_options['logo'] != '') {
+	if ($icon_options && $icon_options['logo'] != '') {
 		return \Dxw\Result\Result::ok($icon_options['logo']);
 	}
 
