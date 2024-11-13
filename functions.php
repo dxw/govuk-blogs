@@ -3,6 +3,8 @@
 $registrar = require(__DIR__.'/app/load.php');
 $registrar->register();
 
+
+require(__DIR__.'/lib/utils.php');
 require(__DIR__.'/lib/config.php');
 require(__DIR__.'/lib/activation.php');
 require(__DIR__.'/lib/widgets.php');

@@ -24,3 +24,5 @@ $registrar->addInstance(new \GovUKBlogs\Theme\CSSManifest(dirname(__FILE__, 2) .
 $registrar->addInstance(new \GovUKBlogs\Theme\Scripts(
 	$registrar->getInstance(\GovUKBlogs\Theme\CSSManifest::class)
 ));
+$registrar->addInstance(new \GovUKBlogs\Theme\ThemeSetup());
+$registrar->addInstance(new \GovUKBlogs\Theme\OldRootsCleanup());
