@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.1.2] - 2024-11-14
+
+### Changed
+
+- Integrated some former Roots functions into the theme
+
 ## [5.1.1] - 2024-11-12
 
 ### Changed
