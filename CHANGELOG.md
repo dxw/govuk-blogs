@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.1.4] - 2024-11-19
+
+### Fixed
+
+- Integrates into theme a former Roots function - `gdsCaption` - which wraps captioned images in <figure> class
+
 ## [5.1.3] - 2024-11-14
 
 ### Fixed
