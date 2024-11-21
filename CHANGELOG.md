@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.1.5] - 2024-11-21
+
+### Fixed
+
+- Removes check preventing coauthors being displaying if there is no post owner
+
 ## [5.1.4] - 2024-11-19
 
 ### Fixed
