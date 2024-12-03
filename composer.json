@@ -1,7 +1,7 @@
 {
     "config": {
         "platform": {
-            "php": "7.4"
+            "php": "8.2"
         }
     },
     "autoload": {
@@ -10,7 +10,7 @@
         }
     },
     "require": {
-        "php": "^7.2",
+        "php": "^8.2",
         "dxw/php-missing": "^1.0",
         "dxw/result": "^1.0",
         "dxw/iguana": "^1.1",
