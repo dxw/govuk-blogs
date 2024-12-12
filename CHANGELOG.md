@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Support for PHP 8.2 and above
+
+### Removed
+
+- BREAKING CHANGE: Support for PHP versions below 8.2
+
 ## [5.1.5] - 2024-11-21
 
 ### Fixed
