@@ -41,3 +41,4 @@ require(__DIR__.'/lib/google-verification-code.php');
 require(__DIR__.'/lib/tiny_mce.php');
 require(__DIR__.'/lib/image-default-link-type.php');
 require(__DIR__.'/lib/feeds.php');
+require(__DIR__.'/lib/set-archive-author.php');
