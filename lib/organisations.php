@@ -10,7 +10,11 @@ function gds_organisations()
 
 		if (is_array($field) && count($field) > 0) {
 			foreach ($field as $f) {
-				$output[] = '<a href="'.esc_attr($orgs[$f['organisation']]['web_url']).'">'.esc_html($orgs[$f['organisation']]['title']).'</a>';
+				if (isset($orgs[$f['organisation']])) {
+					$output[] = '<a href="'.esc_attr($orgs[$f['organisation']]['web_url']).'">'.esc_html($orgs[$f['organisation']]['title']).'</a>';
+				} else {
+					$output[] = $f['organisation'];
+				}
 			}
 			return implode(', ', $output);
 		}
