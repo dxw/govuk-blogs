@@ -14,7 +14,7 @@ class AboutWidget extends WP_Widget
 
 	public function widget($args, $instance)
 	{
-		$title   = $instance['title'];
+		$title   = (isset($instance['title'])) ? $instance['title'] : '';
 		$desc    = apply_filters('widget_textarea', empty($instance['description']) ? '' : $instance['description'], $instance);
 
 		// Display information
