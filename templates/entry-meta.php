@@ -1,13 +1,12 @@
 <div class="govuk-body-s"><?php
 
-// If the post is owned by a deleted user, set it to the archive user
-$tmp_author_id = get_post_field('post_author', $post->ID);
-if ($tmp_author_id > 2) {
-	$tmp_user = get_user_by('id', $tmp_author_id);
-	if (empty($tmp_user->user_login)) {
-		error_log("post {$post->ID} has deleted user $tmp_author_id", 0);
-		add_filter('wp_insert_post_data', 'set_archive_author', '99', 2);
-		wp_update_post($post);
+// If the post is owned by a deleted user, patch it to the archive user
+$check_author_id = get_post_field('post_author', $post->ID);
+if ($check_author_id > 1) {
+	$check_user = get_user_by('id', $check_author_id);
+	if (empty($check_user->user_login)) {
+		error_log("author of post {$post->ID} is deleted user $check_author_id", 0);
+		add_filter('wp_insert_post_data', 'set_archive_author', 99, 2);
 	}
 }
 
