@@ -30,6 +30,8 @@ class AboutWidget extends WP_Widget
 
 	public function form($instance)
 	{
+		$title = '';
+		$desc = '';
 		if (isset($instance[ 'title' ])) {
 			$title = $instance[ 'title' ];
 		}
