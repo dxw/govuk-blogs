@@ -6,9 +6,8 @@ if ($check_author_id > 1) {
 	$check_user = get_user_by('id', $check_author_id);
 	if (empty($check_user->user_login)) {
 		error_log("author of post {$post->ID} is deleted user $check_author_id", 0);
-		//add_filter('wp_insert_post_data', 'set_archive_author', 99, 2);
-		//wp_update_post($post);
-		add_filter('wp_footer', 'set_archive_author', 99, 2);
+		add_filter('wp_insert_post_data', 'set_archive_author', 99, 2);
+		wp_update_post($post);
 	}
 }
 
