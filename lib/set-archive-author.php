@@ -11,10 +11,10 @@ function set_archive_author($data, $postarr)
 		return $data;
 	}
 
-	$archive_username = get_option('archive_author');
+	$archive_author = get_option('archive_author');
 
 	if (!empty($archive_author)) {
-		if (is_int($archive_author)) {
+		if ((string)(int)$archive_author == (string)$archive_author) {
 			$archive_author_id = $archive_author;
 		} else {
 			$archive_author_id = get_user_by('id', $archive_author);
