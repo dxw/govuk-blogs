@@ -26,3 +26,4 @@ $registrar->addInstance(new \GovUKBlogs\Theme\Scripts(
 ));
 $registrar->addInstance(new \GovUKBlogs\Theme\ThemeSetup());
 $registrar->addInstance(new \GovUKBlogs\Theme\OldRootsCleanup());
+$registrar->addInstance(new \GovUKBlogs\Theme\FixNonExistentAuthors());
