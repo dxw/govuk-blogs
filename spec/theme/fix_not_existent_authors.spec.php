@@ -75,7 +75,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 					'post_type' => 'custom_post_type',
 					'post_author' => 123
 				];
-				expect('get_option')->not->toBeCalled();
+				expect('get_network_option')->not->toBeCalled();
 
 				$result = $this->fixNonExistentAuthors->setArchiveAuthor($postData, []);
 
@@ -91,7 +91,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			});
 			context('but the archive_author option is not set', function () {
 				it('returns the post data unamended', function () {
-					allow('get_option')->toBeCalled()->andReturn(false);
+					allow('get_network_option')->toBeCalled()->andReturn(false);
 
 					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
@@ -100,7 +100,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			});
 			context('and the archive_author option is an integer', function () {
 				it('amends the post data to set the post_author to the archive_author value', function () {
-					allow('get_option')->toBeCalled()->andReturn(456);
+					allow('get_network_option')->toBeCalled()->andReturn(456);
 					allow('taxonomy_exists')->toBeCalled()->andReturn(false);
 
 					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
@@ -113,7 +113,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			});
 			context('and the archive_author option is a string containing only an integer', function () {
 				it('amends the post data to set the post_author to the archive_author value', function () {
-					allow('get_option')->toBeCalled()->andReturn('456');
+					allow('get_network_option')->toBeCalled()->andReturn('456');
 					allow('taxonomy_exists')->toBeCalled()->andReturn(false);
 
 					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
@@ -126,7 +126,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			});
 			context('and the archive_author option is a string containing non-numeric characters', function () {
 				it('returns the post data unamended', function () {
-					allow('get_option')->toBeCalled()->andReturn('456foo');
+					allow('get_network_option')->toBeCalled()->andReturn('456foo');
 
 					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
@@ -135,7 +135,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			});
 			context('and the "author" taxonomy exists, indicating that co-authors is in use', function () {
 				it('removes any existing co-author relationships with this post, as well as amending the author ID', function () {
-					allow('get_option')->toBeCalled()->andReturn(456);
+					allow('get_network_option')->toBeCalled()->andReturn(456);
 					allow('taxonomy_exists')->toBeCalled()->andReturn(true);
 					allow('wp_delete_object_term_relationships')->toBeCalled();
 					expect('wp_delete_object_term_relationships')->toBeCalled()->once()->with(123, 'author');

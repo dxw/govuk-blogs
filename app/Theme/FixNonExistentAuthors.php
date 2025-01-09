@@ -31,7 +31,7 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			return $postData;
 		}
 
-		$archive_user_option = get_option('archive_author');
+		$archive_user_option = get_network_option(null, 'archive_author');
 
 		if (!empty($archive_user_option)) {
 			if (is_int($archive_user_option)) {
