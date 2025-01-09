@@ -17,13 +17,13 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			$post_author = get_user_by('id', $post_author_id);
 			if (!($post_author)) {
 				error_log("author of post {$post->ID} is deleted user $post_author_id", 0);
-				add_filter('wp_insert_post_data', [$this, 'setArchiveAuthor'], 99, 1);
+				add_filter('wp_insert_post_data', [$this, 'setArchiveAuthor'], 99, 2);
 				wp_update_post($post);
 			}
 		}
 	}
 
-	public function setArchiveAuthor($postData)
+	public function setArchiveAuthor($postData, $postArray)
 	{
 		$fix_types = ["page", "post", "attachment"];
 
@@ -41,9 +41,11 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			}
 			if (!empty($archive_author_id)) {
 				$postData['post_author'] = $archive_author_id;
+				if (taxonomy_exists('author')) {
+					wp_delete_object_term_relationships($postArray['ID'], 'author');
+				}
 			}
 		}
-
 		return $postData;
 	}
 }

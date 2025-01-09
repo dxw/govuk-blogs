@@ -58,7 +58,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 					allow('add_filter')->toBeCalled();
 					allow('error_log')->toBeCalled();
 					expect('error_log')->toBeCalled()->once()->with('author of post 123 is deleted user 2', 0);
-					expect('add_filter')->toBeCalled()->once()->with('wp_insert_post_data', [$this->fixNonExistentAuthors, 'setArchiveAuthor'], 99, 1);
+					expect('add_filter')->toBeCalled()->once()->with('wp_insert_post_data', [$this->fixNonExistentAuthors, 'setArchiveAuthor'], 99, 2);
 					allow('wp_update_post')->toBeCalled();
 					expect('wp_update_post')->toBeCalled()->once();
 
@@ -77,7 +77,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 				];
 				expect('get_option')->not->toBeCalled();
 
-				$result = $this->fixNonExistentAuthors->setArchiveAuthor($postData);
+				$result = $this->fixNonExistentAuthors->setArchiveAuthor($postData, []);
 
 				expect($result)->toEqual($postData);
 			});
@@ -93,7 +93,7 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 				it('returns the post data unamended', function () {
 					allow('get_option')->toBeCalled()->andReturn(false);
 
-					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData);
+					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
 					expect($result)->toEqual($this->postData);
 				});
@@ -101,8 +101,9 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			context('and the archive_author option is an integer', function () {
 				it('amends the post data to set the post_author to the archive_author value', function () {
 					allow('get_option')->toBeCalled()->andReturn(456);
+					allow('taxonomy_exists')->toBeCalled()->andReturn(false);
 
-					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData);
+					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
 					expect($result)->toEqual([
 						'post_type' => 'post',
@@ -113,8 +114,9 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 			context('and the archive_author option is a string containing only an integer', function () {
 				it('amends the post data to set the post_author to the archive_author value', function () {
 					allow('get_option')->toBeCalled()->andReturn('456');
+					allow('taxonomy_exists')->toBeCalled()->andReturn(false);
 
-					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData);
+					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
 					expect($result)->toEqual([
 						'post_type' => 'post',
@@ -126,9 +128,24 @@ describe(\GovUKBlogs\Theme\FixNonExistentAuthors::class, function () {
 				it('returns the post data unamended', function () {
 					allow('get_option')->toBeCalled()->andReturn('456foo');
 
-					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData);
+					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, []);
 
 					expect($result)->toEqual($this->postData);
+				});
+			});
+			context('and the "author" taxonomy exists, indicating that co-authors is in use', function () {
+				it('removes any existing co-author relationships with this post, as well as amending the author ID', function () {
+					allow('get_option')->toBeCalled()->andReturn(456);
+					allow('taxonomy_exists')->toBeCalled()->andReturn(true);
+					allow('wp_delete_object_term_relationships')->toBeCalled();
+					expect('wp_delete_object_term_relationships')->toBeCalled()->once()->with(123, 'author');
+
+					$result = $this->fixNonExistentAuthors->setArchiveAuthor($this->postData, ['ID' => 123]);
+
+					expect($result)->toEqual([
+						'post_type' => 'post',
+						'post_author' => 456
+					]);
 				});
 			});
 		});
