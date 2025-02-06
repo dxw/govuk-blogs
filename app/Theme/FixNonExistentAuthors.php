@@ -41,9 +41,6 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			}
 			if (!empty($archive_author_id)) {
 				$postData['post_author'] = $archive_author_id;
-				if (taxonomy_exists('author')) {
-					wp_delete_object_term_relationships($postArray['ID'], 'author');
-				}
 			}
 		}
 		return $postData;
