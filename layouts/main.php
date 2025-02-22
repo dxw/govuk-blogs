@@ -20,7 +20,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 	<body <?php body_class('govuk-template__body'); ?>>
    		<script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
-		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link"><?php echo __("Skip to main content"); ?></a>
 
 		<header class="govuk-header" data-module="govuk-header">
 			<div class="govuk-header__container govuk-width-container">
@@ -54,7 +54,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 
 				<div class="govuk-footer__meta">
 					<div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-						<h2 class="govuk-visually-hidden">Useful links</h2>
+						<h2 class="govuk-visually-hidden"><?php echo __("Useful links"); ?></h2>
 							<?php get_template_part('templates/footer'); ?>
 
 						<svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483.2 195.7" height="17" width="41">
