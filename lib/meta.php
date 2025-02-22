@@ -24,7 +24,7 @@ add_action('wp_head', function () {
 
 	$content = limit_words(strip_tags(get_the_content_please($p->ID)), 40); ?>
 
-  <meta name="description" content="<?php bloginfo('description'); ?>" />
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-  <?php
+<?php
 });

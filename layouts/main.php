@@ -1,10 +1,10 @@
 <?php
 $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/rebrand/';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="govuk-template--rebranded">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<meta name="theme-color" content="#0b0c0c">
@@ -20,7 +20,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 	<body <?php body_class('govuk-template__body'); ?>>
 		<?php wp_print_inline_script_tag("document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');");?>
 
-   		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 		<header class="govuk-header" data-module="govuk-header">
 			<div class="govuk-header__container govuk-width-container">
 				<div class="govuk-header__logo">
