@@ -9,18 +9,22 @@ function share_icons($id)
 	$twitter_url = add_query_arg([
 	'url' => urlencode($url),
 	'text' => urlencode($title),
-  ], 'https://twitter.com/intent/tweet?original_referer=');
+	], 'https://twitter.com/intent/tweet?original_referer=');
 
 	$facebook_url = add_query_arg([
 	'u' => urlencode($url),
-  ], 'https://www.facebook.com/sharer/sharer.php');
+	], 'https://www.facebook.com/sharer/sharer.php');
 
 	$linkedin_url = add_query_arg([
 	'url' => urlencode($url),
-  ], 'https://www.linkedin.com/shareArticle'); ?>
+	], 'https://www.linkedin.com/shareArticle');
+
+	$mailto_url = "mailto:?subject=" . rawurlencode(__("I wanted to share this post with you from"). " " . get_bloginfo('name')) ."&body=". rawurlencode($title . " " . $url);
+
+	?>
 
   <div class="icons-buttons">
-    <h3>Share this page</h3>
+    <h3><?php echo __("Share this page"); ?></h3>
     <ul>
       <li>
         <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="twitter">Twitter</a>
@@ -32,7 +36,7 @@ function share_icons($id)
         <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">LinkedIn</a>
       </li>
       <li>
-        <a href="mailto:?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php echo esc_attr($title) ?> <?php echo esc_attr($url) ?>" class="email">Email</a>
+        <a href="<?php echo esc_attr($mailto_url); ?>" class="email">Email</a>
       </li>
     </ul>
     <div class="govuk-clearfix"></div>
