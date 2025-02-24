@@ -58,7 +58,7 @@ function pagination($q = null, $mode = null, $uri = null)
 		}
 		printf('<a href="%s" rel="previous">
       Previous <span class="hidden">page</span>
-    </a>', $uri);
+    </a>', esc_url($uri));
 		echo "</div>";
 	}
 
@@ -116,7 +116,7 @@ function pagination($q = null, $mode = null, $uri = null)
     <a href="%s" rel="next">
       Next <span class="hidden">page</span>
     </a>
-  </div>', $uri);
+  </div>', esc_url($uri));
 	}
 
 	$_SERVER['REQUEST_URI'] = $_;
