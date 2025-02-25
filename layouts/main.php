@@ -1,10 +1,10 @@
 <?php
 $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="govuk-template">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<meta name="theme-color" content="#0b0c0c">
@@ -20,8 +20,9 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 	<body <?php body_class('govuk-template__body'); ?>>
    		<script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
-   		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-		<header role="banner" class="govuk-header" data-module="govuk-header">
+		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link"><?php echo __("Skip to main content"); ?></a>
+
+		<header class="govuk-header" data-module="govuk-header">
 			<div class="govuk-header__container govuk-width-container">
 				<div class="govuk-header__logo">
 					<a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="govuk-header__link govuk-header__link--homepage">  
@@ -47,13 +48,13 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 		<?php get_template_part('templates/banner'); ?>
 		<?php get_template_part('templates/main-content'); ?>
 
-		<footer class="govuk-footer js-footer" role="contentinfo">
+		<footer class="govuk-footer js-footer">
 
 			<div class="govuk-width-container">
 
 				<div class="govuk-footer__meta">
 					<div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-						<h2 class="govuk-visually-hidden">Useful links</h2>
+						<h2 class="govuk-visually-hidden"><?php echo __("Useful links"); ?></h2>
 							<?php get_template_part('templates/footer'); ?>
 
 						<svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483.2 195.7" height="17" width="41">
