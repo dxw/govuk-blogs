@@ -21,11 +21,11 @@ describe(GovUKBlogs\Theme\ThemeSupports::class, function () {
 	describe('->addThemeSupport()', function () {
 		it('adds theme support for specified features', function () {
 			allow('add_theme_support')->toBeCalled();
-			expect('add_theme_support')->toBeCalled()->times(3);
+			expect('add_theme_support')->toBeCalled()->times(4);
 			expect('add_theme_support')->toBeCalled()->once()->with('editor-styles');
 			expect('add_theme_support')->toBeCalled()->once()->with('title-tag');
 			expect('add_theme_support')->toBeCalled()->once()->with('post-thumbnails');
-
+			expect('add_theme_support')->toBeCalled()->once()->with('html5');
 			$this->themeSupports->addThemeSupport();
 		});
 	});
