@@ -13,7 +13,7 @@
               <div class="entry-summary">
                 <?php the_excerpt() ?>
               </div>
-              <a class="read-more" href="<?php the_permalink() ?>">Read more <span class="govuk-visually-hidden">of <?php the_title() ?></span></a>
+              <a class="read-more" href="<?php the_permalink() ?>"><?php echo sprintf(__('Read more<span class="govuk-visually-hidden"> of %s</span>', "govuk-blogs"), get_the_title()); ?></a>
             </div>
           </div>
         </article>
