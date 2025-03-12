@@ -8,7 +8,9 @@ if (have_posts()) {
 						<header>
 							<h3 class="govuk-heading-m"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 							<?php
-		get_template_part('templates/entry-meta');
+		if (get_post_type() === 'post') {
+			get_template_part('templates/entry-meta');
+		}
 		if (has_post_thumbnail()) {
 			the_post_thumbnail('large');
 		} ?>
