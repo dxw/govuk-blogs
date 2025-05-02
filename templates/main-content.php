@@ -3,7 +3,8 @@
   <?php get_template_part('templates/header') ?>
   <?php if (get_post_status() === 'private') : ?>
       <div class="private-notice">
-          <p><strong>This content is private.</strong> It cannot be viewed by anybody except logged in users of this site.</p>
+          <p><strong><?php _e("This content is private.", "govuk-blogs"); ?></strong>
+          <?php _e("It cannot be viewed by anybody except logged in users of this site.", "govuk-blogs"); ?></p>
       </div>
   <?php endif ?>
   <?php if (is_home()) : ?>

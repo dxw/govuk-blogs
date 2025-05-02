@@ -18,7 +18,7 @@ if ($showBannerOnNetwork == true && ($showBannerBySite == true || $showBannerByS
             </div>
             <?php if ($bannerDismissable) : ?>
               <div class="govuk-grid-column-one-quarter">
-                  <p class="govuk-body"><a href="#survey-no-thanks" id="survey-no-thanks" class="govuk-link" role="button" aria-controls="user-satisfaction-survey">No thanks</a></p>
+                  <p class="govuk-body"><a href="#survey-no-thanks" id="survey-no-thanks" class="govuk-link" role="button" aria-controls="user-satisfaction-survey"><?php _e("No thanks", "govuk-blogs"); ?></a></p>
               </div>
             <?php endif; ?>
         </div>

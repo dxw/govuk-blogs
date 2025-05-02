@@ -61,18 +61,23 @@ if (have_comments()) : ?>
             <div class="govuk-form-group">
               <a name="email_field"></a>
               <label class="govuk-label" for="email"><?php _e('Email', 'roots'); ?></label>
-              <div class="govuk-hint">We only ask for your email address so we know you're a real person</div>
+              <div class="govuk-hint"><?php _e("We only ask for your email address so we know you're a real person", "govuk-blogs"); ?></div>
               <input type="email" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="email">
             </div>
           <?php endif ?>
           <?php do_action('comment_form', $post->ID) ?>
           <button class="govuk-button" data-module="govuk-button">
-            Submit comment
+            <?php _e("Submit comment", "govuk-blogs"); ?>
           </button>
         </div>
         <?php comment_id_fields() ?>
         <div class="comment-privacy-notice dxw-subscription">
-            <p class="govuk-inset-text">By submitting a comment you understand it may be published on this public website. Please read our <a href="https://www.gov.uk/government/publications/govuk-blogging-platform-privacy-notice">privacy notice</a> to see how the GOV.UK blogging platform handles your information.</p>
+            <p class="govuk-inset-text"><?php
+		_e("By submitting a comment you understand it may be published on this public website.", "govuk-blogs");
+    	echo sprintf(
+    		__('Please read our <a href="%s">privacy notice</a> to see how the GOV.UK blogging platform handles your information.', "govuk-blogs"),
+    		"https://www.gov.uk/government/publications/govuk-blogging-platform-privacy-notice"
+    	); ?></p>
         </div>
       </form>
     <?php endif ?>

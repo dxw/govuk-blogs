@@ -17,13 +17,13 @@ $headerTag = is_home() ? 'h1' : 'div';
                 <div class="bottom blog-meta">
                         <?php if ($orgs = gds_organisations()) : ?>
                             <dl>
-                                <dt>Organisations:</dt>
+                                <dt><?php _e("Organisations", "govuk-blogs"); ?>:</dt>
                                 <dd><?php echo $orgs # this is pre-escaped?></dd>
                             </dl>
                         <?php endif ?>
                         <?php if (get_option('options_gds_location')) : ?>
                             <dl>
-                                <dt>Location:</dt>
+                                <dt><?php _e("Location", "govuk-blogs"); ?>:</dt>
                                 <dd><?php echo get_option('options_gds_location') ?></dd>
                             </dl>
                         <?php endif ?>
