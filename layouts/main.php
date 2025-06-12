@@ -21,7 +21,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 		<?php wp_print_inline_script_tag("document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');");?>
 
    		<a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-		<header role="banner" class="govuk-header" data-module="govuk-header">
+		<header class="govuk-header" data-module="govuk-header">
 			<div class="govuk-header__container govuk-width-container">
 				<div class="govuk-header__logo">
 					<a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="govuk-header__link govuk-header__link--homepage">  
@@ -47,7 +47,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 		<?php get_template_part('templates/banner'); ?>
 		<?php get_template_part('templates/main-content'); ?>
 
-		<footer class="govuk-footer js-footer" role="contentinfo">
+		<footer class="govuk-footer js-footer">
 
 			<div class="govuk-width-container">
 

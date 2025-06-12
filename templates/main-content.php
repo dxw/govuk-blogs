@@ -9,7 +9,7 @@
   <?php if (is_home()) : ?>
     <?php get_template_part('templates/featured') ?>
   <?php endif ?>
-  <main id="content" class="govuk-grid-row" role="main">
+  <main id="content" class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds main-content">
 		<?php h()->w_requested_template() ?>
       <?php if (!is_single() || !is_page()) {
