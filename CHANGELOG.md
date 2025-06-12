@@ -8,10 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Update govuk-frontend to latest version; v5.10.2.
-- Enable updated typography scale feature, as per [`govuk-frontend` recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#weve-adjusted-our-responsive-type-scale)
+- Enable updated typography scale feature, as per [`govuk-frontend` recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#weve-adjusted-our-responsive-type-scale).
 - Update HTML for error summary, [to follow govuk-frontend recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#update-the-html-for-the-error-summary).
 - Remove redundant `role` attributes from elements, [as support for legacy browsers has been dropped](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#remove-redundant-role-attributes-from-elements).
 - Replace `govuk/all` imports with `govuk/index`, [ahead of deprecation in next major release](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#importing-layers-using-all-files).
+- Apply [refreshed/rebranded changes](https://github.com/alphagov/govuk-frontend/blob/v5.10.2/CHANGELOG.md#use-the-refreshed-govuk-brand-if-youre-not-using-nunjucks) from `govuk-frontend`.
 
 ### Fixed
 
