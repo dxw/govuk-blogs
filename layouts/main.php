@@ -2,7 +2,7 @@
 $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/rebrand/';
 ?>
 <!doctype html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="govuk-template--rebranded">
 	<head>
 		<meta charset="utf-8" />
 
