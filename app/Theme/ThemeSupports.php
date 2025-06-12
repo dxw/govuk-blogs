@@ -14,6 +14,6 @@ class ThemeSupports implements \Dxw\Iguana\Registerable
 		add_theme_support('editor-styles');
 		add_theme_support('title-tag');
 		add_theme_support('post-thumbnails');
-		add_theme_support('html5', ['script']);
+		add_theme_support('html5', ['script', 'style', 'meta', 'navigation-widgets']);
 	}
 }
