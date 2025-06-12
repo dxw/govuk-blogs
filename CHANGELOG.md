@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [6.0.x] - 2025-??-??
+
 ### Changed
 
 - Update govuk-frontend to latest version; v5.10.2.
 - Enable updated typography scale feature, as per [`govuk-frontend` recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#weve-adjusted-our-responsive-type-scale)
+- Update HTML for error summary, [to follow govuk-frontend recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#update-the-html-for-the-error-summary).
+- Remove redundant `role` attributes from elements, [as support for legacy browsers has been dropped](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#remove-redundant-role-attributes-from-elements).
+- Replace `govuk/all` imports with `govuk/index`, [ahead of deprecation in next major release](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#importing-layers-using-all-files).
 
 ### Fixed
 
