@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Update govuk-frontend to latest version; v5.10.2.
+- Enable updated typography scale feature, as per [`govuk-frontend` recommendations](https://github.com/alphagov/govuk-frontend/blob/main/CHANGELOG.md#weve-adjusted-our-responsive-type-scale)
 
 ### Fixed
 
