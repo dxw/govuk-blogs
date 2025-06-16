@@ -24,12 +24,13 @@ function invalidEmailInput(input) {
 
 function addErrorPanel(errors) {
     jQuery("#comment-validation").remove();
-    var html = '<div id="comment-validation" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">';
+    var html = '<div id="comment-validation" class="govuk-error-summary" tabindex="-1" data-module="govuk-error-summary">';
+    html += '<div role="alert">';
     html += '<h3 id="error-summary-title" class="govuk-error-summary__title">Please complete the required fields</h3><div class="govuk-error-summary__body"><ul class="govuk-list govuk-error-summary__list">';
     errors.forEach(function(error) {
         html += '<li>' + error + '</li>';
     });
-    html += '</ul></div></div>';
+    html += '</ul></div></div></div>';
     jQuery("#respond header").after(html);
 }
 
