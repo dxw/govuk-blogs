@@ -5,8 +5,8 @@ add_action('wp_head', function () {
 		$googleVerificationCode = get_field('google_verification_code', 'options');
 		if (!is_null($googleVerificationCode) && $googleVerificationCode !== '') {
 			?>
-            <meta name="google-site-verification" content="<?php echo esc_attr($googleVerificationCode); ?>" />
-            <?php
+		<meta name="google-site-verification" content="<?php echo esc_attr($googleVerificationCode); ?>">
+<?php
 		}
 	}
 });
