@@ -58,7 +58,7 @@ add_action('network_admin_menu', function () {
                             <label>
                                 Allow users to dismiss banner <input type="checkbox" name="banner_dismissable" value="1" <?php checked(get_site_option('banner_dismissable'), 1) ?> >
                             </label>
-                            <br/>
+                            <br>
                             <p>If checked, users will be able to click a "No thanks" link to dismiss the banner for a year</p>
                         </td>
                     </tr>
@@ -66,7 +66,7 @@ add_action('network_admin_menu', function () {
                         <td>
                             <label>
                                 Banner background colour <input type="text" name="banner_colour" value="<?php echo esc_attr(get_site_option('banner_colour')) ?>">
-                                <br/>
+                                <br>
                                 <p>Enter a CSS colour code (e.g. "#000000" for black). If left blank, default is blue.</p>
                             </label>
                         </td>
