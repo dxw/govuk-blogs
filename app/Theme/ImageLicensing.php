@@ -49,6 +49,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	public function register()
 	{
+		add_filter('wp_prepare_attachment_for_js', [$this, 'appendLicenseToCaption'], 10, 2);
 		add_filter('render_block', [$this, 'renderBlock'], 10, 2);
 	}
 
@@ -61,8 +62,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 			return null;
 		}
 
-		$caption = 'Licence: ';
-		$caption .= '<a href="' . esc_attr($licenseData['link']) . '">' . esc_html($licenseData['name']) . '</a>';
+		$caption = 'Licence: <a href="' . esc_attr($licenseData['link']) . '">' . esc_html($licenseData['name']) . '</a>';
 
 		$copyrightHolder = get_post_meta($attachmentId, 'copyright_holder', true);
 		$linkToSource = get_post_meta($attachmentId, 'link_to_source', true);
@@ -76,6 +76,24 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		return $caption;
 	}
 
+	public function appendLicenseToCaption($response, $attachment)
+	{
+		$caption = $response['caption'] ?? '';
+
+		$caption = preg_replace('/(\n<br>\s*)?Licence:.*$/mi', '', $caption);
+		$caption = trim($caption);
+
+		$licenseCaption = $this->generateLicenseCaption($attachment->ID);
+
+		if ($licenseCaption) {
+			$caption = $caption ? $caption . "\n<br>" . $licenseCaption : $licenseCaption;
+		}
+
+		$response['caption'] = $caption;
+
+		return $response;
+	}
+
 	public function renderBlock($blockContent, $block)
 	{
 		if ($block['blockName'] !== 'core/image') {
@@ -83,9 +101,18 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		}
 
 		$attachmentId = $block['attrs']['id'];
-		$licenseCaption = $this->generateLicenseCaption($attachmentId);
-		$licenseCaptionHtml = '<figcaption class="caption" data-license-caption="true">' . $licenseCaption . '</figcaption>';
 
+		$innerHTML = $block['innerHTML'] ?? '';
+		if (stripos($innerHTML, 'Licence:') !== false) {
+			return $blockContent;
+		}
+
+		$licenseCaption = $this->generateLicenseCaption($attachmentId);
+		if (!$licenseCaption) {
+			return $blockContent;
+		}
+
+		$licenseCaptionHtml = '<figcaption class="caption" data-license-caption="true">' . $licenseCaption . '</figcaption>';
 		return '<figure class="wp-block-image">' . $blockContent . $licenseCaptionHtml . '</figure>';
 	}
 }
