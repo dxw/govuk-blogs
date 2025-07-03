@@ -1,5 +1,7 @@
 <?php
 
+use \GovUKBlogs\Theme\ImageLicensing;
+
 if (function_exists('acf_add_options_sub_page')) {
 	acf_add_options_sub_page('Banner');
 	acf_add_options_sub_page('Google Verification Code');
@@ -259,8 +261,7 @@ if (function_exists("register_field_group")) {
 		return $priority;
 	}, 10, 2);
 
-	global $gds_image_licences;
-
+	
 	register_field_group([
 	'id' => 'acf_image-licensing',
 	'title' => 'Image licensing',
@@ -272,7 +273,7 @@ if (function_exists("register_field_group")) {
 		'type' => 'select',
 		'choices' => array_map(function ($licence) {
 			return $licence['name'];
-		}, $gds_image_licences),
+		}, ImageLicensing::$imageLicenses),
 		'default_value' => '',
 		'allow_null' => 1,
 		'multiple' => 0,
