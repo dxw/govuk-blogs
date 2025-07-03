@@ -1,6 +1,6 @@
 <?php
 
-use \GovUKBlogs\Theme\ImageLicensing;
+use GovUKBlogs\Theme\ImageLicensing;
 
 if (function_exists('acf_add_options_sub_page')) {
 	acf_add_options_sub_page('Banner');
@@ -261,7 +261,7 @@ if (function_exists("register_field_group")) {
 		return $priority;
 	}, 10, 2);
 
-	
+
 	register_field_group([
 	'id' => 'acf_image-licensing',
 	'title' => 'Image licensing',
