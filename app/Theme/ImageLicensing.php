@@ -112,7 +112,16 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 			return $blockContent;
 		}
 
-		$licenseCaptionHtml = '<figcaption class="caption" data-license-caption="true">' . $licenseCaption . '</figcaption>';
-		return '<figure class="wp-block-image">' . $blockContent . $licenseCaptionHtml . '</figure>';
+		if (stripos($blockContent, '<figcaption') !== false) {
+			return preg_replace(
+				'/(<\/figcaption>)/i',
+				'<br>' . $licenseCaption . '$1',
+				$blockContent,
+				1
+			);
+		}
+
+		return '<figure class="wp-block-image">' . $blockContent
+			. '<figcaption class="caption" data-license-caption="true">' . $licenseCaption . '</figcaption></figure>';
 	}
 }
