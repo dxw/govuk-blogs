@@ -50,7 +50,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 	public function register()
 	{
 		add_filter('wp_prepare_attachment_for_js', [$this, 'appendLicenseToCaption'], 10, 2);
-		add_filter('render_block', [$this, 'renderBlock'], 10, 2);
+		add_filter('render_block_core/image', [$this, 'renderBlock'], 10, 2);
 	}
 
 	public function generateLicenseCaption($attachmentId)
@@ -96,10 +96,6 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	public function renderBlock($blockContent, $block)
 	{
-		if ($block['blockName'] !== 'core/image') {
-			return $blockContent;
-		}
-
 		$attachmentId = $block['attrs']['id'];
 
 		$innerHTML = $block['innerHTML'] ?? '';

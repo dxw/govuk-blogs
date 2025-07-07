@@ -41,8 +41,8 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 	describe('->register()', function () {
 		it('adds the filters', function () {
 			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->once()->with('render_block', [$this->imageLicensing, 'renderBlock'], 10, 2);
 			expect('add_filter')->toBeCalled()->once()->with('wp_prepare_attachment_for_js', [$this->imageLicensing, 'appendLicenseToCaption'], 10, 2);
+			expect('add_filter')->toBeCalled()->once()->with('render_block_core/image', [$this->imageLicensing, 'renderBlock'], 10, 2);
 
 			$this->imageLicensing->register();
 		});
@@ -169,14 +169,6 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 	});
 
 	describe('->renderBlock()', function () {
-		it('returns unchanged content for non-image blocks', function () {
-			$blockContent = '<p>Some content</p>';
-			$block = ['blockName' => 'core/paragraph', 'attrs' => ['id' => 123]];
-
-			$result = $this->imageLicensing->renderBlock($blockContent, $block);
-			expect($result)->toBe($blockContent);
-		});
-
 		it('returns unchanged content when image already has existing license caption', function () {
 			$this->mockGetPostMeta([
 				'licence' => 'cc-by',
