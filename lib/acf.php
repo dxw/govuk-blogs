@@ -297,7 +297,7 @@ if (function_exists("register_field_group")) {
 		'type' => 'select',
 		'choices' => array_map(function ($licence) {
 			return $licence['name'];
-		}, ImageLicensing::$imageLicenses),
+		}, ImageLicensing::$imageLicences),
 		'default_value' => '',
 		'allow_null' => 1,
 		'multiple' => 0,

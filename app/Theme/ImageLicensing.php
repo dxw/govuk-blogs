@@ -4,7 +4,7 @@ namespace GovUKBlogs\Theme;
 
 class ImageLicensing implements \Dxw\Iguana\Registerable
 {
-	public static $imageLicenses = [
+	public static $imageLicences = [
 		'ogl' => [
 			'name' => 'OGL',
 			'link' => 'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -49,20 +49,20 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	public function register()
 	{
-		add_filter('wp_prepare_attachment_for_js', [$this, 'appendLicenseToCaption'], 10, 2);
+		add_filter('wp_prepare_attachment_for_js', [$this, 'appendLicenceToCaption'], 10, 2);
 		add_filter('render_block_core/image', [$this, 'renderBlock'], 10, 2);
 	}
 
 	public function generateLicenseCaption($attachmentId)
 	{
-		$license = get_post_meta($attachmentId, 'licence', true);
-		$licenseData = self::$imageLicenses[$license];
+		$licence = get_post_meta($attachmentId, 'licence', true);
+		$licenceData = self::$imageLicences[$licence];
 
-		if (!$licenseData['display']) {
+		if (!$licenceData['display']) {
 			return null;
 		}
 
-		$caption = 'Licence: <a href="' . esc_attr($licenseData['link']) . '">' . esc_html($licenseData['name']) . '</a>';
+		$caption = 'Licence: <a href="' . esc_attr($licenceData['link']) . '">' . esc_html($licenceData['name']) . '</a>';
 
 		$copyrightHolder = get_post_meta($attachmentId, 'copyright_holder', true);
 		$linkToSource = get_post_meta($attachmentId, 'link_to_source', true);
@@ -76,17 +76,17 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		return $caption;
 	}
 
-	public function appendLicenseToCaption($response, $attachment)
+	public function appendLicenceToCaption($response, $attachment)
 	{
 		$caption = $response['caption'] ?? '';
 
 		$caption = preg_replace('/(\n<br>\s*)?Licence:.*$/mi', '', $caption);
 		$caption = trim($caption);
 
-		$licenseCaption = $this->generateLicenseCaption($attachment->ID);
+		$licenceCaption = $this->generateLicenceCaption($attachment->ID);
 
-		if ($licenseCaption) {
-			$caption = $caption ? $caption . "\n<br>" . $licenseCaption : $licenseCaption;
+		if ($licenceCaption) {
+			$caption = $caption ? $caption . "\n<br>" . $licenceCaption : $licenceCaption;
 		}
 
 		$response['caption'] = $caption;
@@ -103,21 +103,21 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 			return $blockContent;
 		}
 
-		$licenseCaption = $this->generateLicenseCaption($attachmentId);
-		if (!$licenseCaption) {
+		$licenceCaption = $this->generateLicenceCaption($attachmentId);
+		if (!$licenceCaption) {
 			return $blockContent;
 		}
 
 		if (stripos($blockContent, '<figcaption') !== false) {
 			return preg_replace(
 				'/(<\/figcaption>)/i',
-				'<br>' . $licenseCaption . '$1',
+				'<br>' . $licenceCaption . '$1',
 				$blockContent,
 				1
 			);
 		}
 
 		return '<figure class="wp-block-image">' . $blockContent
-			. '<figcaption class="caption" data-license-caption="true">' . $licenseCaption . '</figcaption></figure>';
+			. '<figcaption class="caption" data-license-caption="true">' . $licenceCaption . '</figcaption></figure>';
 	}
 }
