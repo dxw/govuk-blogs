@@ -53,7 +53,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		add_filter('render_block_core/image', [$this, 'renderBlock'], 10, 2);
 	}
 
-	public function generateLicenceCaption(int $attachmentId): ?string
+	private function generateLicenceCaption(int $attachmentId): ?string
 	{
 		$licence = get_post_meta($attachmentId, 'licence', true);
 		$licenceData = self::$imageLicences[$licence];
