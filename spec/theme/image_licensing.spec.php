@@ -48,73 +48,6 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 		});
 	});
 
-	describe('->generateLicenceCaption()', function () {
-		it('returns licence with copyright holder linked to source when both are provided', function () {
-			$this->mockGetPostMeta([
-				'licence' => 'cc-by',
-				'copyright_holder' => 'John Doe',
-				'link_to_source' => 'https://example.com/source'
-			]);
-
-			$result = $this->imageLicensing->generateLicenceCaption(123);
-			expect($result)->toBe(
-				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> ' .
-				'<a href="https://example.com/source">John Doe</a>'
-			);
-		});
-
-		it('returns licence with copyright holder when only copyright holder is provided', function () {
-			$this->mockGetPostMeta([
-				'licence' => 'cc-by',
-				'copyright_holder' => 'John Doe',
-				'link_to_source' => ''
-			]);
-
-			$result = $this->imageLicensing->generateLicenceCaption(124);
-			expect($result)->toBe(
-				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> John Doe'
-			);
-		});
-
-		it('returns licence with source link when only link to source is provided', function () {
-			$this->mockGetPostMeta([
-				'licence' => 'cc-by',
-				'copyright_holder' => '',
-				'link_to_source' => 'https://example.com/source'
-			]);
-
-			$result = $this->imageLicensing->generateLicenceCaption(125);
-			expect($result)->toBe(
-				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> ' .
-				'<a href="https://example.com/source">Source</a>'
-			);
-		});
-
-		it('returns only licence when neither copyright holder nor link to source is provided', function () {
-			$this->mockGetPostMeta([
-				'licence' => 'cc-by',
-				'copyright_holder' => '',
-				'link_to_source' => ''
-			]);
-
-			$result = $this->imageLicensing->generateLicenceCaption(126);
-			expect($result)->toBe(
-				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a>'
-			);
-		});
-
-		it('returns null for a non-displayable licence', function () {
-			$this->mockGetPostMeta([
-				'licence' => 'ogl',
-				'copyright_holder' => 'Jane Doe',
-				'link_to_source' => 'https://example.com/source2'
-			]);
-
-			$result = $this->imageLicensing->generateLicenceCaption(127);
-			expect($result)->toBe(null);
-		});
-	});
-
 	describe('->appendLicenceToCaption()', function () {
 		it('appends licence caption to empty caption', function () {
 			$this->mockGetPostMeta([
@@ -130,6 +63,58 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 			expect($result['caption'])->toBe(
 				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> ' .
 				'<a href="https://example.com/source">John Doe</a>'
+			);
+		});
+
+		it('appends licence with copyright holder only', function () {
+			$this->mockGetPostMeta([
+				'licence' => 'cc-by',
+				'copyright_holder' => 'John Doe',
+				'link_to_source' => ''
+			]);
+
+			$response = ['caption' => ''];
+			$attachment = (object) ['ID' => 124];
+
+			$result = $this->imageLicensing->appendLicenceToCaption($response, $attachment);
+
+			expect($result['caption'])->toBe(
+				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> John Doe'
+			);
+		});
+
+		it('appends licence with source link only', function () {
+			$this->mockGetPostMeta([
+				'licence' => 'cc-by',
+				'copyright_holder' => '',
+				'link_to_source' => 'https://example.com/source'
+			]);
+
+			$response = ['caption' => ''];
+			$attachment = (object) ['ID' => 125];
+
+			$result = $this->imageLicensing->appendLicenceToCaption($response, $attachment);
+
+			expect($result['caption'])->toBe(
+				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a> ' .
+				'<a href="https://example.com/source">Source</a>'
+			);
+		});
+
+		it('appends licence with no attribution details provided', function () {
+			$this->mockGetPostMeta([
+				'licence' => 'cc-by',
+				'copyright_holder' => '',
+				'link_to_source' => ''
+			]);
+
+			$response = ['caption' => ''];
+			$attachment = (object) ['ID' => 126];
+
+			$result = $this->imageLicensing->appendLicenceToCaption($response, $attachment);
+
+			expect($result['caption'])->toBe(
+				'Licence: <a href="https://creativecommons.org/licences/by/4.0/">Creative Commons Attribution</a>'
 			);
 		});
 
