@@ -214,7 +214,7 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 			$result = $this->imageLicensing->renderBlock($blockContent, $block);
 			expect($result)->toContain('<figure class="wp-block-image">');
 			expect($result)->toContain($blockContent);
-			expect($result)->toContain('<figcaption class="caption" data-licence-caption="true">');
+			expect($result)->toContain('<figcaption class="caption">');
 			expect($result)->toContain('Creative Commons Attribution');
 			expect($result)->toContain('https://example.com/source');
 			expect($result)->toContain('John Doe');
