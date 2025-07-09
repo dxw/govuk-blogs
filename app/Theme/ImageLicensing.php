@@ -47,13 +47,13 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		],
 	];
 
-	public function register()
+	public function register(): void
 	{
 		add_filter('wp_prepare_attachment_for_js', [$this, 'appendLicenceToCaption'], 10, 2);
 		add_filter('render_block_core/image', [$this, 'renderBlock'], 10, 2);
 	}
 
-	public function generateLicenseCaption($attachmentId)
+	public function generateLicenceCaption(int $attachmentId): ?string
 	{
 		$licence = get_post_meta($attachmentId, 'licence', true);
 		$licenceData = self::$imageLicences[$licence];
@@ -76,7 +76,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		return $caption;
 	}
 
-	public function appendLicenceToCaption($response, $attachment)
+	public function appendLicenceToCaption(array $response, object $attachment): array
 	{
 		$caption = $response['caption'] ?? '';
 
@@ -94,7 +94,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		return $response;
 	}
 
-	public function renderBlock($blockContent, $block)
+	public function renderBlock(string $blockContent, array $block): string
 	{
 		$attachmentId = $block['attrs']['id'];
 
@@ -118,6 +118,6 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 		}
 
 		return '<figure class="wp-block-image">' . $blockContent
-			. '<figcaption class="caption" data-license-caption="true">' . $licenceCaption . '</figcaption></figure>';
+			. '<figcaption class="caption">' . $licenceCaption . '</figcaption></figure>';
 	}
 }
