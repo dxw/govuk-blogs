@@ -154,6 +154,20 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 	});
 
 	describe('->renderBlock()', function () {
+		it('returns unchanged content when no licence is chosen', function () {
+			$this->mockGetPostMeta([
+				'licence' => '',
+				'copyright_holder' => '',
+				'link_to_source' => ''
+			]);
+
+			$blockContent = '<img src="image.jpg" alt="Test image">';
+			$block = ['blockName' => 'core/image', 'attrs' => ['id' => 124]];
+
+			$result = $this->imageLicensing->renderBlock($blockContent, $block);
+			expect($result)->toBe($blockContent);
+		});
+
 		it('returns unchanged content when image already has existing licence caption', function () {
 			$this->mockGetPostMeta([
 				'licence' => 'cc-by',

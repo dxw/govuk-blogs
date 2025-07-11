@@ -56,6 +56,11 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 	private function generateLicenceCaption(int $attachmentId): ?string
 	{
 		$licence = get_post_meta($attachmentId, 'licence', true);
+
+		if (empty($licence)) {
+			return null;
+		}
+
 		$licenceData = self::$imageLicences[$licence];
 
 		if (!$licenceData['display']) {
