@@ -1,5 +1,7 @@
 <?php
 
+use GovUKBlogs\Theme\ImageLicensing;
+
 if (function_exists('acf_add_options_sub_page')) {
 	acf_add_options_sub_page('Banner');
 	acf_add_options_sub_page('Google Verification Code');
@@ -259,24 +261,11 @@ if (function_exists("register_field_group")) {
 		return $priority;
 	}, 10, 2);
 
-	global $gds_image_licences;
 
 	register_field_group([
 	'id' => 'acf_image-licensing',
 	'title' => 'Image licensing',
 	'fields' => [
-	  [
-		'key' => 'field_5463adf92808a',
-		'label' => 'Licence',
-		'name' => 'licence',
-		'type' => 'select',
-		'choices' => array_map(function ($licence) {
-			return $licence['name'];
-		}, $gds_image_licences),
-		'default_value' => '',
-		'allow_null' => 1,
-		'multiple' => 0,
-	  ],
 	  [
 		'key' => 'field_5463b0f72808b',
 		'label' => 'Copyright holder',
@@ -301,6 +290,29 @@ if (function_exists("register_field_group")) {
 		'formatting' => 'html',
 		'maxlength' => '',
 	  ],
+	  [
+		'key' => 'field_5463adf92808a',
+		'label' => 'Licence',
+		'name' => 'licence',
+		'type' => 'select',
+		'choices' => array_map(function ($licence) {
+			return $licence['name'];
+		}, ImageLicensing::$imageLicences),
+		'default_value' => '',
+		'allow_null' => 1,
+		'multiple' => 0,
+	  ],
+
+		/** This ACF message field renders an "Update Caption" button in the media modal.
+		 * The button itself does not perform any direct action but serves as a user interface
+		 * element. When clicked, it triggers the blur event, which saves the changes.
+		 **/
+		[
+			'key' => 'update_caption_button',
+			'name' => 'update_caption',
+			'type' => 'message',
+			'message' => '<button type="button" class="acf-button button">Update Caption</button>',
+		],
 	],
 	'location' => [
 	  [
