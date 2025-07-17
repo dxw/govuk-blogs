@@ -162,7 +162,11 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 			]);
 
 			$blockContent = '<img src="image.jpg" alt="Test image">';
-			$block = ['blockName' => 'core/image', 'attrs' => ['id' => 124]];
+			$block = [
+				'blockName' => 'core/image',
+				'attrs' => ['id' => 124],
+				'innerHTML' => '<img>'
+			];
 
 			$result = $this->imageLicensing->renderBlock($blockContent, $block);
 			expect($result)->toBe($blockContent);
@@ -194,7 +198,11 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 			]);
 
 			$blockContent = '<img src="image.jpg" alt="Test image">';
-			$block = ['blockName' => 'core/image', 'attrs' => ['id' => 127]];
+			$block = [
+				'blockName' => 'core/image',
+				'attrs' => ['id' => 127],
+				'innerHTML' => '<img>'
+			];
 
 			$result = $this->imageLicensing->renderBlock($blockContent, $block);
 			expect($result)->toBe($blockContent);
@@ -208,7 +216,11 @@ describe(\GovUKBlogs\Theme\ImageLicensing::class, function () {
 			]);
 
 			$blockContent = '<img src="image.jpg" alt="Test image">';
-			$block = ['blockName' => 'core/image', 'attrs' => ['id' => 123]];
+			$block = [
+				'blockName' => 'core/image',
+				'attrs' => ['id' => 123],
+				'innerHTML' => '<img>'
+			];
 
 			$result = $this->imageLicensing->renderBlock($blockContent, $block);
 			expect($result)->toContain('<figure class="wp-block-image">');
