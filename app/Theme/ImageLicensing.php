@@ -4,6 +4,13 @@ namespace GovUKBlogs\Theme;
 
 class ImageLicensing implements \Dxw\Iguana\Registerable
 {
+	/**
+	* @var array<string, array{
+	*     name:   string,
+	*     link:   string|null,
+	*     display: bool
+	* }>
+	*/
 	public static $imageLicences = [
 		'ogl' => [
 			'name' => 'OGL',
@@ -55,7 +62,7 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	private function generateLicenceCaption(int $attachmentId): ?string
 	{
-		$licence = get_post_meta($attachmentId, 'licence', true);
+		$licence = (string) get_post_meta($attachmentId, 'licence', true);
 
 		if (empty($licence)) {
 			return null;
@@ -67,10 +74,10 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 			return null;
 		}
 
-		$caption = 'Licence: <a href="' . esc_attr($licenceData['link']) . '">' . esc_html($licenceData['name']) . '</a>';
+		$caption = 'Licence: <a href="' . esc_attr((string) $licenceData['link']) . '">' . esc_html($licenceData['name']) . '</a>';
 
-		$copyrightHolder = get_post_meta($attachmentId, 'copyright_holder', true);
-		$linkToSource = get_post_meta($attachmentId, 'link_to_source', true);
+		$copyrightHolder = (string) get_post_meta($attachmentId, 'copyright_holder', true);
+		$linkToSource = (string) get_post_meta($attachmentId, 'link_to_source', true);
 
 		if ($copyrightHolder || $linkToSource) {
 			$caption .= ' ' . ($linkToSource
@@ -83,14 +90,14 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	public function appendLicenceToCaption(array $response, object $attachment): array
 	{
-		$caption = $response['caption'] ?? '';
+		$caption = (string) $response['caption'];
 
 		$caption = preg_replace('/(\n<br>\s*)?Licence:.*$/mi', '', $caption);
 		$caption = trim($caption);
 
-		$licenceCaption = $this->generateLicenceCaption($attachment->ID);
+		$licenceCaption = $this->generateLicenceCaption((int) $attachment->ID);
 
-		if ($licenceCaption) {
+		if (isset($licenceCaption)) {
 			$caption = $caption ? $caption . "\n<br>" . $licenceCaption : $licenceCaption;
 		}
 
@@ -101,15 +108,18 @@ class ImageLicensing implements \Dxw\Iguana\Registerable
 
 	public function renderBlock(string $blockContent, array $block): string
 	{
-		$attachmentId = $block['attrs']['id'];
+		if (!isset($block['attrs']['id'])) {
+			return $blockContent;
+		}
+		$attachmentId = (int) $block['attrs']['id'];
 
-		$innerHTML = $block['innerHTML'] ?? '';
+		$innerHTML = (string) $block['innerHTML'];
 		if (stripos($innerHTML, 'Licence:') !== false) {
 			return $blockContent;
 		}
 
 		$licenceCaption = $this->generateLicenceCaption($attachmentId);
-		if (!$licenceCaption) {
+		if (!isset($licenceCaption)) {
 			return $blockContent;
 		}
 
