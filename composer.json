@@ -23,6 +23,8 @@
         "roave/security-advisories": "dev-latest",
         "dxw/phar-install": "^1.1",
         "dxw/php-cs-fixer-config": "^2.0",
-        "kahlan/kahlan": "^5.2"
+        "kahlan/kahlan": "^5.2",
+        "vimeo/psalm": "^5.26",
+        "humanmade/psalm-plugin-wordpress": "^3.1"
     }
 }
