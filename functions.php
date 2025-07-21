@@ -11,7 +11,6 @@ require(__DIR__.'/lib/widgets.php');
 require(__DIR__.'/lib/scripts.php');
 require(__DIR__.'/lib/custom.php');
 require(__DIR__.'/lib/comments_walker.php');
-require(__DIR__.'/lib/image-licensing.php');
 require(__DIR__.'/lib/options.php');
 require(__DIR__.'/lib/menus.php');
 require(__DIR__.'/lib/excerpt.php');

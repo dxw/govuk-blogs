@@ -7,7 +7,7 @@ describe(YouTube::class, function () {
 		$this->youTube = new YouTube();
 
 		allow('esc_attr')->toBeCalled()->andRun(function ($a) {
-			return "_${a}_";
+			return "_{$a}_";
 		});
 	});
 
