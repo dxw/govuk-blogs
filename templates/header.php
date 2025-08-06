@@ -9,9 +9,9 @@ $headerTag = is_home() ? 'h1' : 'div';
 
         <div class="govuk-grid-column-two-thirds">
             <<?php echo $headerTag; ?> class="blog-title govuk-heading-xl">
-                <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span>
-                <a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
-			</<?php echo $headerTag; ?>>
+                <span class="blog"><a href="<?php echo network_site_url(); ?>">Blog</a></span><span class="govuk-visually-hidden">:</span>
+                <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+            </<?php echo $headerTag; ?>>
 
             <?php if ($orgs = gds_organisations() ||  get_option('options_gds_location')) : ?>
                 <div class="bottom blog-meta">
