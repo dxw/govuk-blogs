@@ -24,7 +24,7 @@ add_action('wp_head', function () {
 
 	$content = limit_words(strip_tags(get_the_content_please($p->ID)), 40);
 
-	if (is_single()) { ?>
+	if (is_singular()) { ?>
 	<meta name="description" content="<?php echo limit_words(wp_strip_all_tags(get_the_excerpt(), true), 40); ?>">
 
 <?php	} else { ?>
