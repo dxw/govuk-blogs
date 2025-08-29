@@ -1,6 +1,6 @@
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h1 class="govuk-heading-l">Sorry, but the page you were trying to view does not exist.</h1>
+<h1 class="govuk-heading-l"><?php _e("Sorry, but the page you were trying to view does not exist.", "govuk-blogs"); ?></h1>
 
 <p class="govuk-body"><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
 <ul class="govuk-list govuk-list--bullet">

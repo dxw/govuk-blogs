@@ -14,7 +14,7 @@
 			<?php the_footnotes(); ?>
 			<?php if (have_rows('related_posts')) : ?>
                 <div class="related-posts">
-                    <p class="govuk-body">You may also be interested in:</p>
+                    <p class="govuk-body"><?php _e("You may also be interested in", "govuk-blogs"); ?>:</p>
                     <ul class="govuk-list govuk-list--bullet">
 						<?php while (have_rows('related_posts')) : ?>
 							<?php the_row() ?>
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
 			<?php endif ?>
-			<?php echo get_the_tag_list('<p class="govuk-body-s tags"><strong>Tags:</strong> ', ', ', '</p>'); ?>
+			<?php echo get_the_tag_list('<p class="govuk-body-s tags"><strong>'.__("Tags", "govuk-blogs").':</strong> ', ', ', '</p>'); ?>
         </div>
     </article>
 
@@ -36,7 +36,7 @@
         </div>
     </nav>
 
-    <h2 class="govuk-visually-hidden">Sharing and comments</h2>
+    <h2 class="govuk-visually-hidden"><?php _e("Sharing and comments", "govuk-blogs"); ?></h2>
 	<?php share_icons(get_the_ID()) ?>
 	<?php comments_template('/templates/comments.php') ?>
 <?php endwhile ?>
