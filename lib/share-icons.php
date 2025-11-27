@@ -23,24 +23,44 @@ function share_icons($id)
 
 	?>
 
-  <div class="icons-buttons">
-    <h3><?php echo __("Share this page"); ?></h3>
-    <ul>
-      <li>
-        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="twitter">Twitter</a>
-      </li>
-      <li>
-        <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="facebook">Facebook</a>
-      </li>
-      <li>
-        <a target="_blank" href="<?php echo esc_attr($linkedin_url) ?>" class="linkedin">LinkedIn</a>
-      </li>
-      <li>
-        <a href="<?php echo esc_attr($mailto_url); ?>" class="email">Email</a>
-      </li>
-    </ul>
-    <div class="govuk-clearfix"></div>
-  </div>
+			<div class="icons-buttons">
+				<h3><?php _e("Share this page", "govuk-blogs"); ?></h3>
+				<ul>
 
+					<li>
+						<a target="_blank" rel="noopener noreferrer external" class="govuk-link govuk-link--no-underline twitter" href="<?php echo esc_attr($twitter_url) ?>">
+							<span class="govuk-visually-hidden"><?php _e("Share on", "govuk-blogs"); ?></span>
+							Twitter
+							<span class="govuk-visually-hidden">(<?php _e("opens in new tab", "govuk-blogs"); ?>)</span>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" rel="noopener noreferrer external" class="govuk-link govuk-link--no-underline facebook" href="<?php echo esc_attr($facebook_url) ?>">
+							<span class="govuk-visually-hidden"><?php _e("Share on", "govuk-blogs"); ?></span>
+							Facebook
+							<span class="govuk-visually-hidden">(<?php _e("opens in new tab", "govuk-blogs"); ?>)</span>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" rel="noopener noreferrer external" class="govuk-link govuk-link--no-underline linkedin" href="<?php echo esc_attr($linkedin_url) ?>">
+							<span class="govuk-visually-hidden"><?php _e("Share on", "govuk-blogs"); ?></span>
+							LinkedIn
+							<span class="govuk-visually-hidden">(<?php _e("opens in new tab", "govuk-blogs"); ?>)</span>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" rel="noopener noreferrer external" class="govuk-link govuk-link--no-underline email" href="<?php echo esc_attr($mailto_url) ?>">
+							<span class="govuk-visually-hidden"><?php _e("Share on", "govuk-blogs"); ?></span>
+							<?php _e("Email", "govuk-blogs"); ?>
+							<span class="govuk-visually-hidden">(<?php _e("opens in new tab", "govuk-blogs"); ?>)</span>
+						</a>
+					</li>
+
+				</ul>
+				<div class="govuk-clearfix"></div>
+			</div>
   <?php
 }
