@@ -197,6 +197,16 @@
     padding: 3rem 0 1rem 0;
 }
 
+#ccc #ccc-notify.ccc-notify__top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-reject-button {
+    margin-right: $gutterHalf;
+}
+
 @media screen and (max-width:768px) {
 
     #ccc {
