@@ -203,8 +203,32 @@
     align-items: start;
 }
 
+/* Top banner */
+#ccc #ccc-notify.ccc-notify__top #ccc-notify-title {
+    font-size: 1.5rem;
+}
+
+#ccc #ccc-notify.ccc-notify__top p {
+    font-size: 1.1875rem;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-notify-buttons {
+    position: unset;
+    width: 100%;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-notify-button {
+    border: none;
+}
+
 #ccc #ccc-notify.ccc-notify__top .ccc-reject-button {
     margin-right: $gutterHalf;
+}
+
+#ccc #ccc-notify.ccc-notify__top #ccc-notify-dismiss {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 @media screen and (max-width:768px) {
