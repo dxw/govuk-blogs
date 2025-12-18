@@ -16,6 +16,15 @@
 			&:first-of-type {
 				margin-right: $gutterHalf;
 			}
+
+            span {
+                display: inline-block;
+                text-transform: lowercase;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
 		}
 	}
 
