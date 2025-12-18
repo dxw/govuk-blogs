@@ -8,6 +8,7 @@
 		@extend .govuk-body;
 	}
 
+    .ccc-notify-buttons,
 	#ccc-button-holder {
 		.ccc-notify-button {
 			@extend .govuk-button;
@@ -17,6 +18,11 @@
 			}
 		}
 	}
+
+    .ccc-notify__top,
+    #ccc-content {
+        background-color: #f4f8fb;
+    }
 
 	#ccc-content h2,
 	#ccc-content h3 {
@@ -91,7 +97,7 @@
 }
 
 #ccc .ccc-content--light .ccc-notify-button:hover {
-    background-color: #333;
+    background-color: #005a30;
 }
 
 #ccc .ccc-content--light .ccc-notify-button,
