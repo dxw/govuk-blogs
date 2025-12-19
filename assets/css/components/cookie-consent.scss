@@ -8,6 +8,7 @@
 		@extend .govuk-body;
 	}
 
+    .ccc-notify-buttons,
 	#ccc-button-holder {
 		.ccc-notify-button {
 			@extend .govuk-button;
@@ -15,8 +16,22 @@
 			&:first-of-type {
 				margin-right: $gutterHalf;
 			}
+
+            span {
+                display: inline-block;
+                text-transform: lowercase;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
 		}
 	}
+
+    .ccc-notify__top,
+    #ccc-content {
+        background-color: #f4f8fb;
+    }
 
 	#ccc-content h2,
 	#ccc-content h3 {
@@ -91,7 +106,7 @@
 }
 
 #ccc .ccc-content--light .ccc-notify-button:hover {
-    background-color: #333;
+    background-color: #005a30;
 }
 
 #ccc .ccc-content--light .ccc-notify-button,
@@ -180,6 +195,40 @@
 
 #ccc h3.optional-cookie-header {
     padding: 3rem 0 1rem 0;
+}
+
+#ccc #ccc-notify.ccc-notify__top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Top banner */
+#ccc #ccc-notify.ccc-notify__top #ccc-notify-title {
+    font-size: 1.5rem;
+}
+
+#ccc #ccc-notify.ccc-notify__top p {
+    font-size: 1.1875rem;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-notify-buttons {
+    position: unset;
+    width: 100%;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-notify-button {
+    border: none;
+}
+
+#ccc #ccc-notify.ccc-notify__top .ccc-reject-button {
+    margin-right: $gutterHalf;
+}
+
+#ccc #ccc-notify.ccc-notify__top #ccc-notify-dismiss {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 @media screen and (max-width:768px) {
