@@ -6,7 +6,7 @@ class ThemeSupports implements \Dxw\Iguana\Registerable
 {
 	public function register(): void
 	{
-		add_action('after_setup_theme', [$this, 'addThemeSupport']);
+		add_action('after_setup_theme', [$this, 'addThemeSupport'], 10, 0);
 	}
 
 	public function addThemeSupport(): void
