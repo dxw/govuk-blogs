@@ -9,7 +9,12 @@ class AllowedBlocks implements \Dxw\Iguana\Registerable
 		add_filter('allowed_block_types_all', [$this, 'limitAllowedBlocks'], 10, 2);
 	}
 
-	public function limitAllowedBlocks($allowed_block_types, $block_editor_context): \WP_BLock_Editor_Context
+	/**
+	 * @param bool|array<int|string, string> $allowed_block_types
+	 * @param \WP_Block_Editor_Context $block_editor_context
+	 * @return bool|array<int|string, string>
+	 */
+	public function limitAllowedBlocks($allowed_block_types, $block_editor_context)
 	{
 		if (! empty($block_editor_context->post)) {
 			return [
@@ -96,6 +101,6 @@ class AllowedBlocks implements \Dxw\Iguana\Registerable
 			];
 		}
 
-		return $block_editor_context;
+		return $allowed_block_types;
 	}
 }
