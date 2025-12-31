@@ -6,7 +6,7 @@ class ThemeSetup implements \Dxw\Iguana\Registerable
 {
 	public function register(): void
 	{
-		add_action('after_setup_theme', [$this, 'loadTextDomain']);
+		add_action('after_setup_theme', [$this, 'loadTextDomain'], 10, 0);
 	}
 
 	public function loadTextDomain(): void
