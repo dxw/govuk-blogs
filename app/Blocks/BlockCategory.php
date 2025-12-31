@@ -9,7 +9,7 @@ class BlockCategory implements \Dxw\Iguana\Registerable
 		add_filter('block_categories_all', [$this, 'addCustomCategory']);
 	}
 
-	public function addCustomCategory($categories): array
+	public function addCustomCategory(array $categories): array
 	{
 		array_unshift($categories, [
 			'slug' => 'govuk-components',
