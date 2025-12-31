@@ -13,11 +13,11 @@ class Scripts implements \Dxw\Iguana\Registerable
 
 	public function register(): void
 	{
-		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
-		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
+		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts'], 10, 0);
+		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles'], 10, 0);
 		add_filter('wp_script_attributes', [$this, 'addScriptTypeToJs'], 10, 1);
-		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlocksVariations']);
-		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations']);
+		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlocksVariations'], 10, 0);
+		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations'], 10, 0);
 	}
 
 	private function getFingerPrintedPath($path): string
