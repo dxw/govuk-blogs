@@ -30,7 +30,7 @@ describe(GovUKBlogs\Blocks\AllowedBlocks::class, function () {
 				'class' => '\WP_Block_Editor_Context'
 			]);
 			$result = $this->allowedBlocks->limitAllowedBlocks($arg1, $arg2);
-			expect($result)->toBeA('object');
+			expect($result)->toBeA('array');
 			$this->allowedBlocks->limitAllowedBlocks($arg1, $arg2);
 		});
 	});
