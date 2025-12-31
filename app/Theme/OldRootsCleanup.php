@@ -4,7 +4,7 @@ namespace GovUKBlogs\Theme;
 
 class OldRootsCleanup implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_filter('excerpt_length', [$this, 'excerptLength']);
 		add_filter('excerpt_more', [$this, 'excerptMore']);
@@ -15,12 +15,12 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	/**
 	 * Clean up the_excerpt()
 	 */
-	public function excerptLength($length)
+	public function excerptLength($length): int
 	{
 		return POST_EXCERPT_LENGTH;
 	}
 
-	public function excerptMore($more)
+	public function excerptMore($more): string
 	{
 		return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
 	}
@@ -28,7 +28,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	/**
 	* Don't return the default description in the RSS feed if it hasn't been changed
 	*/
-	public function removeDefaultDescription($bloginfo)
+	public function removeDefaultDescription($bloginfo): string
 	{
 		$default_tagline = 'Just another WordPress site';
 		return ($bloginfo === $default_tagline) ? '' : $bloginfo;
@@ -40,7 +40,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	 *
 	 * @link http://justintadlock.com/archives/2011/07/01/captions-in-wordpress
 	 */
-	public function gdsCaption($output, $attr, $content)
+	public function gdsCaption($output, $attr, $content): string
 	{
 		if (is_feed()) {
 			return $output;

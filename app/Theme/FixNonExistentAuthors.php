@@ -4,12 +4,12 @@ namespace GovUKBlogs\Theme;
 
 class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_action('gds_byline', [$this, 'replaceAbsentAuthor']);
 	}
 
-	public function replaceAbsentAuthor()
+	public function replaceAbsentAuthor(): void
 	{
 		global $post;
 		$post_author_id = get_post_field('post_author', $post->ID);
@@ -23,7 +23,7 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 		}
 	}
 
-	public function setArchiveAuthor($postData, $postArray)
+	public function setArchiveAuthor($postData, $postArray): array
 	{
 		$fix_types = ["page", "post", "attachment"];
 

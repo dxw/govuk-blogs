@@ -4,12 +4,12 @@ namespace GovUKBlogs\Theme;
 
 class ThemeSupports implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_action('after_setup_theme', [$this, 'addThemeSupport']);
 	}
 
-	public function addThemeSupport()
+	public function addThemeSupport(): void
 	{
 		add_theme_support('editor-styles');
 		add_theme_support('title-tag');

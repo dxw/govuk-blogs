@@ -4,12 +4,12 @@ namespace GovUKBlogs\Blocks;
 
 class AllowedBlocks implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_filter('allowed_block_types_all', [$this, 'limitAllowedBlocks'], 10, 2);
 	}
 
-	public function limitAllowedBlocks($allowed_block_types, $block_editor_context)
+	public function limitAllowedBlocks($allowed_block_types, $block_editor_context): \WP_BLock_Editor_Context
 	{
 		if (! empty($block_editor_context->post)) {
 			return [
