@@ -11,7 +11,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 		$this->cssManifest = $cssManifest;
 	}
 
-	public function register()
+	public function register(): void
 	{
 		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
 		add_action('after_setup_theme', [$this, 'wpEnqueueEditorStyles']);
@@ -20,30 +20,30 @@ class Scripts implements \Dxw\Iguana\Registerable
 		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations']);
 	}
 
-	private function getFingerPrintedPath($path)
+	private function getFingerPrintedPath($path): string
 	{
 		$newFileName = $this->cssManifest->get($path);
 		return get_template_directory_uri() . '/' . $newFileName;
 	}
 
-	private function getFingerPrintedRelativePath($path)
+	private function getFingerPrintedRelativePath($path): string
 	{
 		return $this->cssManifest->get($path);
 	}
 
-	public function wpEnqueueScripts()
+	public function wpEnqueueScripts(): void
 	{
 		wp_enqueue_script('main', $this->getFingerPrintedPath('build/main.min.js'), ['jquery']);
 		wp_enqueue_script('govuk-frontend', get_template_directory_uri().'/build/govuk-frontend-load.js');
 		wp_enqueue_style('main', $this->getFingerPrintedPath('build/main.min.css'));
 	}
 
-	public function wpEnqueueEditorStyles()
+	public function wpEnqueueEditorStyles(): void
 	{
 		add_editor_style($this->getFingerPrintedRelativePath('build/admin.min.css'));
 	}
 
-	public function addScriptTypeToJs($attr)
+	public function addScriptTypeToJs($attr): array
 	{
 		if (empty($attr['id']) || empty($attr['src'])) {
 			return $attr;
@@ -56,7 +56,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 		return $attr;
 	}
 
-	public function enqueueBlocksVariations()
+	public function enqueueBlocksVariations(): void
 	{
 		wp_enqueue_script(
 			'blocks-variations',
@@ -71,7 +71,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 		);
 	}
 
-	public function enqueueBlockStyleVariations()
+	public function enqueueBlockStyleVariations(): void
 	{
 		wp_enqueue_script(
 			'block-style-variations',

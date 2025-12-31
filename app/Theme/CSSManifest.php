@@ -11,7 +11,7 @@ class CSSManifest
 		$this->json = json_decode(file_get_contents($pathToCSSManifest), true);
 	}
 
-	public function get($fileName)
+	public function get($fileName): string
 	{
 		if (!array_key_exists($fileName, $this->json['rewrittenFiles'])) {
 			return '';
