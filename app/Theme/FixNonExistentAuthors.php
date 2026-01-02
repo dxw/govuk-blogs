@@ -23,7 +23,7 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 		}
 	}
 
-	public function setArchiveAuthor($postData, $postArray): array
+	public function setArchiveAuthor(array $postData, array $postArray): array
 	{
 		$fix_types = ["page", "post", "attachment"];
 
