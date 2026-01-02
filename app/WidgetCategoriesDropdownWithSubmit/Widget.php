@@ -2,6 +2,10 @@
 
 namespace GovUKBlogs\WidgetCategoriesDropdownWithSubmit;
 
+/**
+ * @psalm-suppress PropertyNotSetInConstructor
+ * @psalm-suppress MissingTemplateParam
+ */
 class Widget extends \WP_Widget
 {
 	public function __construct()
