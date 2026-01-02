@@ -20,13 +20,13 @@ class Scripts implements \Dxw\Iguana\Registerable
 		add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockStyleVariations'], 10, 0);
 	}
 
-	private function getFingerPrintedPath($path): string
+	private function getFingerPrintedPath(string $path): string
 	{
 		$newFileName = $this->cssManifest->get($path);
 		return get_template_directory_uri() . '/' . $newFileName;
 	}
 
-	private function getFingerPrintedRelativePath($path): string
+	private function getFingerPrintedRelativePath(string $path): string
 	{
 		return $this->cssManifest->get($path);
 	}
@@ -43,7 +43,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 		add_editor_style($this->getFingerPrintedRelativePath('build/admin.min.css'));
 	}
 
-	public function addScriptTypeToJs($attr): array
+	public function addScriptTypeToJs(array $attr): array
 	{
 		if (empty($attr['id']) || empty($attr['src'])) {
 			return $attr;
