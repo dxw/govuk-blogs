@@ -15,12 +15,12 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	/**
 	 * Clean up the_excerpt()
 	 */
-	public function excerptLength($length): int
+	public function excerptLength(int $length): int
 	{
 		return POST_EXCERPT_LENGTH;
 	}
 
-	public function excerptMore($more): string
+	public function excerptMore(string $more): string
 	{
 		return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
 	}
@@ -28,7 +28,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	/**
 	* Don't return the default description in the RSS feed if it hasn't been changed
 	*/
-	public function removeDefaultDescription($bloginfo): string
+	public function removeDefaultDescription(string $bloginfo): string
 	{
 		$default_tagline = 'Just another WordPress site';
 		return ($bloginfo === $default_tagline) ? '' : $bloginfo;
@@ -40,7 +40,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	 *
 	 * @link http://justintadlock.com/archives/2011/07/01/captions-in-wordpress
 	 */
-	public function gdsCaption($output, $attr, $content): string
+	public function gdsCaption(string $output, array $attr, string $content): string
 	{
 		if (is_feed()) {
 			return $output;
