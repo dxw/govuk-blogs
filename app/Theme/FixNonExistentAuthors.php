@@ -31,18 +31,25 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			return $postData;
 		}
 
+		/** @var int|string|false|null */
 		$archive_user_option = get_network_option(null, 'archive_author');
+		$archive_author_id = null;
 
-		if (!empty($archive_user_option)) {
-			if (is_int($archive_user_option)) {
-				$archive_author_id = $archive_user_option;
-			} elseif (is_string($archive_user_option) && ctype_digit($archive_user_option)) {
-				$archive_author_id = intval($archive_user_option);
-			}
-			if (!empty($archive_author_id)) {
-				$postData['post_author'] = $archive_author_id;
-			}
+		if ($archive_user_option === false || $archive_user_option === null) {
+			return $postData;
 		}
+
+		if (is_int($archive_user_option)) {
+			$archive_author_id = $archive_user_option;
+		} elseif (ctype_digit($archive_user_option)) {
+			/** @var numeric-string $archive_user_option */
+			$archive_author_id = (int) $archive_user_option;
+		}
+
+		if ($archive_author_id !== null) {
+			$postData['post_author'] = $archive_author_id;
+		}
+
 		return $postData;
 	}
 }
