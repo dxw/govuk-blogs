@@ -53,15 +53,19 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 		'caption' => ''
 		];
 
+		/** @var array{id: string, align: string, width: string, caption: string} $attr */
 		$attr = shortcode_atts($defaults, $attr);
+		$width = (int) ($attr['width'] ?? 0);
+		$caption = $attr['caption'] ?? '';
+		$id = $attr['id'] ?? '';
 
 		// // If the width is less than 1 or there is no caption, return the content wrapped between the [caption] tags
-		if ($attr['width'] < 1 || empty($attr['caption'])) {
+		if ($width < 1 || $caption === '') {
 			return $content;
 		}
 
 		// Set up the attributes for the caption <figure>
-		$attributes  = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '');
+		$attributes  = (!empty($id) ? ' id="' . esc_attr($id) . '"' : '');
 		$attributes .= ' class="thumbnail wp-caption ' . esc_attr($attr['align']) . '"';
 		$attributes .= ' style="width: ' . esc_attr($attr['width']) . 'px"';
 
