@@ -13,9 +13,13 @@ class CSSManifest
 
 	public function get(string $fileName): string
 	{
-		if (!array_key_exists($fileName, $this->json['rewrittenFiles'])) {
+		/** @var array<string,string> */
+		$rewrittenFiles = $this->json['rewrittenFiles'] ?? [];
+
+		if (!array_key_exists($fileName, $rewrittenFiles)) {
 			return '';
 		}
-		return $this->json['rewrittenFiles'][$fileName];
+
+		return $rewrittenFiles[$fileName];
 	}
 }

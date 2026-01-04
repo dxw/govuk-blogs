@@ -11,12 +11,15 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 
 	public function replaceAbsentAuthor(): void
 	{
+		/** @var WP_Post $post */
 		global $post;
-		$post_author_id = get_post_field('post_author', $post->ID);
+
+		$post_id = (int) $post->ID;
+		$post_author_id = (int) get_post_field('post_author', $post_id);
 		if ($post_author_id > 1) {
 			$post_author = get_user_by('id', $post_author_id);
 			if (!($post_author)) {
-				error_log("author of post {$post->ID} is deleted user $post_author_id", 0);
+				error_log("author of post {$post_id} is deleted user $post_author_id", 0);
 				add_filter('wp_insert_post_data', [$this, 'setArchiveAuthor'], 99, 2);
 				wp_update_post($post);
 			}
