@@ -22,7 +22,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 
 	public function excerptMore(string $more): string
 	{
-		return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
+		return ' &hellip; <a href="' . (string) get_permalink() . '">' . __('Continued', 'roots') . '</a>';
 	}
 
 	/**
