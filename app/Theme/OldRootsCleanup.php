@@ -17,7 +17,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	 */
 	public function excerptLength(int $length): int
 	{
-		return POST_EXCERPT_LENGTH;
+		return (int) POST_EXCERPT_LENGTH;
 	}
 
 	public function excerptMore(string $more): string
