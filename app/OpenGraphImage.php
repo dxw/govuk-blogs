@@ -6,7 +6,7 @@ class OpenGraphImage implements \Dxw\Iguana\Registerable
 {
 	public function register(): void
 	{
-		add_action('wp_head', [$this, 'wpHead']);
+		add_action('wp_head', [$this, 'wpHead'], 10, 0);
 	}
 
 	public function wpHead(): void

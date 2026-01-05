@@ -6,16 +6,20 @@ class CSSManifest
 {
 	private $json;
 
-	public function __construct($pathToCSSManifest)
+	public function __construct(string $pathToCSSManifest)
 	{
 		$this->json = json_decode(file_get_contents($pathToCSSManifest), true);
 	}
 
-	public function get($fileName)
+	public function get(string $fileName): string
 	{
-		if (!array_key_exists($fileName, $this->json['rewrittenFiles'])) {
+		/** @var array<string,string> */
+		$rewrittenFiles = $this->json['rewrittenFiles'] ?? [];
+
+		if (!array_key_exists($fileName, $rewrittenFiles)) {
 			return '';
 		}
-		return $this->json['rewrittenFiles'][$fileName];
+
+		return $rewrittenFiles[$fileName];
 	}
 }
