@@ -6,6 +6,7 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 {
 	public function register(): void
 	{
+		/** @psalm-suppress HookNotFound */
 		add_action('gds_byline', [$this, 'replaceAbsentAuthor']);
 	}
 
