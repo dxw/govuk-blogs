@@ -21,7 +21,7 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			if (!($post_author)) {
 				error_log("author of post {$post_id} is deleted user $post_author_id", 0);
 				add_filter('wp_insert_post_data', [$this, 'setArchiveAuthor'], 99, 2);
-				wp_update_post($post);
+				wp_update_post(['ID' => $post_id]);
 			}
 		}
 	}
