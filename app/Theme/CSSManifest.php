@@ -4,7 +4,8 @@ namespace GovUKBlogs\Theme;
 
 class CSSManifest
 {
-	private $json;
+	/** @var array<string, mixed> */
+	private array $json;
 
 	public function __construct(string $pathToCSSManifest)
 	{
