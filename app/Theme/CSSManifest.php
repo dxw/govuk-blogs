@@ -4,18 +4,29 @@ namespace GovUKBlogs\Theme;
 
 class CSSManifest
 {
-	private $json;
+	/** @var array<array-key, mixed> */
+	private array $json;
 
-	public function __construct($pathToCSSManifest)
+	public function __construct(string $pathToCSSManifest)
 	{
-		$this->json = json_decode(file_get_contents($pathToCSSManifest), true);
+		/** @var array<array-key, mixed>|null */
+		$json = json_decode(file_get_contents($pathToCSSManifest), true);
+
+		if (!is_array($json)) {
+			$json = [];
+		}
+
+		$this->json = $json;
 	}
 
-	public function get($fileName)
+	public function get(string $fileName): string
 	{
-		if (!array_key_exists($fileName, $this->json['rewrittenFiles'])) {
+		$rewrittenFiles = $this->json['rewrittenFiles'] ?? [];
+
+		if (!is_array($rewrittenFiles) || !array_key_exists($fileName, $rewrittenFiles)) {
 			return '';
 		}
-		return $this->json['rewrittenFiles'][$fileName];
+
+		return (string) $rewrittenFiles[$fileName];
 	}
 }

@@ -4,26 +4,30 @@ namespace GovUKBlogs\Theme;
 
 class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
+		/** @psalm-suppress HookNotFound */
 		add_action('gds_byline', [$this, 'replaceAbsentAuthor']);
 	}
 
-	public function replaceAbsentAuthor()
+	public function replaceAbsentAuthor(): void
 	{
+		/** @var WP_Post $post */
 		global $post;
-		$post_author_id = get_post_field('post_author', $post->ID);
+
+		$post_id = (int) $post->ID;
+		$post_author_id = (int) get_post_field('post_author', $post_id);
 		if ($post_author_id > 1) {
 			$post_author = get_user_by('id', $post_author_id);
 			if (!($post_author)) {
-				error_log("author of post {$post->ID} is deleted user $post_author_id", 0);
+				error_log("author of post {$post_id} is deleted user $post_author_id", 0);
 				add_filter('wp_insert_post_data', [$this, 'setArchiveAuthor'], 99, 2);
-				wp_update_post($post);
+				wp_update_post(['ID' => $post_id]);
 			}
 		}
 	}
 
-	public function setArchiveAuthor($postData, $postArray)
+	public function setArchiveAuthor(array $postData, array $postArray): array
 	{
 		$fix_types = ["page", "post", "attachment"];
 
@@ -31,18 +35,25 @@ class FixNonExistentAuthors implements \Dxw\Iguana\Registerable
 			return $postData;
 		}
 
+		/** @var int|string|false|null */
 		$archive_user_option = get_network_option(null, 'archive_author');
+		$archive_author_id = null;
 
-		if (!empty($archive_user_option)) {
-			if (is_int($archive_user_option)) {
-				$archive_author_id = $archive_user_option;
-			} elseif (is_string($archive_user_option) && ctype_digit($archive_user_option)) {
-				$archive_author_id = intval($archive_user_option);
-			}
-			if (!empty($archive_author_id)) {
-				$postData['post_author'] = $archive_author_id;
-			}
+		if ($archive_user_option === false || $archive_user_option === null) {
+			return $postData;
 		}
+
+		if (is_int($archive_user_option)) {
+			$archive_author_id = $archive_user_option;
+		} elseif (ctype_digit($archive_user_option)) {
+			/** @var numeric-string $archive_user_option */
+			$archive_author_id = (int) $archive_user_option;
+		}
+
+		if ($archive_author_id !== null) {
+			$postData['post_author'] = $archive_author_id;
+		}
+
 		return $postData;
 	}
 }

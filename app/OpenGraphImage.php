@@ -6,7 +6,7 @@ class OpenGraphImage implements \Dxw\Iguana\Registerable
 {
 	public function register(): void
 	{
-		add_action('wp_head', [$this, 'wpHead']);
+		add_action('wp_head', [$this, 'wpHead'], 10, 0);
 	}
 
 	public function wpHead(): void
@@ -19,6 +19,11 @@ class OpenGraphImage implements \Dxw\Iguana\Registerable
 			return;
 		}
 
-		echo sprintf('<meta property="og:image" content="%s">'."\n", get_the_post_thumbnail_url());
+		$thumbnail = get_the_post_thumbnail_url();
+		if ($thumbnail == false) {
+			return;
+		}
+
+		echo sprintf('<meta property="og:image" content="%s">' . "\n", $thumbnail);
 	}
 }
