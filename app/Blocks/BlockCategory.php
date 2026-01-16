@@ -9,6 +9,10 @@ class BlockCategory implements \Dxw\Iguana\Registerable
 		add_filter('block_categories_all', [$this, 'addCustomCategory']);
 	}
 
+	/**
+	 * @param array<array-key, array<array-key, mixed>> $categories
+	 * @return array<array-key, array<array-key, mixed>>
+	 */
 	public function addCustomCategory(array $categories): array
 	{
 		array_unshift($categories, [
