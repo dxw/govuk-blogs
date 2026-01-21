@@ -27,7 +27,7 @@ function share_icons($id)
     <h3><?php echo __("Share this page"); ?></h3>
     <ul>
       <li>
-        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="twitter">Twitter</a>
+        <a target="_blank" href="<?php echo esc_attr($twitter_url) ?>" class="twitter">X (formerly Twitter)</a>
       </li>
       <li>
         <a target="_blank" href="<?php echo esc_attr($facebook_url) ?>" class="facebook">Facebook</a>

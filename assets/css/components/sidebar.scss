@@ -119,6 +119,10 @@
 			}
 
 			// Twitter
+			&[href^="http://x.com/"],
+			&[href^="http://www.x.com/"],
+			&[href^="https://x.com/"],
+			&[href^="https://www.x.com/"],
 			&[href^="http://twitter.com/"],
 			&[href^="http://www.twitter.com/"],
 			&[href^="https://twitter.com/"],
