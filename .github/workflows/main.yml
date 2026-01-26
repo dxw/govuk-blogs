@@ -26,6 +26,8 @@ jobs:
             ${{ runner.os }}-composer-
       - name: Install dependencies
         run: composer install --no-interaction
+      - name: Run static code analysis
+        run: vendor/bin/psalm --error-level=1 --find-unused-psalm-suppress
       - name: PHP CS fix
         run: vendor/bin/php-cs-fixer fix --dry-run -v --diff
       - name: Run Kahlan tests
