@@ -4,12 +4,16 @@ namespace GovUKBlogs\Blocks;
 
 class BlockCategory implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_filter('block_categories_all', [$this, 'addCustomCategory']);
 	}
 
-	public function addCustomCategory($categories)
+	/**
+	 * @param array<array-key, array<array-key, mixed>> $categories
+	 * @return array<array-key, array<array-key, mixed>>
+	 */
+	public function addCustomCategory(array $categories): array
 	{
 		array_unshift($categories, [
 			'slug' => 'govuk-components',

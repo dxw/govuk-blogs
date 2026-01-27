@@ -4,12 +4,12 @@ namespace GovUKBlogs\Blocks\AccordionRow;
 
 class Block implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
-		add_action('init', [$this, 'registerBlock']);
+		add_action('init', [$this, 'registerBlock'], 10, 0);
 	}
 
-	public function registerBlock()
+	public function registerBlock(): void
 	{
 		register_block_type(__DIR__ . '/build');
 	}
