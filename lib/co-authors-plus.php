@@ -5,7 +5,9 @@ add_filter('coauthors_auto_apply_template_tags', function () {
 });
 
 add_action('init', function () {
-	remove_filter('the_author', [$GLOBALS['coauthors_plus_template_filters'], 'filter_the_author']);
+	if (isset($GLOBALS['coauthors_plus_template_filters'])) {
+		remove_filter('the_author', [$GLOBALS['coauthors_plus_template_filters'], 'filter_the_author']);
+	}
 }, 100);
 
 add_filter('the_author', function ($author) {
