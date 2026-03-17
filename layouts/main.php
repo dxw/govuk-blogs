@@ -1,5 +1,5 @@
 <?php
-$govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/govuk-frontend/dist/govuk/assets/rebrand/';
+$govukFrontendAssetPath = get_template_directory_uri() . '/build/govuk-assets/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,15 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/node_modules/go
 		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
 		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
 		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
+		<meta name="theme-color" content="#0b0c0c">
+
+		<link rel="icon" sizes="48x48" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.ico">
+		<link rel="icon" sizes="any" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.svg" type="image/svg+xml">
+		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
+		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
+		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
+
+		<meta property="og:image" content="<?php echo esc_url($govukFrontendAssetPath . 'images/govuk-opengraph-image.png'); ?>">
 
 		<?php wp_head(); ?>
 	</head>
