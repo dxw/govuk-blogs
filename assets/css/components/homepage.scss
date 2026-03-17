@@ -1,3 +1,4 @@
+@use "sass:color";
 .featured-posts {
 
   figure {
@@ -193,7 +194,7 @@ hr {
     font-family: "nta", Helvetica, Arial, sans-serif;
 
     &:hover, &:focus {
-      color: darken($greyText, 15%);
+      color: color.adjust($greyText, $lightness: -15%);
       text-decoration: underline;
     }
 

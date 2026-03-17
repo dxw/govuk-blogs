@@ -1,3 +1,4 @@
+@use "sass:color";
 // Spacing
 // -------------------------
 
@@ -34,13 +35,12 @@ $blogColour:   govuk-colour("teal", $variant: "primary");
 $alertColour:  govuk-colour("red");
 $buttonColour: govuk-colour("green");
 
-$buttonHover:darken(govuk-colour("green"), 2); //006435
-$buttonBorder:darken(govuk-colour("green"), 5); //#003618;
+$buttonHover: govuk-colour("green", $variant: "shade-25");
+$buttonBorder: govuk-colour("green", $variant: "shade-50");
 $blogTitleColour: $govuk-secondary-text-colour;
 $placeHolderColour: $govuk-secondary-text-colour;
 $tableHeadCellColour: govuk-colour("black", $variant: "tint-95");;
 $tableCellColour: #e1e8e8;
-
 
 // REFERENCE OF THE GOVUK Modern Colour Palette
 // https://github.com/alphagov/govuk-frontend/blob/063cd8e2470b62b824c6e50ca66342ac7a95d2d8/src/govuk/settings/_colours-palette.scss
@@ -101,4 +101,3 @@ $yellow: govuk-colour("yellow");
 $focus-colour: govuk-colour("yellow");
 
 $is-ie: false !default;
-
