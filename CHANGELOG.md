@@ -3,6 +3,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [8.0.0] - 2026-03-20
+
+### Changed
+
+- Upgrade `govuk-frontend` to the latest major version [`v6.1.0`](https://github.com/alphagov/govuk-frontend/releases/tag/v6.1.0)
+- Upgrade `dart-sass` to the latest version
+- [Change the existing header to a <div> element and wrap it with a <header> element](https://github.com/alphagov/govuk-frontend/blob/v6.0.0/CHANGELOG.md#update-nunjucks-blocks-around-the-govuk-header)
+- [Change the existing footer to a <div> element and wrap it with a <footer> element](https://github.com/alphagov/govuk-frontend/blob/v6.0.0/CHANGELOG.md#update-nunjucks-blocks-around-the-govuk-footer)
+- Update colours following GOV.UK warning recommendations
+- Increase font size from `14` to `16`
+- Update asset paths to remove reference to `rebrand` directory
+
+### Removed
+
+- Remove usage of deprecated `darken` function
+- Remove `--rebranded` HTML flag
+- Remove new typography scale flag
+
 ## [7.3.0] - 2026-01-21
 
 ### Changed
