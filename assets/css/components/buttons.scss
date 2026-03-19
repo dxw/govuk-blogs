@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .wp-block-button {
 	.wp-element-button {
 		@extend .govuk-button;
@@ -61,7 +63,7 @@
   border: none;
   text-decoration: none;
   position: relative;
-  @include govuk-font(14);
+  @include govuk-font(16);
   padding: 8px 16px;
   cursor: pointer;
   background-image: none;
@@ -86,14 +88,14 @@
 .btn:active,
 .btn:focus,
 .btn-active{
-  background-color: darken($blueDark, 10%);
+  background-color: color.adjust($blueDark, $lightness: -10%);
 }
 
 .btn-secondary .btn:hover,
 .btn-secondary .btn-hover,
 .btn:hover,
 .btn-hover {
-  background-color: darken($blueDark, 10%);
+  background-color: color.adjust($blueDark, $lightness: -10%);
 }
 
 .btn:active,

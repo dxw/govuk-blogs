@@ -1,3 +1,4 @@
+@use "sass:color";
 // Spacing
 // -------------------------
 
@@ -18,29 +19,28 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 // COLOURS
 // --------------------------------------------------
 
-$greyText: 		 govuk-colour("dark-grey");
-$greyLight:		 govuk-colour("light-grey");
-$blueDark:		 govuk-colour("dark-blue");
+$greyText: 		 govuk-colour("black", $variant: "tint-25");
+$greyLight:		 govuk-colour("black", $variant: "tint-95");
+$blueDark:		 govuk-colour("blue", $variant: "shade-50");
 $red:          govuk-colour("red");
 $black:        govuk-colour("black");
 $white:        govuk-colour("white");
-$background:   govuk-colour("light-grey");
-$panelColour:  govuk-colour("mid-grey");
+$background:   govuk-colour("black", $variant: "tint-95");
+$panelColour:  govuk-colour("black", $variant: "tint-80");
 $borderColour: $govuk-border-colour;
 $focusColour:  govuk-colour("yellow");
 $linkColour:   govuk-colour("blue");
 $linkHover:    $govuk-link-hover-colour;
-$blogColour:   govuk-colour("turquoise");
+$blogColour:   govuk-colour("teal", $variant: "primary");
 $alertColour:  govuk-colour("red");
 $buttonColour: govuk-colour("green");
 
-$buttonHover:darken(govuk-colour("green"), 2); //006435
-$buttonBorder:darken(govuk-colour("green"), 5); //#003618;
+$buttonHover: govuk-colour("green", $variant: "shade-25");
+$buttonBorder: govuk-colour("green", $variant: "shade-50");
 $blogTitleColour: $govuk-secondary-text-colour;
 $placeHolderColour: $govuk-secondary-text-colour;
-$tableHeadCellColour: govuk-colour("light-grey");;
+$tableHeadCellColour: govuk-colour("black", $variant: "tint-95");;
 $tableCellColour: #e1e8e8;
-
 
 // REFERENCE OF THE GOVUK Modern Colour Palette
 // https://github.com/alphagov/govuk-frontend/blob/063cd8e2470b62b824c6e50ca66342ac7a95d2d8/src/govuk/settings/_colours-palette.scss
@@ -96,9 +96,8 @@ $mobileMaxWidth:    $tablet - 1px;
 $tabletMinWidth:    $tablet;
 $tabletMaxWidth:    $desktop - 1px;
 
-$greyTopBorder: 1px solid govuk-colour("mid-grey");
+$greyTopBorder: 1px solid govuk-colour("black", $variant: "tint-80");
 $yellow: govuk-colour("yellow");
 $focus-colour: govuk-colour("yellow");
 
 $is-ie: false !default;
-

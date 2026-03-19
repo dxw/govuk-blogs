@@ -160,7 +160,7 @@
     @media print {
         .inset-text {
             font-family: sans-serif;
-            @include govuk-font(14);
+            @include govuk-font(16);
             color: govuk-colour("black");
         }
     }
