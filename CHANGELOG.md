@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Fixed
+
+- Building and enqueuing of govuk-frontend.min.js
 
 ## [8.0.0] - 2026-03-20
 
@@ -39,7 +44,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Added
 - Prevent `sitemap.xml` from being redirected to an atom feed.
 
-## [7.1.0] - 2025-07-21 
+## [7.1.0] - 2025-07-21
 
 ## Added
 - Functionality to trim manual excerpts, to match the default 55 words of automatic excerpts.
@@ -254,7 +259,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Modify favicon.ico to be bigger (32x32px)
-  
+
 ## [3.3.9] - 2024-01-11
 
 ### Changed

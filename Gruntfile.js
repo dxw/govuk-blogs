@@ -98,7 +98,14 @@ module.exports = function (grunt) {
 						flatten: true,
 						src: 'govuk-frontend-load.js',
 						dest: 'build/'
-					}
+					},
+                    {
+                        expand: true,
+						cwd: 'node_modules/govuk-frontend/dist/govuk/',
+						flatten: true,
+						src: 'govuk-frontend.min.js',
+						dest: 'build/'
+					},
                 ],
             },
         },
