@@ -41,8 +41,7 @@ if (have_comments()) : ?>
     <?php else : ?>
 
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
-        <div class="govuk-form-group">
-          <a name="comment_field"></a>
+        <div class="govuk-form-group" id="comment_field">
           <label for="comment" class="govuk-label"><?php _e('Enter your comment', 'roots') ?></label>
           <textarea class="govuk-textarea required" name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
         </div>
@@ -53,13 +52,11 @@ if (have_comments()) : ?>
               <a href="<?php echo wp_logout_url(get_permalink()) ?>"><?php _e('Log out', 'roots') ?></a>
             </p>
           <?php else : ?>
-            <div class="govuk-form-group">
-              <a name="name_field"></a>
+            <div class="govuk-form-group" id="name_field">
               <label class="govuk-label" for="author"><?php _e('Name', 'roots'); ?></label>
               <input type="text" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="author" id="author" value="<?php echo esc_attr($comment_author) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="name">
             </div>
-            <div class="govuk-form-group">
-              <a name="email_field"></a>
+            <div class="govuk-form-group" id="email_field">
               <label class="govuk-label" for="email"><?php _e('Email', 'roots'); ?></label>
               <div class="govuk-hint">We only ask for your email address so we know you're a real person</div>
               <input type="email" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="email">
@@ -77,4 +74,4 @@ if (have_comments()) : ?>
       </form>
     <?php endif ?>
   </section><!-- /#respond -->
-<?php endif ?>
+<?php endif;
