@@ -71,6 +71,7 @@ if (have_comments()) : ?>
           </button>
         </div>
         <?php comment_id_fields() ?>
+        <?php wp_nonce_field('comment_verify'); ?>
         <div class="comment-privacy-notice dxw-subscription">
             <p class="govuk-inset-text">By submitting a comment you understand it may be published on this public website. Please read our <a href="https://www.gov.uk/government/publications/govuk-blogging-platform-privacy-notice">privacy notice</a> to see how the GOV.UK blogging platform handles your information.</p>
         </div>
