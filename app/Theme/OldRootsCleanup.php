@@ -4,7 +4,7 @@ namespace GovUKBlogs\Theme;
 
 class OldRootsCleanup implements \Dxw\Iguana\Registerable
 {
-	public function register()
+	public function register(): void
 	{
 		add_filter('excerpt_length', [$this, 'excerptLength']);
 		add_filter('excerpt_more', [$this, 'excerptMore']);
@@ -15,20 +15,20 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	/**
 	 * Clean up the_excerpt()
 	 */
-	public function excerptLength($length)
+	public function excerptLength(int $length): int
 	{
-		return POST_EXCERPT_LENGTH;
+		return (int) POST_EXCERPT_LENGTH;
 	}
 
-	public function excerptMore($more)
+	public function excerptMore(string $more): string
 	{
-		return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
+		return ' &hellip; <a href="' . (string) get_permalink() . '">' . __('Continued', 'roots') . '</a>';
 	}
 
 	/**
 	* Don't return the default description in the RSS feed if it hasn't been changed
 	*/
-	public function removeDefaultDescription($bloginfo)
+	public function removeDefaultDescription(string $bloginfo): string
 	{
 		$default_tagline = 'Just another WordPress site';
 		return ($bloginfo === $default_tagline) ? '' : $bloginfo;
@@ -40,7 +40,7 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 	 *
 	 * @link http://justintadlock.com/archives/2011/07/01/captions-in-wordpress
 	 */
-	public function gdsCaption($output, $attr, $content)
+	public function gdsCaption(string $output, array $attr, string $content): string
 	{
 		if (is_feed()) {
 			return $output;
@@ -53,15 +53,19 @@ class OldRootsCleanup implements \Dxw\Iguana\Registerable
 		'caption' => ''
 		];
 
+		/** @var array{id: string, align: string, width: string, caption: string} $attr */
 		$attr = shortcode_atts($defaults, $attr);
+		$width = (int) ($attr['width'] ?? 0);
+		$caption = $attr['caption'] ?? '';
+		$id = $attr['id'] ?? '';
 
 		// // If the width is less than 1 or there is no caption, return the content wrapped between the [caption] tags
-		if ($attr['width'] < 1 || empty($attr['caption'])) {
+		if ($width < 1 || $caption === '') {
 			return $content;
 		}
 
 		// Set up the attributes for the caption <figure>
-		$attributes  = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '');
+		$attributes  = (!empty($id) ? ' id="' . esc_attr($id) . '"' : '');
 		$attributes .= ' class="thumbnail wp-caption ' . esc_attr($attr['align']) . '"';
 		$attributes .= ' style="width: ' . esc_attr($attr['width']) . 'px"';
 
