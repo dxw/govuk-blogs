@@ -22,8 +22,6 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/govuk-assets/';
 		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
 		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
 
-		<meta property="og:image" content="<?php echo esc_url($govukFrontendAssetPath . 'images/govuk-opengraph-image.png'); ?>">
-
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class('govuk-template__body'); ?>>
@@ -35,7 +33,7 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/govuk-assets/';
 			<div class="govuk-header" data-module="govuk-header">
 				<div class="govuk-header__container govuk-width-container">
 					<div class="govuk-header__logo">
-						<a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="govuk-header__homepage-link">  
+						<a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="govuk-header__homepage-link">
 							<svg
 								focusable="false"
 								role="img"
