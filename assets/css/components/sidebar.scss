@@ -126,7 +126,9 @@
 			&[href^="http://twitter.com/"],
 			&[href^="http://www.twitter.com/"],
 			&[href^="https://twitter.com/"],
-			&[href^="https://www.twitter.com/"] {
+			&[href^="https://www.twitter.com/"],
+			&[href^="https://x.com/"],
+			&[href^="https://www.x.com/"] {
 				@include icon-twitter;
 			}
 
