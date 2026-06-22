@@ -18,9 +18,13 @@
  */
 
 # Note: GDS can't use this because of special embed code for Analytics. See lib/scripts.php.
-define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y
+if (!defined('GOOGLE_ANALYTICS_ID')) {
+	define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y
+}
 
-define('POST_EXCERPT_LENGTH', 40);
+if (!defined('POST_EXCERPT_LENGTH')) {
+	define('POST_EXCERPT_LENGTH', 40);
+}
 
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
