@@ -5,21 +5,12 @@ $govukFrontendAssetPath = get_template_directory_uri() . '/build/govuk-assets/';
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<meta name="theme-color" content="#0b0c0c">
-
-		<link rel="icon" sizes="48x48" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.ico">
+		<link rel="icon" sizes="48x48" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.ico" type="image/x-icon">
 		<link rel="icon" sizes="any" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.svg" type="image/svg+xml">
-		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
-		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
-		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
-		<meta name="theme-color" content="#0b0c0c">
-
-		<link rel="icon" sizes="48x48" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.ico">
-		<link rel="icon" sizes="any" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/favicon.svg" type="image/svg+xml">
-		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" color="#0b0c0c">
-		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png">
+		<link rel="mask-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-mask.svg" type="image/svg+xml" color="#0b0c0c">
+		<link rel="apple-touch-icon" href="<?php echo esc_url($govukFrontendAssetPath); ?>images/govuk-icon-180.png" type="image/png">
 		<link rel="manifest" href="<?php echo esc_url($govukFrontendAssetPath); ?>manifest.json">
 
 		<?php wp_head(); ?>
