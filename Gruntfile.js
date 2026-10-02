@@ -17,81 +17,81 @@
 //
 
 module.exports = function (grunt) {
-    'use strict';
+	'use strict';
 
-    const sass = require('sass')
+	const sass = require('sass')
 
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 
-        clean: ['build'],
+		clean: ['build'],
 
-        sass: {
-            options: {
-                implementation: sass,
-                outputStyle: 'compressed',
-                sourceMap: true,
-                includePaths: ['node_modules/'],
-            },
-            production: {
-                files: {
-                    'build/main.min.css': 'assets/css/main.scss',
-                    'build/admin.min.css': 'assets/css/admin.scss',
-                }
-            }
-        },
+		sass: {
+			options: {
+				implementation: sass,
+				outputStyle: 'compressed',
+				sourceMap: true,
+				includePaths: ['node_modules/'],
+			},
+			production: {
+				files: {
+					'build/main.min.css': 'assets/css/main.scss',
+					'build/admin.min.css': 'assets/css/admin.scss',
+				}
+			}
+		},
 
 		fingerprint: {
 			production: {
-			  options: {
+				options: {
 				json: 'build/fingerprint.json',
-			  },
-			  src: [
+			},
+			src: [
 				'build/*.min.css',
 				'build/main.min.js'
 				],
 			},
 		},
 
-        uglify: {
-            dist: {
-                options: {
-                    preserveComments: 'some',
-                    compress: false,
-                    sourceMap: 'build/main.min.js.map',
-                    sourceMappingURL: 'main.min.js.map',
-                    sourceMapRoot: '../',
-                },
-                files: {
-                    'build/main.min.js': [
-                        'assets/js/plugins/*.js',
-                        'node_modules/es6-promise/dist/es6-promise.auto.js',
-                        'node_modules/govuk-frontend/dist/govuk/all.js',
-                        'assets/js/main.js',
-                        'assets/js/comments.js',
+		uglify: {
+			dist: {
+				options: {
+					preserveComments: 'some',
+					compress: false,
+					sourceMap: 'build/main.min.js.map',
+					sourceMappingURL: 'main.min.js.map',
+					sourceMapRoot: '../',
+				},
+				files: {
+					'build/main.min.js': [
+						'assets/js/plugins/*.js',
+						'node_modules/es6-promise/dist/es6-promise.auto.js',
+						'node_modules/govuk-frontend/dist/govuk/all.js',
+						'assets/js/main.js',
+						'assets/js/comments.js',
 						'assets/js/buttons.js',
 						'assets/js/accordion.js'
-                    ],
-                },
-            },
-        },
+					],
+				},
+			},
+		},
 
-        copy: {
-            dist: {
-                files: [
-                    {
-                        src: [
-                            'node_modules/bootstrap/img/glyphicons-halflings.png',
-                            'node_modules/bootstrap/img/glyphicons-halflings-white.png',
-                        ],
-                        dest: 'build/',
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/govuk-frontend/dist/govuk/assets/',
-                        src: ['**/*'],
-                        dest: 'build/govuk-assets/',
-                    },
+		copy: {
+			dist: {
+				files: [
+					{
+						src: [
+							'node_modules/bootstrap/img/glyphicons-halflings.png',
+							'node_modules/bootstrap/img/glyphicons-halflings-white.png',
+						],
+						dest: 'build/',
+					},
+					{
+						expand: true,
+						cwd: 'node_modules/govuk-frontend/dist/govuk/assets/',
+						src: ['**/*'],
+						dest: 'build/govuk-assets/',
+					},
 					{
 						expand: true,
 						cwd: 'assets/js/',
@@ -99,54 +99,55 @@ module.exports = function (grunt) {
 						src: 'govuk-frontend-load.js',
 						dest: 'build/'
 					},
-                    {
-                        expand: true,
+					{
+						expand: true,
 						cwd: 'node_modules/govuk-frontend/dist/govuk/',
 						flatten: true,
 						src: 'govuk-frontend.min.js',
 						dest: 'build/'
 					},
-                ],
-            },
-        },
+				],
+			},
+		},
 
-        image: {
-          dynamic: {
-            files: [{
-              expand: true,
-              cwd: 'assets/img',
-              src: ['**/*.{png,jpg,gif,svg}'],
-              dest: 'assets/img'
-            }]
-          }
-        },
+		image: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'assets/img',
+					src: ['**/*.{png,jpg,gif,svg}'],
+					dest: 'assets/img'
+				}]
+			}
+		},
 
-        _watch: {
+		_watch: {
 			files: ['assets/css/**/*.scss', 'assets/js/**/*.js'],
 			tasks: ['clean', 'copy', 'sass', 'uglify', 'fingerprint' ],
-        },
-    })
+		},
 
-    grunt.loadNpmTasks('grunt-sass')
-    grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.loadNpmTasks('grunt-contrib-watch')
-    grunt.loadNpmTasks('grunt-contrib-copy')
-    grunt.loadNpmTasks('grunt-image')
+	})
+
+	grunt.loadNpmTasks('grunt-sass')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
+	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-contrib-copy')
+	grunt.loadNpmTasks('grunt-image')
 	grunt.loadNpmTasks('@dxw-digital/grunt-fingerprint')
-    grunt.loadNpmTasks('grunt-contrib-clean')
+	grunt.loadNpmTasks('grunt-contrib-clean')
 
-    grunt.renameTask('watch', '_watch')
-    grunt.registerTask('watch', [
-        'default',
-        '_watch',
-    ])
+	grunt.renameTask('watch', '_watch')
+	grunt.registerTask('watch', [
+		'default',
+		'_watch',
+	])
 
-    grunt.registerTask('default', [
-        'clean',
-        'copy',
-        'sass',
-        'uglify',
+	grunt.registerTask('default', [
+		'clean',
+		'copy',
+		'sass',
+		'uglify',
 		'fingerprint'
-    ])
+	])
 
 }
