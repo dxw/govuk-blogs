@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [8.x.x] - 202?-??-??
 
--
+- Upgrade `govuk-frontend` to the latest major version [`v6.5.1`](https://github.com/alphagov/govuk-frontend/releases/tag/v6.5.1)
 
 ## [8.0.2] - 2026-06-05
 
