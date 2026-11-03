@@ -43,7 +43,7 @@ if (have_comments()) : ?>
       <form action="<?php echo get_option('siteurl') ?>/wp-comments-post.php" method="post" id="commentform" class="group">
         <div class="govuk-form-group" id="comment_field">
           <label for="comment" class="govuk-label"><?php _e('Enter your comment', 'roots') ?></label>
-          <textarea class="govuk-textarea required" name="comment" id="comment" cols="50" rows="10" required aria-required="true"></textarea>
+          <textarea class="govuk-textarea required" name="comment" id="comment" cols="50" rows="10" required></textarea>
         </div>
         <div class="js-comment-extra">
           <?php if (is_user_logged_in()) : ?>
@@ -54,12 +54,12 @@ if (have_comments()) : ?>
           <?php else : ?>
             <div class="govuk-form-group" id="name_field">
               <label class="govuk-label" for="author"><?php _e('Name', 'roots'); ?></label>
-              <input type="text" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="author" id="author" value="<?php echo esc_attr($comment_author) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="name">
+              <input type="text" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="author" id="author" value="<?php echo esc_attr($comment_author) ?>"<?php echo $req ? ' required' : '' ?> autocomplete="name">
             </div>
             <div class="govuk-form-group" id="email_field">
               <label class="govuk-label" for="email"><?php _e('Email', 'roots'); ?></label>
               <div class="govuk-hint">We only ask for your email address so we know you're a real person</div>
-              <input type="email" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>" <?php echo $req ? 'required aria-required="true"' : '' ?> autocomplete="email">
+              <input type="email" class="govuk-input text<?php echo $req ? ' required' : '' ?>" name="email" id="email" value="<?php echo esc_attr($comment_author_email) ?>"<?php echo $req ? ' required' : '' ?> autocomplete="email">
             </div>
           <?php endif ?>
           <?php do_action('comment_form', $post->ID) ?>
